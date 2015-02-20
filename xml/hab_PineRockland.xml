@@ -1,0 +1,165 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Florida Natural Areas Inventory</origin>
+        <title>hab_PineRockland</title>
+        <geoform>vector digital data</geoform>
+        <othercit>Florida Forever Conservation Needs Assessment Technical Report. Florida Natural Areas Inventory. Tallahassee, Florida (available online at www.fnai.org).</othercit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Florida Forever Measure B4: The number of acres acquired of under-represented native ecosystems. Depending on the classification system followed, Florida features as many as 81 different natural community types (FNAI 2010). Many of these community types, particularly wetland communities, are relatively well-represented on existing conservation lands, and therefore are less of a priority for land acquisition than some of Florida's rarest communities that are currently not well-protected. The 1997 Florida Preservation 2000 Program Remaining Needs and Priorities Report (Brock 1997) identified natural community types that were inadequately represented on conservation lands in Florida. Since that time, the Office of Environmental Services (OES), Florida Department of Environmental Protection, has regularly reported progress toward protecting additional acres of natural communities through land acquisition. Based on the OES criteria, a natural community is considered to be inadequately represented on conservation lands if less than 15% of the original extent of that community is currently found on existing conservation lands. For a complete description please refer to: Florida Forever Conservation Needs Assessment Technical Report. Florida Natural Areas Inventory. Tallahassee, FL. (available online at www.fnai.org)</abstract>
+      <purpose>This data set was developed as part of the Florida Forever Conservation Needs Assessment. These data are intended to address specific performance measures of the Florida Forever program and may not be appropriate for general use, and are not intended for use in a regulatory decision-making process. Please refer to Knight, G. et al. 2000. Florida Forever Conservation Needs Assessment Summary Report. Florida Natural Areas Inventory. Tallahassee, Florida.</purpose>
+      <supplinf>This version of under-represented natural communities is derived primarily from the Cooperative Land Cover Map v1.1 (FNAI 2010) but see Florida Forever Conservation Needs Assessment Technical Report. (available online at www.fnai.org) for exceptions and detailed methods.</supplinf>
+    </descript>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.555589</westbc>
+        <eastbc>-80.297315</eastbc>
+        <northbc>25.289338</northbc>
+        <southbc>24.658639</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>Florida Natural Areas Inventory</themekt>
+        <themekey>upland hardwood</themekey>
+        <themekey>conservation</themekey>
+        <themekey>sandhill</themekey>
+        <themekey>FNAI</themekey>
+        <themekey>pine flatwoods</themekey>
+        <themekey>pine rockland</themekey>
+        <themekey>seepage slope</themekey>
+        <themekey>sandhill upland lake</themekey>
+        <themekey>tropical hardwood hammock</themekey>
+        <themekey>under-represented</themekey>
+        <themekey>upland glade</themekey>
+        <themekey>habitat</themekey>
+        <themekey>natural</themekey>
+        <themekey>scrub</themekey>
+        <themekey>community</themekey>
+        <themekey>dry prairie</themekey>
+      </theme>
+    </keywords>
+    <accconst>Other Constraints: The Florida Forever Conservation Needs Assessment data are available online, subject to a data use agreement.</accconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Natural Areas Inventory</cntorg>
+        </cntorgp>
+        <cntvoice>850-224-8207</cntvoice>
+        <cntfax>850-681-9364</cntfax>
+        <hours>8:00 a.m. - 5:00 p.m.</hours>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Florida Natural Areas Inventory</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <dataqual>
+    <logic>Data have been checked for consistency</logic>
+    <complete>For a complete description please refer to: Florida Forever Conservation Needs Assessment Technical Report. Florida Natural Areas Inventory. Tallahassee, Florida (available online at www.fnai.org).</complete>
+    <lineage>
+      <procstep>
+        <procdesc>Version 3.1 contains a correction to areas identified as scrub near Archbold Biological Station.</procdesc>
+      </procstep>
+      <procstep>
+        <procdesc>Knight, A. and J. Oetting. 2011. Florida Forever Conservation Needs Assessment Technical Report, Version 3.3.1. Florida Natural Areas Inventory. Tallahassee, Florida (available online at www.fnai.org).</procdesc>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>43</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>hab_PineRockland</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GRIDCODE</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Natural Areas Inventory</cntorg>
+          <cntper>Amy Knight</cntper>
+        </cntorgp>
+        <cntpos>GIS Program Specialist</cntpos>
+        <cntaddr>
+          <addrtype>Unknown</addrtype>
+          <address>1018 Thomasville Rd, Suite 200-C</address>
+          <city>Tallahassee</city>
+          <state>FL</state>
+          <postal>32303</postal>
+        </cntaddr>
+        <cntvoice>850-224-8207</cntvoice>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

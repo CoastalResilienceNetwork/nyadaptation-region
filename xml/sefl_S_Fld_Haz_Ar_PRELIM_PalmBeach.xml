@@ -1,0 +1,654 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Federal Emergency Management Agency</origin>
+        <pubdate>20140818</pubdate>
+        <title>sefl_S_Fld_Haz_Ar_PRELIM_PalmBeach</title>
+        <geoform>FEMA-DFIRM-Preliminary</geoform>
+        <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <onlink>http://hazards.fema.gov</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Federal Emergency Management Agency</origin>
+            <pubdate>20140818</pubdate>
+            <title>FEMA CASE 14-04-7608S</title>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The Floodplain Mapping/Redelineation study deliverables depict and quantify the flood risks for the study area. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The Floodplain Mapping/Redelineation flood risk boundaries are derived from the engineering information Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA).</abstract>
+      <purpose>The objective of the Floodplain Mapping/Redelineation data submission is to archive the flood boundary and redelineation data for a study in a database such that it can be revised and used with minimum effort in future flood insurance studies or map revisions. This digital data is produced for the purposes of updating/creating a DFIRM database.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20140818</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>MIP Submission Date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>Unknown</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-80.886103</westbc>
+        <eastbc>-80.029437</eastbc>
+        <northbc>26.970907</northbc>
+        <southbc>26.320641</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>hydrology</themekey>
+        <themekey>inlandWaters</themekey>
+        <themekey>environment</themekey>
+      </theme>
+      <theme>
+        <themekt>FEMA NFIP Topic Category</themekt>
+        <themekey>SFHA</themekey>
+        <themekey>Flood Insurance Rate Map</themekey>
+        <themekey>Digital Flood Insurance Rate Map</themekey>
+        <themekey>Coastal Flooding</themekey>
+        <themekey>NFIP</themekey>
+        <themekey>Floodplain Mapping</themekey>
+        <themekey>FEMA Flood Hazard Zone</themekey>
+        <themekey>Floodway</themekey>
+        <themekey>DFIRM Database</themekey>
+        <themekey>FIRM</themekey>
+        <themekey>DFIRM</themekey>
+        <themekey>Base Flood Elevation</themekey>
+        <themekey>Special Flood Hazard Area</themekey>
+        <themekey>CBRS</themekey>
+        <themekey>Coastal Barrier Resources System</themekey>
+        <themekey>Riverine Flooding</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>FEMA-CID 125157</placekey>
+        <placekey>FEMA-CID 120221</placekey>
+        <placekey>FEMA-CID 120197</placekey>
+        <placekey>REGION 04</placekey>
+        <placekey>COMMUNITY CITY OF BOYNTON BEACH</placekey>
+        <placekey>FEMA-CID 120192</placekey>
+        <placekey>FEMA-CID 120215</placekey>
+        <placekey>FEMA-CID 120223</placekey>
+        <placekey>FEMA-CID 120226</placekey>
+        <placekey>COMMUNITY CITY OF GREENACRES</placekey>
+        <placekey>STATE FL</placekey>
+        <placekey>FEMA-CID 120229</placekey>
+        <placekey>COMMUNITY TOWN OF BRINY BREEZES</placekey>
+        <placekey>COMMUNITY TOWN OF CLOUD LAKE</placekey>
+        <placekey>COMMUNITY TOWN OF GULF STREAM</placekey>
+        <placekey>COMMUNITY CITY OF PALM BEACH GARDENS</placekey>
+        <placekey>FEMA-CID 120216</placekey>
+        <placekey>COMMUNITY CITY OF SOUTH BAY</placekey>
+        <placekey>COMMUNITY TOWN OF LAKE PARK</placekey>
+        <placekey>COMMUNITY VILLAGE OF PALM SPRINGS</placekey>
+        <placekey>FEMA-CID 120198</placekey>
+        <placekey>FEMA-CID 125120</placekey>
+        <placekey>COMMUNITY CITY OF BELLE GLADE</placekey>
+        <placekey>FEMA-CID 120196</placekey>
+        <placekey>FEMA-CID 120212</placekey>
+        <placekey>COMMUNITY TOWN OF LAKE CLARKE SHORES</placekey>
+        <placekey>FEMA-CID 120194</placekey>
+        <placekey>FEMA-CID 125142</placekey>
+        <placekey>FEMA-CID 125134</placekey>
+        <placekey>COMMUNITY TOWN OF LOXAHATCHEE GROVES</placekey>
+        <placekey>FEMA-CID 120200</placekey>
+        <placekey>FEMA-CID 120208</placekey>
+        <placekey>COMMUNITY CITY OF WEST PALM BEACH</placekey>
+        <placekey>FEMA-CID 120195</placekey>
+        <placekey>FEMA-CID 125109</placekey>
+        <placekey>FEMA-CID 125102</placekey>
+        <placekey>FEMA-CID 120225</placekey>
+        <placekey>COMMUNITY CITY OF BOCA RATON</placekey>
+        <placekey>FEMA-CID 12099C</placekey>
+        <placekey>FEMA-CID 120227</placekey>
+        <placekey>COMMUNITY TOWN OF JUPITER</placekey>
+        <placekey>COMMUNITY TOWN OF WELLINGTON</placekey>
+        <placekey>COMMUNITY TOWN OF MANGONIA PARK</placekey>
+        <placekey>COMMUNITY TOWN OF GLEN RIDGE</placekey>
+        <placekey>FEMA-CID 120211</placekey>
+        <placekey>FEMA-CID 120219</placekey>
+        <placekey>FEMA-CID 125111</placekey>
+        <placekey>COUNTY-FIPS 099</placekey>
+        <placekey>FEMA-CID 125137</placekey>
+        <placekey>FEMA-CID 120205</placekey>
+        <placekey>COMMUNITY TOWN OF JUPITER INLET COLONY</placekey>
+        <placekey>COMMUNITY PALM BEACH COUNTY AND INCORPORATED AREAS</placekey>
+        <placekey>FEMA-CID 120220</placekey>
+        <placekey>COMMUNITY VILLAGE OF GOLF</placekey>
+        <placekey>FEMA-CID 120207</placekey>
+        <placekey>COMMUNITY TOWN OF OCEAN RIDGE</placekey>
+        <placekey>FEMA-CID 120193</placekey>
+        <placekey>COMMUNITY TOWN OF HIGHLAND BEACH</placekey>
+        <placekey>COMMUNITY TOWN OF HYPOLUXO</placekey>
+        <placekey>COMMUNITY CITY DELRAY BEACH</placekey>
+        <placekey>COMMUNITY CITY OF PAHOKEE</placekey>
+        <placekey>COMMUNITY TOWN OF SOUTH PALM BEACH</placekey>
+        <placekey>COMMUNITY TOWN OF HAVERHILL</placekey>
+        <placekey>COMMUNITY VILLAGE OF TEQUESTA</placekey>
+        <placekey>COMMUNITY TOWN OF PALM BEACH</placekey>
+        <placekey>COUNTY PALM BEACH</placekey>
+        <placekey>COMMUNITY VILLAGE OF NORTH PALM BEACH</placekey>
+        <placekey>COMMUNITY VILLAGE OF ROYAL PALM BEACH</placekey>
+        <placekey>FEMA-CID 120213</placekey>
+        <placekey>FEMA-CID 120201</placekey>
+        <placekey>COMMUNITY CITY OF LAKE WORTH</placekey>
+        <placekey>COMMUNITY TOWN OF MANALAPAN</placekey>
+        <placekey>FEMA-CID 120228</placekey>
+        <placekey>FEMA-CID 120309</placekey>
+        <placekey>FEMA-CID 120203</placekey>
+        <placekey>COMMUNITY TOWN OF PALM BEACH SHORES</placekey>
+        <placekey>COMMUNITY CITY OF RIVIERA BEACH</placekey>
+        <placekey>FEMA-CID 125119</placekey>
+        <placekey>FEMA-CID 120217</placekey>
+        <placekey>COMMUNITY CITY OF ATLANTIS</placekey>
+        <placekey>COMMUNITY TOWN OF JUNO BEACH</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The hardcopy FIRM and DFIRM and the accompanying FISs are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. However the hardcopy flood maps and flood profiles are the authoritative documents for the NFIP. Acknowledgement of FEMA would be appreciated in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>miphelp@riskmapcds.com</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+    <crossref>
+      <citeinfo>
+        <origin>Federal Emergency Management Agency</origin>
+        <pubdate>19971002</pubdate>
+        <title>Flood Insurance Rate Map, Palm Beach County, FL and Incorporated Areas.</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <onlink>miphelp@riskmapcds.com</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>The DFIRM Database consists of community based vector files and associated attributes produced in conjunction with the hard copy FEMA FIRM. The published effective FIRM and DFIRM maps are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of FEMA's DFIRM database was also performed. To obtain more detailed information in areas where Base Flood Elevations (BFEs) and/or floodways have been determined, users are encouraged to consult the Flood Profiles and Floodway Data and/or Summary of Stillwater Elevations tables contained within the FIS report that accompanies this DFIRM database. Users should be aware that BFEs shown in the S_BFE table represent rounded whole-foot elevations. These BFEs are intended for flood insurance rating purposes only and should not be used as the sole source of flood elevation information. Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM for purposes of construction and/or floodplain management. The 1-percent-annual-chance water-surface elevations shown in the S_XS table match the regulatory elevations shown in the FIS report.</attraccr>
+    </attracc>
+    <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM are rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.</logic>
+    <complete>Data contained in the DFIRM Database files reflect the content of the source materials. Features may have been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping, FEMA plans to maintain full detail in the spatial data it produces. However, older information is often transferred from existing maps where some generalization has taken place. Flood risk data are developed for communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information obtained through consultation with the communities; floodplain topographic surveys; and hydrological and hydraulic analysis. Both detailed and approximate analyses are employed. Generally, detailed analyses are used to generate flood risk data only for developed or developing areas of communities. For areas where little or no development is expected to occur, FEMA uses approximate analyses to generate flood risk data. Typically, only drainage areas that are greater than one square mile are studied.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>The DFIRM Database consists of community based vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and DFIRM are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of FEMA's DFIRM database was also performed.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>The DFIRM Database consists of community based vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and DFIRM maps are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of FEMA's DFIRM database was also performed.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>USGS</origin>
+            <pubdate>20020101</pubdate>
+            <title>USGS Quad Index</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20020101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE1</srccitea>
+        <srccontr>USGS Quad Index</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Federal Emergency Management Agency</origin>
+            <pubdate>19820415</pubdate>
+            <title>Flood Insurance Study, Palm Beach County, Florida and Incorporated Areas</title>
+            <othercit>This FIS was prepared to include the incorporated communities within, Palm Beach County</othercit>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20140818</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>STUDY1</srccitea>
+        <srccontr>Palm Beach County FIS</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Palm Beach County</origin>
+            <pubdate>20090109</pubdate>
+            <title>Ortho Imagery Base Index</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>None</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20090109</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE6</srccitea>
+        <srccontr>Ortho Imagery Base Index</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>ESRI Tiger Data</origin>
+            <pubdate>20000101</pubdate>
+            <title>Transportation</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20000101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE4</srccitea>
+        <srccontr>Transportation</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>South Florida Water Management District</origin>
+            <pubdate>20140101</pubdate>
+            <title>C51 Basin FLOOD STUDY Palm Beach County and Incorporated Areas, Florida</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20140101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>STUDY3</srccitea>
+        <srccontr>S_Fld_Haz_Ln and S_Fld_Haz_Ar</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Tomasello Consulting Engineers, Inc.</origin>
+            <pubdate>20140101</pubdate>
+            <title>E-2E/E-3/E-4 Basin FLOOD STUDY City of Boca Raton, Palm Beach County, Florida</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20140101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>STUDY2</srccitea>
+        <srccontr>S_BFE, S_Fld_Haz_Ln, S_Fld_Haz_Ar, and S_Wtr_Ln</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>USGS</origin>
+            <pubdate>20080924</pubdate>
+            <title>Hydrology</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20080924</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE5</srccitea>
+        <srccontr>Hydrology</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>NOAA, NGS</origin>
+            <pubdate>20040101</pubdate>
+            <title>Benchmarks</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20040101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE2</srccitea>
+        <srccontr>Benchmarks</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>South Florida Water Management District</origin>
+            <pubdate>20140101</pubdate>
+            <title>*************************FLOOD STUDY Palm Beach County and Incorporated Areas, Florida</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20140101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>STUDY4</srccitea>
+        <srccontr>S_Fld_Haz_Ln and S_Fld_Haz_Ar</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>USGS</origin>
+            <pubdate>20040603</pubdate>
+            <title>Public Land Survey System</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20040603</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE7</srccitea>
+        <srccontr>PLSS Grid</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Palm Beach Zoning Board</origin>
+            <pubdate>20061101</pubdate>
+            <title>Political Boundaries</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20061101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>BASE3</srccitea>
+        <srccontr>Political Boundaries</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Floodplain Mapping and Redelineation datasets are compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for DFIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+        <srcused>BASE1</srcused>
+        <srcused>BASE4</srcused>
+        <srcused>BASE5</srcused>
+        <srcused>BASE6</srcused>
+        <srcused>BASE7</srcused>
+        <srcused>STUDY3</srcused>
+        <srcused>STUDY1</srcused>
+        <srcused>BASE2</srcused>
+        <srcused>STUDY2</srcused>
+        <srcused>STUDY4</srcused>
+        <srcused>BASE3</srcused>
+        <procdate>20140818</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>17070</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_S_Fld_Haz_Ar_PRELIM_PalmBeach</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FLD_AR_ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FLD_ZONE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FLOODWAY</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SFHA_TF</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STATIC_BFE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>V_DATUM</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DEPTH</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LEN_UNIT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VELOCITY</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VEL_UNIT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>AR_REVERT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>BFE_REVERT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DEP_REVERT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE_CIT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The DFIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>FEMA, Map Service Center</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>P.O. Box 3617</address>
+          <city>Oakton</city>
+          <state>Virginia</state>
+          <postal>22124</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>miphelp@riskmapcds.com</cntemail>
+        <cntinst>Data requests must include the full name of the community or county and the FIRM panel number(s) or the 7.5- minute series quadrangle sheet area(s) covered by the request.</cntinst>
+      </cntinfo>
+    </distrib>
+    <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty. FEMA will warrant the delivery of this product in a computer-readable format, and will offer appropriate adjustment of credit when the product is determined unreadable by correctly adjusted computer input peripherals, or when the physical medium is delivered in damaged condition. Requests for adjustment of credit must be made within 90 days from the date of this shipment from the ordering site.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>MapInfo Interchange file (MIF)</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://hazards.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://hazards.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://hazards.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+          <offoptn>
+            <offmedia>CD-ROM</offmedia>
+            <recfmt>ISO 9660</recfmt>
+          </offoptn>
+          <offoptn>
+            <offmedia>CD-ROM</offmedia>
+            <recfmt>ISO 9660</recfmt>
+          </offoptn>
+          <offoptn>
+            <offmedia>CD-ROM</offmedia>
+            <recfmt>ISO 9660</recfmt>
+          </offoptn>
+        </digtopt>
+      </digform>
+      <fees>Contact Distributor</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20141208</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>AECOM</cntorg>
+          <cntper>Daryle L. Fontenot, PE, CFM</cntper>
+        </cntorgp>
+        <cntpos>Project Manager</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>6201 Fairview Road, Suite 400</address>
+          <city>Charlotte</city>
+          <state>NC</state>
+          <postal>28210</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>704-643-0108</cntvoice>
+        <cntemail>daryle.fontenot@aecom.com</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

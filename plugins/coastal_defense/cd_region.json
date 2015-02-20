@@ -1,0 +1,24 @@
+[
+	{
+		"location": "FL Keys",
+		"layers": {
+			"profileTransect": "http://services.coastalresilience.org:6080/arcgis/rest/services/CoastalDefense/CD_FL_Keys/MapServer/1",
+			"profilePolygon": "http://services.coastalresilience.org:6080/arcgis/rest/services/CoastalDefense/CD_FL_Keys/MapServer/2",
+			"mapLayers": { 
+				"url": "http://services.coastalresilience.org:6080/arcgis/rest/services/CoastalDefense/CD_FL_Keys/MapServer",
+				"habitatLayerIds": [3,4],
+				"profilePolygonLayerId": 2,
+				"profileTransectLayerId": 1
+			}
+		},
+		"extent" : {
+			"xmin": -82.03673772530,
+			"ymin": 24.58050648220,
+			"xmax":-79.95070867250,
+			"ymax": 25.51732018830
+		},
+		"profilePointFilterNumber": 10
+	}
+
+]
+

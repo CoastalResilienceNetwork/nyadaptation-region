@@ -1,0 +1,148 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Florida Fish and Wildlife Research Institute</origin>
+        <title>hab_criticalhabitat</title>
+        <geoform>vector digital data</geoform>
+        <othercit>Endries, M., B. Stys, G. Mohr, G. Kratimenos, S. Langley, K. Root, and R. Kautz. Wildlife Habitat Conservation Needs in Florida: Updated Recommendations for Strategic Habitat Conservation Areas. Florida Fish and Wildlife Conservation Commission. Tallahassee, Florida. Tallahassee, Florida. Florida Forever Conservation Needs Assessment Technical Report. Florida Natural Areas Inventory. Tallahassee, Florida (available online at www.fnai.org).</othercit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The Florida Fish and Wildlife Conservation Commission originally identified strategic habitat conservation areas (SHCA) in the Commission report, "Closing the Gaps in Florida's Wildlife Habitat Conservation System" (Cox et al. 1994). The goal of the SHCA is to identify the minimum amount of land needed in Florida to ensure long-term survival of key components to Florida's biological diversity. In 2009, the SHCA underwent a significant revision based on a new suite of species, updated datasets, new datasets that did not exist when the original analysis was conducted, and improved analytical techniques including spatially explicit population viability analyses. A population risk assessment was conducted for 62 focal vertebrate species, of which 34 were shown to have additional protection needs in Florida. The SHCA identify important remaining habitat conservation needs on private lands for these 34 terrestrial vertebrates. The SHCA are prioritized based on global and state natural heritage ranks. Value 1 = Priority 1 (Highest): State Rank 1 and Global Rank 1-3 Value 2 = Priority 2: State Rank 1 and Global Rank 4-5 or State Rank 2 and Global Rank 2-3 Value 3 = Priority 3: State Rank 2 and Global Rank 4-5 or State Rank 3 and Global Rank 3 Value 4 = Priority 4: State Rank 3 and Global Rank 4 Value 5 = Priority 5: State Rank 3 and Global Rank 5 or State Rank 4 and Global Rank 4 For information on development of the SHCAs please refer to: Endries, M., B. Stys, G. Mohr, G. Kratimenos, S. Langley, K. Root, and R. Kautz. Wildlife Habitat Conservation Needs in Florida: Updated Recommendations for Strategic Habitat Conservation Areas. Florida Fish and Wildlife Conservation Commission. Tallahassee, Florida. Available for download from the Fish and Wildlife Research Institute at http://research.myfwc.com/features/view_article.asp?id=29815</abstract>
+      <purpose>This data set was developed to identify habitat protection needs for rare species in Florida.</purpose>
+      <supplinf>Identification of SHCAs on Conservation Lands The SHCAs identify privately-owned areas for only those species that do not have adequate protection on conservation lands, thereby ignoring species whose critical habitat is protected on conservation lands. Florida black bear habitat, for example, is not included as an SHCA because no additional private lands are needed for its long term persistence; however it could be argued that black bear habitat on conservation lands should be included as an SHCA because it would be required for the species to persist. Sixty-two wildlife species were selected for analysis. A population risk assessment was conducted for each of 62 focal vertebrate species although only 33 were selected as sufficiently at risk to warrant inclusion as an SHCA. This means that 29 species have sufficient protection on conservation lands such that their habitat on these lands could be thought of as an SHCA. We therefore worked with FWC to augment the SHCAs to include potential habitat within conservation lands for all 62 focal species. The SHCA version 3.3 includes these modifications.</supplinf>
+    </descript>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.718502</westbc>
+        <eastbc>-80.175310</eastbc>
+        <northbc>25.514996</northbc>
+        <southbc>24.556360</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>Florida Natural Areas Inventory</themekt>
+        <themekey>conservation</themekey>
+        <themekey>species</themekey>
+        <themekey>strategic</themekey>
+        <themekey>FWC</themekey>
+        <themekey>habitat</themekey>
+      </theme>
+    </keywords>
+    <accconst>Other Constraints: The Florida Forever Conservation Needs Assessment data are available online, subject to a data use agreement.</accconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Fish and Wildlife Research Institute</cntorg>
+          <cntper>Beth Stys</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>Unknown</addrtype>
+        </cntaddr>
+        <cntemail>Beth.Stys@MyFWC.com</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Florida Fish and Wildlife Research Institute</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <dataqual>
+    <complete>Endries, M., B. Stys, G. Mohr, G. Kratimenos, S. Langley, K. Root, and R. Kautz. Wildlife Habitat Conservation Needs in Florida: Updated Recommendations for Strategic Habitat Conservation Areas. Florida Fish and Wildlife Conservation Commission. Tallahassee, Florida.</complete>
+    <lineage>
+      <procstep>
+        <procdesc>Endries, M., B. Stys, G. Mohr, G. Kratimenos, S. Langley, K. Root, and R. Kautz. Wildlife Habitat Conservation Needs in Florida: Updated Recommendations for Strategic Habitat Conservation Areas. Florida Fish and Wildlife Conservation Commission. Tallahassee, Florida.</procdesc>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>2028</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>hab_criticalhabitat</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GRIDCODE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LEGEND</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Natural Areas Inventory</cntorg>
+          <cntper>Amy Knight</cntper>
+        </cntorgp>
+        <cntpos>GIS Program Specialist</cntpos>
+        <cntvoice>850-224-8207</cntvoice>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

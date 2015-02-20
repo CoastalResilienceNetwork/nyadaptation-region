@@ -1,0 +1,150 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<title>Fresh_water_springs</title>
+				<geoform>vector digital data</geoform>
+				<onlink>file://\\SHAWN-PC\C$\USVI_GAP_oct08.gdb</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>The vegetation of the Virgin Islands is considered sub-tropical as a result of the unique conditions created by climate, soil, wind, elevation and aspect. The classification of the plant communities is complex because of the blending of types across environmental gradients, leading to subtle changes in species composition and abundance. Past land use activities and fluctuation in the natural environment contribute to this complexity.These data came from the data for coastal wetlands from which they were subcategorized.</abstract>
+			<purpose>In an attempt to establish a valid and useful vegetation classification system based on the National Vegetation Classification System and the Caribbean Vegetation Types, it is necessary to identify special vegetation types that are typical to the Virgin Islands.</purpose>
+		</descript>
+		<spdom>
+			<bounding>
+				<westbc>-65.022519</westbc>
+				<eastbc>-64.707693</eastbc>
+				<northbc>18.369463</northbc>
+				<southbc>17.711053</southbc>
+			</bounding>
+		</spdom>
+		<keywords/>
+		<accconst>None</accconst>
+		<useconst>1. The University of the Virgin Islands (UVI) reserves all rights in the Rapid Ecological Assessment data provided. UVI warrants that the data are current, complete, and accurate for at least the year 1998. 2. Reproduction and/or distribution of the complete data set or subsets thereof to any parties other than the Purchaser, or posting of these data in whole or in part on any public computer network is strictly prohibited, unless UVI has provided prior written authorization. Where such authorization is provided, all parties receiving these data must be informed, in writing, of the restrictions contained herein. 3. The User agrees to provide appropriate acknowledgment of the University of the Virgin Islands as a data contributor to any reports or other products derived from these data. The information below should be provided when the data are cited: The University of the Virgin Islands. 2000. Conservation Data Center, Rapid Ecological Assessment. St. Thomas, VI. U.S.A. 4. The Purchaser agrees to provide a copy of any reports or other products derived from these data or portions of thE data to the University of the Virgin Islands. Materials should be sent to: Virgin Islands Conservation Data Center University of the Virgin Islands No. 2 John Brewers Bay St. Thomas, VI 00802 5. The User agrees to note any errors or omissions that are found in the data and provide copy of same to the University at the above address. Such comments will be valuable in improving the quality of our databases for the network of users. 6. The User agrees to indemnify and hold the University, its employees, agents, servants and property harmless from any and all claims, actions, suits, demands, or expenses made or brought on account of the loss of life or property, or injury or damage to persons or property that shall be due to, arise out of, result from, or be in any way connected with the use or misuse of these data, or any reports or other products derived from these data.</useconst>
+		<datacred>USVI Conservation Gap Analysis (2009) The Nature Conservancy Conservation Planner 3052 Estate Little Princess Christiansted, VI 00820 (340) 718-5575 </datacred>
+		<native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+	</idinfo>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>2</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator</mapprojn>
+					<mercator>
+						<stdparll>0.0</stdparll>
+						<longcm>0.0</longcm>
+						<feast>0.0</feast>
+						<fnorth>0.0</fnorth>
+					</mercator>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>Meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984 Major Auxiliary Sphere</horizdn>
+				<ellips>WGS 1984 Major Auxiliary Sphere</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>0.0</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>fw_springs_prep</enttypl>
+			</enttyp>
+			<attr>
+				<attrlabl>Code</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Target</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>GOAL</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>TYPE</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>SPF</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>OCC</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>CLUMP</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>SEPNUM</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>SEPDIS</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PROP</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>TNAME</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>TID</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Area</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distliab>See access and use constraints information.</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20120127</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\MAPS18\C$\inetpub\wwwroot\xml\USVI\fw_springs_prep</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\inetpub\wwwroot\xml\fw_springs_prep" dest="\\MAPS18\C$\inetpub\wwwroot\xml\USVI\fw_springs_prep" date="20120412" time="10184200"></copy></copyHistory></DataProperties></Esri></metadata>

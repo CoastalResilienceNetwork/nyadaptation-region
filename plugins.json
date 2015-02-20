@@ -1,0 +1,15 @@
+{
+    "plugins": [
+	{
+      "repo": "multiSelect",
+      "name": "floodSLR"
+    },
+	{
+      "repo": "future_habitat"
+    },
+	{
+      "repo": "explorer",
+      "name": "riskexplorer",
+    }
+    ]
+}

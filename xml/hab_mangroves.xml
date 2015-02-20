@@ -1,0 +1,205 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>hab_mangroves</title>
+        <geoform>vector digital data</geoform>
+        <onlink>file://\\10.200.55.50\caribbean\unzipped\spatial_data\FLKEYS_2008_09_LCLU_SFWMD_DRAFT_v0.3.0\2008_09_LCLU_SFWMD_DRAFT_v0.3.0.gdb</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data set serves as documentation of land cover and land use (LCLU) within the South Florida Water Management District as it existed in 2008-09. Land Cover Land Use data was updated from 2004-05 LCLU by photo-interpretation from the 2008-09 aerial photography and classified using the SFWMD modified FLUCCS classification system. Features were interpreted from the County-based aerial photography (4 in - 2 ft pixel) and updated on screen from the 2004-05 vector data. Horizontal accuracy of the data corresponds to the positional accuracy of the County aerial photography. The minimum mapping unit for classification was 2 acres for wetlands and 5 acres for uplands. NOTE THAT this polygon featureclass covers Priority Area 1, 2, 3, and 4 as of March 2011. Priority Area 5 to 6 will be appended to this featureclass upon their completions. Therefore, this dataset is provisional and subject to change any time during the development stage.</abstract>
+      <purpose>This data update project supports various missions of the District (SFWMD).</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.812308</westbc>
+        <eastbc>-80.170708</eastbc>
+        <northbc>25.532944</northbc>
+        <southbc>24.549794</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>Acknowledgement of South Florida Water Management District would be appreciated in products derived from this data. The positional accuracy of the 2004 data meets USGS NMAS for 1:12000 scale maps, providing a foundation for 2009 updates. During feature updates, map scale was set between 1:7000 to 12000. This data has a minimum classification accuracy of 90% for each Level I category, 85% for each FLUCCS Level II category and 75% for FLUCCS level III and IV categories.</useconst>
+    <datacred>SFWMD IT-GIS is responisble for the 2008-09 Land Cover / Land Use Mapping Update project</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>858</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>SFWMD_2008_09_LCLU</enttypl>
+        <enttypd>LCLU featureclass</enttypd>
+        <enttypds>SFWMD</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MELALEUCA</attrlabl>
+        <attrdef>Modifier - Presence of Melaleuca</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BRAZILIAN_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>EXOTICS</attrlabl>
+        <attrdef>Presence of Exotic Species</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TREE_ISLAN</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DEAD_TREES</attrlabl>
+        <attrdef>Modifier - Presence of Dead Trees</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ORV</attrlabl>
+        <attrdef>Modifier - Presence of Off-Road Vehicles tire marks</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BURNED</attrlabl>
+        <attrdef>Presence of Burned Vegetation</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GENERAL_NO</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PRIORITY</attrlabl>
+        <attrdef>Update priority</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DATE_TIME_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>UPDATE_STA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PI_EDITOR</attrlabl>
+        <attrdef>Name of photointerpreter</attrdef>
+        <attrdefs>Person Name</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LCCODE</attrlabl>
+        <attrdef>2009 Land Cover Code</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LUCODE</attrlabl>
+        <attrdef>2009 Land Use Code</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Le_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The FLUCCS uses 4-digit integer codes to represent the land use or land cover types within the classification system pertaining to wetlands, uplands, and anthropogenic features.  The land cover code is populated in LCCODE field and the land use code populated in LUCODE. 
+(Download PI-Key PDF from http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi-key.pdf)</eaover>
+      <eadetcit>Users should refer to the Florida Department of Transportation FLUCCS and the SFWMD Photointerpretation Classification Key for the full definitions of the class codes.
+</eadetcit>
+      <dsoverv>A polygon featureclass contains 2008-09 Land Use Land Cover features updated using 2008-09 county aerial photography within SFWMD boundary.</dsoverv>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

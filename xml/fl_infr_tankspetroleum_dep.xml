@@ -1,0 +1,195 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Registered Tanks from STCM</title>
+        <geoform>vector digital data</geoform>
+        <onlink>file://</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Identify regulated and non-regulated petroleum facilities. The Petroleum Program regulates (permitting, compliance, enforcement) the design, construction, operation and maintenance of Petroleum Facilities Storage Tanks.John Knowles received data from Alison Higgins of The Nature Conservancy who received it from below: Renee DuffeyGIS CoordinatorFDEP-South District2295 Victoria Ave, Suite 364Fort Myers, FL 33901Office 239-344-5633 (new number)Renee.Duffey@dep.state.fl.us</abstract>
+      <purpose>All registered petroleum facilities.  Facilities that meet Homeland Security exemption requirements are not included.  For information on facilities that are excluded please contact STCM_Support@dep.state.fl.us
+</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.813823</westbc>
+        <eastbc>-80.279130</eastbc>
+        <northbc>25.327067</northbc>
+        <southbc>24.547264</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>There are several other GIS layers available for download from the DEP website at: http://www.dep.state.fl.us/gis/datadir.htm  
+You can also view DEP’s GIS data from our online mapping site MapDirect at: http://ca.dep.state.fl.us/mapdirect/ 
+</useconst>
+    <datacred>Data was collected by SWAPP program staff and was inspected by either FDEP staff, county agencies or delegated agencies that collected the data.
+</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>497</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_infr_tankspetroleum_dep</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_I</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CC_COUNTY_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_N</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_S</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_T</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_C</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_2</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CLEANUP_ST</attrlabl>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>REGULATED Y or N identified if the facility is regulated by the Bureau of Petroleum Storage Systems
+
+CC_COUNTY Numeric code identifying the county which the facility operates in.
+ For a complete list of the numeric codes, see the fields PK_COUNTY
+ and NAME in the lookup table bis_lib.mt_county on FDEP
+ 0 None
+ 1-67 County names in alphabet order
+ 99 All
+
+FACILITY_S (Facility Status)
+ OPEN
+ CLOSED
+ DELETED
+ ABANDONED
+ DUPLICATE
+ OPEN-SH
+ OPEN-NSH
+ CLOSED-SH
+ CLOSED-NSH
+ UNDETERMINED
+ 
+FACILITY_T (Facility Type)
+ A = Retail Station
+ B = Residential 
+ C = Fuel user/Non-retail
+ D = Bulk Storage Facility
+ E = Industrial Plant
+ F = Federal Government
+ G = State Government
+ H = Local Government
+ I = County Government
+ N = Indian Land
+ J = Collection Station
+ K = Bulk Chemical Storage
+ L = Chemical user
+ M = Agricultural
+ T = Bulk Product Terminal Facility
+ V = Marine/Coastal Fuel Storage
+ Z = Other Regulated Facility
+ X = Contamination Site
+ S = Not Used
+ O = Special Cleanup Project
+ 1 = Drycleaner
+ 2 = Wholesale supplier
+ 3 = Dry drop-off
+ 4 = Uniform-Linen service
+ 5 = Coin Laundry
+ 6 = Dryclean-related other
+ W = Waterfront Fuel Storage
+ P = UST Residential (UST&gt;1100 gals)
+ R = Terminal/NonReg Tanks
+ Q = Emergency Response Spill Site
+
+FACILITY_C (Facility Cleanup Status)
+  APPL Applied
+  CMPL Completed (All related discharge cleanup activities are completed.  At
+   least one discharge required a cleanup activity.)
+  NREQ Not Required (All related discharges either did not require cleanup per
+   Chapter 62-770 rules, or no contamination was found by inspection.)
+  ONGO Ongoing (At least one cleanup activity is in progress at a related
+   discharge.)
+  REPT Report of Discharge Received
+  UNLV Unavailable
+  VCCR Verified Contamination - Cleanup Required
+  
+CLEANUP_ST (Cleanup Status Effective Date)
+The date the facility cleanup status became effective.</eaover>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120412</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

@@ -1,0 +1,347 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Water Resources Division</origin>
+				<title>Coastal Critical Erosion Areas 2013</title>
+				<edition>1.0</edition>
+				<geoform>vector digital data</geoform>
+				<pubinfo>
+					<pubplace>Tallahassee FL.</pubplace>
+					<publish>FDEP</publish>
+				</pubinfo>
+				<othercit>The determination of beach condition was under the direction of Ralph Clark and his staff of Coastal Engineers</othercit>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Based on the Critical Erosion Report for 2013. Indicates the condition of shoreline, determined by our staff of Coastal Engineers. This report is used to document areas of change and to help the beach management staff with prioritizing projects and resources to the areas of greatest need.</abstract>
+			<purpose>To show the areas and severity of beach erosion as determined by our engineering staff.</purpose>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>20130627</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Annually</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-87.517550</westbc>
+				<eastbc>-80.029894</eastbc>
+				<northbc>30.706217</northbc>
+				<southbc>24.543421</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>Coastal</themekey>
+				<themekey>Beach</themekey>
+				<themekey>Erosion</themekey>
+				<themekey>Coastline</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Gulf Coast</placekey>
+				<placekey>Panhandle</placekey>
+				<placekey>Florida</placekey>
+				<placekey>beach</placekey>
+				<placekey>Atlantic Coast</placekey>
+				<placekey>Northwest coast</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>Florida Dept. of Environmental Protection, Water Resources Division must be given credit if used in any presentation, printed or digital.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Water Resources Division</cntorg>
+					<cntper>Gary Cook</cntper>
+				</cntorgp>
+				<cntpos>GIS Coordinator</cntpos>
+				<cntaddr>
+					<addrtype>mailing</addrtype>
+					<address>MS 3590</address>
+					<address>3900 Commonwealth Blvd.</address>
+					<city>Tallahassee</city>
+					<state>FL</state>
+					<postal>32399</postal>
+					<country>US</country>
+				</cntaddr>
+				<cntvoice>850 413-7719</cntvoice>
+				<cntemail>gary.cook@dep.state.fl.us</cntemail>
+				<hours>M-F 800 to 1700 EST -5 GMT</hours>
+			</cntinfo>
+		</ptcontac>
+		<native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>NOT drawn to any accuracy level. Only a graphic to generally indicate areas of erosion. Specifics contained in the written report. NOT to be used in engineering or surveying determinations.</attraccr>
+		</attracc>
+		<complete>Lines were drawn to be offshore from the shoreline in our photos. They may not align with other data sources. Since the shapefile is to be used only as a graphic, we did not require any survey quality accuracy. This is the final version for the year 2013</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>NONE This is only a graphic</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Beaches,Mines and ERP Support Group</origin>
+						<title>Shapefile creation</title>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Tallahassee FL</pubplace>
+							<publish>FDEP</publish>
+						</pubinfo>
+						<onlink>http://www.dep.state.fl.us/beaches/data/gis-data.htm</onlink>
+					</citeinfo>
+				</srccite>
+				<typesrc>hardcopyPaper</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20130627</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+				<srccitea>GIS</srccitea>
+				<srccontr>Creation of shapefile for locations contained in the report "Critically Eroded Beaches in Florida 2013"</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Creation of shapefile</procdesc>
+				<srcused>GIS</srcused>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Bureau of Beaches and Coastal Systems</cntorg>
+							<cntper>Gary Cook</cntper>
+						</cntorgp>
+						<cntpos>GIS Coordinator</cntpos>
+						<cntaddr>
+							<addrtype>mailing</addrtype>
+							<address>MS 300</address>
+							<address>3900 Commonwealth Blvd.</address>
+							<city>Tallahassee</city>
+							<state>FL</state>
+							<postal>32399</postal>
+							<country>US</country>
+						</cntaddr>
+						<cntvoice>850 419-7719</cntvoice>
+						<cntemail>gary.cook@dep.state.fl.us</cntemail>
+						<hours>M-F 800 to 1700 EST -5 GMT</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Determination of location and status of eroded areas in Florida.</procdesc>
+				<srcused>GIS</srcused>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Water Resources Division</cntorg>
+							<cntper>Gary Cook</cntper>
+						</cntorgp>
+						<cntpos>GIS Coordinator</cntpos>
+						<cntaddr>
+							<addrtype>mailing</addrtype>
+							<address>M.S. 3590</address>
+							<address>3900 Commonwealth Blvd.</address>
+							<city>Tallahassee</city>
+							<state>FL</state>
+							<postal>32399</postal>
+							<country>US</country>
+						</cntaddr>
+						<cntvoice>850 413-7719</cntvoice>
+						<cntemail>gary.cook@dep.state.fl.us</cntemail>
+						<hours>M-F 800 to 1700 EST -5 GMT</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied from previous year.</procdesc>
+				<srcused>GIS</srcused>
+				<procdate>20100520</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Updated data in SDE/DataMiner for the year 2013 from an update provided by the Water Resources Division. Metadata updated.</procdesc>
+				<procdate>20130821</procdate>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>String</sdtstype>
+				<ptvctcnt>189</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>FL_Critical_Erosion_Areas</enttypl>
+				<enttypd>Annual Report on the Erosion Areas in the State of Florida</enttypd>
+				<enttypds>Published Report</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>OBJECTID_1</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>RANGES</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>STATUS</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LOCAL_NAME</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>COUNTY</attrlabl>
+				<attrdef>County record is located in</attrdef>
+				<attrdefs>BBCS</attrdefs>
+			</attr>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Water Resources Division</cntorg>
+					<cntper>Gary Cook</cntper>
+				</cntorgp>
+				<cntpos>GIS Coordinator</cntpos>
+				<cntaddr>
+					<addrtype>mailing</addrtype>
+					<address>3900 Commonwealth Blvd.</address>
+					<address>MS 3590</address>
+					<city>Tallahassee</city>
+					<state>FL</state>
+					<postal>32399</postal>
+					<country>US</country>
+				</cntaddr>
+				<cntvoice>850 413-7719</cntvoice>
+				<cntemail>gary.cook@dep.state.fl.us</cntemail>
+				<hours>M-F 800 to 1700 EST -5 GMT</hours>
+			</cntinfo>
+		</distrib>
+		<distliab>See access and use constraints information.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>SHP</formname>
+					<formspec>Can be used in any program with ability to recognize ESRI shapefiles</formspec>
+					<filedec>no compression applied</filedec>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.dep.state.fl.us/beaches/data/gis-data.htm</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>None</fees>
+			<ordering>Can be e-mailed if access to web is restricted</ordering>
+			<turnarnd>Immediately</turnarnd>
+		</stdorder>
+		<availabl>
+			<timeinfo>
+				<sngdate>
+					<caldate>20130627</caldate>
+				</sngdate>
+			</timeinfo>
+		</availabl>
+		<techpreq>To be used only in GIS programs with the ability to recognize ESRI shapefile format.</techpreq>
+	</distinfo>
+	<metainfo>
+		<metd>20140905</metd>
+		<metfrd>20140601</metfrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Florida Department of Environmental Protection (FDEP) OTIS/GIS Section</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical</addrtype>
+					<address>2600 Blair Stone Rd</address>
+					<address>MS 6520</address>
+					<city>Tallahassee</city>
+					<state>FL</state>
+					<postal>32399</postal>
+					<country>US</country>
+				</cntaddr>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\TERMINAL\D\temp\SEFL\New Folder\FL_Critical_Erosion_Areas</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="D:\temp\FL_Critical_Erosion_Areas" dest="\\TERMINAL\D\temp\SEFL\New Folder\FL_Critical_Erosion_Areas" date="20141103" time="12524600"></copy></copyHistory></DataProperties></Esri></metadata>

@@ -1,0 +1,152 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Airport Facility</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Transportation systems in HAZUS include highways, railways, light rail, bus, ports, ferries and airports. The inventory data required for these include the geographical location, and classification of system components.Airport transportation systems consist of runways, control towers, terminal buildings, parking structures, fuel facilities, and maintenance and hanger facilities. Airport runways and facilities datasets were developed from 1999 data obtained from the Bureau of Transportation Statistics (U.S. Department of Transportation), Federal Aviation Administration. Heliports are not included.Notes:12. The contact information for NBI is The Federal Highway Administration, 400 7th Street, SW, Washington, DC 20590. 13. The contact information for the BTC is : Bureau of Transportation Statistics, 400 7th Street, SW o Room 3103, Washington, DC 20590 (L'Enfant Plaza Metrorail Station (7th and D Streets exit), 800-853-1351.14. The contact information for the USACE is : Department of the Army Corps of Engineers, CEIWR-NDC-N, 7701 Telegraph Road, Alexandria, Virginia 22315-3868.</abstract>
+      <purpose>For the FL Keys SLR mapping effort.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.759550</westbc>
+        <eastbc>-81.051380</eastbc>
+        <northbc>24.726140</northbc>
+        <southbc>24.556110</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <datacred>HAZUS-MH</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>3</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_infr_airportflty</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AirportFlt</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>TranspFclt</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Tract</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Name</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Address</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>City</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Statea</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Zipcode</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Owner</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Contact</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PhoneNumbe</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Use</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>YearBuilt</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Cost</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Cargo</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NumFlights</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NumPasseng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>BackupPowe</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Comment</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20110907</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

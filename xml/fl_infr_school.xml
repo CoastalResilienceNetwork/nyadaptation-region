@@ -1,0 +1,161 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<title>School</title>
+				<geoform>vector digital data</geoform>
+				<onlink>file://\\r4li3g01\hazus\MR2_Data\FL1\EF.mdb</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>The schools data set was developed from the 2000 Public Elementary/Secondary School Universe Survey Data and the Private School Universe Survey Data maintained by the National Center for Education Statistics, U.S. Department of Education(see note #8). A proprietary geocoding application was used to assign geographical coordinates to each school based on its address. 8. The contact information for the National Center for Education Statistics: 1990 K Street, NW, Washington, DC 20006, USA, Phone: (202) 502-7300.</abstract>
+			<purpose>Inventory data for HAZUS-MH</purpose>
+		</descript>
+		<spdom>
+			<bounding>
+				<westbc>-81.798400</westbc>
+				<eastbc>-80.292020</eastbc>
+				<northbc>25.296840</northbc>
+				<southbc>24.552390</southbc>
+			</bounding>
+		</spdom>
+		<keywords/>
+		<accconst>None</accconst>
+		<useconst>REQUIRED: Restrictions and legal prerequisites for using the data set after access is granted.</useconst>
+		<datacred>HAZUS-MH</datacred>
+		<native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+	</idinfo>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Entity point</sdtstype>
+				<ptvctcnt>28</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000000006714873101998366</absres>
+						<ordres>0.000000006714873101998366</ordres>
+					</coordrep>
+					<plandu>Meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>fl_infr_school</enttypl>
+			</enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SchoolId</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>EfClass</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Tract</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Name</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Address</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>City</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Zipcode</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Statea</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Contact</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PhoneNumbe</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>YearBuilt</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>NumStories</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Cost</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>NumStudent</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>BackupPowe</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>ShelterCap</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Area</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>District</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Kitchen</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Latitude</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Longitude</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Comment</attrlabl>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distliab>See access and use constraints information.</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20120412</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\MAPS18\C$\inetpub\wwwroot\xml\fl_infr_school</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\arcgisserver\data\Florida Keys\Prepped\Infrastructure\fl_infr_school" dest="\\MAPS18\C$\inetpub\wwwroot\xml\fl_infr_school" date="20120412" time="12533000"></copy></copyHistory></DataProperties></Esri></metadata>

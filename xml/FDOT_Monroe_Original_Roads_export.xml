@@ -1,0 +1,216 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>FDOT_Monroe_Original_Roads</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This dataset was developed through an integration of three sources: 1) FDOT's GIS On-systems Roads (RCI_On) feature class (as obtained from the Sea Level Scenario Sketch Planning Tool); 2) FDOT's GIS Off-system Roads (RCI_OFF) feature class (as obtained from the Sea Level Scenario Sketch Planning Tool); and 3) Monroe County's road Centerlines GIS feature class (as obtained from the Monroe County Property Appraiser's GIS office). Although the Monroe County Centerlines dataset has significantly more complete coverage of road segments, visual inspection indicated that spatial accuracy is generally higher for road segments contained within the FDOT datasets. To integrate these datasets, the FDOT RCI_On and RCI_Off were first clipped to the boundary of Monroe County and then merged into one polyline shapefile (FDOT_RCI_Monroe_Merged). A 15 meter dissolved buffer (FDOT_RCI_Merged_Buffer) was then created around the merged FDOT polyline file. A select by location analysis was then used to select polyline segments from Monroe County's road Centerlines GIS feature class contained within the FDOT_RCI_Merged_Buffer. Because this automated selection process incompletely identified features from Centerlines that were duplicative of those in FDOT_RCI_Monroe_Merged, several additional duplicative polylines from Centerlines were then manually selected. Once all duplicative segments were selected successfully, a reverse selected features command was then performed on Centerlines. These selected features, which represent those road segments in Centerlines that are not duplicative of those in FDOT_RCI_Monroe_Merged, were then exported to a new feature class (Monroe_Neighborhood_Road_Centers). The final geo-processing step was to merge FDOT_RCI_Monroe_Merged with Monroe_Neighborhood_Road_Centers. Original metadata description for RCI_On is as follows: "The Off-systems Roads feature class covers the state of Florida. This layer represents roads not maintained by Florida DOT that are city or county owned."Original metadata description for RCI_Off is as follows: "The FDOT GIS Off-system Roads feature class provides spatial information on Florida Roads not maintained by Florida DOT that are city or county owned."</abstract>
+      <purpose>This dataset provides a full set of road centerlines in Monroe County, Florida for use in sea level rise inundation modeling. The dataset was developed in 2014 at Stetson University and the University of Georgia Carl Vinson Institute of Government through the GreenKeys! planning process, as sponsored by Monroe County's Sustainability Program.  </purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.808884</westbc>
+        <eastbc>-80.257510</eastbc>
+        <northbc>25.803530</northbc>
+        <southbc>24.546578</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>inundation</themekey>
+        <themekey>sea level rise</themekey>
+        <themekey>sea level change</themekey>
+        <themekey>roads</themekey>
+        <themekey>climate change</themekey>
+        <themekey>flooding</themekey>
+        <themekey>Monroe County</themekey>
+        <themekey>Florida</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Original data for the FDOT datasets include the following text: "This product has been compiled from the most accurate source data from the Florida Department of Transportation's Transportation Statistics Office. However, this product is for reference purposes only and is not to be construed as a legal document or survey instrument. Any reliance on the information contained herein is at the user's own risk. The Florida Department of Transportation assumes no responsibility for any use of the information contained herein or any loss resulting therefrom."The Centerline dataset from the Monroe County Property Appraiser contained no metadata at the time this new dataset was assembled. The Centerline dataset, however, is also not of survey quality, meaning that the limitations described by FDOT should be similarly applied to all information in this dataset.</useconst>
+    <datacred>Jason M. Evans, PhD, Stetson University, Department of Environmental Science and Studies; University of Georgia, Carl Vinson Institute of Government; Monroe County, Florida; Florida Department of Transportation; University of Florida, GeoPlan Center</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>String</sdtstype>
+        <ptvctcnt>7346</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>RCI_OFF_APR13</enttypl>
+        <enttypd>RCI_OFF_APR13</enttypd>
+        <enttypds>Florida Department of Transportation, Transportation Statistics Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ROADWAY</attrlabl>
+        <attrdef>Roadway ID - A unique 8-character identification number assigned to a roadway or section of a roadway either On or Off the State Highway System for which information is maintained in the Department's Roadway Characteristics Inventory (RCI).</attrdef>
+        <attrdefs>Florida Department of Transportation, Transportation Statistics Office</attrdefs>
+        <attrdomv>
+          <udom>8-character ID, the first two characters are the county code, the next  3 are the section code, and final 3 characters are the subsection code.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ROAD_STATU</attrlabl>
+        <attrdef>Road status codes
+
+</attrdef>
+        <attrdefs>Florida Department of Transportation, Transportation Statistics Office</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>01</edomv>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+            <edomvd>Pending - Roadways that are pending addition.</edomvd>
+          </edom>
+          <edom>
+            <edomv>02</edomv>
+            <edomvd>Active On System - Main-line roadways maintained by the Department.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>04</edomv>
+            <edomvd>Inactive - History</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>05</edomv>
+            <edomvd>Deleted - Roadways physically deleted.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>06</edomv>
+            <edomvd>Active/Lane Miles (1-way pair). Not used.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>07</edomv>
+            <edomvd>Active Exclusive (e.g. ramps, access and frontage roadways) - non-mainline roadways maintained by the Department.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>08</edomv>
+            <edomvd>Dummy - Roadway examples used for training.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>09</edomv>
+            <edomvd>Active Off System - Roadways not maintained by the Department that are city or county owned.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Active With Combination - Roadways with more than one status.</edomvd>
+            <edomvds>Florida Department of Transportation, Transportation Statistics Office</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Local Name</attrdef>
+        <attrdefs>Florida Department of Transportation, Transportation Statistics Office</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FUNCLASS</attrlabl>
+        <attrdef>Functional Class</attrdef>
+        <attrdefs>Florida Department of Transportation, Transportation Statistics Office</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>MILES</attrlabl>
+        <attrdef>Length in miles</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DESCRIPT</attrlabl>
+        <attrdef>GeoPlan added field based on FUNCLASS</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AUTOID</attrlabl>
+        <attrdef>Unique ID added by GeoPlan</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FULL_NAME</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>File Geodatabase Feature Class</formname>
+          <transize>4.568</transize>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20141101</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

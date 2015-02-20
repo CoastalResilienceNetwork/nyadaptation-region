@@ -1,0 +1,227 @@
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<title>Wastewater Facilities from WAFR IMS </title>
+				<geoform>vector digital data</geoform>
+				<onlink>file://</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Statewide coverage of Wastewater Facility Regulation (WAFR) Facilities. This dataset includes facilities whose current operating status is Active, Closed but Monitored, or Under Construction. Also included are un-permitted facilities for which a permit is required. These facilities are regulated by the following Florida Department of Environmental Protection programs - "Industrial Wastewater Program", "Domestic Wastewater Program", "Phosphate Management Wastewater Program", "Power Plant Management Wastewater Program".</abstract>
+			<purpose>None.</purpose>
+		</descript>
+		<spdom>
+			<bounding>
+				<westbc>-81.796798</westbc>
+				<eastbc>-80.279581</eastbc>
+				<northbc>25.320793</northbc>
+				<southbc>24.567339</southbc>
+			</bounding>
+		</spdom>
+		<keywords/>
+		<accconst>None</accconst>
+		<useconst>This data is intended to be used for general informational and planning purposes, and is not appropiate for legal and/or cadastral purposes.</useconst>
+		<native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.0.2414</native>
+	</idinfo>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Entity point</sdtstype>
+				<ptvctcnt>154</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000000006714873101998366</absres>
+						<ordres>0.000000006714873101998366</ordres>
+					</coordrep>
+					<plandu>Meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>fl_WAFR_Facilities</enttypl>
+			</enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FACILITY_N</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>ENVIRONMEN</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>MANAGED_EN</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>FACILITY_T</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>FACILITY_S</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>NPDES</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>OFFICE_NAM</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>COUNTY_NAM</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>CMCD_COORD</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>CAC1_COORD</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>OOIC_OBJEC</attrlabl>
+			</attr>
+		</detailed>
+		<overview>
+			<eaover>ATTRIBUTE DESCRIPTION :
+
+PK$WAFR_FACILITY     Unique sequence identifier (key) for the facility record
+
+FACILITY_ID  	     Unique Facility ID
+
+COUNTY	Numeric code identifying the county which the facility operates in.
+	For a complete list of the numeric codes, see the fields PK_COUNTY
+	and NAME in the lookup table bis_lib.mt_county on FDEP
+	0	None
+	1-67	County names in alphabet order
+	99	All
+
+OFFICE	The DEP District or county office responsible for the facility
+	For a complete list, see the lookup table bis_lib.offices on DEV/FDEP
+	CD	Central District
+	NED	Northeast District
+	NWD	Northwest District
+	NWDP	Northwest District Branch (Panama City)
+	SD	South District
+	SDB	South District Branch
+	SED	Southeast District
+	SEDB	Southeast District Branch
+	SEPB	Palm Beach County
+	SWD	Southwest District
+	SWDS	Desoto County
+	SWHI	Hillsborough County
+	SWPM	
+	SWSA	Sarasota County
+
+FACILITY_TYPE
+	AFO	Animal Feeding Operation
+	AGR	Agricultural
+	CBP	Concrete Batch GP
+	CFO	Concentrated Animal Feeding Operation
+	CON	Conservation Area
+	DEW	Dewatering GP
+	DW	Domestic Wastewater Treatment Plant
+	IU	Industrial User
+	IW	Industrial Wastewater
+	MCP	MS4 Co-permittee
+	NEX	Stormwater No Exposure Certification                                                 
+	OTH	Other
+	PED	Petroleum Cleanup GP (8 hr)
+	PES	Petroleum Cleanup GP (&lt;=30-day duration)
+	PET	Petroleum Cleanup GP (long term)
+	RAF	Residuals Application Facility
+	RES     Residuals/Septage Management Facility
+	REU	Reuse/Distribution System
+	UIC	Underground Injection Control Facility                                               
+
+STATUS  A  Active
+        C  Closed But Monitored
+        N  Active Permit not Required
+        P  Plugged and Abandoned (UIC)
+        T
+        X  Active Unpermitted Discharge
+	
+NPDES  	Y	National Pollution Discharge Elimination System 
+        N	State or Local Facility
+	
+DESIGN_CAPACITY	Designed capacity of facility in MGD
+
+FEATURE         Description of the point used to represent the Facility.
+                Various values which include:
+                Front Gate
+                Center of Plant
+                Other
+                Treatment Plant Headworks	
+	
+GIS_QA_METHOD   NOT REVIEWED
+                VISUAL QA WITH DOQ
+
+USERNAME	Identifier of the last user to update this record
+
+TIME_STAMP	Date the record was last updated
+
+DATUM  Code   Description                       Spheroid       Old
+       CAC    CAPE CANAVERAL                    CLARKE 1866    66
+       HARN   HIGH ACCURACY REFERENCE NETWORK   GRS80          80
+       HGPN   HIGH PRECISION GPS NETWORK        GRS80          90
+       NAD27  NORTH AMERICAN DATUM OF 1927      CLARKE 1866    27
+       NAD83  NORTH AMERICAN DATUM OF 1983      GRS80          83
+       WGS84  WORLD GEODETIC SURVEY OF 1984     WGS84          84
+
+METHOD	ADDM 	Address Matching
+	AGPS 	Autonomous GPS
+	DGPS 	Differentially Corrected GPS
+	DMAP 	Digital Map Interpolation
+	DPHO 	Digital Aerial Photography
+	GGPS 	Geodetic Quality Global Positioning System (GPS)
+	LORN 	LORAN-C Navigational Device
+	MMAP 	Manual Map Interpolation
+	MPHO 	Manual Aerial Photography
+	SATI 	Satellite Imagery
+	UNVR 	Unverified
+	ZIPC 	Zip Code Centroid
+	
+SHAPE	Column used by ArcSDE which does not show up as a field in ArcView</eaover>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distliab>See access and use constraints information.</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20121109</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\IP-0A7A5217\G$\Global\Florida Keys\xml\fl_WAFR_Facilities</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="G:\Global\Florida Keys\Prepped\Social_and_Economic\fl_WAFR_Facilities" dest="\\IP-0A7A5217\G$\Global\Florida Keys\xml\fl_WAFR_Facilities" date="20121109" time="04341000"></copy></copyHistory></DataProperties></Esri></metadata>

@@ -1,0 +1,119 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Storm Surge Zones v6C</title>
+        <geoform>vector digital data</geoform>
+        <onlink>file://\\DCAD006700\D$\GIS\StormSurgeZones\storm_surge_zones_v6C.gdb</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This polygon shapefile or featureset depicting Surge Zones, was created using a Surge Modeling application created for the Florida Statewide Regional Evacuation Update Study. The data was derived from National Hurricane Center SLOSH model runs on all the NOAA SLOSH basins throughout Florida. The runs create outputs for all different storm simulations from all points of the compass. Each direction has a MEOW (maximum envelope of water) for each category of storm (1-5), and all directions combined result in a MOMs (maximum of maximums) set of data. The MOMs are used in this surge model. The application uses three input parameters or data: elevation (from LIDAR), SLOSH basin results, and contiguous shoreline or sea polygons. The LIDAR data used has been converted to a DEM with 5ft pixel resolution. All processing takes place at the same raster resolution, so the resulting surge polygons (if 5ft) are a spline curve-fitting representation loosely following the outer third of each pixel. The shoreline features are used to process only contiguous surge zones for each category storm, so there are no lower surge "islands" in the interior of the surge output features.</abstract>
+      <purpose>Florida Statewide Regional Evacuation Study Update</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.815802</westbc>
+        <eastbc>-80.169042</eastbc>
+        <northbc>25.543139</northbc>
+        <southbc>24.544113</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>This data is intended for planning and preparedness uses only. Please check sources, scale, accuracy, currentness and other available information. Please confirm that you are using the most recent copy of both data and metadata.  Acknowledgement of FDEM would be appreciated.
+Obtained from http://floridadisaster.org/gis/data/ as instructed by Richard Butgereit from FDEM.  TNC obtained from SFWMD (Diana Umpierre). </useconst>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>13897</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_hz_stormsurgezones</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cat</attrlabl>
+        <attrdef>Storm Surge Category</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>RPC</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>edited</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Le_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

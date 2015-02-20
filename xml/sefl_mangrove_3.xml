@@ -1,0 +1,560 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</origin>
+				<pubdate>unpublished material</pubdate>
+				<title>Mangrove_3</title>
+				<geoform>vector digital data</geoform>
+				<onlink>http://myfwc.com/research/</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This GIS data set represents mangroves in Florida. The data are reselected from land use and land cover data from Florida's water management districts.</abstract>
+			<purpose>This GIS data set represents mangrove areas in Florida.</purpose>
+			<supplinf>Prior to July 1, 2004, the Fish and Wildlife Research Institute (FWRI) was known as the Florida Marine Research Institute (FMRI). The institute name has not been changed in historical data sets or references to work completed by the Florida Marine Research Institute. The institute name has been changed in references to ongoing research, new research, and contact information.</supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<mdattim>
+					<sngdate>
+						<caldate>19990101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20100101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20090101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20060101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20080101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20040101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20110101</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20050101</caldate>
+					</sngdate>
+				</mdattim>
+			</timeinfo>
+			<current>ground condition</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-83.092519</westbc>
+				<eastbc>-80.035680</eastbc>
+				<northbc>29.921125</northbc>
+				<southbc>24.522501</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>Vegetation</themekt>
+				<themekey>mangroves</themekey>
+			</theme>
+			<theme>
+				<themekt>ISO 19115 Topic Category</themekt>
+				<themekey>biota</themekey>
+			</theme>
+			<theme>
+				<themekt>FWC Theme</themekt>
+				<themekey>wetlands</themekey>
+				<themekey>coastal</themekey>
+				<themekey>mapping</themekey>
+				<themekey>land use/land cover</themekey>
+				<themekey>GIS</themekey>
+			</theme>
+			<theme>
+				<themekt>ISO 19115 Topic Categories</themekt>
+				<themekey>biota</themekey>
+			</theme>
+			<place>
+				<placekt>FWC Regions</placekt>
+				<placekey>statewide</placekey>
+				<placekey>Northeast</placekey>
+				<placekey>South</placekey>
+				<placekey>Florida</placekey>
+				<placekey>Southwest</placekey>
+				<placekey>North Central</placekey>
+			</place>
+			<place>
+				<placekt>Water Management Districts</placekt>
+				<placekey>St. Johns River</placekey>
+				<placekey>Southwest Florida</placekey>
+				<placekey>Suwannee River</placekey>
+				<placekey>South Florida</placekey>
+			</place>
+			<place>
+				<placekt>FWC Place</placekt>
+				<placekey>statewide</placekey>
+				<placekey>Florida</placekey>
+			</place>
+		</keywords>
+		<accconst>These data are unrestricted. Where possible, always acquire this dataset directly from FWC as other sources may have altered the original data.</accconst>
+		<useconst>Users are encouraged to read and fully comprehend the metadata record prior to using these data. Please acknowledge the Florida Fish and Wildlife Conservation Commission (FWC) as the data source for any products developed from these data. Users should be aware that comparison with other data sets for the same area may be inaccurate due to inconsistencies resulting from changes in mapping conventions, data collection techniques, and computer processes over time. FWC shall not be liable for improper or incorrect use of these data.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+					<cntper>GISLibrarian</cntper>
+				</cntorgp>
+				<cntpos>GIS Data Librarian</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical</addrtype>
+					<address>100 Eighth Avenue Southeast</address>
+					<address>Fish and Wildlife Research Institute</address>
+					<city>St. Petersburg</city>
+					<state>Florida</state>
+					<postal>33701</postal>
+					<country>US</country>
+				</cntaddr>
+				<cntvoice>727-896-8626</cntvoice>
+				<cntfax>727-893-1679</cntfax>
+				<cntemail>GISLibrarian@MyFWC.com</cntemail>
+				<hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+			</cntinfo>
+		</ptcontac>
+		<datacred>The data are reselected from land use land cover data from the Southwest Florida Water Management District, St. Johns River Water Management District, Suwannee River Water Management District, and South Florida Water Management District, and additional mangroves mapped by Coastal Planning &amp; Engineering, Inc in the Marquesas.</datacred>
+		<secinfo>
+			<secsys>FWRI-DC</secsys>
+			<sechandl>Available without restriction</sechandl>
+		</secinfo>
+		<native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>Attribute accuracy has not been tested by FWRI. See the metadata for the source data sets for more information.</attraccr>
+		</attracc>
+		<logic>These data are logically consistent. Topology was run and no overlaps present.</logic>
+		<complete>These data are complete for the state of Florida.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Positional accuracy has not been tested by FWRI. See metadata for the source data sets. See the metadata for the source data sets for more information.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Coastal Planning &amp; Engineering, Inc.</origin>
+						<pubdate>20110601</pubdate>
+						<title>Benthic Habitats Marquesas-Quicksands Florida 2006</title>
+					</citeinfo>
+				</srccite>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>20060304</begdate>
+							<enddate>20061007</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>benthic_marquesas_2006_poly</srccitea>
+				<srccontr>Polygons coded as "CONTINUOUS MANGROVE", "PATCHY MANGROVE", or "SPARSE MANGROVE" were recoded as "Mangrove Swamp" and included in this compilation, only where no more recent data were available. In areas of overlap with 'landuse_sfwmd_2008_09', the more recent data were used. In areas of overlap with earlier SFWMD data, the Marquesas data were use, unless the "Major_bio_" was "UNKNOWN" or uncoded - in which case SFWMD from an earlier time period (2004-05 or 1999) were used.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>South Florida Water Management District (SFWMD)</origin>
+						<pubdate>20110930</pubdate>
+						<title>Land Use Land Cover South Florida Water Management District 2008-2009</title>
+						<onlink>http://my.sfwmd.gov/gisapps/sfwmdxwebdc/dataview.asp?</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>12000</srcscale>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>20080101</begdate>
+							<enddate>20090101</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_sfwmd_2008_09</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. In areas of overlap with the Southwest Florida Water Management District and St. Johns River Water Management District data, the other districts' data were used in the compilation since they had more detail. The minimum mapping unit for mangroves in SJRWMD and SWFWMD was 0.5 acre and the South Florida Water management district data had a minimum mapping unit of 2 acres.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Florida Department of Environmental Protection (FDEP)</origin>
+						<pubdate>unknown</pubdate>
+						<title>landuse_srwmd_2010_11</title>
+						<geoform>vector digital data</geoform>
+						<onlink>http://www.dep.state.fl.us/gis/datadir.htm</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>12000</srcscale>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>20100101</begdate>
+							<enddate>20110101</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_srwmd_2010_11</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. All polygons were used in the compilation.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Photo Science, Inc.</origin>
+						<pubdate>unknown</pubdate>
+						<title>landuse_sfwmd_2004_05</title>
+						<geoform>vector digital data</geoform>
+						<onlink>http://www.sfwmd.gov</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>12000</srcscale>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>20040101</begdate>
+							<enddate>20050101</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_sfwmd_2004_05</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. Polygons from this data set were only used where no more recent data had been interpreted.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Southwest Florida Water Management District</origin>
+						<pubdate>20120316</pubdate>
+						<title>landuse_swfwmd_2011_poly</title>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>2379 Broad Street (US 41 South), Brooksville Florida 34604-6899</pubplace>
+							<publish>Southwest Florida Water Management District</publish>
+						</pubinfo>
+						<onlink>http://www.swfwmd.state.fl.us/data/gis/</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>12000</srcscale>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20110101</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_swfwmd_2011</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. All polygons were used in the compilation.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>St. Johns River Water Management District</origin>
+						<pubdate>20110301</pubdate>
+						<title>landuse_sjrwmd_2009</title>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Palatka, Florida</pubplace>
+							<publish>St. Johns River Water Management District</publish>
+						</pubinfo>
+					</citeinfo>
+				</srccite>
+				<srcscale>12000</srcscale>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>20081201</begdate>
+							<enddate>20090301</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_sjrwmd_2009</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. All polygons were used in the compilation.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>South Florida Water Management District</origin>
+						<pubdate>unknown</pubdate>
+						<title>landuse_sfwmd_1999_H</title>
+						<geoform>vector digital data</geoform>
+						<onlink>http://www.sfwmd.gov</onlink>
+					</citeinfo>
+				</srccite>
+				<typesrc>None</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>19990101</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>landuse_sfwmd_1999_H</srccitea>
+				<srccontr>Code 6120 'Mangrove Swamp' was reselected from this data set. Polygons from this data set were only used where no more recent data had been interpreted. Note: Source metadata is inconsistent in scale information. The source data are either 1:12,000 scale or 1:40,000 scale.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Code 6120 (mangrove swamp) was selected out of the 2004 or 2005 land use land cover data from Florida's water management districts. In areas where this data was not present, older data were used. See source contributions for more details.</procdesc>
+				<procdate>20080301</procdate>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+							<cntper>GISLibrarian</cntper>
+						</cntorgp>
+						<cntpos>GIS Data Librarian</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical</addrtype>
+							<address>100 Eighth Avenue Southeast</address>
+							<address>Fish and Wildlife Research Institute</address>
+							<city>St. Petersburg</city>
+							<state>Florida</state>
+							<postal>33701</postal>
+							<country>US</country>
+						</cntaddr>
+						<cntvoice>727-896-8626</cntvoice>
+						<cntfax>727-893-1679</cntfax>
+						<cntemail>GISLibrarian@MyFWC.com</cntemail>
+						<hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>This data set was updated using 2007 landcover information from SWFWMD. See source information for more details.</procdesc>
+				<procdate>20081201</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated in 2009 to reflect the most recent land use land cover data available. All data are 2004 or more recent with the exception of some 1999 data used to fill gaps in South Florida. See source information for more details.</procdesc>
+				<procdate>20090501</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated April 2010 to include the 2006-08 landuse from SRWMD.</procdesc>
+				<procdate>20100401</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated to include the SWFWMD 2008 landcover.</procdesc>
+				<procdate>20100501</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated to include the SWFWMD 2009 landcover.</procdesc>
+				<procdate>20101201</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated in October 2011 to include 2008-09 landcover data from SFWMD.</procdesc>
+				<procdate>20111001</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated to include mangroves mapped in the Marquesas from 2006 data.</procdesc>
+				<procdate>20111117</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated in April, 2013 to include 2009 landcover data from SJRWMD, 2010-2011 landcover data from SRWMD, and 2010 landcover data from SWFWMD.</procdesc>
+				<procdate>20130409</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>The data were updated to include 2011 landcover data from SWFWMD.</procdesc>
+				<procdate>20140417</procdate>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>8018</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xdt="http://www.w3.org/2005/xpath-datatypes">
+		<detailed>
+			<enttyp>
+				<enttypl>Mangrove_3</enttypl>
+				<enttypd>Mangrove represented as polygons.</enttypd>
+				<enttypds>Producer defined.</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>METADATA</attrlabl>
+				<attrdef>Name of source metadata document in FWRI's metadata system.</attrdef>
+				<attrdefs>Producer defined.</attrdefs>
+				<attrdomv>
+					<udom>Name of source metadata document.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DESCRIPT</attrlabl>
+				<attrdef>Description of feature.</attrdef>
+				<attrdefs>Producer defined.</attrdefs>
+				<attrdomv>
+					<udom>All features are "Mangrove Swamp".</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SOURCEDATE</attrlabl>
+				<attrdef>Date of source material.</attrdef>
+				<attrdefs>Producer defined.</attrdefs>
+				<attrdomv>
+					<udom>Date of source material.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>VID</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Area</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+					<cntper>GISLibrarian</cntper>
+				</cntorgp>
+				<cntpos>GIS Data Librarian</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical</addrtype>
+					<address>100 Eighth Avenue Southeast</address>
+					<address>Fish and Wildlife Research Institute</address>
+					<city>St. Petersburg</city>
+					<state>Florida</state>
+					<postal>33701</postal>
+					<country>US</country>
+				</cntaddr>
+				<cntvoice>727-896-8626</cntvoice>
+				<cntfax>727-893-1679</cntfax>
+				<cntemail>GISLibrarian@MyFWC.com</cntemail>
+				<hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+			</cntinfo>
+		</distrib>
+		<distliab>This data set is in the public domain, and the recipient may not assert any proprietary rights thereto nor represent it to anyone as other than a Florida Fish and Wildlife Conservation Commission produced data set; it is provided "as-is" without warranty of any kind, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The user assumes all responsibility for the accuracy and suitability of this data set for a specific application. In no event will the staff of the Florida Fish and Wildlife Conservation Commission be liable for any damages, including lost profits, lost savings, or other incidental or consequential damages arising from the use of or the inability to use this data set.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>SHP</formname>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://myfwc.com/research/</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>None. However, persons or organizations requesting information must provide transfer media if FTP is not available and must pay express shipping costs if express shipping is required.</fees>
+			<ordering>Contact GIS Librarian by e-mail, telephone, or letter explaining which products are needed and providing a brief description of how the products will be used. Also, provide name and address of the person or organization requesting the products.</ordering>
+			<turnarnd>Usually within 10 business days, although, complex requests may take longer</turnarnd>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>20141017</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+					<cntper>GISLibrarian</cntper>
+				</cntorgp>
+				<cntpos>GIS Data Librarian</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical</addrtype>
+					<address>Fish and Wildlife Research Institute</address>
+					<address>100 Eighth Avenue Southeast</address>
+					<city>St. Petersburg</city>
+					<state>Florida</state>
+					<postal>33701</postal>
+					<country>US</country>
+				</cntaddr>
+				<cntvoice>727-896-8626</cntvoice>
+				<cntfax>727-893-1679</cntfax>
+				<cntemail>GISLibrarian@MyFWC.com</cntemail>
+				<hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+		<metac>No restrictions on metadata</metac>
+		<metuc>Metadata must be distributed with the data set.</metuc>
+		<metsi>
+			<metscs>FWRI-MC</metscs>
+			<metshd>Metadata must be distributed with the data set.</metshd>
+		</metsi>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\TERMINAL\D\temp\SEFL\New Folder\sefl_mangrove_3</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="D:\temp\sefl_mangrove_3" dest="\\TERMINAL\D\temp\SEFL\New Folder\sefl_mangrove_3" date="20141103" time="12524600"></copy></copyHistory></DataProperties></Esri></metadata>

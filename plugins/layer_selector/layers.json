@@ -1,0 +1,32 @@
+[
+    {
+        "agsSource": {
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
+            "folderTitle": "Coastal_Resilience_base_data",
+            "folders": [
+                {
+                    "name": "Southeast_Florida",
+                    "services": [
+						{ "name": "Flood_and_SLR", "type":"dynamic" },
+						{ "name": "Habitats", "type":"dynamic" },
+						{ "name": "SEFL_Social_and_Economic", "type":"dynamic" }
+                    ]
+				},
+                {
+				    "name": "Florida_Keys",
+                    "services": [
+                        { "name": "Habitats", "type":"dynamic" },
+                        { "name": "Landuse_and_Other_Management_Boundaries", "type":"dynamic" },
+						{ "name": "Social_and_Economic", "type":"dynamic" }
+                    ]
+				},
+                {
+                    "name": "Florida",
+                    "services": [
+                        { "name": "FEMA_Repetitive_Loss", "type":"dynamic" }
+                    ]
+                }
+            ]
+        }
+    }
+]

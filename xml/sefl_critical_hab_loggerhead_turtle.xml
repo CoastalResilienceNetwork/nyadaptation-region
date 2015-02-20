@@ -1,0 +1,414 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <pubdate>20140710</pubdate>
+        <title>Final Critical Habitat (Terrestrial) for the Northwest Atlantic Ocean Distinct Population Segment of Caretta caretta (Loggerhead Sea Turtle)</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>These data identify, in general, the areas of Final critical habitat (terrestrial) for the Northwest Atlantic Ocean Distinct Population Segment of Caretta caretta (Loggerhead sea turtle). Please see the federal register for textual descriptions of each unit. In general, critical habitat units include lands from the mean high water line landward to the toe of the secondary dune or developed structure. Each unit contains all of the primary constituent elements as defined below. Due to the dynamic nature of the shoreline, the gis representation of the proposed critical habitat may not appear to match the shoreline in all areas when compared to aerial imagery produced in a different time period, of a different resolution, or viewed at a different scale than the imagery with which it was created.The terrestrial primary constituent elements specific to the Northwest Atlantic Ocean DPS of the loggerhead sea turtle are: (1) Primary Constituent Element 1—Suitable nesting beach habitat that has (a) relatively unimpeded nearshore access from the ocean to the beach for nesting females and from the beach to the ocean for both post-nesting females and hatchlings and (b) is located above mean high water to avoid being inundated frequently by high tides.(2) Primary Constituent Element 2—Sand that (a) allows for suitable nest construction, (b) is suitable for facilitating gas diffusion conducive to embryo development, and (c) is able to develop and maintain temperatures and a moisture content conducive to embryo development.(3) Primary Constituent Element 3—Suitable nesting beach habitat with sufficient darkness to ensure nesting turtles are not deterred from emerging onto the beach and hatchlings and postnesting females orient to the sea.</abstract>
+      <purpose>Critical habitat constitutes areas considered essential for the conservation of a listed species. These areas provide notice to the public and land managers of the importance of the areas to the conservation of this species. Special protections and/or restrictions are possible in areas where Federal funding, permits, licenses, authorizations, or actions occur or are required.</purpose>
+      <supplinf>Due to the dynamic nature of the shoreline critical habitat boundaries may not appear to align with some features when overlain on aerial imagery other than that with which it was established due to differences in resolution and date of acquisition. The textual unit descriptions in the final rule are the legal source for the critical habitat units.</supplinf>
+    </descript>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-82.925870</westbc>
+        <eastbc>-80.031341</eastbc>
+        <northbc>27.470670</northbc>
+        <southbc>24.523137</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>U.S. Fish &amp; Wildlife Service</themekey>
+        <themekey>Loggerhead sea turtle</themekey>
+        <themekey>Caretta caretta</themekey>
+        <themekey>habitat</themekey>
+        <themekey>critical</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>biota</themekey>
+        <themekey>environment</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>North Carolina</placekey>
+        <placekey>South Carolina</placekey>
+        <placekey>Georgia</placekey>
+        <placekey>Florida</placekey>
+        <placekey>Alabama</placekey>
+        <placekey>Mississippi</placekey>
+      </place>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Cape Romain NWR</placekey>
+        <placekey>Wassaw NWR</placekey>
+        <placekey>Blackbeard Island NWR</placekey>
+        <placekey>Merritt Island NWR/KSC</placekey>
+        <placekey>Archie Carr NWR</placekey>
+        <placekey>Hobe Sound NWR</placekey>
+        <placekey>Ten Thousand Islands NWR</placekey>
+        <placekey>Key West NWR</placekey>
+        <placekey>St. Vincent NWR</placekey>
+        <placekey>and Bon Secour NWR</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The GIS files and their associated coordinates are not the legal source for determining the critical habitat boundaries of species described in this dataset, but are used to identify areas which contain the physical and biological features essential to the conservation of the species or areas otherwise determined to be essential. Inherent in any dataset used to develop graphical representations, are limitations of accuracy as determined, among others, the source, scale and resolution of the data. While the U.S. Fish and Wildlife Service makes every effort to represent the critical habitat shown with data as completely and accurately as possible (given existing time and resource constraints), the USFWS gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data. In addition, the USFWS shall not be held liable for improper or incorrect use of the data described and/or contained herein. Graphical representations provided by the use of these data do not represent a legal description of the critical habitat boundary. The user is referred to the critical habitat textual description in the appropriate final rule for this species as published in the Federal Register. These data are to be used only in the context of the definition and purpose of critical habitat. This primarily relates to Section 7 consultation under the Endangered Species Act. These data may be used for planning and land management purposes. They are not to be used for legal survey use. Please refer to Federal Register Citation Number 79FR132, published 07-10-2014 for the legal critical habitat information.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Fish &amp; Wildlife Service, North Florida Ecological Services Office</cntorg>
+          <cntper>Ann Marie Lauritsen</cntper>
+        </cntorgp>
+        <cntpos>Biologist</cntpos>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <address>600 4th Street South</address>
+          <city>Saint Petersburg</city>
+          <state>Florida</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>904/731-3032</cntvoice>
+        <cntfax>904/731-3045</cntfax>
+        <cntemail>annmarie_lauritsen@fws.gov</cntemail>
+        <hours>M-F 9 AM to 4 PM (EST)</hours>
+      </cntinfo>
+    </ptcontac>
+    <datacred>U. S. Fish &amp; Wildlife Service, North Florida Ecological Services Office and National Oceanic and Atmospheric Administration, National Marine Fisheries Service</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the data set has either not been conducted, or is not applicable.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <geoform>None</geoform>
+          </citeinfo>
+        </srccite>
+        <typesrc>hardcopy</typesrc>
+        <srccitea>Source Input 1</srccitea>
+        <srccontr>Refer to the Federal Register (Vol. 79 No. 132), 07-10-2014.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>In May 2014 the proposed critical habitat was revised based on comments. Some units were removed and others were adjusted. The metadata was updated in July 2014.</procdesc>
+      </procstep>
+      <procstep>
+        <procdesc>In September 2012 the shapefile was edited to remove overlapping lines and to add attribute fields according to USFWS spatial data standards. In March 2013 the metadata was created to meet USFWS spatial data standards.</procdesc>
+      </procstep>
+      <procstep>
+        <procdesc>The occupied areas that contained the physical and biological features essential to the conservation of the species were delineated using Google Earth Imagery in June 2012. Due to the dynamic nature of the shoreline, the gis representation of the final critical habitat may not appear to match the shoreline in all areas when compared to aerial imagery produced in a different time period, of a different resolution, or viewed at a different scale.</procdesc>
+      </procstep>
+      <procstep>
+        <procdesc>In September 2012 the Google Earth file was imported into ArcGIS and edited to conform to the shoreline using Bing Imagery at a scale of 1:10,000. Due to the dynamic nature of the shoreline, the gis representation of the final critical habitat may not appear to match the shoreline in all areas when compared to aerial imagery produced in a different time period, of a different resolution, or viewed at a different scale.</procdesc>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>String</sdtstype>
+        <ptvctcnt>15</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_critical_hab_loggerhead_turtle</enttypl>
+        <enttypd>Final Critical Habitat for Caretta caretta (Loggerhead sea turtle)</enttypd>
+        <enttypds>U.S. Fish &amp; Wildlife Service</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SINGLMULTI</attrlabl>
+        <attrdef>Single or Multiple Species</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COMNAME</attrlabl>
+        <attrdef>Legal common name of the species</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SCINAME</attrlabl>
+        <attrdef>Binomial or trinomial scientific name</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SPCODE</attrlabl>
+        <attrdef>Unique Species Code referencing the species for the critical habitat being submitted</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>VIPCODE</attrlabl>
+        <attrdef>Unique Population Code referencing the species for the critical habitat being submitted</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>UNIT</attrlabl>
+        <attrdef>Critical habitat unit code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>UNITNAME</attrlabl>
+        <attrdef>Critical Habitat unit name</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attrdef>Critical Habitat Status</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>FINAL</edomv>
+            <edomvd>Final Critical Habitat</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PROPOSED</edomv>
+            <edomvd>Proposed Critical Habitat</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EXCLUDED</edomv>
+            <edomvd>Excluded (4A3 or 4B2)</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VACATED</edomv>
+            <edomvd>Vacated by Court Order</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEADOFFICE</attrlabl>
+        <attrdef>Lead Office Cost Center Code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COOPOFFICE</attrlabl>
+        <attrdef>Cooperating Office Cost Center Code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COOPOFMORE</attrlabl>
+        <attrdef>Additional Cooperating Office Cost Center Codes</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FEDREG</attrlabl>
+        <attrdef>Federal Register ID</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PUBDATE</attrlabl>
+        <attrdef>Federal Register publication date</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>EFFECTDATE</attrlabl>
+        <attrdef>Effective date for critical habitat designation</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>VACATEDATE</attrlabl>
+        <attrdef>Date critical habitat designation vacated</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ACCURACY</attrlabl>
+        <attrdef>Accuracy items or concerns</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Temporal Adjustment</edomv>
+            <edomvd>Data is dependent on temporal factors</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Seasonal Adjustment</edomv>
+            <edomvd>Data is dependent on seasonal factors</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tidal Adjustment</edomv>
+            <edomvd>Data is dependent on tidal fluctuations</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Historical Adjustment</edomv>
+            <edomvd>Reference features, streams, boundaries, etc. have changed</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Source Adjustment</edomv>
+            <edomvd>Source data is inconsistent or coarse</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Other</edomv>
+            <edomvd>Other concern</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>L_mi</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>L_km</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Fish &amp; Wildlife Service, North Florida Ecological Services Office</cntorg>
+          <cntper>Charles Underwood</cntper>
+        </cntorgp>
+        <cntpos>Public Affairs Officer</cntpos>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <address>7915 Baymeadows Way, Suite 200</address>
+          <city>Jacksonville</city>
+          <state>Florida</state>
+          <postal>32256-7517</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>904/731-3336</cntvoice>
+        <cntfax>904/731-3045</cntfax>
+        <cntemail>chuck_underwood@fws.gov</cntemail>
+        <hours>M-F 9 AM to 4 PM (EST)</hours>
+      </cntinfo>
+    </distrib>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://criticalhabitat.fws.gov/docs/crithab/zip/FCH_Caretta_caretta_20140710.zip</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+      <ordering>This shapefile is downloadable from the US Fish &amp; Wildlife Service's Critical Habitat Portal. See the "Online Source" section.</ordering>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20141101</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USFWS Panama City Field Office</cntorg>
+          <cntper>Gayle Martin</cntper>
+        </cntorgp>
+        <cntpos>GIS Specialist</cntpos>
+        <cntaddr>
+          <addrtype>physical</addrtype>
+          <address>1601 Balboa Avenue</address>
+          <city>Panama City</city>
+          <state>FL</state>
+          <postal>32405</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>850-769-0552</cntvoice>
+        <cntemail>gayle_martin@fws.gov</cntemail>
+        <hours>M-F 9 am to 3 pm (CST)</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

@@ -1,0 +1,332 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</origin>
+        <pubdate>unpublished material</pubdate>
+        <title>sde.sde.flkeys_SLAMM_A1Tmax_2010</title>
+        <geoform>raster digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This document describes the mapping process used by the Florida Fish and Wildlife Conservation Commission (FWC) to map potential impacts to marsh environments due to predicted sea level rise using the Sea Level Affecting Marshes Model (SLAMM 6.0.1) developed by Warren Pinnacle Consulting, Inc. (Jonathon Clough of Warren Pinnacle developed versions five and six). The SLAMM results contributed to the Florida Keys Marine Adaptation Planning (KEYSMAP) project lead by Bob Glazer, FWC, GeoAdaptive and National Oceanic and Atmospheric Administration (NOAA). The processes described here apply to the Upper, Middle, and Lower Keys of the project study site. Other methods were used for the western, southern and eastern portions of the South Florida peninsula.</abstract>
+      <purpose>This layer is result of a simulation model, the Sea Level Affecting Marshes Model (SLAMM).  This vegetation cover depicts the simulated future condition of the coastal wetlands in the Florida Keys at a specific year, for an IPCC-defined sea level rise scenario, A1T Maximum.  This simulation modeling was completed by the the Florida Fish and Wildlife Conservation Commission.  The values in this dataset represent vegetation categories as defined by the Sea Level Affecting Marshes Model version 6.0.
+
+Data are intended to provide landscape-scale guidance to decision makers involved in public land acquisition, land use planning and other land conservation efforts at regional scales.</purpose>
+      <supplinf>Prior to July 1, 2004, the Fish and Wildlife Research Institute (FWRI) was known as the Florida Marine Research Institute (FMRI). The institute name has not been changed in historical data sets or references to work completed by the Florida Marine Research Institute. The institute name has been changed in references to ongoing research, new research, and contact information.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20100101</begdate>
+          <enddate>20600101</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.890228</westbc>
+        <eastbc>-80.124859</eastbc>
+        <northbc>25.680006</northbc>
+        <southbc>24.385076</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+      </theme>
+      <theme>
+        <themekt>FWRItheme</themekt>
+        <themekey>Sea Level Rise</themekey>
+        <themekey>GIS</themekey>
+        <themekey>mapping</themekey>
+        <themekey>Sea Level Affecting Marshes Model</themekey>
+      </theme>
+      <place>
+        <placekt>FWRIplace</placekt>
+        <placekey>Florida Keys</placekey>
+        <placekey>Florida</placekey>
+      </place>
+    </keywords>
+    <accconst>Available without restriction. All data must be verified by Principal Investigator or Group Database Analyst prior to release. It is strongly recommended that this data is directly acquired from FWC and not indirectly through other sources which may have changed the data in some way. FWC makes no claims as to the data's suitability for other purposes</accconst>
+    <useconst>Acknowledgement of the FWC-FWRI (Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute) as the data source would be appreciated in any products developed from these data, and such acknowledgment as is standard for citation and legal practices for data source is expected by users of this data. Please cite the original metadata when using portions of the record to create a similar record of slightly altered data, such as reprojection. If any data are modified or adjusted, please share the edited information with FWC. Users should be aware that comparison with other data sets for the same area from other time periods may be inaccurate due to inconsistencies resulting from changes in mapping conventions, data collection, and computer processes over time. FWC shall not be liable for improper or incorrect use of this data. These data are not legal documents and are not to be used as such. This is not a survey data set and should not be utilized as such. These data are not to be used for navigation.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Fish and Wildlife Conservation Commission - Fish and Wildlife Research Institute</cntorg>
+          <cntper>GISLibrarian</cntper>
+        </cntorgp>
+        <cntpos>GIS Data Librarian</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>100 Eighth Avenue Southeast</address>
+          <address>Fish and Wildlife Research Institute</address>
+          <city>St. Petersburg</city>
+          <state>Florida</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>727-896-8626</cntvoice>
+        <cntfax>727-893-1679</cntfax>
+        <cntemail>GISLibrarian@MyFWC.com</cntemail>
+        <hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Brian Beneke, Research Associate, FWC-FWRI</datacred>
+    <secinfo>
+      <secsys>FWRI-DC</secsys>
+      <sechandl>Available without restriction</sechandl>
+    </secinfo>
+    <native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.2.0.3348</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Unknown, input data models were not validated</attraccr>
+    </attracc>
+    <logic>Logically consistent. All attribute values fall within defined values</logic>
+    <complete>Visually inspected for completeness to ensure all values fell within specified ranges and all pixel cells were classified.</complete>
+    <lineage>
+      <procstep>
+        <procdesc>This document describes the mapping process used by the Florida Fish and Wildlife Conservation Commission (FWC) to map potential impacts to marsh environments due to predicted sea level rise using the Sea Level Affecting Marshes Model (SLAMM 6.0.1) developed by Warren Pinnacle Consulting, Inc. (Jonathon Clough of Warren Pinnacle developed versions five and six). The SLAMM results contributed to the Florida Keys Marine Adaptation Planning (KEYSMAP) project lead by Bob Glazer, FWC, GeoAdaptive and National Oceanic and Atmospheric Administration (NOAA). The processes described here apply to the Upper, Middle, and Lower Keys of the project study site. Other methods were used for the western, southern and eastern portions of the South Florida peninsula. GIS Data SLAMM version 6.0.1 beta, May 2010 was run with the minimum data requirements including land cover (Florida Cooperative Land Cover map, FNAI 2010), and high resolution elevation data (NOAA LiDAR 2011). The elevation data was also used to calculate slope, another necessary data input. The data was pre-processed in ArcGIS to create raster files with identical spatial dimensions, projections, size and number of cells. Each site was then converted to an ASCII.txt format for input into SLAMM. NOAA LiDAR.img files resample process used by UF GeoPlan Center. Original data were provided in img format in geographic coordinates (NAD83) and vertically referenced to NAVD88. Vertical units for all data are in meters. Each of the files were added to a geodatabase, projected, converted to integer, resampled, converted to a float grid and reprojected. The Saptial analyst math toolbox was then used (with the cell size set at 10) to multiply the data by a value of 1. This used the "nearest" resampling method and preserved the original data values and range. Converted resampled 10 meter DEM to 10 meter SLOPE file. Then Converted SLOPE file to ASCII text file. The Florida Cooperative Land Cover (CLC) map (FNAI 2010 ) was used as the base land cover map. The CLC is a raster data set with a resolution of 15m. The land cover classes in the CLC map were cross-walked to the SLAMM land cover Categories (Appendix Table 1). Visual inspections of the cross-walked categories were conducted using Google Earth and Bing maps in ArcMap. Errors due to land use change and inconsistencies in the actual vegetation types and the cross-walk schema were corrected. The majority of the edits addressed issues with missing areas of mangroves, removal of the estuarine water (Category 17) from the Middle and Lower Keys, editing Rocky Intertidal (Category 14), Transitional Marsh/Scrub Shrub (Category 7), Regularly Flooded Marsh (Category 8) and Irregularly Flooded Marsh (Category 20). For Categories 7 and 20, there were no direct cross-walked CLC classes. Areas were identified as Transitional Marsh/Scrub Shrub and Irregularly Flooded Marsh based on expert input/comment and edits based on current imagery. Expert input was provided through three meetings with local land managers (see XX section). Based on the cross-walk schema, areas of Irregularly Flooded Marsh were typically cross-walked to Regularly Flooded Marsh and Rocky Intertidal, and to a lesser extent Mangrove (Category 9) and Tidal Flat (Category 11). Areas edited to the Transitional Marsh/Scrub Shrub category were originally cross-walked to Mangrove, Regularly Flooded Marsh, Rocky Intertidal, and Undeveloped Dry Land (Category 2) based on the schema. Additional areas of Ocean Beach (Category 12) were added during the edit process based on expert input. Once the cross-walked land cover map was finalized, the converted Roads (Nav-tech) raster file was merged with the cross-walked raster in order to select any missed developed land not found in the CLC map. The final SLAMM category land cover map was resampled to 10m to match other input layers and then converted to ASCII text file for input into SLAMM. Execution Options The Execution Options graphic user interface (GUI) was used to select four International Panel on Climate Change (IPCC) Sea Level Rise (SLR) scenarios and 1 Meter fixed by 2100 . The "protect developed dry land" option was not used, leading to all land potentially vulnerable to SLR, to best capture impacts to the natural and built environments. Using the soil saturation option caused streaking throughout portions of the sampled region. These streaks typically ran parallel to the assigned offshore direction, occurring over land and water. Due to the artificial nature of these streaks, the soil saturation option was not used. Comprehensive, study area-wide dike data was not available for the Keys; therefore, this option was not used. The Connectivity Algorithm was used so that dry lands or freshwater wetlands would be subject to saline inundation from low lying sources and/or pathway to estuarine or ocean. SLR Scenarios Run Models were run for the Land cover photo date (used 2010), 2020, 2030, 2040, and 2060. Climate scenarios selected include: A1FI Maximum (Fossil intensive) A1FI Minimum (Fossil intensive) A1T Maximum (non-fossil energy sources) A1T Minimum (non-fossil energy sources) 1 Meter (fixed rise by 2100) Input parameters The Florida Keys were split into three sites due to the different parameters used throughout the Keys for each site and insufficient memory of the SLAMM software (32-bit memory) to successfully analyze larger areas. The sites overlap with each other in order to create seamless data from one site to another. Each of the sites ( site 1=Lower Keys see, site 2=Middle Keys, site 3=Upper Keys ) were split into two polygonal sub-sites. Sub-sites on the northern portion (Gulf side) of the map are identified as sub-site A and sub-sites on the southern portion (Atlantic side) of the map are identified as sub-site B. The "Global" subsite is the entire site that is not within either subsite boundaries. Inputs included: *Direction offshore: Decided by professional judgment. Each direction input was indicated by the direction of water from the shoreline. *Historic trend for sea level rise: Estimated for mm / year from NOAA long term SLR gauges. (NOAA Tides and Currents) *MTL to NAVD88: correction (or more generally [any vertical datum] to MTL correction) is utilized to convert the elevation data maps from a fixed vertical datum to a datum based on the Mean Tide Level of the site. It is defined as MTL minus NAV88 based on the data from a NOAA gauge. (NOAA Tides and Currents) *GT Great Diurnal Tide Range (GT) (m): Difference in height between mean higher high water and mean lower low water. (NOAA Tides and Currents). *Salt Elevation Designates the boundary between wet lands and dry lands or wetlands and fresh water wetlands. Salt Elevation (m above MTL) is derived from inundation from observed data from NOAA gauges. For site 1 and site 2 the value for Salt Elevation was based on the mean values from Clough 2008 - values for our subsite A were derived from the mean of subsite A and B and values for our subsite B were derived from the mean of subsite C and D Site 3 used mean values of subsite A and subsite B from (Clough and Larson 2010). *Marsh Erosion, Swamp Erosion, Tidal Flat Erosion, Regularly Flooded Marsh Accretion, Irregularly Flooded Marsh Accretion, Tidal-Fresh Marsh Accretion, Inland-Fresh Marsh Accretion, Mangrove Accretion, Tidal Swamp Accretion, and Swamp Accretion parameters were all taken from USFWS documented SLAMM studies containing input parameters for SLAMM in the keys (Clough and Larson, 2010, and Clough, 2008). The cell-size used for this analysis was 10 meter by 10 meter cells. ArcGIS was used to post process the results from ASCII files to raster (GRID) files.</procdesc>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sde.sde.SDE_VAT_421</enttypl>
+        <enttypds>ESRI</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VALUE</attrlabl>
+        <attrdefs>SLAMM 6.0</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomvd>Developed Dry Land</edomvd>
+            <edomv>1</edomv>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Undeveloped Dry Land</edomvd>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Swamp</edomvd>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Cypress Swamp</edomvd>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>Inland Fresh Marsh</edomvd>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Tidal Fresh Marsh</edomvd>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Transitional Salt Marsh</edomvd>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Regularly Flooded Marsh</edomvd>
+          </edom>
+          <edom>
+            <edomv>9</edomv>
+            <edomvd>Mangrove</edomvd>
+          </edom>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Estuarine Beach</edomvd>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Tidal Flat</edomvd>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Ocean Beach</edomvd>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Ocean Flat</edomvd>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Rocky Intertidal</edomvd>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Inland Open Water</edomvd>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Riverine Tidal</edomvd>
+          </edom>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>Estuarine Water</edomvd>
+          </edom>
+          <edom>
+            <edomv>18</edomv>
+            <edomvd>Tidal Creek</edomvd>
+          </edom>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>Open Ocean</edomvd>
+          </edom>
+          <edom>
+            <edomv>20</edomv>
+            <edomvd>Irregularly Flooded Marsh</edomvd>
+          </edom>
+          <edom>
+            <edomv>21</edomv>
+            <edomvd>Not Used</edomvd>
+          </edom>
+          <edom>
+            <edomv>22</edomv>
+            <edomvd>Inland Shore</edomvd>
+          </edom>
+          <edom>
+            <edomv>23</edomv>
+            <edomvd>Tidal Swamp</edomvd>
+          </edom>
+          <edom>
+            <edomv>25</edomv>
+            <edomvd>Vegetated Tidal Flat</edomvd>
+          </edom>
+          <edom>
+            <edomv>26</edomv>
+            <edomvd>BackShore</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+          <cntper>GISLibrarian</cntper>
+        </cntorgp>
+        <cntpos>GIS Data Librarian</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Fish and Wildlife Research Institute</address>
+          <address>100 Eighth Avenue Southeast</address>
+          <city>St. Petersburg</city>
+          <state>Florida</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>727-896-8626</cntvoice>
+        <cntfax>727-893-1679</cntfax>
+        <cntemail>gisrequests@myfwc.com</cntemail>
+        <hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+      </cntinfo>
+    </distrib>
+    <distliab>This data set is in the public domain, and the recipient may not assert any proprietary rights thereto nor represent it to anyone as other than a FWC-FWRI produced data set; it is provided "as-is" without warranty of any kind, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The user assumes all responsibility for the accuracy and suitability of this data set for a specific application. In no event will the staff of the Fish and Wildlife Research Institute be liable for any damages, including lost profits, lost savings, or other incidental or consequential damages arising from the use of or the inability to use this data set.</distliab>
+    <stdorder>
+      <digform>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://research.myfwc.com/</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. However, persons or organizations requesting information must provide transfer media if FTP is not available and must pay express shipping costs if express shipping is required.</fees>
+      <ordering>Contact GIS Librarian by e-mail, telephone, or letter explaining which products are needed and providing a brief description of how the products will be used. Also, provide name and address of the person or organization requesting the products.</ordering>
+      <turnarnd>Usually within 10 business days, although, complex requests may take longer</turnarnd>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20130918</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute</cntorg>
+          <cntper>GISLibrarian</cntper>
+        </cntorgp>
+        <cntpos>GIS Data Librarian</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>100 Eighth Avenue Southeast</address>
+          <address>Fish and Wildlife Research Institute</address>
+          <city>St. Petersburg</city>
+          <state>Florida</state>
+          <postal>33701</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>727-896-8626</cntvoice>
+        <cntfax>727-893-1679</cntfax>
+        <cntemail>GISLibrarian@MyFWC.com</cntemail>
+        <hours>8:00 a.m.-5:00 p.m. Eastern time</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+    <metac>No restrictions on metadata</metac>
+    <metuc>Metadata must be distributed with the data set.</metuc>
+    <metsi>
+      <metscs>FWRI-MC</metscs>
+      <metshd>Metadata must be distributed with the data set.</metshd>
+    </metsi>
+  </metainfo>
+</metadata>

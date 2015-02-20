@@ -1,0 +1,495 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>poli_parcel_public</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <spdom>
+      <bounding>
+        <westbc>-81.816740</westbc>
+        <eastbc>-80.251473</eastbc>
+        <northbc>25.352476</northbc>
+        <southbc>24.544046</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>76388</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>poli_parcel_public</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>RECHAR</attrlabl>
+        <attrdef>Real Estate identification number in character format</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>GEO_FEAT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PARCELNO</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Property owners name 1</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ADD1</attrlabl>
+        <attrdef>Property owners name 2 / address</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ADD2</attrlabl>
+        <attrdef>Property owners mailing address</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>UNIT</attrlabl>
+        <attrdef>Property owners mailing address unit</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CITY</attrlabl>
+        <attrdef>Property owners city</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>Property owners state</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ZIP</attrlabl>
+        <attrdef>Property owners zip code</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COUNTRY</attrlabl>
+        <attrdef>Property owners foreign country</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PC</attrlabl>
+        <attrdef>Dept. of Revenue Parcel property class code</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>RE</attrlabl>
+        <attrdef>Real Estate identification number, AKA parcel identification number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>RECHAR_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>AK</attrlabl>
+        <attrdef>Alternate Key number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>MILLGROUP</attrlabl>
+        <attrdef>Taxing District</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>NBHD</attrlabl>
+        <attrdef>Neighborhood number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>MARKET</attrlabl>
+        <attrdef>Market Area</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FLA</attrlabl>
+        <attrdef>Floor living area in square feet</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SALE1</attrlabl>
+        <attrdef>Amount of last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>M1</attrlabl>
+        <attrdef>Month of last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Y1</attrlabl>
+        <attrdef>Year of last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>C1</attrlabl>
+        <attrdef>Sale qualification</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ORBOOK1</attrlabl>
+        <attrdef>Official record book number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ORPAGE1</attrlabl>
+        <attrdef>Official record page number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>NBRBLDG</attrlabl>
+        <attrdef>Number of finished buildings on property</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>YRBLT</attrlabl>
+        <attrdef>Year building 1 built</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>NBRCOMM</attrlabl>
+        <attrdef>Number of commercial buildings</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SALE2</attrlabl>
+        <attrdef>Amount of second to last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>M2</attrlabl>
+        <attrdef>Month of second to last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Y2</attrlabl>
+        <attrdef>Year of second to last sale</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>C2</attrlabl>
+        <attrdef>Sale qualification</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ORBOOK2</attrlabl>
+        <attrdef>Official record book number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ORPAGE2</attrlabl>
+        <attrdef>Official record page number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LL1</attrlabl>
+        <attrdef>Land Line use code 1</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TYPE1</attrlabl>
+        <attrdef>Unit of measurement of area 1</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AREA1</attrlabl>
+        <attrdef>Area measurement of land line 1</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LL2</attrlabl>
+        <attrdef>Land Line use code 2</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TYPE2</attrlabl>
+        <attrdef>Unit of measurement of area 2</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AREA2</attrlabl>
+        <attrdef>Area measurement of land line 2</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LEGAL1</attrlabl>
+        <attrdef>Legal description</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LEGAL2</attrlabl>
+        <attrdef>Legal description</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LEGAL3</attrlabl>
+        <attrdef>Legal description</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PYEAR1</attrlabl>
+        <attrdef>Tax Roll year</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PBLDG1</attrlabl>
+        <attrdef>Certified tax roll building value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PMISC1</attrlabl>
+        <attrdef>Certified tax roll miscellaneous value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PLAND1</attrlabl>
+        <attrdef>Certified tax roll land value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PJUST1</attrlabl>
+        <attrdef>Certified tax roll just value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PEXEM1</attrlabl>
+        <attrdef>Certified tax roll exempt value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PASSD1</attrlabl>
+        <attrdef>Certified tax roll assessed value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PTAX1</attrlabl>
+        <attrdef>Certified tax roll taxable value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PYEAR2</attrlabl>
+        <attrdef>Previous Tax Roll year</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PBLDG2</attrlabl>
+        <attrdef>Previous certified tax roll building value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PMISC2</attrlabl>
+        <attrdef>Previous certified tax roll miscellaneous value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PLAND2</attrlabl>
+        <attrdef>Previous certified tax roll land value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PJUST2</attrlabl>
+        <attrdef>Previous certified tax roll just value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PASSD2</attrlabl>
+        <attrdef>Previous tax roll assessed value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PEXEM2</attrlabl>
+        <attrdef>Previous certified tax roll exempt value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PTAX2</attrlabl>
+        <attrdef>Previous certified tax roll taxable value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PYEAR3</attrlabl>
+        <attrdef>Previous Tax Roll year</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PBLDG3</attrlabl>
+        <attrdef>Previous certified tax roll building value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PMISC3</attrlabl>
+        <attrdef>Previous certified tax roll miscellaneous value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PLAND3</attrlabl>
+        <attrdef>Previous certified tax roll land value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PJUST3</attrlabl>
+        <attrdef>Previous certified tax roll just value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PASSD3</attrlabl>
+        <attrdef>Previous tax roll assessed value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PEXEM3</attrlabl>
+        <attrdef>Previous certified tax roll exempt value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PTAX3</attrlabl>
+        <attrdef>Previous certified tax roll taxable value</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>RNG</attrlabl>
+        <attrdef>Range</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TWP</attrlabl>
+        <attrdef>Township</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SEC</attrlabl>
+        <attrdef>Section</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LOCATION</attrlabl>
+        <attrdef>Physical location</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>KEYNAME</attrlabl>
+        <attrdef>Island name</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CONDO_COMP</attrlabl>
+        <attrdef>Condominium Complex Name</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CONDO_SQ_F</attrlabl>
+        <attrdef>Square footage of unit</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CONDO_YEAR</attrlabl>
+        <attrdef>Year established</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SPECUSE</attrlabl>
+        <attrdef>Subdivision header real estate numbers</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PHYUNIT</attrlabl>
+        <attrdef>Unit number</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>RPNUMBER</attrlabl>
+        <attrdef>Real Property number (for mobile homes)</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>BUSNAME</attrlabl>
+        <attrdef>Business Name</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SUBDIVISIO</attrlabl>
+        <attrdef>Subdivision Name</attrdef>
+        <attrdefs>TAX ROLL DOWNLOAD</attrdefs>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

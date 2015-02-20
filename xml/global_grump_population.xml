@@ -1,0 +1,1241 @@
+
+<?xml version="1.0" encoding="ISO-8859-1"?><metadata>
+
+<idinfo>
+<citation>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Population Count Grid</title>
+<edition>1.00</edition>
+<geoform>raster</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-population-count</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>The Global Rural-Urban Mapping Project, Version 1 (GRUMPv1) consists of estimates of human population for the years 1990, 1995, and 2000 by 30 arc-second (1km) grid cells and associated data sets dated circa 2000. A proportional allocation gridding algorithm, utilizing more than 1,000,000 national and sub-national geographic units, is used to assign population values (counts, in persons) to grid cells. This data set is produced by the Columbia University Center for International Earth Science Information Network (CIESIN) in collaboration with the International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT).</abstract>
+<purpose>To provide a time series of raster population data for ntegration with other data sets</purpose>
+<supplinf>This is the Global Rural-Urban Mapping Project, Version 1 (GRUMPv1) data set. If you discover any errors or have any issues with the data, please let us know at ciesin.info@ciesin.columbia.edu.</supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<mdattim>
+<sngdate>
+<caldate>19900701</caldate>
+<time/>
+</sngdate>
+<sngdate>
+<caldate>19950701</caldate>
+<time/>
+</sngdate>
+<sngdate>
+<caldate>20000701</caldate>
+<time/>
+</sngdate>
+</mdattim>
+</timeinfo>
+<current/>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>As needed</update>
+</status>
+<spdom>
+<descgeog/>
+<bounding>
+<westbc>-180.000000</westbc>
+<eastbc>180.000000</eastbc>
+<northbc>85.000000</northbc>
+<southbc>-58.000000</southbc>
+<boundalt>
+<altmin/>
+<almax/>
+<altunits/>
+</boundalt>
+</bounding>
+<dsgpoly>
+<dsgpolyo>
+<gring/>
+</dsgpolyo>
+<dsgpolyx>
+<gring/>
+</dsgpolyx>
+</dsgpoly>
+</spdom>
+<keywords>
+<theme>
+<themekt>CIESIN Indexing Vocabulary Version 2.1 (GCMD Format)</themekt>
+<themekey>CIESIN &gt; Population Dynamics &gt; Demographic Characteristics &gt; Population Distribution</themekey>
+<themekey>CIESIN &gt; Population Dynamics &gt; Demographic Characteristics &gt; Population Size</themekey>
+</theme>
+<theme>
+<themekt>GCMD Parameter Valids</themekt>
+<themekey>EARTH SCIENCE &gt; Human Dimensions &gt; Population &gt; Population Distribution</themekey>
+<themekey>EARTH SCIENCE &gt; Human Dimensions &gt; Population &gt; Population Size</themekey>
+</theme>
+<theme>
+<themekt>General</themekt>
+<themekey>Global Population</themekey>
+<themekey>Global Rural-Urban Mapping Project</themekey>
+<themekey>GRUMPv1</themekey>
+<themekey>Population Count</themekey>
+<themekey>Population Estimates</themekey>
+<themekey>Population Projections</themekey>
+<themekey>Population Studies</themekey>
+<themekey>Gridded Population</themekey>
+<themekey>Urban Population</themekey>
+<themekey>Rural Population</themekey>
+</theme>
+<theme>
+<themekt>EI Gateway Vocabulary</themekt>
+<themekey>Population</themekey>
+</theme>
+<theme>
+<themekt>Data Granularity</themekt>
+<themekey>Country</themekey>
+<themekey>Continent</themekey>
+<themekey>Global</themekey>
+</theme>
+<theme>
+<themekt>ISO Topic</themekt>
+<themekey>Society</themekey>
+</theme>
+<theme>
+<themekt>WDC Theme</themekt>
+<themekey>Population</themekey>
+</theme>
+<theme>
+<themekt>CSA-NBII Biocomplexity</themekt>
+<themekey>Population Distribution</themekey>
+<themekey>Rural Populations</themekey>
+<themekey>Urban Populations</themekey>
+<themekey>Human Populations</themekey>
+<themekey>Populations</themekey>
+<themekey>World Population</themekey>
+</theme>
+<place>
+<placekt>CIESIN Location Terms, version 2.0</placekt>
+<placekey>Continent &gt; Africa</placekey>
+<placekey>Continent &gt; Asia</placekey>
+<placekey>Continent &gt; Australia</placekey>
+<placekey>Continent &gt; Europe</placekey>
+<placekey>Global</placekey>
+<placekey>Continent &gt; North America</placekey>
+<placekey>Continent &gt; South America</placekey>
+<placekey>Region &gt; Amazonia</placekey>
+<placekey>Region &gt; Caribbean</placekey>
+<placekey>Region &gt; Central Africa</placekey>
+<placekey>Region &gt; Central America</placekey>
+<placekey>Region &gt; East Asia</placekey>
+<placekey>Region &gt; Equatorial</placekey>
+<placekey>Region &gt; Middle East</placekey>
+<placekey>Region &gt; Mid-Latitude</placekey>
+<placekey>Region &gt; North Africa</placekey>
+<placekey>Region &gt; Oceania</placekey>
+<placekey>Region &gt; Pacific Islands</placekey>
+<placekey>Region &gt; Polar</placekey>
+<placekey>Region &gt; South Asia</placekey>
+<placekey>Region &gt; South Pacific Islands</placekey>
+<placekey>Region &gt; Southeast Asia</placekey>
+<placekey>Region &gt; West Africa</placekey>
+<placekey>Country &gt; Afghanistan</placekey>
+<placekey>Country &gt; Albania</placekey>
+<placekey>Country &gt; Algeria</placekey>
+<placekey>Country &gt; American Samoa</placekey>
+<placekey>Country &gt; Andorra</placekey>
+<placekey>Country &gt; Angola</placekey>
+<placekey>Country &gt; Anguilla</placekey>
+<placekey>Country &gt; Antigua and Barbuda</placekey>
+<placekey>Country &gt; Argentina</placekey>
+<placekey>Country &gt; Armenia</placekey>
+<placekey>Country &gt; Aruba</placekey>
+<placekey>Country &gt; Australia</placekey>
+<placekey>Country &gt; Austria</placekey>
+<placekey>Country &gt; Azerbaijan</placekey>
+<placekey>Country &gt; Bahamas</placekey>
+<placekey>Country &gt; Bahrain</placekey>
+<placekey>Country &gt; Bangladesh</placekey>
+<placekey>Country &gt; Barbados</placekey>
+<placekey>Country &gt; Belarus</placekey>
+<placekey>Country &gt; Belgium</placekey>
+<placekey>Country &gt; Belize</placekey>
+<placekey>Country &gt; Benin</placekey>
+<placekey>Country &gt; Bermuda</placekey>
+<placekey>Country &gt; Bhutan</placekey>
+<placekey>Country &gt; Bolivia</placekey>
+<placekey>Country &gt; Bosnia and Herzegovina</placekey>
+<placekey>Country &gt; Botswana</placekey>
+<placekey>Country &gt; Brazil</placekey>
+<placekey>Country &gt; British Virgin Islands</placekey>
+<placekey>Country &gt; Brunei</placekey>
+<placekey>Country &gt; Bulgaria</placekey>
+<placekey>Country &gt; Burkina Faso</placekey>
+<placekey>Country &gt; Burundi</placekey>
+<placekey>Country &gt; Cambodia</placekey>
+<placekey>Country &gt; Cameroon</placekey>
+<placekey>Country &gt; Canada</placekey>
+<placekey>Country &gt; Cape Verde</placekey>
+<placekey>Country &gt; Cayman Islands</placekey>
+<placekey>Country &gt; Central African Republic</placekey>
+<placekey>Country &gt; Chad</placekey>
+<placekey>Country &gt; Chile</placekey>
+<placekey>Country &gt; China</placekey>
+<placekey>Country &gt; Colombia</placekey>
+<placekey>Country &gt; Comoros</placekey>
+<placekey>Country &gt; Cook Islands</placekey>
+<placekey>Country &gt; Costa Rica</placekey>
+<placekey>Country &gt; Cote D'Ivoire</placekey>
+<placekey>Country &gt; Croatia</placekey>
+<placekey>Country &gt; Cuba</placekey>
+<placekey>Country &gt; Cyprus</placekey>
+<placekey>Country &gt; Czech Republic</placekey>
+<placekey>Country &gt; Democratic Republic of the Congo</placekey>
+<placekey>Country &gt; Denmark</placekey>
+<placekey>Country &gt; Djibouti</placekey>
+<placekey>Country &gt; Dominica</placekey>
+<placekey>Country &gt; Dominican Republic</placekey>
+<placekey>Country &gt; Ecuador</placekey>
+<placekey>Country &gt; Egypt</placekey>
+<placekey>Country &gt; El Salvador</placekey>
+<placekey>Country &gt; Equatorial Guinea</placekey>
+<placekey>Country &gt; Eritrea</placekey>
+<placekey>Country &gt; Estonia</placekey>
+<placekey>Country &gt; Ethiopia</placekey>
+<placekey>Country &gt; Faeroe Islands</placekey>
+<placekey>Country &gt; Falkland Islands</placekey>
+<placekey>Country &gt; Fiji</placekey>
+<placekey>Country &gt; Finland</placekey>
+<placekey>Country &gt; France</placekey>
+<placekey>Country &gt; French Guiana</placekey>
+<placekey>Country &gt; French Polynesia</placekey>
+<placekey>Country &gt; Gabon</placekey>
+<placekey>Country &gt; Gambia</placekey>
+<placekey>Country &gt; Georgia</placekey>
+<placekey>Country &gt; Germany</placekey>
+<placekey>Country &gt; Ghana</placekey>
+<placekey>Country &gt; Gibraltar</placekey>
+<placekey>Country &gt; Greece</placekey>
+<placekey>Country &gt; Greenland</placekey>
+<placekey>Country &gt; Grenada</placekey>
+<placekey>Country &gt; Guadeloupe</placekey>
+<placekey>Country &gt; Guam</placekey>
+<placekey>Country &gt; Guatemala</placekey>
+<placekey>Country &gt; Guernsey</placekey>
+<placekey>Country &gt; Guinea</placekey>
+<placekey>Country &gt; Guinea-Bissau</placekey>
+<placekey>Country &gt; Guyana</placekey>
+<placekey>Country &gt; Haiti</placekey>
+<placekey>Country &gt; Honduras</placekey>
+<placekey>Country &gt; Hong Kong</placekey>
+<placekey>Country &gt; Hungary</placekey>
+<placekey>Country &gt; Iceland</placekey>
+<placekey>Country &gt; India</placekey>
+<placekey>Country &gt; Indonesia</placekey>
+<placekey>Country &gt; Iran</placekey>
+<placekey>Country &gt; Iraq</placekey>
+<placekey>Country &gt; Ireland</placekey>
+<placekey>Country &gt; Isle of Man</placekey>
+<placekey>Country &gt; Israel</placekey>
+<placekey>Country &gt; Italy</placekey>
+<placekey>Country &gt; Jamaica</placekey>
+<placekey>Country &gt; Japan</placekey>
+<placekey>Country &gt; Jersey</placekey>
+<placekey>Country &gt; Jordan</placekey>
+<placekey>Country &gt; Kazakhstan</placekey>
+<placekey>Country &gt; Kenya</placekey>
+<placekey>Country &gt; Kiribati</placekey>
+<placekey>Country &gt; Kuwait</placekey>
+<placekey>Country &gt; Kyrgyzstan</placekey>
+<placekey>Country &gt; Laos</placekey>
+<placekey>Country &gt; Latvia</placekey>
+<placekey>Country &gt; Lebanon</placekey>
+<placekey>Country &gt; Lesotho</placekey>
+<placekey>Country &gt; Liberia</placekey>
+<placekey>Country &gt; Libya</placekey>
+<placekey>Country &gt; Liechtenstein</placekey>
+<placekey>Country &gt; Lithuania</placekey>
+<placekey>Country &gt; Luxembourg</placekey>
+<placekey>Country &gt; Macau</placekey>
+<placekey>Country &gt; Macedonia</placekey>
+<placekey>Country &gt; Madagascar</placekey>
+<placekey>Country &gt; Malawi</placekey>
+<placekey>Country &gt; Malaysia</placekey>
+<placekey>Country &gt; Maldives</placekey>
+<placekey>Country &gt; Mali</placekey>
+<placekey>Country &gt; Malta</placekey>
+<placekey>Country &gt; Marshall Islands</placekey>
+<placekey>Country &gt; Martinique</placekey>
+<placekey>Country &gt; Mauritania</placekey>
+<placekey>Country &gt; Mauritius</placekey>
+<placekey>Country &gt; Mayotte</placekey>
+<placekey>Country &gt; Mexico</placekey>
+<placekey>Country &gt; Micronesia</placekey>
+<placekey>Country &gt; Moldova</placekey>
+<placekey>Country &gt; Monaco</placekey>
+<placekey>Country &gt; Mongolia</placekey>
+<placekey>Country &gt; Montserrat</placekey>
+<placekey>Country &gt; Morocco</placekey>
+<placekey>Country &gt; Mozambique</placekey>
+<placekey>Country &gt; Myanmar</placekey>
+<placekey>Country &gt; Namibia</placekey>
+<placekey>Country &gt; Nauru</placekey>
+<placekey>Country &gt; Nepal</placekey>
+<placekey>Country &gt; Netherlands</placekey>
+<placekey>Country &gt; Netherlands Antilles</placekey>
+<placekey>Country &gt; New Caledonia</placekey>
+<placekey>Country &gt; New Zealand</placekey>
+<placekey>Country &gt; Nicaragua</placekey>
+<placekey>Country &gt; Niger</placekey>
+<placekey>Country &gt; Nigeria</placekey>
+<placekey>Country &gt; North Korea</placekey>
+<placekey>Country &gt; Northern Mariana Islands</placekey>
+<placekey>Country &gt; Norway</placekey>
+<placekey>Country &gt; Oman</placekey>
+<placekey>Country &gt; Pakistan</placekey>
+<placekey>Country &gt; Palau</placekey>
+<placekey>Country &gt; Palestine</placekey>
+<placekey>Country &gt; Panama</placekey>
+<placekey>Country &gt; Papua New Guinea</placekey>
+<placekey>Country &gt; Paraguay</placekey>
+<placekey>Country &gt; Peru</placekey>
+<placekey>Country &gt; Philippines</placekey>
+<placekey>Country &gt; Pitcairn Islands</placekey>
+<placekey>Country &gt; Poland</placekey>
+<placekey>Country &gt; Portugal</placekey>
+<placekey>Country &gt; Puerto Rico</placekey>
+<placekey>Country &gt; Qatar</placekey>
+<placekey>Country &gt; Republic of the Congo</placekey>
+<placekey>Country &gt; Reunion</placekey>
+<placekey>Country &gt; Romania</placekey>
+<placekey>Country &gt; Russia</placekey>
+<placekey>Country &gt; Rwanda</placekey>
+<placekey>Country &gt; Saint Helena</placekey>
+<placekey>Country &gt; Saint Kitts and Nevis</placekey>
+<placekey>Country &gt; Saint Lucia</placekey>
+<placekey>Country &gt; Saint Pierre and Miquelon</placekey>
+<placekey>Country &gt; Saint Vincent and The Grenadines</placekey>
+<placekey>Country &gt; Samoa</placekey>
+<placekey>Country &gt; San Marino</placekey>
+<placekey>Country &gt; Sao Tome and Principe</placekey>
+<placekey>Country &gt; Saudi Arabia</placekey>
+<placekey>Country &gt; Senegal</placekey>
+<placekey>Country &gt; Serbia and Montenegro</placekey>
+<placekey>Country &gt; Seychelles</placekey>
+<placekey>Country &gt; Sierra Leone</placekey>
+<placekey>Country &gt; Singapore</placekey>
+<placekey>Country &gt; Slovakia</placekey>
+<placekey>Country &gt; Slovenia</placekey>
+<placekey>Country &gt; Solomon Islands</placekey>
+<placekey>Country &gt; Somalia</placekey>
+<placekey>Country &gt; South Africa</placekey>
+<placekey>Country &gt; South Korea</placekey>
+<placekey>Country &gt; Spain</placekey>
+<placekey>Country &gt; Sri Lanka</placekey>
+<placekey>Country &gt; Sudan</placekey>
+<placekey>Country &gt; Suriname</placekey>
+<placekey>Country &gt; Svalbard</placekey>
+<placekey>Country &gt; Swaziland</placekey>
+<placekey>Country &gt; Sweden</placekey>
+<placekey>Country &gt; Switzerland</placekey>
+<placekey>Country &gt; Syria</placekey>
+<placekey>Country &gt; Taiwan</placekey>
+<placekey>Country &gt; Tajikistan</placekey>
+<placekey>Country &gt; Tanzania</placekey>
+<placekey>Country &gt; Timor</placekey>
+<placekey>Country &gt; Togo</placekey>
+<placekey>Country &gt; Tokelau</placekey>
+<placekey>Country &gt; Tonga</placekey>
+<placekey>Country &gt; Trinidad and Tobago</placekey>
+<placekey>Country &gt; Tunisia</placekey>
+<placekey>Country &gt; Turkey</placekey>
+<placekey>Country &gt; Turkmenistan</placekey>
+<placekey>Country &gt; Turks and Caicos Islands</placekey>
+<placekey>Country &gt; Tuvalu</placekey>
+<placekey>Country &gt; Uganda</placekey>
+<placekey>Country &gt; Ukraine</placekey>
+<placekey>Country &gt; United Arab Emirates</placekey>
+<placekey>Country &gt; United Kingdom</placekey>
+<placekey>Country &gt; United States</placekey>
+<placekey>Country &gt; Uruguay</placekey>
+<placekey>Country &gt; US Virgin Islands</placekey>
+<placekey>Country &gt; Uzbekistan</placekey>
+<placekey>Country &gt; Vatican City</placekey>
+<placekey>Country &gt; Vanuatu</placekey>
+<placekey>Country &gt; Venezuela</placekey>
+<placekey>Country &gt; Vietnam</placekey>
+<placekey>Country &gt; Wallis and Futuna Islands</placekey>
+<placekey>Country &gt; Yemen</placekey>
+<placekey>Country &gt; Yugoslavia</placekey>
+<placekey>Country &gt; Zambia</placekey>
+<placekey>Country &gt; Zimbabwe</placekey>
+</place>
+<stratum>
+<stratkt/>
+<stratkey/>
+</stratum>
+<temporal>
+<tempkt/>
+<tempkey/>
+</temporal>
+</keywords>
+<taxonomy>
+<keywtax>
+<taxonkt/>
+<taxonkey/>
+</keywtax>
+<taxonsys>
+<classsys>
+<classcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</classcit>
+<classmod/>
+</classsys>
+<idref>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</idref>
+<ider>
+<cntinfo>
+<cntperp>
+<cntper/>
+<cntorg/>
+</cntperp>
+<cntpos/>
+<cntaddr>
+<addrtype/>
+<address/>
+<city/>
+<state/>
+<postal/>
+<country/>
+</cntaddr>
+<cntvoice/>
+<cnttdd/>
+<cntfax/>
+<cntemail/>
+<hours/>
+<cntinst/>
+</cntinfo>
+</ider>
+<taxonpro/>
+<taxoncom/>
+<vouchers>
+<specimen/>
+<reposit>
+<cntinfo>
+<cntperp>
+<cntper/>
+<cntorg/>
+</cntperp>
+<cntpos/>
+<cntaddr>
+<addrtype/>
+<address/>
+<city/>
+<state/>
+<postal/>
+<country/>
+</cntaddr>
+<cntvoice/>
+<cnttdd/>
+<cntfax/>
+<cntemail/>
+<hours/>
+<cntinst/>
+</cntinfo>
+</reposit>
+</vouchers>
+</taxonsys>
+<taxongen/>
+<taxoncl>
+<taxonrn/>
+<taxonrv/>
+<common/>
+</taxoncl>
+</taxonomy>
+<accconst>None</accconst>
+<useconst>The Trustees of Columbia University in the City of New York, International Food Policy Research Institute (IPFRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT) hold the copyright of this data set. Users are prohibited from any commercial, non-free resale, or redistribution without explicit written permission from CIESIN, IFPRI, The World Bank, and CIAT. Users should acknowledge CIESIN, IFPRI, The World Bank, and CIAT as the source used in the creation of any reports, publications, new data sets, derived products, or services resulting from the use of this data set. CIESIN, IFPRI, The World Bank, and CIAT also request reprints of any publications and notification of any redistributing efforts.</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>NASA Socioeconomic Data and Applications Center (SEDAC)</cntorg>
+<cntper/>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>CIESIN, Columbia University, 61 Route 9W, P.O. Box 1000</address>
+<city>Palisades</city>
+<state>NY</state>
+<postal>10964</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>+1 845-365-8920</cntvoice>
+<cnttdd/>
+<cntfax>+1 845-365-8922</cntfax>
+<cntemail>ciesin.info@ciesin.columbia.edu</cntemail>
+<hours/>
+<cntinst/>
+</cntinfo>
+</ptcontac>
+<browse>
+<browsen/>
+<browsed/>
+<browset/>
+</browse>
+<datacred>http://sedac.ciesin.columbia.edu/data/dataset/grump-v1-population-count/credits</datacred>
+<secinfo>
+<secsys/>
+<secclass/>
+<sechandl/>
+</secinfo>
+<native/>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Coastlines</title>
+<edition>1.00</edition>
+<geoform>vector</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-coastlines</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): National Administrative Boundaries</title>
+<edition>1.00</edition>
+<geoform>vector</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-national-admin-boundaries</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): National Identifier Grid</title>
+<edition>1.00</edition>
+<geoform>raster</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-national-identifier-grid</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2012</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Population Density Grid</title>
+<edition>1.01</edition>
+<geoform>raster, map</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-population-density</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Settlement Points</title>
+<edition>1.00</edition>
+<geoform>vector, tabular, map</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-settlement-points</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>Center for International Earth Science Information Network (CIESIN)/Columbia University, International Food Policy Research Institute (IFPRI), The World Bank, and Centro Internacional de Agricultura Tropical (CIAT)</origin>
+<pubdate>2011</pubdate>
+<pubtime/>
+<title>Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Urban Extents Grid</title>
+<edition>1.00</edition>
+<geoform>raster, map</geoform>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace>Palisades, NY</pubplace>
+<publish>NASA Socioeconomic Data and Applications Center (SEDAC)</publish>
+</pubinfo>
+<othercit/>
+<onlink>http://sedac.ciesin.columbia.edu/data/set/grump-v1-urban-extents</onlink>
+<lworkcit>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</crossref>
+<tool>
+<toolname/>
+<tooldesc/>
+<toolacc>
+<onlink/>
+<toolinst/>
+<toolcomp/>
+</toolacc>
+<toolcont>
+<cntinfo>
+<cntperp>
+<cntper/>
+<cntorg/>
+</cntperp>
+<cntpos/>
+<cntaddr>
+<addrtype/>
+<address/>
+<city/>
+<state/>
+<postal/>
+<country/>
+</cntaddr>
+<cntvoice/>
+<cnttdd/>
+<cntfax/>
+<cntemail/>
+<hours/>
+<cntinst/>
+</cntinfo>
+</toolcont>
+<toolcite>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</toolcite>
+</tool>
+<webpub>false</webpub>
+</idinfo>
+<dataqual>
+<attracc>
+<attraccr/>
+<qattracc>
+<attraccv/>
+<attracce/>
+</qattracc>
+</attracc>
+<logic/>
+<complete/>
+<posacc>
+<horizpa>
+<horizpar/>
+<qhorizpa>
+<horizpav/>
+<horizpae/>
+</qhorizpa>
+</horizpa>
+<vertacc>
+<vertaccr/>
+<qvertpa>
+<vertaccv/>
+<vertacce/>
+</qvertpa>
+</vertacc>
+</posacc>
+<lineage>
+<method>
+<methtype/>
+<methodid>
+<methkt/>
+<methkey/>
+</methodid>
+<methdesc/>
+<methcite>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</methcite>
+</method>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin/>
+<pubdate/>
+<pubtime/>
+<title/>
+<edition/>
+<geoform/>
+<serinfo>
+<sername/>
+<issue/>
+</serinfo>
+<pubinfo>
+<pubplace/>
+<publish/>
+</pubinfo>
+<othercit/>
+<onlink/>
+<lworkcit/>
+</citeinfo>
+</srccite>
+<srcscale/>
+<typesrc/>
+<srctime>
+<timeinfo>
+<sngdate>
+<caldate/>
+<time/>
+</sngdate>
+</timeinfo>
+<srccurr/>
+</srctime>
+<srccitea/>
+<srccontr>http://sedac.ciesin.columbia.edu/data/set/grump-v1-population-count/sources</srccontr>
+</srcinfo>
+<procstep>
+<procdesc/>
+<srcused/>
+<procdate/>
+<proctime/>
+<srcprod/>
+<proccont>
+<cntinfo>
+<cntperp>
+<cntper/>
+<cntorg/>
+</cntperp>
+<cntpos/>
+<cntaddr>
+<addrtype/>
+<address/>
+<city/>
+<state/>
+<postal/>
+<country/>
+</cntaddr>
+<cntvoice/>
+<cnttdd/>
+<cntfax/>
+<cntemail/>
+<hours/>
+<cntinst/>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+<cloud/>
+</dataqual>
+<spdoinfo>
+<indspref/>
+<direct>Raster</direct>
+<rastinfo>
+<rasttype>Grid Cell</rasttype>
+<rowcount>17160</rowcount>
+<colcount>43200</colcount>
+<vrtcount>1</vrtcount>
+</rastinfo>
+</spdoinfo>
+<spref>
+<horizsys>
+<geograph>
+<latres>0.008330</latres>
+<longres>0.008330</longres>
+<geogunit>Decimal degrees</geogunit>
+</geograph>
+<geodetic>
+<horizdn>WGS84</horizdn>
+<ellips>WGS84</ellips>
+<semiaxis>6378137.000000</semiaxis>
+<denflat>298.257224</denflat>
+</geodetic>
+</horizsys>
+<vertdef>
+<altsys>
+<altdatum/>
+<altres/>
+<altunits/>
+<altenc/>
+</altsys>
+<depthsys>
+<depthdn/>
+<depthres/>
+<depthdu/>
+<depthem/>
+</depthsys>
+</vertdef>
+</spref>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>glupxxag</enttypl>
+<enttypd/>
+<enttypds/>
+</enttyp>
+<attr>
+<attrlabl>Band_1</attrlabl>
+<attrdef/>
+<attrdefs/>
+<attrdomv>
+<edom>
+<edomv/>
+<edomvd/>
+<edomvds/>
+</edom>
+</attrdomv>
+<begdatea/>
+<enddatea/>
+<attrvai>
+<attrva/>
+<attrvae/>
+</attrvai>
+<attrmfrq/>
+</attr>
+</detailed>
+<detailed>
+<enttyp>
+<enttypl>glupxxg</enttypl>
+<enttypd/>
+<enttypds/>
+</enttyp>
+<attr>
+<attrlabl>Band_1</attrlabl>
+<attrdef/>
+<attrdefs/>
+<attrdomv>
+<edom>
+<edomv/>
+<edomvd/>
+<edomvds/>
+</edom>
+</attrdomv>
+<begdatea/>
+<enddatea/>
+<attrvai>
+<attrva/>
+<attrvae/>
+</attrvai>
+<attrmfrq/>
+</attr>
+</detailed>
+<overview>
+<eaover/>
+<eadetcit/>
+</overview>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>NASA Socioeconomic Data and Applications Center (SEDAC)</cntorg>
+<cntper/>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>CIESIN, Columbia University, 61 Route 9W, P.O. Box 1000</address>
+<city>Palisades</city>
+<state>NY</state>
+<postal>10964</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>+1 845-365-8920</cntvoice>
+<cnttdd/>
+<cntfax>+1 845-365-8922</cntfax>
+<cntemail>ciesin.info@ciesin.columbia.edu</cntemail>
+<hours/>
+<cntinst/>
+</cntinfo>
+</distrib>
+<resdesc>CIESIN_SEDAC_GRUMPv1_POPCOUNT</resdesc>
+<distliab>CIESIN follows procedures designed to ensure that data disseminated by CIESIN are of reasonable quality. If, despite these procedures, users encounter apparent errors or misstatements in the data, they should contact SEDAC User Services at +1 845-365-8920 or via email at ciesin.info@ciesin.columbia.edu. Neither CIESIN nor NASA verifies or guarantees the accuracy, reliability, or completeness of any data provided. CIESIN provides this data without warranty of any kind whatsoever, either expressed or implied. CIESIN shall not be liable for incidental, consequential, or special damages arising out of the use of any data provided by CIESIN.</distliab>
+<stdorder>
+<digform>
+<digtinfo>
+<formname/>
+<formvern/>
+<formspec/>
+<asciistr>
+<recdel/>
+<numheadl/>
+<deschead/>
+<orienta/>
+<casesens>false</casesens>
+<authent/>
+<quotech/>
+<datafiel>
+<dfieldnm/>
+<missingv/>
+<dfwidth/>
+</datafiel>
+</asciistr>
+<formcont/>
+<filedec/>
+<transize/>
+</digtinfo>
+<digtopt>
+<onlinopt>
+<computer>
+<networka>
+<networkr/>
+</networka>
+</computer>
+<accinstr/>
+<oncomp/>
+</onlinopt>
+</digtopt>
+</digform>
+<fees/>
+<ordering>The data in ArcInfo Binary Grid (GRID), American Standard Code for Information Interchange (ASCII), Band Interleaved by Line (BIL) formats are available from the NASA Socioeconomic Data and Applications Center (SEDAC).</ordering>
+<turnarnd/>
+</stdorder>
+<stdorder>
+<digform>
+<digtinfo>
+<formname>ASCII, GRID, BIL</formname>
+<formvern/>
+<formspec/>
+<asciistr>
+<recdel/>
+<numheadl/>
+<deschead/>
+<orienta/>
+<casesens>false</casesens>
+<authent/>
+<quotech/>
+<datafiel>
+<dfieldnm/>
+<missingv/>
+<dfwidth/>
+</datafiel>
+</asciistr>
+<formcont/>
+<filedec>Unzip</filedec>
+<transize/>
+</digtinfo>
+<digtopt>
+<onlinopt>
+<computer>
+<networka>
+<networkr>http://sedac.ciesin.columbia.edu/data/set/grump-v1-population-count/data-download</networkr>
+</networka>
+</computer>
+<accinstr>Data accessible via direct download.</accinstr>
+<oncomp/>
+</onlinopt>
+</digtopt>
+</digform>
+<fees/>
+<ordering/>
+<turnarnd/>
+</stdorder>
+<custom/>
+<techpreq/>
+<availabl>
+<timeinfo>
+<sngdate>
+<caldate>2011</caldate>
+<time/>
+</sngdate>
+</timeinfo>
+</availabl>
+</distinfo>
+<metainfo>
+<metd>20110316</metd>
+<metrd>20120713</metrd>
+<metfrd>20130713</metfrd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>Center for International Earth Science Information Network (CIESIN) Metadata Administration</cntorg>
+<cntper/>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>CIESIN, Columbia University, 61 Route 9W, P.O. Box 1000</address>
+<city>Palisades</city>
+<state>NY</state>
+<postal>10964</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>+1 845-365-8988</cntvoice>
+<cnttdd/>
+<cntfax>+1 845-365-8922</cntfax>
+<cntemail>metadata@ciesin.columbia.edu</cntemail>
+<hours/>
+<cntinst/>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+<metac/>
+<metuc/>
+<metsi>
+<metscs/>
+<metsc/>
+<metshd/>
+</metsi>
+<metextns>
+<onlink/>
+<metprof/>
+</metextns>
+</metainfo>
+</metadata>

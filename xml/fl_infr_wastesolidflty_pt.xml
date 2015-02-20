@@ -1,0 +1,1217 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Solid Waste Facilities</title>
+        <geoform>vector digital data</geoform>
+        <onlink>Server=gissde; Service=5151; User=dep; Version=SDE.DEFAULT</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>John Knowles received data from Alison Higgins of The Nature Conservancy who received it from below: Renee DuffeyGIS CoordinatorFDEP-South District2295 Victoria Ave, Suite 364Fort Myers, FL 33901Office 239-344-5633 (new number)Renee.Duffey@dep.state.fl.us</abstract>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.808086</westbc>
+        <eastbc>-80.325077</eastbc>
+        <northbc>25.237425</northbc>
+        <southbc>24.548758</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>There are several other GIS layers available for download from the DEP website at: http://www.dep.state.fl.us/gis/datadir.htm  
+You can also view DEP’s GIS data from our online mapping site MapDirect at: http://ca.dep.state.fl.us/mapdirect/ 
+</useconst>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>222</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_infr_wastesolidflty_pt</enttypl>
+        <enttypds>FDEP SOLID WASTE FACILIITIES</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_I</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_N</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_T</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>FACILITY_S</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STATUS_DAT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>OBJECT_OF_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>OWNERSHIP</attrlabl>
+        <attrdef>TYPE OF OWNERSHIP</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>A</edomv>
+            <edomvd>STATE OR FEDERAL</edomvd>
+            <edomvds>THE OWNED BY THE STATE OR FEDERAL</edomvds>
+          </edom>
+          <edom>
+            <edomv>C</edomv>
+            <edomvd>COUNTY</edomvd>
+            <edomvds>OWNED BY THE COUNTY</edomvds>
+          </edom>
+          <edom>
+            <edomvds>OWNED BY FEDERAL </edomvds>
+            <edomv>F</edomv>
+            <edomvd>FEDERAL</edomvd>
+          </edom>
+          <edom>
+            <edomvds>OWNED BY MUNICIPAL </edomvds>
+            <edomv>M</edomv>
+            <edomvd>MUNICIPAL</edomvd>
+          </edom>
+          <edom>
+            <edomv>P</edomv>
+            <edomvd>PRIVATE </edomvd>
+            <edomvds>THE OWNED PRIVATELY  </edomvds>
+          </edom>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>STATE </edomvd>
+            <edomvds>OWNED BY THE STATE</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CLASS_STAT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CITY</attrlabl>
+        <attrdef>CITY THE FACILITY IS LOCATED IN</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ZIP4</attrlabl>
+        <attrdef>ZIP CODE OF THE FACILITY PLUS 4 DIG</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>OFFICE</attrlabl>
+        <attrdef>TYPE OF DISTRICT OFFICES</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>MP1</edomv>
+            <edomvd>MARINE PATROL DISTRICT 1 (PC)</edomvd>
+          </edom>
+          <edom>
+            <edomv>MP11</edomv>
+            <edomvd>MARINE PATROL DISTRICT 11 (PN)</edomvd>
+          </edom>
+          <edom>
+            <edomv>MP2</edomv>
+            <edomvd>MARINE PATROL DISTRICT 12 (CE)</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWBY</edomv>
+            <edomvd>BAY</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWCA</edomv>
+            <edomvd>CALHOUN</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWD</edomv>
+            <edomvd>NORTHWEST DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWDP</edomv>
+            <edomvd>NORTHWEST DISTRICT BRANCH (PANAMA CITY)</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWDS</edomv>
+            <edomvd>NORTHWEST DISTRICT STATELLITE</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWDT</edomv>
+            <edomvd>NORTHWEST DISTRICT (TALLHASSEE)</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWES</edomv>
+            <edomvd>ESCAMBIA</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWGA</edomv>
+            <edomvd>GADSDEN</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWGU</edomv>
+            <edomvd>GULF</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWHO</edomv>
+            <edomvd>HOLMES</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWJA</edomv>
+            <edomvd>JACKSON</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWJE</edomv>
+            <edomvd>JEFFERSON</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWLE</edomv>
+            <edomvd>LEON</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWLI</edomv>
+            <edomvd>LIBERTY</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWOK</edomv>
+            <edomvd>OKALOOSA</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWSR</edomv>
+            <edomvd>SANTA ROSA</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWWA</edomv>
+            <edomvd>WASHINGTON</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWWK</edomv>
+            <edomvd>WAKULLA</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWWL</edomv>
+            <edomvd>WALTON</edomvd>
+          </edom>
+          <edom>
+            <edomv>PP5</edomv>
+            <edomvd>PARK PATROL DISTRICT 5</edomvd>
+          </edom>
+          <edom>
+            <edomv>PPN</edomv>
+            <edomvd>PARK PATROL REGIONAL OFFICE (N)</edomvd>
+          </edom>
+          <edom>
+            <edomv>PS1</edomv>
+            <edomvd>PARK PATROL DISTRICT 1 (PC)</edomvd>
+          </edom>
+          <edom>
+            <edomv>TAL</edomv>
+            <edomvd>HEADQUARTERS</edomvd>
+          </edom>
+          <edom>
+            <edomv>TLST</edomv>
+            <edomvd>TALLAHASSEE NPDES STROMWATER</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>FLORIDA COUNTY BY NAMES ALACHUA - WASHINGTON</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>ALACHUA,  BAKER,  BAY</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>BRADFORD,  BREVARD,  BROWARD</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>CALHOUN,   CHARLOTTE,   CITRUS</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>CLAY, COLLIER, COLUMBIA</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>DADE, DESOTO, DIXIE</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>DUVAL, ESCAMBIA, FLAGLER</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>FRANKLIN, GADSDEN, GILCHRIST</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>HARDEE, HENDRY, HERNANDO</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>INDIAN RIVER, JACKSON, JEFFERSON</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>LAFAYETTE, LAKE, LEE</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>LEON, LEVY, LIBERTY</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>MADISON, MANATEE, MARION</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>MARTIN, MONROE, NASSAU</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>OKALOOSA, OKEECHOBEE, ORANGE</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>OSCEOLA, PALM BEACH, PASCO</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>PINELLAS, POLK, PUTNAM</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>ST. JOHNS, ST. LUCIE, SANTA ROSA</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>SARASOTA, SEMINOLE, SUMTER</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>SUWANNEE, TAYLOR, UNION</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>VOLUSIA, WAKULLA, WALTON</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+          <edom>
+            <edomv>WASHINGTON</edomv>
+            <edomvd>NAME</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LAT_MM</attrlabl>
+        <attrdef>LATITUDE - MINUTES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONG_SS</attrlabl>
+        <attrdef>LONGITUDE - SECONDS LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DATUM_ID</attrlabl>
+        <attrdef>DATUM TYPE</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>HPGN</edomv>
+            <edomvd>High Precision GIS Network / High Precision Geodetic Reference</edomvd>
+          </edom>
+          <edom>
+            <edomv>NAD27</edomv>
+            <edomvd>North American Datum of 1927</edomvd>
+          </edom>
+          <edom>
+            <edomv>NAD83</edomv>
+            <edomvd>North American Datum of 1983</edomvd>
+          </edom>
+          <edom>
+            <edomv>WGS84</edomv>
+            <edomvd>World Geodetic Survey of 1984</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONG_DD</attrlabl>
+        <attrdef>LONGITUDE - DEGREES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONG_MM</attrlabl>
+        <attrdef>LONGITUDE - MINUTES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PROXIMITY_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ACCURACY</attrlabl>
+        <attrdef>COORD ACCURACY LEVEL CODES</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt; 0.01 M</edomv>
+            <edomvd>CSUR - Cadastral or Land Survey </edomvd>
+          </edom>
+          <edom>
+            <edomv>&lt; 0.1 M </edomv>
+            <edomvd>GGPS - Geodetic Quality C/A Code and Carrier Phase GPS</edomvd>
+          </edom>
+          <edom>
+            <edomv>1-5 M </edomv>
+            <edomvd>DGPS - Differentially Corrected C/A Code Phase GPS </edomvd>
+          </edom>
+          <edom>
+            <edomv>3-7 M </edomv>
+            <edomvd>WGPS - C/A Code Phase GPS with Wide-Area Augmentation Service Correction </edomvd>
+          </edom>
+          <edom>
+            <edomv>5-10 M </edomv>
+            <edomvd>DPHO - Digital Aerial Photography </edomvd>
+          </edom>
+          <edom>
+            <edomv>5-50 M </edomv>
+            <edomvd>AGPS - Autonomous C/A Code Phase GPS </edomvd>
+          </edom>
+          <edom>
+            <edomv>5-100 M </edomv>
+            <edomvd>DMAP - Digital Map Interpolation </edomvd>
+          </edom>
+          <edom>
+            <edomv>20-150 M </edomv>
+            <edomvd>CALC - Calculated by GIS Software </edomvd>
+          </edom>
+          <edom>
+            <edomv>50-150 M </edomv>
+            <edomvd>LORN - LORAN-C Navigational Device </edomvd>
+          </edom>
+          <edom>
+            <edomv>50-150 M </edomv>
+            <edomvd>ADDM - Address Matching / Precision Mapping </edomvd>
+          </edom>
+          <edom>
+            <edomv>50-150 M</edomv>
+            <edomvd>MPHO - Manual Aerial Photography With Ground Control </edomvd>
+          </edom>
+          <edom>
+            <edomv>&gt; 150 M </edomv>
+            <edomvd>MMAP Manual Map Interpolation</edomvd>
+          </edom>
+          <edom>
+            <edomv>&gt; 150 M </edomv>
+            <edomvd>SATI - Satellite Imagery </edomvd>
+          </edom>
+          <edom>
+            <edomv>&lt; 1 Km </edomv>
+            <edomvd>ZIP2 - ZIP Code + 2 Segment Centroid </edomvd>
+          </edom>
+          <edom>
+            <edomv>&lt; 0.5 Km4 </edomv>
+            <edomvd>ZIP4 - ZIP Code +4 Segment Centroid </edomvd>
+          </edom>
+          <edom>
+            <edomv>&lt; 2 Km4 </edomv>
+            <edomvd>ZIPC - ZIP Code Centroid </edomvd>
+          </edom>
+          <edom>
+            <edomv>N/A</edomv>
+            <edomvd>OTHR</edomvd>
+          </edom>
+          <edom>
+            <edomv>N/A</edomv>
+            <edomvd>UNKN - Unknown Method </edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>QA_STATUS</attrlabl>
+        <attrdef>REVIEWING STATUS</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CLASS</attrlabl>
+        <attrdef>TYPES OF CLASSES</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>100</edomv>
+            <edomvd>CLASS I LANDFILL  </edomvd>
+            <edomvds>GENERAL DISPOSAL 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>200</edomv>
+            <edomvd>CLASS II LANFILL</edomvd>
+            <edomvds>GENERAL DISPOSAL</edomvds>
+          </edom>
+          <edom>
+            <edomv>300</edomv>
+            <edomvd>CLASS III LANDFILL  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>310</edomv>
+            <edomvd>LAND CLEARING DEBRIS  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>320</edomv>
+            <edomvd>YARD TRASH COMPOSTING W/DISPOSAL (17-701)</edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>330</edomv>
+            <edomvd>YARD TRASH PROCESSING (NOT COMPOSTING) </edomvd>
+          </edom>
+          <edom>
+            <edomv>400</edomv>
+            <edomvd>SLUDGE DISPOSAL FACILITY  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>410</edomv>
+            <edomvd>ASBESTOS DISPOSAL FACILITY  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>420</edomv>
+            <edomvd>ASH MONOFIL  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>500</edomv>
+            <edomvd>OTHER DISPOSAL FACILITY  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>510</edomv>
+            <edomvd>SPECIAL WASTE</edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>511</edomv>
+            <edomvd>TIRE DISPOSAL  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>520</edomv>
+            <edomvd>OLD DUMPS</edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>530</edomv>
+            <edomvd>LACK OF DATA </edomvd>
+          </edom>
+          <edom>
+            <edomv>540</edomv>
+            <edomvd>CONSTRUCTION/DEMOLITION DEBRIS  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>545</edomv>
+            <edomvd>CONSTRUCTION/DEMOLITION DEBRIS RECYCLING </edomvd>
+          </edom>
+          <edom>
+            <edomv>590</edomv>
+            <edomvd>UNAUTHORIZED DUMP  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>591</edomv>
+            <edomvd>C &amp; D DEBRIS, UNAUTHORIZED  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>592</edomv>
+            <edomvd>WASTE TIRE SITE, UNAUTHORIZED  </edomvd>
+            <edomvds>GENERAL DISPOSAL </edomvds>
+          </edom>
+          <edom>
+            <edomv>595</edomv>
+            <edomvd>UNAUTHORIZED DISPOSAL/PROCESSING-COMPLAINT </edomvd>
+          </edom>
+          <edom>
+            <edomv>600</edomv>
+            <edomvd>TREATMENT FACILITY </edomvd>
+          </edom>
+          <edom>
+            <edomv>610</edomv>
+            <edomvd>INCINERATION </edomvd>
+          </edom>
+          <edom>
+            <edomv>611</edomv>
+            <edomvd>INCINERATION ONLY </edomvd>
+          </edom>
+          <edom>
+            <edomv>620</edomv>
+            <edomvd>PYROLYSIS </edomvd>
+          </edom>
+          <edom>
+            <edomv>630</edomv>
+            <edomvd>OTHER TREATMENT </edomvd>
+          </edom>
+          <edom>
+            <edomv>631</edomv>
+            <edomvd>BIOHAZARDOUS WASTE TREATMENT </edomvd>
+          </edom>
+          <edom>
+            <edomv>700</edomv>
+            <edomvd>VOLUME REDUCTION/TRANSFER STATION </edomvd>
+          </edom>
+          <edom>
+            <edomv>710</edomv>
+            <edomvd>WASTE TIRE PROCESSING FACILITY </edomvd>
+          </edom>
+          <edom>
+            <edomv>720</edomv>
+            <edomvd>SHREDDER/PULVERIZER </edomvd>
+          </edom>
+          <edom>
+            <edomv>722</edomv>
+            <edomvd>AUTO/WHITE GOODS SHREDDER </edomvd>
+          </edom>
+          <edom>
+            <edomv>722</edomv>
+            <edomvd>MOBILE SHREDDER </edomvd>
+          </edom>
+          <edom>
+            <edomv>730</edomv>
+            <edomvd>SLUDGE CONCENTRATION </edomvd>
+          </edom>
+          <edom>
+            <edomv>740</edomv>
+            <edomvd>COMPOSTING PLANT </edomvd>
+          </edom>
+          <edom>
+            <edomv>741</edomv>
+            <edomvd>SLUDGE COMPOSTING </edomvd>
+          </edom>
+          <edom>
+            <edomv>742</edomv>
+            <edomvd>YARD TRASH COMPOSTING W/RECYCLING (17-709) </edomvd>
+          </edom>
+          <edom>
+            <edomv>743</edomv>
+            <edomvd>MANURE COMPOSTING </edomvd>
+          </edom>
+          <edom>
+            <edomv>748</edomv>
+            <edomvd>OTHER COMPOSTING W/DISPOSAL(17-701) </edomvd>
+          </edom>
+          <edom>
+            <edomv>749</edomv>
+            <edomvd>OTHER COMPOSTING W/RECYCLING(17-709) </edomvd>
+          </edom>
+          <edom>
+            <edomv>750</edomv>
+            <edomvd>TRANSFER STATION </edomvd>
+          </edom>
+          <edom>
+            <edomv>751</edomv>
+            <edomvd>WASTE TIRE COLLECTION CENTER </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>752</edomv>
+            <edomvd>USED OIL COLLECTION CENTER </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>753</edomv>
+            <edomvd>BIOHAZARDOUS WASTE STORAGE </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>800</edomv>
+            <edomvd>RESOURCE RECOVERY FACILITY </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>810 </edomv>
+            <edomvd>MATERIAL RECOVERY </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>811</edomv>
+            <edomvd>USED OIL RECYCLING </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>812</edomv>
+            <edomvd>CONTAINER RECYCLING </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>820 </edomv>
+            <edomvd>ENERGY RECOVERY </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>821</edomv>
+            <edomvd>BIOMASS GAS/LIQUID PRODUCTION </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>900</edomv>
+            <edomvd>OTHER VOLUME REDUCTION/RESOURCE RECOVERY ACILITY</edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+          <edom>
+            <edomv>910</edomv>
+            <edomvd>DISASTER DEBRIS STAGING AREA </edomvd>
+            <edomvds>PROCESSING FACILITY 
+</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS</attrlabl>
+        <attrdef>STREET ADDRESS OR PHYSICAL LOCATION BY DIRECTION</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ZIP5</attrlabl>
+        <attrdef>ZIP CODE OF THE FACILITY</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DISTRICT</attrlabl>
+        <attrdef>THE DISTRICT THE FACILITY IS LOCATION IN</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>CD</edomv>
+            <edomvd>CENTRAL DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>NED</edomv>
+            <edomvd>NORTHEAST DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>NWD</edomv>
+            <edomvd>NORTHWEST DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>SED</edomv>
+            <edomvd>SOUTHEAST DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>SWD</edomv>
+            <edomvd>SOUTHWEST DISTRICT</edomvd>
+          </edom>
+          <edom>
+            <edomv>SD</edomv>
+            <edomvd>SOUTH DISTRICT</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY_ID</attrlabl>
+        <attrdef>FLORIDA COUNTY BY NUMBERS 1 - 67</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1   ALACHUA,    2   BAKER,    3   BAY</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>4   BRADFORD,  5   BREVARD,   6   BROWARD</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>7   CALHOUN,    8   CHARLOTTE,  9   CITRUS</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>10   CLAY,            11   COLLIER,           12   COLUMBIA</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>13   DADE, 14   DESOTO,           15   DIXIE</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>16   DUVAL,            17   ESCAMBIA,       18   FLAGLER</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>19   FRANKLIN,          20   GADSDEN,         21   GILCHRIST</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>22   GLADES,             23   GULF,                24   HAMILTON</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>25   HARDEE,             26   HENDRY,           27   HERNANDO</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>28   HIGHLANDS,       29   HILLSBOROUGH,  30   HOLMES</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>31   INDIAN RIVER,     32   JACKSON,         33   JEFFERSON</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>34   LAFAYETTE,         35   LAKE,                36   LEE</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>37   LEON,            38   LEVY,               39   LIBERTY</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>40   MADISON,           41   MANATEE,         42   MARION</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>43   MARTIN,              44   MONROE,          45   NASSAU</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>46   OKALOOSA,         47   OKEECHOBEE,    48   ORANGE</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>49   OSCEOLA,           50   PALM BEACH,    51   PASCO</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>52   PINELLAS,           53   POLK,                54   PUTNAM</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>ST. JOHNS,         56   ST. LUCIE,         57   SANTA ROSA</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>58   SARASOTA,          59   SEMINOLE,        60   SUMTER</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>61   SUWANNEE,         62   TAYLOR,            63   UNION</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>64   VOLUSIA,             65   WAKULLA,         66   WALTON</edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+          <edom>
+            <edomv>67   WASHINGTON          </edomv>
+            <edomvd>NUMBER</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COORDINATE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ACCURACY_L</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LAT_DD</attrlabl>
+        <attrdef>LATITUDE - DEGREES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LAT_SS</attrlabl>
+        <attrdef>LATITUDE - SECONDS LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP WACS DATABASE</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COLLECTOR_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>COLLECT_DA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VERIFIER_U</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VERIFICATI</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>VERIFY_MET</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>**** Current Facility Status Codes ****
+
+Code	Description
+
+A	ACTIVE / 
+C	CLEANUP, WASTE REMOVED /
+D	NOT YET DETERMINED /
+E	CERCLIS PRELIMINARY ASSESSMENT / 
+F	NFA,NO FURTHER ACTION/INACTIVE / 
+I	INACTIVE / 
+J	CLOSED, NO GW MONITORING / 
+K	CLOSED, WITH GW MONITORING/ 
+N	ACT NOT PERMITED / 
+O	NEVER OPERATED, PERMIT NEVER USED / 
+P	PROPOSED
+
+**** OBJECT OF INTEREST CODE ****
+FACILITY
+GENERAL DISPOAL AREA
+WASTE PROCESSING AREA
+
+*** The following Class codes are appropriate for Solid Waste General Disposal classes of operation. ***
+
+Code   -   Description     -     Class Type
+100    -   CLASS I LANDFILL      -     GENERAL  /
+200    -   CLASS II LANDFILL      -     GENERAL  /
+300    -   CLASS III LANDFILL      -     GENERAL  / 
+310    -   LAND CLEARING DEBRIS      -     GENERAL  /
+320    -   YARD TRASH COMPOSTING W/DISPOSAL (17-701)      -     GENERAL  /
+400    -   SLUDGE DISPOSAL FACILITY      -     GENERAL  /
+410    -   ASBESTOS DISPOSAL FACILITY      -     GENERAL  /
+420    -   ASH MONOFIL      -     GENERAL  /
+500    -   OTHER DISPOSAL FACILITY      -     GENERAL  /
+510    -   SPECIAL WASTE      -     GENERAL  /
+511    -   TIRE DISPOSAL      -     GENERAL  /
+520    -   OLD DUMP      -     GENERAL  /
+540    -   CONSTRUCTION/DEMOLITION DEBRIS      -     GENERAL  /
+590    -   UNAUTHORIZED DUMP      -     GENERAL  /
+591    -   C &amp; D DEBRIS, UNAUTHORIZED      -     GENERAL  /
+592    -   WASTE TIRE SITE, UNAUTHORIZED      -     GENERAL  /
+748    -   OTHER COMPOSTING W/DISPOSAL(17-701)      -     GENERAL  /
+
+*** The following Class codes are appropriate for Solid Waste Processing classes of operation. ***
+  
+CLASS CODE   -   CLASS TYPE     -      FACILITY TYPE
+
+330   -   YARD TRASH PROCESSING (NOT COMPOSTING)      -      PROCESSING  /
+530   -   LACK OF DATA      -      BOTH  /
+545   -   CONSTRUCTION/DEMOLITION DEBRIS RECYCLING      -      PROCESSING  /
+600   -   TREATMENT FACILITY     -      BOTH  /
+610   -   INCINERATION      -      PROCESSING  /
+611   -   INCINERATION ONLY     -      PROCESSING  /
+620   -   PYROLYSIS     -      BOTH  / 
+630   -   OTHER TREATMENT     -      PROCESSING  /
+631   -   BIOHAZARDOUS WASTE TREATMENT      -      PROCESSING  /
+700   -   VOLUME REDUCTION/TRANSFER STATION     -      PROCESSING  / 
+720   -   SHREDDER/PULVERIZER PROCESSING     -      PROCESSING  /
+721   -   AUTO/WHITE GOODS SHREDDER     -      PROCESSING  / 
+722   -   MOBILE SHREDDER      -      PROCESSING  /
+730   -   SLUDGE CONCENTRATION      -      PROCESSING  / 
+740   -   COMPOSTING PLANT      -      PROCESSING  
+741   -   SLUDGE COMPOSTING      -      PROCESSING  /
+742   -   YARD TRASH COMPOSTING W/RECYCLING      -      PROCESSING  /
+743   -   MANURE COMPOSTING PROCESSING     -      PROCESSING  /
+749   -   OTHER COMPOSTING W/RECYCLING(17-709)      -      PROCESSING  /
+750   -   TRANSFER STATION      -      PROCESSING
+751   -   WASTE TIRE COLLECTION CENTER      -      PROCESSING  /
+752   -   USED OIL COLLECTION CENTER      -      PROCESSING  /
+753   -   BIOHAZARDOUS WASTE STORAGE      -      PROCESSING  /  
+800   -   RESOURCE RECOVERY FACILITY     -      PROCESSING  /
+810   -   MATERIAL RECOVERY     -      PROCESSING  / 
+811   -   USED OIL RECYCLING      -      PROCESSING  / 
+812   -   CONTAINER RECYCLING     -      PROCESSING  /
+820   -   ENERGY RECOVERY      -      PROCESSING  /  
+821   -   BIOMASS GAS/LIQUID PRODUCTION     -      PROCESSING  /
+900   -   OTHER VOLUME REDUCTION/RESOURCE RECOVERY ACILITY     -      PROCESSING  /
+
+Both* - refers to a code that may be used for either Waste Processing or General Disposal classes of operation.                  
+
+**** In addition to supporting additional GIS feature types (lines and polygons added to support for points), the standard will also now allow several different projections/coordinate systems.  The projection / coordinate systems supported are: 
+
+o	Geographic (latitude/longitude coordinates),
+o	State Plane (East, West and North zones)
+o	UTM (zones 16 and 17), 
+o	Cape Canaveral, and 
+o	The FDEP custom Albers.  
+Several datum are supported as well: 
+o	NAD27, 
+o	NAD83, 
+o	WGS84, and 
+o	Partially HPGN/HARN.
+
+***** Object of Interest Identifier ****
+
+The Object of Interest (the thing regulated, permitted, or tracked).  While the BIS Applications group will maintain the Object of Interest code table, the program area will be responsible for determining the taxonomy of codes needed to support their applications and business decisions.
+
+**** Coordinate Accuracy Level ****
+
+EXACT - meaning the measurement was taken on the object of interest (meaning that only very large scale high quality imagery or GPS would yield EXACT point proximity).
+APPRX - meaning the approximate location of the object of interest (nearby for GPS or decent quality imagery for visible features), say within 50 meters or less of the true object location.
+VICIN - meaning within the vicinity of the object of interest (lower quality imagery with less visible features, map interpolation), greater than 50 meters away.
+OFFST - meaning the measurement was taken at a point of some known distance and bearing from the object of interest.  It is not specified where the known distance and bearing are stored.
+ENTRA - meaning the entrance through which one must travel to get to the object of interest.  This code is like APPRX and VICIN, but adds additional information.
+CENTR - meaning the center of the site/facility containing the object of interest.  This code is like APPRX and VICIN, but adds additional information.
+ADMIN - meaning the administrative building of the site/facility containing the object of interest.  This code is like APPRX and VICIN, but adds additional information.
+
+**** Datum Identifier ****
+
+The horizontal reference for measuring locations on the Earth's surface.
+HPGN	- High Precision GIS Network / High Precision Geodetic Reference
+NAD27	- North American Datum of 1927
+NAD83	- North American Datum of 1983
+WGS84	- World Geodetic Survey of 1984
+
+**** Collector Name ****
+
+The name of the person taking the measurement.
+
+**** Collector Affiliation Name ****
+
+The agency or company for whom the collector works.
+
+**** Collection Date ****
+
+The date and time on which the measurement was taken.
+
+**** Coordinate Accuracy Level Identifier ****
+
+The measured, estimated or deduced degree of correctness of the measurement.
+
+**** Verifying Program Identifier ****
+
+The FDEP program performing the verification.
+
+**** Verification Date ****
+
+The date and time on which the verification was performed.
+
+**** Latitude Measure Degrees ****
+
+The degrees portion of the angular distance on a meridian north or south of the equator.
+
+**** Latitude Measure Minutes ****
+
+The minutes portion of the angular distance on a meridian north or south of the equator
+
+**** Latitude Measure Seconds ****
+
+The seconds portion to four significant digits of the angular distance on a meridian north or south of the equator.
+
+**** Longitude Measure Degrees ****
+
+The degrees portion of the angular distance on a meridian east or west of the prime meridian.  
+
+**** Longitude Measure Minutes ****
+
+The minutes portion of the angular distance on a meridian east or west of the prime meridian.
+
+**** Longitude Measure Seconds ****
+
+The seconds portion to four significant digits of the angular distance on a meridian east or west of the prime meridian
+
+***** Collection Method Identifier ****
+
+ADDM	- Address Matching  /
+AGPS	- Autonomous GPS  /
+CALC	- Calculated by GIS Software  /
+CSUR	- Cadastral Survey  /
+DGPS	- Differentially Corrected GPS  /
+DMAP	- Digital Map Interpolation  /
+DPHO	- Digital Aerial Photography With Ground Control  /
+GGPS	- Geodetic Quality GPS  /
+LORN	- LORAN-C Navigational Device  /
+MMAP	- Manual Map Interpolation  /
+MPHO	- Manual Aerial Photography With Ground  / 
+OTHR	- A Method Not Listed  /
+SATI	- Satellite Imagery With Ground Control  /
+WGPS	- GPS with Wide-Area Augmentation Service Correction  /
+UNKN	- Unknown Method  /
+ZIP2	- ZIP Code + 2 Segment Centroid  /  
+ZIP4	- ZIP Code + 4 Segment Centroid  /
+ZIPC	- Zip Code Centroid  /
+
+** Code, Method, Expanded, Description, Estimated Accuracy, Rank &amp; Accuracy Level **
+
+CSUR - Cadastral or Land Survey 
+Measurement of boundaries, area, and/or elevations of land (or structures) on the earth's surface by means of measuring angles and distances with optical survey equipment, and using geometry and trigonometry to determine locations.  In the general plan this includes a field-note record of the observations, measurements, legal description, and monuments descriptive of the work performed and a plat that represents the cadastral survey. Ref: (http://www.cadastral.com/73manlc1.htm#1-2.)  / &lt; 0.01 M / 1 / 1
+GGPS - Geodetic Quality C/A Code and Carrier Phase GPS 
+Measurement of position using both Coarse Acquisition (C/A) and Carrier phase of GPS signal to determine location to a higher level of Accuracy.  / &lt; 0.1 M / 2 / 2
+DGPS - Differentially Corrected C/A Code Phase GPS 
+Measurement of position using a single GPS receiver and a localized correction signal from a commercial or public community base station such as the US Coast Guard Beacons. This includes Real Time Kinematic (RTK) / 1-5 M / 3 / 3
+WGPS - C/A Code Phase GPS with Wide-Area Augmentation Service Correction 
+Measurement of position using a single GPS receiver in conjunction with a correction obtained from a model using regional base stations and transmitted by telecommunications satellites. / 3-7 M / 4 / 3
+DPHO - Digital Aerial Photography 
+Assignment of location coordinates by means of visually referencing the coordinates to a background consisting of digital aerial photography.  No interpolation is attempted. / 5-10 M / 5 / 3
+AGPS - Autonomous C/A Code Phase GPS 
+Measurement of position using a single GPS receiver, with coordinates determined within the receiver in real time. Such positioning involves using the information broadcast by the GPS satellites alone. / 5-50 M / 6 / 4/5
+DMAP - Digital Map Interpolation Assignment of location coordinates by means of visually interpolating geographic coordinates on a background consisting of digital maps; i.e., USGS 1:24,000 Quadrangle maps, with geographic reference points. / 5-100 M / 7 / 4-6
+CALC - Calculated by GIS Software 
+The calculation of the center of a polygon by GIS software using the supplied boundary of a shape. The accuracy of the calculated value is a determined by the precision of the supplied boundary shape.  For example, a County center calculated from the US Bureau of the Census TIGER/Line file based on 1:100,000 scale maps would not be as accurate as a center calculated from a survey-grade small parcel shape. / 20-150 M / 7 / 5
+LORN - LORAN-C Navigational Device 
+Long Range Aid to Navigation (LORAN) - Measurement of position using a long distance radio navigation land station transmitting synchronized pulses. Hyperbolic lines of position are determined by the measurement of the difference in the time of arrival of these pulses. Three or more stations are needed to remove ambiguities in the position of the receiver. / 50-150 M / 8 / 6
+ADDM - Address Matching / Precision Mapping 
+Automatic or semi-automatic operations to estimate location coordinates by geo-referencing locations with digital cartographic street reference data.  Census data, such as the Bureau of Census's TIGER, containing street names, address ranges and latitude/longitude of the street network, are used to interpolate point locations, usually within the block range.  
+Ref: http://www.hanford.gov/dqo/project/level5/ldpigscm.pdf  / 50-150 M / 9 / 6
+MPHO - Manual Aerial Photography With Ground Control 
+Direct measurement of locations from existing printed aerial photography using various methods (i.e., bar scale, engineer's scale or electronic ruler, electronic digitizer).  Such aerial photography must have been orthorectified  / 50-150 M / 10 / 6
+MMAP Manual Map Interpolation Direct measurement of locations from existing paper maps, using various methods (i.e., bar scale, engineer's scale or electronic ruler, electronic digitizer).  
+Ref: http://www.hanford.gov/dqo/project/level5/ldpigscm.pdf   / &gt; 150 M /11 / 6
+SATI - Satellite Imagery 
+Assignment of location coordinates by means of visually interpolating geographic coordinates on a background consisting of digital or satellite imagery.  / &gt; 150 M / 12 / 6
+ZIP2 - ZIP Code + 2 Segment Centroid 
+Automated method for the assignment of location coordinates to the centroid of the ZIP+2 street segment that contains the feature address. / &lt; 1 Km / 13 / 6
+ZIP4 - ZIP Code +4 Segment Centroid 
+Automated method for the assignment of location coordinates to the centroid of the ZIP+4 street segment that contains the feature address.  / &lt; 0.5 Km4 / 14 / 6
+ZIPC - ZIP Code Centroid 
+Automated method for the assignment of location coordinates to the centroid of a polygon representing the zip-code area and containing the feature.  / &lt; 2 Km4 / 15 / 6
+OTHR A Method Not Listed Assignment of location coordinates using a method excluded from this group of collection methods.  / n/a  / 99 / 6
+UNKN - Unknown Method 
+Method of assignment of location coordinates is unknown. / n/a  / 99 / 6
+
+**** Florida County by Numbers and by Names ****
+
+         1   ALACHUA,              
+         2   BAKER,                  
+         3   BAY,                   
+         4   BRADFORD,               
+         5   BREVARD,                
+         6   BROWARD,               
+         7   CALHOUN,               
+         8   CHARLOTTE,             
+         9   CITRUS,                
+        10   CLAY,                  
+        11   COLLIER,               
+        12   COLUMBIA,              
+        13   DADE,                  
+        14   DESOTO,                
+        15   DIXIE,                 
+        16   DUVAL,                 
+        17   ESCAMBIA,              
+        18   FLAGLER,               
+        19   FRANKLIN,              
+        20   GADSDEN,               
+        21   GILCHRIST,            
+        22   GLADES,                
+        23   GULF,                  
+        24   HAMILTON,              
+        25   HARDEE,                
+        26   HENDRY,               
+        27   HERNANDO,              
+        28   HIGHLANDS,             
+        29   HILLSBOROUGH,          
+        30   HOLMES,                
+        31   INDIAN RIVER,          
+        32   JACKSON,               
+        33   JEFFERSON,             
+        34   LAFAYETTE,             
+        35   LAKE,                  
+        36   LEE,                   
+        37   LEON,                  
+        38   LEVY,                 
+        39   LIBERTY,               
+        40   MADISON,               
+        41   MANATEE,               
+        42   MARION,                
+        43   MARTIN,                
+        44   MONROE,                
+        45   NASSAU,                
+        46   OKALOOSA,              
+        47   OKEECHOBEE,            
+        48   ORANGE,                
+        49   OSCEOLA,              
+        50   PALM BEACH,           
+        51   PASCO,               
+        52   PINELLAS,            
+        53   POLK,                
+        54   PUTNAM,              
+        55   ST. JOHNS,            
+        56   ST. LUCIE,            
+        57   SANTA ROSA,           
+        58   SARASOTA,             
+        59   SEMINOLE,             
+        60   SUMTER,               
+        61   SUWANNEE,             
+        62   TAYLOR,               
+        63   UNION,                
+        64   VOLUSIA,             
+        65   WAKULLA,             
+        66   WALTON,               
+        67   WASHINGTON</eaover>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120412</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

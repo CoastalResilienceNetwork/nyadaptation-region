@@ -1,0 +1,226 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<pubdate>20130701</pubdate>
+				<title>Unified Florida Coral Reef Tract Map v1.1</title>
+				<edition>Version 1.0</edition>
+				<geoform>vector digital data</geoform>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Version 1.1 - December 2013. The Unified Florida Reef Tract Map (Unified Reef Map) provides a consistent geospatial framework for management, monitoring, and characterization of the Florida reef tract from Martin County to the Dry Tortugas. The Unified Reef Map integrates existing benthic habitat maps of Martin, Palm Beach, Broward, and Miami Counties, Biscayne National Park, Florida Bay, and the Florida Keys, including the Dry Tortugas. This map of the seafloor uses a Unified Classification (UC) system to provide a common and consistent picture of the entire area while retaining the original detailed information specific to different source maps. The UC contains five levels of seafloor classification detail providing flexibility in the scope of analysis. UC Level 0 is the coarsest classification level that provides a consistent view of the entire area. UC Level 4 retains full seafloor description details from source maps which are not necessarily consistent for all areas. Where mapping projects spatially overlap, data are edited to create a seamless and consistent transition. Existing seafloor classification values are also cross-walked to the Coastal and Marine Ecological Classification Standard (CMECS).</abstract>
+			<purpose>The purpose of this map product is to provide a seamless spatial representation of the Florida Keys Reef Tract and surrounding area benthos with a classification system that unifies the various source classification schemes while retaining the original information. Individual source maps cross-walked to the unified classification without spatial edits (retaining overlap and unmatched seams) are also available. Please refer to the technical report accompanying this dataset for detailed information and dataset use recommendations. Note that his is a draft product, Accuracy Assessment for integration edits will be conducted in 2014. This map will be updated with new data as it becomes available.</purpose>
+		</descript>
+		<spdom>
+			<bounding>
+				<westbc>-82.989231</westbc>
+				<eastbc>-79.982416</eastbc>
+				<northbc>27.264204</northbc>
+				<southbc>24.413193</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>benthic</themekey>
+				<themekey>GIS</themekey>
+				<themekey>mapping</themekey>
+				<themekey>marine</themekey>
+				<themekey>marine vegetation (mangroves</themekey>
+				<themekey>seagrasses</themekey>
+				<themekey>seaweeds</themekey>
+				<themekey>sea oats)</themekey>
+				<themekey>coastal</themekey>
+				<themekey>habitat (rivers</themekey>
+				<themekey>estuaries</themekey>
+				<themekey>ecology</themekey>
+				<themekey>hard bottom)</themekey>
+				<themekey>corals (reefs</themekey>
+				<themekey>etc.)</themekey>
+				<themekey>biota</themekey>
+				<themekey>environment</themekey>
+				<themekey>oceans</themekey>
+				<themekey>Ecology</themekey>
+			</theme>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>Acknowledgement of the FWC-FWRI (Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute) as the data source would be appreciated in any products developed from these data, and such acknowledgment as is standard for citation and legal practices for data source is expected by users of this data. Please cite the original metadata when using portions of the record to create a similar record of slightly altered data, such as reprojection. If any data are modified or adjusted, please share the edited information with FWC. Users should be aware that comparison with other data sets for the same area from other time periods may be inaccurate due to inconsistencies resulting from changes in mapping conventions, data collection, and computer processes over time. FWC shall not be liable for improper or incorrect use of this data. These data are not legal documents and are not to be used as such. This is not a survey data set and should not be utilized as such. These data are not to be used for navigation.</useconst>
+		<datacred>FWC-FWRI</datacred>
+		<native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+	</idinfo>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>34148</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>UnifiedFloridaReefMap</enttypl>
+				<enttypds>Producer defined</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>OBJECTID_1</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ClassLv0</attrlabl>
+				<attrdef>Unified Classification Level 0. This is the coarsest (most general) thematic level.</attrdef>
+				<attrdefs>FWC</attrdefs>
+			</attr>
+			<attr>
+				<attrlabl>ClassLv1</attrlabl>
+				<attrdef>Unified Classification Level 1</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>Source</attrlabl>
+				<attrdef>Original mapping project reference</attrdef>
+				<attrdefs>FWC</attrdefs>
+			</attr>
+			<attr>
+				<attrlabl>Zone_</attrlabl>
+				<attrdef>Classification Zone</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>GeoformDet</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>GeoformD_1</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>GeoForm</attrlabl>
+				<attrdef>This field retains the original source data classification values</attrdef>
+				<attrdefs>Orginal source layer</attrdefs>
+			</attr>
+			<attr>
+				<attrlabl>BioCoverDe</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PercentBio</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PercentCor</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>BioCover</attrlabl>
+				<attrdef>This field retains the original source data classification values</attrdef>
+				<attrdefs>Orginal source layer</attrdefs>
+			</attr>
+			<attr>
+				<attrlabl>CMECS_Geo</attrlabl>
+				<attrdef>CMECS Geoform cross-walk</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>CMECS_Bio</attrlabl>
+				<attrdef>CMECS Biological Cover cross-walk</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>ClassLv2</attrlabl>
+				<attrdef>Unified Classification Level 2</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>ClassLv3</attrlabl>
+				<attrdef>Unified Classification Level 3</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>ClassLv4</attrlabl>
+				<attrdef>Unified Classification Level 4. This is the most detailed thematic classification level.</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>AggKey</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Acres</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Bio_des</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>Ancil1</attrlabl>
+				<attrdef>Ancillary Information detailing integration edits</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>Ancil2</attrlabl>
+				<attrdef>Ancillary Information detailing integration edits</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>AncilNotes</attrlabl>
+				<attrdef>Ancillary Information detailing integration edits</attrdef>
+			</attr>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape_Area</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<metainfo>
+		<metd>20130624</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+	</metainfo>
+	<Esri><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\TERMINAL\D\temp\SEFL\New Folder\sefl_Unified_ReefMapv11</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="D:\temp\sefl_Unified_ReefMapv11" dest="\\TERMINAL\D\temp\SEFL\New Folder\sefl_Unified_ReefMapv11" date="20141103" time="12524600"></copy></copyHistory></DataProperties></Esri></metadata>

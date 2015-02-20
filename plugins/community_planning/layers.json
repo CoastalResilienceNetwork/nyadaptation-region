@@ -1,0 +1,16 @@
+[
+    {
+        "agsSource": {
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
+            "folderTitle": "Coastal_Resilience_base_data",
+            "folders": [
+                {
+                    "name": "Florida_Keys",
+                    "services": [
+                        { "name": "Monroe_County_Sustainability_Action_Plan", "type":"dynamic" }
+                    ]
+                }
+            ]
+        }
+    }
+]

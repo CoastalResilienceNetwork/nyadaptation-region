@@ -1,0 +1,239 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Brownfield Areas</title>
+        <geoform>vector digital data</geoform>
+        <onlink>Server=gissde; Service=5151; User=dep; Version=SDE.DEFAULT</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Brownfields are defined by the Florida Department of Environmental Protection (FDEP) as abandoned, idled, or underused industrial and commercial facilities where expansion or redevelopment is complicated by real or perceived environmental contamination. The primary goals of Florida's Brownfields Redevelopment Act (Ch. 97-277, Laws of Florida, codified at ss. 376.77-.85, F.S.) are to reduce health and environmental hazards on existing commercial and industrial sites that are abandoned or underused due to these hazards and create financial and regulatory incentives to encourage redevelopment and voluntary cleanup of contaminated properties. A "brownfield area" means a contiguous area of one or more brownfield sites, some of which may not be contaminated, that has been designated as such by a local government resolution. Such areas may include all or portions of community redevelopment areas, enterprise zones, empowerment zones, other such designated economically deprived communities and areas, and Environmental Protection Agency (EPA) designated brownfield pilot projects. This layer provides a polygon representation of the boundaries of these designated Brownfield Areas in Florida.</abstract>
+      <purpose>Brownfields data is provided to assist in the determination of areas with potential for economic revitalization. This layer was created to provide a geospatial reference of brownfields within the Brownfields GeoViewer internet mapping application.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.407242</westbc>
+        <eastbc>-81.403901</eastbc>
+        <northbc>24.695567</northbc>
+        <southbc>24.691395</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>Because a variety of sources and methods were used to derive information for this data, the quality of the linework may vary accordingly. This data is intended to be used for general locational representation and should not be considered appropriate for legal and/or cadastral purposes.
+
+There are several other GIS layers available for download from the DEP website at: http://www.dep.state.fl.us/gis/datadir.htm  
+You can also view DEP’s GIS data from our online mapping site MapDirect at: http://ca.dep.state.fl.us/mapdirect/ 
+</useconst>
+    <datacred>FDEP/DWM/BWC</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>1</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_MoTh_brownfieldareas</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>USERNAME</attrlabl>
+        <attrdef>USERNAME - Technician or analyst who processed the graphics for each feature in the spatial data layer</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DATESTAMP</attrlabl>
+        <attrdef>DATESTAMP - Date when the graphics were finished for each feature in the spatial data layer</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE</attrlabl>
+        <attrdef>SOURCE - Source of information and/or data for each feature in the spatial data layer</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>METHOD</attrlabl>
+        <attrdef>METHOD - Code to denote processing methodology for creating the graphics for each feature in the spatial data layer</attrdef>
+        <attrdefs>FDEP</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>SHP</edomv>
+            <edomvd>Graphic was copied and pasted from source shapefile(s)</edomvd>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PAPER</edomv>
+            <edomvd>Graphic was heads up digitized from paper maps</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREA_ID</attrlabl>
+        <attrdef>AREA ID -  Brownfield Area ID assigned by the program as "BF" + "DEP county code (2 characters)" + "year of resolution date (two characters)" + "sequential area number for the specified county (2 characters)" + "000"</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AREA_NAME</attrlabl>
+        <attrdef>AREA_NAME - Name of the area designated by a local municipality by resolution as a designated brownfield area</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CITY</attrlabl>
+        <attrdef>CITY - Florida County in which the designated brownfield area lies</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>COUNTY - Florida County in which the designated brownfield area lies</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DISTRICT</attrlabl>
+        <attrdef>DISTRICT - FDEP District in which the designated brownfield area lies.</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ACREAGE</attrlabl>
+        <attrdef>ACREAGE - Number of acres included within the designated brownfield area.</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>RESOLUTIO1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>RESOLUTIO2</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>XCOORD</attrlabl>
+        <attrdef>X_COORDINATE</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>YCOORD</attrlabl>
+        <attrdef>Y_COORDINATE_NBR</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LATITUDE</attrlabl>
+        <attrdef>LATITUDE</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONGITUDE</attrlabl>
+        <attrdef>LONGITUDE</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LAT_DD</attrlabl>
+        <attrdef>LAT_DD - LATITUDE - DEGREES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LAT_MM</attrlabl>
+        <attrdef>LAT_DD - LATITUDE - DEGREES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LAT_SS</attrlabl>
+        <attrdef>LAT_SS - LATITUDE - SECONDS LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONG_DD</attrlabl>
+        <attrdef>LONG_DD - LONGITUDE - DEGREES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONG_MM</attrlabl>
+        <attrdef>LONG_MM - LONGITUDE - MINUTES LOCATION IDENTIFIER</attrdef>
+        <attrdefs>FDEP</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LONG_SS</attrlabl>
+        <attrdef>LONG_SS - LONGITUDE - SECONDS LOCATION IDENTIFIER</attrdef>
+        <attrdefs>DEP GIS DATA</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20120413</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

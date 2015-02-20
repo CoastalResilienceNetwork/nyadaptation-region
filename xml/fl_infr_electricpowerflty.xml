@@ -1,0 +1,146 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Electric Power Facility</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Utility systems include potable water, wastewater, oil, natural gas, electric power, and communication systems. The inventory data required for these include the geographical location and classification of system components.Potable water systems consist of pipelines, water treatment plants, control vaults, control stations, wells, storage tanks, and pumping stations. Wastewater systems consist of pipelines, wastewater treatment plants, control vaults, control stations, and lift stations. Oil systems consist of pipelines, refineries, control vaults, control stations, and tank farms. Natural gas systems consist of pipelines, control vaults, control stations, and compressor stations. Electric power systems consists of generating plants, substations, distribution circuits, and transmission towers.Each of these datasets was developed from 2001 data obtained through the Environmental Protection Agency (EPA) Envirofacts Data Warehouse Location Reference Tables (LRT)tool based on SIC. The attribute information provided by LRT includes: name, address, city, zip, state, and geographical coordinates. South Carolina potable water, waste water, oil and natural gas pipelines data c2001 were provided by the South Carolina Emergency Division (SCEMD).The distribution pipelines database for potable water, waste water and natural gas, which is aggregated at the census tract level, was developed based on the assumption that the number of distribution lines is correlated to the number of local streets. This approximation is considered fairly accurate in urban areas, but less so in rural areas because of the use of onsite components such as water wells, septic tanks and propane gas tanks.</abstract>
+      <purpose>For the FL Keys SLR mapping effort.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.798290</westbc>
+        <eastbc>-81.091670</eastbc>
+        <northbc>24.710560</northbc>
+        <southbc>24.560520</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <datacred>HAZUS-MH</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>5</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true3857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>fl_infr_electricpowerflty</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ElectricPo</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>UtilFcltyC</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Tract</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Name</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Address</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>City</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Statea</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Zipcode</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Owner</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Contact</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PhoneNumbe</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Use</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>YearBuilt</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NumStories</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Capacity</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Cost</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Comment</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20110907</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

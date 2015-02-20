@@ -1,0 +1,299 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Photo Science, Inc.</origin>
+				<pubdate>Unknown</pubdate>
+				<title Sync="TRUE">cotton_mouse_focus_area</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<ftname Sync="TRUE">cotton_mouse_focus_area</ftname><onlink Sync="TRUE">\\ifw4fo-flvebm\shared\007_KEYS_FEMA\RPA_DELIVERABLE_20110312\SPATIAL_DATA\SPECIES_FOCUS_AREAS\cotton_mouse_focus_area.shp</onlink></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This dataset was developed as part of the U.S. Fish and Wildlife Service's 2010 FEMA/FL Keys Biological Opinion, and represents the Focus Area in the Florida Keys of the Key Largo Cotton Mouse.  Every reasonable effort has been made to assure that the best available data was used in the development of the dataset.  The USFWS makes no warranty, representation or guaranty as to the content of the included data beyond what is described in the aforementioned Biological Opinion.  This dataset is subject to change without notice, and users can check with the listed contact for update information. The Focus Area consists of a subset of the habitat classifications presented in Monroe County's 2009 landcover dataset, whose description is provided below:
+
+Photo Science, Inc. of St. Petersburg, Florida was contracted by the Growth Management Division of Monroe County, Florida for the development of a geospatial land cover dataset for the Florida Keys. The previous GIS land cover dataset was developed based on 1991 aerial photography and had not been updated. Monroe County required the creation of a land cover dataset developed from 2006 high resolution orthophotographs to produce an updated land cover geospatial dataset. The minimum mapping unit for classification was 0.5 acres for all codes except hammocks which was 0.35 acres.
+Terramar Environmental Services, Inc., Sugarloaf Key, Florida contracted with the Growth Management Division of Monroe County, Florida to provide an independent review of  the Land Cover dataset created by Photo Science, Inc.
+Photo Science were required by the County to update  734  areas identified by Terramar Environmental Services, Inc. based on current 2009 habitat field conditions.</abstract>
+			<purpose>This species Focus Area dataset will be used to assist various agencies in determining the proximity of properties in the Florida Keys to potential habitat of endangered species.</purpose>
+			<langdata Sync="TRUE">en</langdata><supplinf>Interpreted from 1:4,800 CIR and natural color aerial photography flown in Febuary and March 2006.Data were compiled using ARCGIS in a heads up environment.</supplinf></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate><caldate>2009</caldate></sngdate></timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-80.529707</westbc>
+				<eastbc Sync="TRUE">-80.252932</eastbc>
+				<northbc Sync="TRUE">25.358347</northbc>
+				<southbc Sync="TRUE">24.994604</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">749938.383664</leftbc><rightbc Sync="TRUE">776661.679227</rightbc><bottombc Sync="TRUE">115927.923451</bottombc><topbc Sync="TRUE">155501.196852</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>none</themekt>
+				<themekey>Monroe County</themekey><themekey>map</themekey><themekey>habitat</themekey><themekey>ADID</themekey><themekey>Land Cover</themekey><themekey>vegetation</themekey><themekey>Key Largo</themekey><themekey>Cotton Mouse</themekey><themekey>focus area</themekey></theme>
+			<place>
+				<placekt>none</placekt>
+			</place>
+		</keywords>
+		<accconst>none</accconst>
+		<useconst>The positional accuracy of this data meets USGS NMAS for 1:12000 scale maps. This data has a minimum classification accuracy of 90% for all categories.  
+</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+				</cntaddr>
+				<cntvoice>757-562-3909</cntvoice>
+				<cntorgp><cntorg>USFWS, South Florida Field Office</cntorg></cntorgp><cntpos>GIS Dept.</cntpos></cntinfo>
+		</ptcontac>
+		<datacred>USFWS using landcover data from Photo Science, Inc.</datacred>
+		<native Sync="TRUE">Microsoft Windows 2000 Version 5.2 (Build 3790) Service Pack 2; ESRI ArcCatalog 9.3.1.3500</native>
+		<natvform Sync="TRUE">Shapefile</natvform><crossref><citeinfo><title>Monroe County</title></citeinfo></crossref></idinfo>
+	<dataqual>
+		<attracc>
+		</attracc>
+		<logic>Comparison of the completed land cover data with the 2006 orthophotos was performed. This was done during photointerpretation and quality assurance.
+
+Polygon topology present. All polygons were tested for slivers. Every polygon has a label, there are no multiple labels within polygons, there are no contiguous polygons.</logic>
+		<complete>Minimum mapping unit for all land cover polygons was 0.5 acres with the exception of the "Hammock" category which was 0.35 acres.The study area boundaries for the project were defined by Monroe County. Land Cover habitat features were captured and classified according to the rules, conventions, and descriptions in the Statement of Work and the Photointerpretation Key for the "Land Cover dataset for the Florida Keys" mapping project.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>The positional accuracy of this data meets USGS NMAS for 1:12000 scale maps. Horizontal accuracy of the data corresponds to the positional accuracy of the aerotriangulated photography that was controlled by GPS survey control points. </horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>FDOT/Monroe County</origin>
+						<pubdate>Unknown</pubdate>
+						<title>2006 Florida Keys Aerial Photography</title>
+					</citeinfo>
+				</srccite>
+				<srcscale>1:4800</srcscale>
+				<typesrc>Digital orthophotos</typesrc>
+				<srctime>
+					<timeinfo>
+						<mdattim><sngdate><caldate>02/06</caldate></sngdate><sngdate><caldate>03/06</caldate></sngdate></mdattim></timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>none</srccitea>
+				<srccontr>photographic signature for interpretation of Land Cover data.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Photointerpretation Key
+
+The current photointerpretation key contains examples of all Land Cover classification types delineated for the study and includes both textural descriptions of the classification types along with several aerial photo clips clearly delineated to show users the signatures on the photos.</procdesc>
+				<procdate>June 19, 2009</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Photointerpretation
+
+Photointerpretation for the project was accomplished using heads up photogrammetric techniques. 
+
+Photointerpreters utilized previously collected field data and in-process collection of field data along with other available collateral data to assist in their interpretation. Throughout the photointerpretation process, positional accuracy of land cover boundaries was maintained according to the photographic signatures apparent on the photography.
+ 
+The following coding and classification system was applied during photointerpretation:
+
+CODE	            CLASS NAME
+	
+1	         Developed Land
+2	         Undeveloped Land
+3	         Impervious surface
+4	         Hammock
+5	         Pineland
+6	         Exotic
+7	         Scrub mangrove
+8	         Freshwater Wetland
+9                       Salt marsh
+10                     Buttonwood
+11                     Mangrove
+12                     Beach Berm
+13                     Water
+
+
+Classification Conventions
+
+
+1)            Developed Land
+
+Comprised of areas of intensive use with much of the land covered by structures. Examples are dwellings, strip developments, industrial and commercial complexes, landfills, golfcourses and parks. All impervious surface areas below 0.5 acres will also be included within this category. 
+
+2)	Undeveloped Land
+
+Includes open, scarified or disturbed lands which tend to have uncertain land uses and may contain native species.
+
+3)            Impervious Surface
+
+Includes all surfaces above 0.5 acres which do not allow, or minimally allows, the penetration of water. Examples are building roofs, concrete and asphalt pavements/parking lots and some fine grained soils such as clays.
+
+4)            Hammock
+
+Used to designate most of the upland and upland hammock vegetation found throughout the Keys that is natural and generally undisturbed.
+
+5)            Pineland
+
+This is an upland forest community with an open canopy dominated by the native slash pine composed of known species.
+
+6)            Exotic
+ 
+Invasive exotic species include Melaleuca, Australian Pine, Brazilian Pepper, Leatherleaf and Sapodilla north of the seven mile bridge.
+
+7)            Scrub Mangrove
+
+Typically found in the lower Keys, coastal scrub mangrove of dwarf mangrove are dominated by known species.  Plants are typically less than 5' tall.
+
+8)            Freshwater Wetland 
+
+Wetland areas with either standing water or saturated soil or both where the water is fresh or brackish composed of known species. Some Freshwater Wetlands are isolated and therefore not subject to the MMU of 0.5 acres. Rather, photointerpreters will delineate them without regard to the MMU. 
+
+9)            Salt marsh
+
+The salt marsh community is a wetland area subject to tidal influence, and the vegetation is dominated by non-woody groundcovers and grasses.
+
+10)          Buttonwood
+
+Designates the transitional areas located between tidal mangroves and hammocks that are dominated by Buttonwood. The Buttonwood wetland is a wetland that is usually present in the more landward zone of the transitional wetland area, and may intermix with more upland communities.
+
+11)          Mangrove
+
+A wetland plant association subject to tidal influence where the vegetation is dominated by Black, White or Red mangroves, containing both shrub and tree size vegetation.
+
+12)          Beach Berm
+
+A bare sandy shoreline, coastal dune or a mound or ridge of unconsolidated sand that is immediately landward of, and usually parallel to, the shoreline. The sand is calcareous material that is the remains of marine organisms such as corals, algae and molluscs. The berm may include forested, coastal ridges and may be colonized by hammock vegetation.
+
+13)          Water
+
+All water bodies, both fresh and tidal (saline).</procdesc>
+				<procdate>March 2009 - June 2009</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Quality Assurance and Quality Control
+
+Photo Science, Inc. has established, documented, implemented and maintains a thorough quality control system.
+
+Photo Science's Quality Control techniques are designed to ensure products/materials provided by Photo Science are subject to adequate control of quality to ensure customer satisfaction.  The techniques are designed to prevent discrepancies from occurring and are enforced with positive corrective action when necessary.  
+
+Quality control reviews were ongoing throughout the project. The dataset was examined for adherence to mapping conventions, the PI Key, spatial and classification accuracy, and photointerpretation consistency. 
+
+In-Process Photointerpretation Quality Assurance
+
+Photo Science's Project Manager and the designated QA Photointerpreter systematically reviewed the delineations and classifications interpreted from the aerial photographs.  
+During quality control review using ARC/GIS software, the QA Photointerpreter reviewed the land cover delineations interpreted on the aerial photographs.  The original photointerpreter completed the required revisions and resubmitted the data to the QA Photointerpreter. The work was checked again by the quality assurance photointerpreter prior to delivery. 
+Comparison of the completed data with the orthophotos was performed. This was done during photointerpretation and quality assurance.
+
+
+The quality of the ArcGIS digital data was monitored by a combination of manual and automated analyses. A set of automated quality control programs were used to check for errors, such as missing polygon label points, label points with no attributes, invalid attribute codes, missing attributes within the info tables, and two adjacent polygons with the same attributes.</procdesc>
+				<procdate>May 2009</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>Final Geodatabase
+
+At the conclusion of the photointerpretation  processes for building topology and validating the dataset were completed.
+
+Unique identifiers (record numbers) for resulting polygons were assigned automatically by the system according to normal ARC/GIS conventions. 
+
+</procdesc>
+				<procdate>May 2009</procdate>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">L:\Monroe_County\metadata.xml</srcused><procdate Sync="TRUE">20090616</procdate><proctime Sync="TRUE">06232500</proctime></procstep><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">L:\Monroe_County\Delivery\final 5-12-09\metadata.xml</srcused><procdate Sync="TRUE">20090825</procdate><proctime Sync="TRUE">13244400</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">\\GISNOTEBOOK\C$\Documents and Settings\davisson-bryan\Desktop\GIS Desktop\Photo Science\FINAL_082509\Monroe County.mdb</srcused><procdate Sync="TRUE">20090825</procdate><proctime Sync="TRUE">15343300</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">Server=MC-SRV-GIS; Service=5152; Database=MonroeGISData; Version=dbo.DEFAULT</srcused><procdate Sync="TRUE">20090903</procdate><proctime Sync="TRUE">13160500</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><procdate Sync="TRUE">20100121</procdate><proctime Sync="TRUE">10423800</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><procdate Sync="TRUE">20100223</procdate><proctime Sync="TRUE">22342300</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">S:\007_KEYS_FEMA\GIS_DATA_FOR_EXPORT\SPECIES_FOCUS_AREAS\cotton_mouse_focus_area</srcused><procdate Sync="TRUE">20110309</procdate><proctime Sync="TRUE">08094900</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="flkeys_flkeys_Cotton_Mouse_Focus_Area"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_North_American_1983_HARN</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn><projcsn Sync="TRUE">Albers Conical Equal Area [Florida Geographic Data Library]</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altres Sync="TRUE">0.000100</altres>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="flkeys_flkeys_Cotton_Mouse_Focus_Area">
+			<enttyp>
+				<enttypl Sync="TRUE">flkeys_flkeys_Cotton_Mouse_Focus_Area</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">objectid</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">18</atprecis><attscale Sync="TRUE">8</attscale></attr>
+			<attr><attrlabl Sync="TRUE">CODE</attrlabl><attalias Sync="TRUE">code</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><attrdef>Character code of the Land Cover classification code as defined in the Photointerpretation Key</attrdef><attrdefs>Monroe County</attrdefs><attrdomv><edom><edomv>1</edomv></edom><edom><edomv>2</edomv></edom><edom><edomv>3</edomv></edom><edom><edomv>4</edomv></edom><edom><edomv>5</edomv></edom><edom><edomv>6</edomv></edom><edom><edomv>7</edomv></edom><edom><edomv>8</edomv></edom><edom><edomv>9</edomv></edom><edom><edomv>10</edomv></edom><edom><edomv>11</edomv></edom><edom><edomv>12</edomv></edom><edom><edomv>13</edomv></edom></attrdomv><atprecis Sync="TRUE">18</atprecis><attscale Sync="TRUE">8</attscale></attr><attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">DESCRIPTIO</attrlabl><attalias Sync="TRUE">descriptio</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Data_Sourc</attrlabl><attalias Sync="TRUE">data_sourc</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">st_area_sh</attrlabl><attalias Sync="TRUE">st_area_sh</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">st_length_</attrlabl><attalias Sync="TRUE">st_length_</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+		<overview>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+				</cntaddr>
+				<cntvoice>772-562-3909</cntvoice>
+				<cntorgp><cntorg>USFWS, South Florida Field Office</cntorg></cntorgp></cntinfo>
+		</distrib>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>10.106</transize>
+					<dssize Sync="TRUE">1.607</dssize></digtinfo>
+			</digform>
+		</stdorder>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc></distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20110311</metd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Steven Glass</cntper>
+					<cntorg>USFWS</cntorg>
+				</cntperp>
+				<cntvoice>772-562-3909 ext 238</cntvoice>
+				<cntpos>GIS Analyst</cntpos><cntemail>steven_glass@fws.gov</cntemail></cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta></metainfo>
+	<Esri><CreaDate>20130819</CreaDate><CreaTime>12215000</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20131111</SyncDate><SyncTime>13370300</SyncTime><ModDate>20131111</ModDate><ModTime>13370300</ModTime><DataProperties><lineage><Process ToolSource="C:\Program Files (x86)\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20100121" Time="104241">Project Habitat S:\007_KEYS_FEMA\BASE_LAYERS\Habitat_Projected.shp PROJCS['Albers Conical Equal Area [Florida Geographic Data Library]',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Albers'],PARAMETER['False_Easting',400000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-84.0],PARAMETER['Standard_Parallel_1',24.0],PARAMETER['Standard_Parallel_2',31.5],PARAMETER['Central_Parallel',24.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_StatePlane_Florida_East_FIPS_0901_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',656166.6666666665],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-81.0],PARAMETER['Scale_Factor',0.9999411764705882],PARAMETER['Latitude_Of_Origin',24.33333333333333],UNIT['Foot_US',0.3048006096012192]]</Process><Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20120130" Time="144908">CopyFeatures "Database Connections\MonroeGISData.sde\MonroeGISData.DBO.E_10_BO\MonroeGISData.DBO.E_10_BO_Cotton_Mouse_Focus_Area" "C:\Documents and Settings\davisson-bryan\Desktop\USFWS\E_10_BO_Cotton_Mouse_Focus_Area.shp" # 0 0 0</Process><Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20121108" Time="165451">Project "G:\Global\Florida Keys\temp\FocusAreas\Cotton_Mouse_Focus_Area.shp" "G:\Global\Florida Keys\Prepped\Habitat\Cotton_Mouse_Focus_Area.shp" PROJCS['WGS_1984_Web_Mercator_Auxiliary_Sphere',GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Mercator_Auxiliary_Sphere'],PARAMETER['False_Easting',0.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',0.0],PARAMETER['Standard_Parallel_1',0.0],PARAMETER['Auxiliary_Sphere_Type',0.0],UNIT['Meter',1.0]] NAD_1983_HARN_To_WGS_1984 PROJCS['NAD_1983_HARN_StatePlane_Florida_East_FIPS_0901_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',656166.6666666665],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-81.0],PARAMETER['Scale_Factor',0.9999411764705882],PARAMETER['Latitude_Of_Origin',24.33333333333333],UNIT['Foot_US',0.3048006096012192]]</Process></lineage><itemProps><itemLocation><linkage Sync="TRUE">file://\\TERMINAL\Z$\xml\temporary\flkeys_flkeys_Cotton_Mouse_Focus_Area.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><itemName Sync="TRUE">flkeys_flkeys_Cotton_Mouse_Focus_Area</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><nativeExtBox><westBL Sync="TRUE">-8964523.667200</westBL><eastBL Sync="TRUE">-8933761.733500</eastBL><southBL Sync="TRUE">2875939.554500</southBL><northBL Sync="TRUE">2918979.456300</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn><projcsn Sync="TRUE">WGS_1984_Web_Mercator_Auxiliary_Sphere</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;WGS_1984_Web_Mercator_Auxiliary_Sphere&amp;quot;,GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Mercator_Auxiliary_Sphere&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,0.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,0.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,0.0],PARAMETER[&amp;quot;Auxiliary_Sphere_Type&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3857]]&lt;/WKT&gt;&lt;XOrigin&gt;-20037700&lt;/XOrigin&gt;&lt;YOrigin&gt;-30241100&lt;/YOrigin&gt;&lt;XYScale&gt;148923141.92838538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102100&lt;/WKID&gt;&lt;LatestWKID&gt;3857&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml><csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits></coordRef></DataProperties><ArcGISFormat>1.0</ArcGISFormat></Esri><dataIdInfo><envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.2.0.3348</envirDesc><dataLang><languageCode Sync="TRUE" value="eng" country="USA"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></dataLang><idCitation><resTitle Sync="TRUE">flkeys_flkeys_Cotton_Mouse_Focus_Area</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="search"><westBL Sync="TRUE">-80.529686</westBL><eastBL Sync="TRUE">-80.253347</eastBL><northBL Sync="TRUE">25.351491</northBL><southBL Sync="TRUE">25.001587</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-80.529707</westBL><eastBL Sync="TRUE">-80.252932</eastBL><northBL Sync="TRUE">25.358347</northBL><southBL Sync="TRUE">24.994604</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><descKeys><thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66"></thesaName><keyword Sync="TRUE">002</keyword></descKeys></dataIdInfo><mdLang><languageCode Sync="TRUE" value="eng"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="006"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\ifw4fo-flvebm\shared\007_KEYS_FEMA\RPA_DELIVERABLE_20110312\SPATIAL_DATA\SPECIES_FOCUS_AREAS\cotton_mouse_focus_area.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">1.607</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor><distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE" code="3857">Albers Conical Equal Area [Florida Geographic Data Library]</identCode><idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">8.1.1</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="flkeys_flkeys_Cotton_Mouse_Focus_Area"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20131111</mdDateSt></metadata>
