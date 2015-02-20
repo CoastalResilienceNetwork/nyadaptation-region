@@ -7,6 +7,10 @@
 	{
       "repo": "future_habitat",
       "name": "future_habitat"
+    },
+	{
+      "repo": "explorer",
+      "name": "riskexplorer"
     }
     ]
 }
