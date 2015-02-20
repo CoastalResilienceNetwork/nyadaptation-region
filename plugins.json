@@ -3,6 +3,10 @@
 	{
       "repo": "multiSelect",
       "name": "floodSLR"
+    },
+	{
+      "repo": "future_habitat",
+      "name": "future_habitat"
     }
     ]
 }
