@@ -1,0 +1,390 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <pubdate>20130815</pubdate>
+        <title>Final Critical Habitat for Florida Leafwing (Anaea troglodyta floridalis)</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>These data identify, in general, the areas of proposed critical habitat for Anaea troglodyta floridalis (Florida Leafwing).</abstract>
+      <purpose>Critical habitat constitutes areas considered essential for the conservation of a listed species. These areas provide notice to the public and land managers of the importance of the areas to the conservation of this species. Special protections and/or restrictions are possible in areas where Federal funding, permits, licenses, authorizations, or actions occur or are required.</purpose>
+    </descript>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.397852</westbc>
+        <eastbc>-80.381922</eastbc>
+        <northbc>25.627045</northbc>
+        <southbc>24.665047</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>U.S. Fish &amp; Wildlife Service</themekey>
+        <themekey>habitat</themekey>
+        <themekey>Anaea troglodyta floridalis</themekey>
+        <themekey>Florida Leafwing</themekey>
+        <themekey>critical</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>environment</themekey>
+        <themekey>biota</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Monroe County and Miami-Dade County, Florida</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The GIS files and their associated coordinates are not the legal source for determining the critical habitat boundaries of species described in this dataset, but are used to identify areas which contain the physical and biological features essential to the conservation of the species or areas otherwise determined to be essential. Inherent in any dataset used to develop graphical representations, are limitations of accuracy as determined, among others, the source, scale and resolution of the data. While the U.S. Fish and Wildlife Service makes every effort to represent the critical habitat shown with data as completely and accurately as possible (given existing time and resource constraints), the USFWS gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data. In addition, the USFWS shall not be held liable for improper or incorrect use of the data described and/or contained herein. Graphical representations provided by the use of these data do not represent a legal description of the critical habitat boundary. The user is referred to the critical habitat textual description in the appropriate final rule for this species as published in the Federal Register. These data are to be used only in the context of the definition and purpose of critical habitat. This primarily relates to Section 7 consultation under the Endangered Species Act. These data may be used for planning and land management purposes. They are not to be used for legal survey use. Please refer to Federal Register Citation Number 78FR49878, published 20130815 for the legal critical habitat information.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Fish &amp; Wildlife Service, South Florida Ecological Services Field Office</cntorg>
+        </cntorgp>
+        <cntpos>GIS Specialist</cntpos>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <address>1339 20th Street</address>
+          <city>Vero Beach</city>
+          <state>Florida</state>
+          <postal>32960</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>772.562.3909</cntvoice>
+        <cntfax>772.562.4288</cntfax>
+        <cntemail>leeann_kelso@fws.gov</cntemail>
+        <hours>8:30 am to 4:30 pm est</hours>
+        <cntinst>email, telephone, or fax.</cntinst>
+      </cntinfo>
+    </ptcontac>
+    <datacred>U. S. Fish &amp; Wildlife Service, South Florida Ecological Services Field Office</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+  </idinfo>
+  <dataqual>
+    <lineage>
+      <srcinfo>
+        <typesrc>None</typesrc>
+        <srccontr>Refer to the Federal Register (78FR49878), 20130815.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>1. Merge NFCBOUNDPolysNonCroton and NFCBOUNDPolysCroton (This data represents field work conducted by The Institute for Regional Conservation in collaboration with Miami-Dade County Department of Environmental Resources Management and the U.S. Fish and Wildlife Service South Florida Ecosystem Office (Vero Beach, FL), as the project "Delineation and organization of natural forest communities of Miami-Dade County." Under this project the boundaries of all Natural Forest Community (NFC) sites in Miami-Dade County were delineated in the field or from aerial photographs and plant inventories were conducted for each private NFC where access was granted.
+2. Used “fluccs_04-sfwmd-revised_2011”
+3. Used aerial imagery (Source: Esri, DigitalGlobe, GeoEye, i-cubed, USDA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, and the GIS User Community) to draw a polygon (base on Mark’s knowledge) 
+4. Used “dade_pine_rockland_habitat_final” (from Heather Tipton)
+5. Used” Pineland_Habitat” (Summary: Creation of a 2006 land cover map from 1:4,800 scale CIR and natural color aerial photography that is consistent with the previous 1991 land cover map study area. This data was produced for the Monroe County's "Land Cover dataset for the Florida Keys" project.
+Description: Photo Science, Inc. of St. Petersburg, Florida was contracted by the Growth Management Division of Monroe County, Florida for the development of a geospatial land cover dataset for the Florida Keys. The previous GIS land cover dataset was developed based on 1991 aerial photography and had not been updated. Monroe County required the creation of a land cover dataset developed from 2006 high resolution orthophotographs to produce an updated land cover geospatial dataset. The minimum mapping unit for classification was 0.5 acres for all codes except hammocks which was 0.35 acres. Terramar Environmental Services, Inc., Sugarloaf Key, Florida contracted with the Growth Management Division of Monroe County, Florida to provide an independent review of the Land Cover dataset created by Photo Science, Inc. Photo Science were required by the County to update 734 areas identified by Terramar Environmental Services, Inc. based on current 2009 habitat field conditions. A 'data source' field was added within the dataset highlighting the 734 modifications.)
+
+6. Definition Query: above 18 Acres (eliminated polygons less than 18 acres)
+</procdesc>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>4</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_critical_hab_Florida_leafwing</enttypl>
+        <enttypd>proposed Critical Habitat for Anaea troglodyta floridalis (Florida Leafwing)</enttypd>
+        <enttypds>U.S. Fish &amp; Wildlife Service</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SINGLMULTI</attrlabl>
+        <attrdef>Differentiates between Critical Habitats of single species and multiple species.</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>SINGLE</edomv>
+            <edomvd>Shapefile represents a single species.</edomvd>
+            <edomvds>U.S. Fish and Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MULTIPLE</edomv>
+            <edomvd>Shapefile represents multiple species.</edomvd>
+            <edomvds>U.S. Fish and Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COMNAME</attrlabl>
+        <attrdef>Legal common name of the species</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SCINAME</attrlabl>
+        <attrdef>Binomial or trinomial scientific name</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SPCODE</attrlabl>
+        <attrdef>Unique Species Code referencing the species for the critical habitat being submitted</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>VIPCODE</attrlabl>
+        <attrdef>Unique Population Code referencing the species for the critical habitat being submitted</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>UNIT</attrlabl>
+        <attrdef>Critical habitat unit code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SUBUNIT</attrlabl>
+        <attrdef>Critical Habitat subunit code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>UNITNAME</attrlabl>
+        <attrdef>Critical Habitat unit name</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SUBUNITNAM</attrlabl>
+        <attrdef>Critical Habitat subunit name</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attrdef>Critical Habitat Status</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>FINAL</edomv>
+            <edomvd>Final Critical Habitat</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PROPOSED</edomv>
+            <edomvd>Proposed Critical Habitat</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EXCLUDED</edomv>
+            <edomvd>Excluded (4A3 or 4B2)</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VACATED</edomv>
+            <edomvd>Vacated by Court Order</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEADOFFICE</attrlabl>
+        <attrdef>Lead Office Cost Center Code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COOPOFFICE</attrlabl>
+        <attrdef>Cooperating Office Cost Center Code</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COOPOFMORE</attrlabl>
+        <attrdef>Additional Cooperating Office Cost Center Codes</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FEDREG</attrlabl>
+        <attrdef>Federal Register ID</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>PUBDATE</attrlabl>
+        <attrdef>Federal Register publication date</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>EFFECTDATE</attrlabl>
+        <attrdef>Effective date for critical habitat designation</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>VACATEDATE</attrlabl>
+        <attrdef>Date critical habitat designation vacated</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ACCURACY</attrlabl>
+        <attrdef>Accuracy items or concerns</attrdef>
+        <attrdefs>U.S. Fish &amp; Wildlife Service</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Temporal Adjustment</edomv>
+            <edomvd>Data is dependent on temporal factors</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Seasonal Adjustment</edomv>
+            <edomvd>Data is dependent on seasonal factors</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tidal Adjustment</edomv>
+            <edomvd>Data is dependent on tidal fluctuations</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Historical Adjustment</edomv>
+            <edomvd>Reference features, streams, boundaries, etc. have changed</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Source Adjustment</edomv>
+            <edomvd>Source data is inconsistent or coarse</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Other</edomv>
+            <edomvd>Other concern</edomvd>
+            <edomvds>U.S. Fish &amp; Wildlife Service</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GIS_ACRES</attrlabl>
+        <attrdef>calculated using ArcGIS 10.0, SP5 utilizing the FL Albers projection</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Fish &amp; Wildlife Service, South Florida Ecological Services Field Office</cntorg>
+        </cntorgp>
+        <cntpos>GIS Specialist</cntpos>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <address>1339 20th Street</address>
+          <city>Vero Beach</city>
+          <state>Florida</state>
+          <postal>32960</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>772.562.3909</cntvoice>
+        <cntfax>772.562.4288</cntfax>
+        <cntemail>leeann_kelso@fws.gov</cntemail>
+        <hours>8:30 am to 4:30 pm est</hours>
+        <cntinst>email, telephone, or fax.</cntinst>
+      </cntinfo>
+    </distrib>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://criticalhabitat.fws.gov/docs/crithab/zip/PCH_ANAEA_TROGLODYTA_FLORIDALIS_20130815.zip</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+      <ordering>This shapefile is downloadable from the US Fish &amp; Wildlife Service's Critical Habitat Portal. See the "Online Source" section.</ordering>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20141101</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

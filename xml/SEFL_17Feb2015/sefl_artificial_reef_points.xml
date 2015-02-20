@@ -1,0 +1,554 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<title>sefl_artificial_reef_points</title>
+				<geoform>vector digital data</geoform>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Each point in this GIS data set represents a single deployment event (either a uniquely located artificial reef or deployments of the same reef on different days). Division of Marine Fisheries Management maintains and updates the source database. This data set represents deployments through December 31, 2012.</abstract>
+			<purpose>This data set is for display purposes only.  Do not use it for navigation.  Each point location is intended to represent a single deployment event, defined as either different location coordinates or the same coordinates but on different days.  It is important to note that DMF has not independently confirmed most of the reef locations and this data had been supplied from various sources without verification.</purpose>
+		</descript>
+		<spdom>
+			<bounding>
+				<westbc>-81.894003</westbc>
+				<eastbc>-79.981453</eastbc>
+				<northbc>26.977838</northbc>
+				<southbc>24.420121</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>artificial reefs</themekey>
+				<themekey>GIS</themekey>
+				<themekey>mapping</themekey>
+				<themekey>benthic</themekey>
+				<themekey>habitat (rivers</themekey>
+				<themekey>estuaries</themekey>
+				<themekey>ecology</themekey>
+				<themekey>hard bottom)</themekey>
+				<themekey>marine</themekey>
+				<themekey>oceans</themekey>
+			</theme>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>Acknowledgement of the FWC-FWRI (Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute) as the data source, and the originator FWC Division of Marine Fisheries, would be appreciated in any products developed from these data, and such acknowledgment as is standard for citation and legal practices for data source is expected by users of this data. Please cite the original metadata when using portions of the record to create a similar record of slightly altered data, such as reprojection. If any data are modified or adjusted, please share the edited information with FWC. Users should be aware that comparison with other data sets for the same area from other time periods may be inaccurate due to inconsistencies resulting from changes in mapping conventions, data collection, and computer processes over time. FWC shall not be liable for improper or incorrect use of this data. These data are not legal documents and are not to be used as such. This is not a survey data set and should not be utilized as such. These data are not to be used for navigation.</useconst>
+		<datacred>FWC Division of Marine Fisheries Management</datacred>
+		<native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+	</idinfo>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Entity point</sdtstype>
+				<ptvctcnt>432</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>sefl_artificial_reef_points</enttypl>
+				<enttypd>ARTREF_APR14.DBF</enttypd>
+				<enttypds>FFWCC-FWRI</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>COAST</attrlabl>
+				<attrdef>This field indicates whether the reef is in the Gulf of Mexico "G" or Atlantic Ocean "A."</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>A</edomv>
+						<edomvd>Atlantic Ocean</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>G</edomv>
+						<edomvd>Gulf of Mexico</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>COE_PERMIT</attrlabl>
+				<attrdef>This is the Corps of Engineers active permit number for the site at the time of deployment.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>This field can contain a permit number, or null values are acceptable.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CONTRACT</attrlabl>
+				<attrdef>The FWC-DMF contract number, if the reef is a grant-funded deployment administered by DMF; if not, this field is blank.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Can be either a contact number, or null values are acceptable</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>COUNTY</attrlabl>
+				<attrdef>The Florida county nearest to the artificial reef project.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Name of County is a text character field.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DEPLOY</attrlabl>
+				<attrdef>This is a "yes" or "no" field that indicates whether FWC-DMF staff were present for the deployment of the materials.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>"YES" or "NO"</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DEPLOYDATE</attrlabl>
+				<attrdef>date the materials were placed offshore, if known. If only the year is known, then the last day of the year is entered (example 1988 would be 12/31/88). If only a month and year is known, then the last day of that month is entered (example July 1998 would be 7/31/98). If the deployment date is unknown this field is blank.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>GRANTEE_SPONSER</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>TOT_AMOUNT</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>LOCAL_AMOU</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>FWC_AMOUNT</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>DEPTH</attrlabl>
+				<attrdef>Depth (in feet) to the bottom at the time of deployment.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>feet</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DESCRIPTIO</attrlabl>
+				<attrdef>This field contains a brief narrative description of the deployment and the name of the ship if available.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of deployment</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DIVE_DATE</attrlabl>
+				<attrdef>The most recent date that DMF divers visited the site; data are given in month/day/year format.  This would be updated after the dive event and the previous dive date shifted to the field "PREDIVE1" if applicable.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>The most recent date that DMF divers visited the site; data are given in month/day/year format.  This would be updated after the dive event and the previous dive date shifted to the field "PREDIVE1" if applicable.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FEDGRANT</attrlabl>
+				<attrdef>Federal Aid in Sport Fish Restoration Program grant number, if the project was funded by that source; if not, this field is blank.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Grant number, or null values are acceptable</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FT_PRNT_FT</attrlabl>
+				<attrdef>Footprint of the reef materials on the bottom in square feet.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>square feet</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>GPS</attrlabl>
+				<attrdef>
+This field is a code to indicate which sets of coordinates available to DMF are presumed to be the most accurate, the latitude and longitude or LORAN.  It represents how these more accurate coordinates were generated, if known.  Values are;
+WAAS: these lat/longs were taken with a WAAS  unit on the reef,
+DGPS:  these latitude and longitude coordinates were taken with a DGPS unit on the reef,
+GPS:  these latitude and longitude coordinates were taken with a non-differential GPS unit on the reef,
+LOR:  these LORAN coordinates were taken by LORAN unit on the reef,
+BOTH: Both sets of coordinates were given to DMF
+If blank, it is unknown how these coordinates were generated and which sets are most accurate. LORAN is assumed to be more accurate prior to about 1995.  DMF staff used ASF corrections from the 1984 Defense Mapping Agency tables to mathematically calculate most of the non-field generated coordinates using the Andren Software LoranGPS program.
+
+Please note that all coordinates used to create the shapefile were the latitude and longitude coordinates.
+</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>DGPS</edomv>
+						<edomvd>these latitude and longitude coordinates were taken with a DGPS unit on the reef</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>GPS</edomv>
+						<edomvd>these latitude and longitude coordinates were taken with a non-differential GPS unit on the reef</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>LOR</edomv>
+						<edomvd>these LORAN coordinates were taken by LORAN unit on the reef</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>BOTH</edomv>
+						<edomvd>Both sets of coordinates were given to DMF</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>&lt;null&gt;</edomv>
+						<edomvd>If blank, it is unknown how these coordinates were generated</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>WAAS</edomv>
+						<edomvd>These lat/longs were taken with a WAAS  unit on the reef.</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ID</attrlabl>
+				<attrdef>This is a unique number associated with each deployment record.  It begins with the first two letters of the county name and a four digit numerical code assigned at the time this new field was developed in July of 2005.  New deployments will be assigned sequential codes within the county and this ID number will not change.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Alphanumeric ID code.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LAT_DD</attrlabl>
+				<attrdef>Latitude coordinate in decimal degrees</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-90</rdommin>
+						<rdommax>90</rdommax>
+						<attrunit>decimal degrees</attrunit>
+						<attrmres>0.00001</attrmres>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LATITUDE</attrlabl>
+				<attrdef>North latitude in degrees, decimal minutes (DDMM.MMM)</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>90</rdommax>
+						<attrunit>DDMM.MMM (north latitude)</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LON_DD</attrlabl>
+				<attrdef>Longitude coordinate in decimal degrees.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-180</rdommin>
+						<rdommax>180</rdommax>
+						<attrunit>decimal degrees</attrunit>
+						<attrmres>0.00001</attrmres>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LONGITUDE</attrlabl>
+				<attrdef>West longitude in degrees, decimal minutes (DDMM.MMM)</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>180</rdommax>
+						<attrunit>DDMM.MMM (west longitude)</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LORAN1</attrlabl>
+				<attrdef>The first set of LORAN time delay coordinates for the reef.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Loran coordinate, or null value are acceptable.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LORAN2</attrlabl>
+				<attrdef>The second set of LORAN time delay coordinates for the reef.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Loran coordinate, or null value are acceptable.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MATERIAL1</attrlabl>
+				<attrdef>The type of reef material that makes up the majority of that deployment.  If it is a ship or barge, the size is given in feet (125'), if known.  If the material is a prefabricated modular unit, the number of units is given in parentheses, (i.e. Reefballs (80)).</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of reef material.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MATERIAL2</attrlabl>
+				<attrdef>The second type of reef materials placed on the reef during that deployment.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of reef material.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MATERIAL3</attrlabl>
+				<attrdef>The third type of reef materials placed on the reef during that deployment.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of reef material.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PERMIT_SIT</attrlabl>
+				<attrdef>The common name for the permit site as it appears on the Corps of Engineers permits.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of the name of permit site</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PREDIVE1</attrlabl>
+				<attrdef>The second most recent date that DMF divers visited the site; data are given in month/day/year format.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PREDIVE2</attrlabl>
+				<attrdef>The third most recent date that DMF divers visited the site; data are given in month/day/year format.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PREDIVE3</attrlabl>
+				<attrdef>The fourth most recent date that DMF divers visited the site; data are given in month/day/year format.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PREDIVE4</attrlabl>
+				<attrdef>The fifth most recent date that DMF divers visited the site; data are given in month/day/year format.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>REEF_SET</attrlabl>
+				<attrdef>This field is intended to identify one set of coordinates within a patch reef that can be used as a central identifier for each reef.  All other deployments within that reef will be labeled "PATCH" reefs.  This field is intended to be used to sort for the number of reef sites, not the larger number of reef deployments.  This field has not yet been populated as of March 5, 2007 (it defaults to "CENTER" and  once populated the DEPLOYNUM field will be deleted.)</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Field used to select reefs.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>REEFNAME</attrlabl>
+				<attrdef>The common name for the reef site.  This may or may not be the name of the permitted site as several reefs may be within one permitted site. If a site is located within a shallow protected area, the word (BAY) is entered in parenthesis after the name.  If the reef was unintentionally sunk offshore during a storm event or during war, the site is considered a wreck and a (W) if placed beside the name.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Text description of reef name.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>RELIEF</attrlabl>
+				<attrdef>The height (in feet) of  the reef materials off the bottom, also known as profile.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>feet</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Feature geometry</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DEPLOYNUM</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>SOURCE</attrlabl>
+				<attrdef>
+Where the current sets of coordinates were originally obtained.
+(1) MPF, the FWC Materials Placement Forms, (Required by Chapter 370.25, Florida Statutes)
+(2) Dive date was an FWC field visit,
+(3) Pybase 97 was the Atlas of Artificial Reefs by Florida Sea grant 1997 (most of the records with blank values in this field also came from this source).
+(4) Various monitoring grants to field truth locations or county staff.
+</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>1</edomv>
+						<edomvd>MPF, the FWC Materials Placement Forms, (Required by Chapter 370.25, Florida Statutes</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>2</edomv>
+						<edomvd>Dive date was an FWC field visit</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>3</edomv>
+						<edomvd>Pybase 97 was the Atlas of Artificial Reefs by Florida Sea grant 1997 (most of the records with blank values in this field also came from this source).</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>4</edomv>
+						<edomvd>Various monitoring grants to field truth locations or county staff.</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TONS</attrlabl>
+				<attrdef>The dry weight (in US tons) of the reef material deployed, if known.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>tons</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TYPE</attrlabl>
+				<attrdef>This is special type of reef that may be tracked, currently three types (1) WRECK (not intentionally placed), (2) BAY (inshore Bay waters) and (3) MITIGATION (reefs placed for mitigation purposes).</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>1</edomv>
+						<edomvd>WRECK (not intentionally placed)</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>2</edomv>
+						<edomvd>BAY (inshore Bay waters)</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+					<edom>
+						<edomv>3</edomv>
+						<edomvd>MITIGATION (reefs placed for mitigation purposes)</edomvd>
+						<edomvds>FWC</edomvds>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>VOL_DIVE</attrlabl>
+				<attrdef>Dates that any non-FWC official dives were done on site.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<udom>Date field</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>VOLUMEFT3</attrlabl>
+				<attrdef>Volume of reef material in cubic feet, if known.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>cubic feet</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>STATE</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>VOLUMEYD3</attrlabl>
+				<attrdef>Volume of reef materials in cubic yards, if known.</attrdef>
+				<attrdefs>FWC</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>N</rdommax>
+						<attrunit>cubic yards</attrunit>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distliab>See access and use constraints information.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>Shapefile</formname>
+					<transize>0.000</transize>
+				</digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>20150121</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+	</metainfo>
+	<Esri><CreaDate>20150121</CreaDate><CreaTime>12261000</CreaTime><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><SyncOnce>TRUE</SyncOnce><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\FL201-GSWGL12\C$\Users\KFreeman\CR_SEFL_Web_GDBs\MapService_Habitats\Metadata\sefl_artificial_reef_points_</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\Users\KFreeman\CR_SEFL_Web_GDBs\sefl_artificial_reef_points_" dest="\\FL201-GSWGL12\C$\Users\KFreeman\CR_SEFL_Web_GDBs\MapService_Habitats\Metadata\sefl_artificial_reef_points_" date="20150121" time="12261000"></copy></copyHistory></DataProperties></Esri></metadata>

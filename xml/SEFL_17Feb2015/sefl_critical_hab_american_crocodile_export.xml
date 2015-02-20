@@ -1,0 +1,429 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>G. Dennis - Checked against written description on 9-16-05.</origin>
+        <origin>Barry Wood created based on written description on 9-15-05.</origin>
+        <title>sefl_critical_hab_american_crocodile</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This layer identifies designated critical habitat for the American crocodile under the Endangered Species Act.</abstract>
+      <purpose>Geographic Information System (GIS) data for the designation of critical habitat of the American crocodile: These GIS data and their associated coordinates are not the definitive source for determining the critical habitat boundaries for the American crocodile. As noted in the final rule, the textual unit descriptions constitute the legal source for determining the critical habitat boundaries. Users of these GIS data are cautioned to refer to the final textual unit descriptions provided in the final rule as the definitive source in determining critical habitat areas. Additionally, interested parties are encouraged to contact the U.S. Fish and Wildlife Service for a definitive finding of whether a location is within critical habitat.</purpose>
+      <supplinf>Description from 42 FR 47843 1977 American Crocodile (Crocodylus acutus) Florida. All land and water within the following boundary: Beginning at the easternmost tip of Turkey Point, Dade County, on the coast of Biscayne Bay; thence southeastward along a straight line to Christmas Point at the southernmost tip of Elliott Key; thence southwestward along a line following the shores of the Atlantic Ocean side of Old Rhodes Key. Palo Alto Key, Angelfish Key, Key Largo. Plantation Key, Windley Key, Upper Matecumbe Key, Lower Matecumbe Key, and Long Key, to the westernmost tip of Long Key; thence northwestward along a straight line to the westernmost tip of Middle Cape: thence northward along the shore of the Gulf of Mexico to the north side of the mouth of Little Sable Creek; thence eastward along a straight line to the northernmost point of Nine-Mile Pond; thence northeastward along a straight line to the point of beginning.</supplinf>
+    </descript>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.172618</westbc>
+        <eastbc>-80.228229</eastbc>
+        <northbc>25.438681</northbc>
+        <southbc>24.802551</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>Endangered Species</themekt>
+        <themekey>American Crocodile</themekey>
+        <themekey>Designated Critical Habitat</themekey>
+        <themekey>(Crocodylus acutus)</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Florida Keys</placekey>
+        <placekey>South Florida</placekey>
+        <placekey>Everglades</placekey>
+      </place>
+    </keywords>
+    <accconst>These data are not to be redistributed to anyone. These data shall be obtained directly from the appropriate USFWS (see Section 6.1 Distributor) office or official USFWS internet web page (http://criticalhabitat.fws.gov/), when available.</accconst>
+    <useconst>These data are final critical habitat areas for the American crocodile. These data are to be used only in the context of the definition and purpose of critical habitat. This primarily relates to Section 7 consultation under the Endangered Species Act. These data may be used for planning and land management purposes. They are not to be used for legal survey use. NOTE: The legal boundaries are described in the Federal Register language (see supplemental information).</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>US Fish &amp; Wildlife Service</cntorg>
+        </cntorgp>
+        <cntpos>GIS Specialist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>South Florida Ecological Services Office</address>
+          <address>1339 20th Street</address>
+          <city>Vero Beach</city>
+          <state>Florida</state>
+          <postal>32960</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>772-562-3909</cntvoice>
+        <cntfax>772-562-4288</cntfax>
+        <hours>M-F 8-4:30 ET</hours>
+      </cntinfo>
+    </ptcontac>
+    <datacred>South Florida Ecological Service Office (SFESO), U.S. Fish &amp; Wildlife Service</datacred>
+    <secinfo>
+      <secsys>NA</secsys>
+      <secclass>Unclassified</secclass>
+      <sechandl>These data are not to be redistributed to anyone. These data shall be obtained directly from the appropriate USFWS (see Section 6.1 Distributor) office or official USFWS internet web page (http://criticalhabitat.fws.gov/), when available.</sechandl>
+    </secinfo>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>"AREA" and ACRES" attributes were updated to verify their accuracy on 9/15/05.</attraccr>
+      <qattracc>
+        <attraccv>Excellent</attraccv>
+        <attracce>Deductinve estimate. Since the attributes were created by a reliable software (XTools 2.2), it can be assumed that they are correct.</attracce>
+      </qattracc>
+    </attracc>
+    <logic>The shapefile was exported to an ArcInfo coverage. The coverage was checked using ArcEdit (ArcInfo 8.2). The coverage was checked for dangles, and they were removed if discovered. The lines also had all splits removed. The coverage was then built and exported back to a shapefile.</logic>
+    <complete>The topology was checked completely. There were no user-defined attributes for this shapefile. The attributes created by ArcInfo were deleted. XTools 2.2 was used to create and update the attributes "AREA" and "ACRES".</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>Horizontal accuracy is within the national map accuracy standards for 1:24,000 GIS data.</horizpar>
+        <qhorizpa>
+          <horizpav>90% of identifiable points are within 1/50th of an inch (40 feet).</horizpav>
+          <horizpae>This layer was overlayed on a 124,000 Florida county and hydrology polgyons data layers to deductively check the accuracy</horizpae>
+        </qhorizpa>
+      </horizpa>
+      <vertacc>
+        <vertaccr>NA</vertaccr>
+        <qvertpa>
+          <vertaccv>NA</vertaccv>
+          <vertacce>NA</vertacce>
+        </qvertpa>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>FGDL</origin>
+            <title>cntshr.shp</title>
+            <edition>NA</edition>
+            <geoform>vector digital data</geoform>
+            <serinfo>
+              <sername>Florida Counties with Detailed Shorelines</sername>
+            </serinfo>
+            <pubinfo>
+              <pubplace>FDEP, Tallahassee, FL</pubplace>
+              <publish>FDEP</publish>
+            </pubinfo>
+            <othercit>Data compiled from source by FGDL and available online.</othercit>
+            <onlink>ftp://ftp1.fgdl.org/pub/state/</onlink>
+          </citeinfo>
+        </srccite>
+        <srcscale>24</srcscale>
+        <typesrc>onLine</typesrc>
+        <srccitea>FDEP</srccitea>
+        <srccontr>Florida Dept. of Environmental Protection (FDEP) Florida county boundaries with shorelines data. Some of the boundaries of the data layer correspond with the shoreline (lines) depicted in the FDEP FL county boundaries data set. Complied by Florida Geographic Data Library (FGDL).</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Florida Geographic Data Library (compiled)</origin>
+            <pubdate>19900101</pubdate>
+            <pubtime>unknown</pubtime>
+            <title>hy24p44.shp</title>
+            <edition>NA</edition>
+            <geoform>vector digital data</geoform>
+            <othercit>Data compiled from source by FGDL and available online.</othercit>
+            <onlink>ftp://ftp1.fgdl.org/pub/county/dade/dade_core/</onlink>
+          </citeinfo>
+        </srccite>
+        <srcscale>24</srcscale>
+        <typesrc>onLine</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>19900101</caldate>
+              <time>unknown</time>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>USGS</srccitea>
+        <srccontr>United States Geological Survey digital line graph hydrology polygons data. Some of the boundaries of the data layer correspond with the shoreline (lines) depicted in the USGS DLG hydrology polygons data set.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>The polygon ArcInfo coverage was converted back to a shapefile. The field attributes added by ArcInfo were deleted. The Attributes "Area" and "Acres" were created and updated by XTools 2.2. The attribute fields "Area" and "Acres" were then restructured using XTools 2.2 so that "Area" is an integer and "Acres" has only one decimal.</procdesc>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>South Florida Ecological Service Office, U.S. Fish &amp; Wildlife Service</cntorg>
+              <cntper>Barry Wood</cntper>
+            </cntorgp>
+            <cntpos>GIS Specialist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>1339 20th Street</address>
+              <city>Vero Beach</city>
+              <state>Florida</state>
+              <postal>32960</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>(772) 562-3909</cntvoice>
+            <hours>M-F 8-4:30 EST</hours>
+            <cntinst>barry_wood@fws.gov</cntinst>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Polygon shapefile was converted to an ArcInfo coverage for a logical consistency check.</procdesc>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>South Florida Ecological Service Office, U.S. Fish &amp; Wildlife Service</cntorg>
+              <cntper>Barry Wood</cntper>
+            </cntorgp>
+            <cntpos>GIS Specialist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>1339 20th Street</address>
+              <city>Vero Beach</city>
+              <state>Florida</state>
+              <postal>32960</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>(772) 562-3909</cntvoice>
+            <hours>M-F 8-4:30 EST</hours>
+            <cntinst>barry_wood@fws.gov</cntinst>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Based on descriptions in the 42 FR 47843. The source data layers for county boundaries with shorelines and hydrology were used to create the polygon shapefile.</procdesc>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>South Florida Ecological Service Office, U.S. Fish &amp; Wildlife Service</cntorg>
+              <cntper>Barry Wood</cntper>
+            </cntorgp>
+            <cntpos>South Florida Ecological Service Office, U.S. Fish &amp; Wildlife Service</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>1339 20th Street</address>
+              <city>Vero Beach</city>
+              <state>Florida</state>
+              <postal>32960</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>(772) 562-3909</cntvoice>
+            <hours>M-F 8-4:30 ET</hours>
+            <cntinst>barry_wood@fws.gov</cntinst>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Metadata imported and then edited using ArcCatalog.</procdesc>
+        <srcused>T:\TEST_DIRECTORY\GISDATA\SPECIES\CAPE_SABLE_SEASIDE_SPARROW\cape_sable_seaside_sparrow-critical_habitat.shp</srcused>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>South Florida Ecological Service Office, U.S. Fish &amp; Wildlife Service</cntorg>
+              <cntper>Barry Wood</cntper>
+            </cntorgp>
+            <cntpos>GIS Specialist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>1339 20th Street</address>
+              <city>Vero Beach</city>
+              <state>Florida</state>
+              <postal>32960</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>(772) 562-3909</cntvoice>
+            <hours>M-F 8-4:30 EST</hours>
+            <cntinst>barry_wood@fws.gov</cntinst>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>1</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_critical_hab_american_crocodile</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+        <attrdef>area of polygons in square meters</attrdef>
+        <attrdefs>XTools 2.2</attrdefs>
+        <attrdomv>
+          <udom>Area of polygons in square meters generated by XTools 2.2</udom>
+        </attrdomv>
+        <begdatea>9/15/2005</begdatea>
+        <enddatea>9/15/2005</enddatea>
+        <attrvai>
+          <attrva>excellant</attrva>
+          <attrvae>created by reliable software</attrvae>
+        </attrvai>
+        <attrmfrq>None planned</attrmfrq>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>area of polygons in acres</attrdef>
+        <attrdefs>XTools 2.2</attrdefs>
+        <attrdomv>
+          <udom>Area of polygons in acres generated by XTools 2.2</udom>
+        </attrdomv>
+        <begdatea>9/15/2005</begdatea>
+        <enddatea>9/15/2005</enddatea>
+        <attrvai>
+          <attrva>excellant</attrva>
+          <attrvae>created by reliable software</attrvae>
+        </attrvai>
+        <attrmfrq>None planned</attrmfrq>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Area and Acres are the attribute fields.</eaover>
+      <eadetcit>AREA and ACRES calculated by XTools 2.2</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Fish &amp; WIldlife Service (USFWS)</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>1339 20th Street</address>
+          <city>Vero Beach</city>
+          <state>Florida</state>
+          <postal>32960</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>(772) 562-3909</cntvoice>
+        <hours>M-F, 8-4:30 ET</hours>
+      </cntinfo>
+    </distrib>
+    <distliab>The U.S. Fish &amp; Wildlife Service (USFWS) shall not be held liable for improper or incorrect use of the data described and/or contained herein. These data are not to be redistributed to anyone. These data shall be obtained directly from the appropriate USFWS (see Section 6.1 Distributor) office or official USFWS internet web page (http://criticalhabitat.fws.gov/), when available. This disclaimer applies both to individual use of the data and aggregated use with other data. This map is provided only for illustrative purposes of American Crocodile critical habitat. For the precise legal definition of critical habitat, please refer to the narrative unit descriptions.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ESRI</formname>
+          <formvern>shapefile</formvern>
+          <formspec>ESRI shapefile</formspec>
+          <formcont>NA</formcont>
+          <filedec>no compression applied</filedec>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>american_crocodile-critical_habitat</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+      <ordering>official USFWS internet web page (http://criticalhabitat.fws.gov/)</ordering>
+      <turnarnd>NA</turnarnd>
+    </stdorder>
+    <techpreq>NA</techpreq>
+  </distinfo>
+  <metainfo>
+    <metd>20141101</metd>
+    <metrd>9/15/2005</metrd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>US Fish &amp; Wildlife Service</cntorg>
+          <cntper>George Dennis &amp; Barry Wood</cntper>
+        </cntorgp>
+        <cntpos>G.D. = Ecologist &amp; B.W. = GIS Specialist</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>1339 20th Street</address>
+          <address>South Florida Ecological Services Office</address>
+          <city>Vero Beach</city>
+          <state>Florida</state>
+          <postal>32960</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>772-562-3909</cntvoice>
+        <hours>M-F 8-4:30 ET</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+    <metsi>
+      <metscs>NA</metscs>
+      <metsc>Unclassified</metsc>
+      <metshd>NA</metshd>
+    </metsi>
+  </metainfo>
+</metadata>

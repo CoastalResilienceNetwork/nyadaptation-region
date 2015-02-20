@@ -1,0 +1,156 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>sefl_citylm_2011_FGDL</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The data was created to serve as base information for use in GIS systems for a variety of planning and analytical purposes.</abstract>
+      <purpose>This dataset contains city limits for the State of Florida. The data was compiled by the GeoPlan Center using tax code boundaries as defined in 2010 county parcel data from the Florida Department of Revenue (FDOR).  This dataset is an update to the city limits shapefile par_citylm_2010.shp. Credit for this dataset: Florida Department of Revenue and the 67 - County Property Appraisers.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.816814</westbc>
+        <eastbc>-80.030749</eastbc>
+        <northbc>26.970980</northbc>
+        <southbc>24.543970</southbc>
+      </bounding>
+    </spdom>
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.2.1.3497</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>109</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_citylm_2011_FGDL</enttypl>
+        <enttypd>PAR_CITYLM_2011.DBF</enttypd>
+        <enttypds>GeoPlan Center</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Name of the City, or Municipality, represented.</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County in which city is located.</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TAX_COUNT</attrlabl>
+        <attrdef>Number of tax code numbers used to derive city limit.</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TAXAUTHCD</attrlabl>
+        <attrdef>Value associated with the tax code # as defined by the DOR parcel data field 'TAXAUTHCD'.</attrdef>
+        <attrdefs>FDOR</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>Acres</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DESCRIPT</attrlabl>
+        <attrdef>Based on Name.</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FGDLAQDATE</attrlabl>
+        <attrdef>The date FGDL acquired the data from the Source.</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>AUTOID</attrlabl>
+        <attrdef>Unique ID added by GeoPlan</attrdef>
+        <attrdefs>GeoPlan</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20150217</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

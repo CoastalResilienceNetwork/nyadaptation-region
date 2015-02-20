@@ -14,7 +14,7 @@
                     "latestWkid": 3857
                 }
             },
-			"methods": {"title": "Methods", "url": "methods/FL_Keys_storm_surge_methods.pdf"},
+			"methods": {"title": "Methods", "url": "methods/Inundation_Mapping_Methodology_Appendix_B.pdf"},
 			"tabs" : [
 				{
 					"name": "NA",
@@ -83,7 +83,7 @@
                     "latestWkid": 3857
                 }
             },
-			"methods": {"title": "Methods", "url": "methods/FL_Keys_storm_surge_methods.pdf"},
+			"methods": {"title": "Methods", "url": "methods/NOAA_SLR_Viewer_Description.pdf"},
 			"tabs" : [
 				{
 					"name": "NA",

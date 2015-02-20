@@ -1,0 +1,242 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>sefl_SFWMD_2008_09_LCLU_SaltMarsh_only</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data set serves as documentation of land cover and land use (LCLU) within the South Florida Water Management District as it existed in 2008-09. Land Cover Land Use data was updated from 2004-05 LCLU by photo-interpretation from 2008-09 aerial photography and classified using the SFWMD modified FLUCCS classification system. Features were interpreted from the county-based aerial photography (4 in - 2 ft pixel) and updated on screen from the 2004-05 vector data. Horizontal accuracy of the data corresponds to the positional accuracy of the county aerial photography. The minimum mapping unit for classification was 2 acres for wetlands and 5 acres for uplands. The update was completed on 07/11/2011 (version 1.0). The "wet prairie" (6430) category was added back into the database on 01/18/2012, for areas that were classified as wet prairie in the 2004-5 LCLU and had been converted to freshwater marsh (6410) for the 2008-9 LCLU (version 1.1).</abstract>
+      <purpose>This is the Salt Marsh land cover category (LC Code 6420) extracted from the South Florida Water Management District LULC 2008-09.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-81.756900</westbc>
+        <eastbc>-80.045854</eastbc>
+        <northbc>26.819750</northbc>
+        <southbc>24.560351</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Salt Marsh</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Acknowledgement of South Florida Water Management District would be appreciated in products derived from this data. The positional accuracy of the 2004 data meets USGS NMAS for 1:12000 scale maps, providing a foundation for 2009 updates. During feature updates, map scale was set between 1:7,000 to 12,000.</useconst>
+    <datacred>SFWMD IT-GIS is responisble for the 2008-09 Land Cover / Land Use Mapping Update project</datacred>
+    <native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.2.1.3497</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>508</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_SFWMD_2008_09_LCLU_SaltMarsh_only</enttypl>
+        <enttypd>LCLU featureclass</enttypd>
+        <enttypds>SFWMD</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal Object ID</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MELALEUCA</attrlabl>
+        <attrdef>Modifier - Presence of Melaleuca</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BRAZILIAN_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>EXOTICS</attrlabl>
+        <attrdef>Presence of Exotic Species</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TREE_ISLAN</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DEAD_TREES</attrlabl>
+        <attrdef>Modifier - Presence of Dead Trees</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ORV</attrlabl>
+        <attrdef>Modifier - Presence of Off-Road Vehicles tire marks</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BURNED</attrlabl>
+        <attrdef>Presence of Burned Vegetation</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GENERAL_NO</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PRIORITY</attrlabl>
+        <attrdef>Update priority</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DATE_TIME_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>UPDATE_STA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PI_EDITOR</attrlabl>
+        <attrdef>Name of photointerpreter</attrdef>
+        <attrdefs>Person Name</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LCCODE</attrlabl>
+        <attrdef>2009 Land Cover Code</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LUCODE</attrlabl>
+        <attrdef>2009 Land Use Code</attrdef>
+        <attrdefs>SFWMD</attrdefs>
+        <attrdomv>
+          <udom>see supplementary info</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CR_Label</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CR_Label2</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>flu_lc</enttypl>
+      </enttyp>
+    </detailed>
+    <overview>
+      <eaover>The FLUCCS uses 4-digit integer codes to represent the land use or land cover types within the classification system pertaining to wetlands, uplands, and anthropogenic features.  The land cover code is populated in LCCODE field and the land use code populated in LUCODE.</eaover>
+      <eadetcit>Users should refer to the Florida Department of Transportation FLUCCS and the SFWMD Photointerpretation Classification Key for the full definitions of the class codes. (Download PI-Key PDF from http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi-key.pdf)</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>SDE Feature Class</formname>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20150217</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

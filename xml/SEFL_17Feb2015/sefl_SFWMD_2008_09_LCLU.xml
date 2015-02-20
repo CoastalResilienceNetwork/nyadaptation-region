@@ -1,0 +1,622 @@
+<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>SFWMD</origin>
+				<pubdate>20110930</pubdate>
+				<title>SFWMD 2008-09 Land Cover and Land Use Primary Feature Class (v1.1)</title>
+				<edition>1.0.0</edition>
+				<geoform>vector digital data</geoform>
+				<onlink>\\ad.sfwmd.gov\DFSRoot\data\egis\staging\fpl_tmp\lscndclu08_v1dot1.gdb</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This data set serves as documentation of land cover and land use (LCLU) within the South Florida Water Management District as it existed in 2008-09. Land Cover Land Use data was updated from 2004-05 LCLU by photo-interpretation from 2008-09 aerial photography and classified using the SFWMD modified FLUCCS classification system.  Features were interpreted from the county-based aerial photography (4 in - 2 ft pixel) and updated on screen from the 2004-05 vector data.  Horizontal accuracy of the data corresponds to the positional accuracy of the county aerial photography.  The minimum mapping unit for classification was 2 acres for wetlands and 5 acres for uplands. The update was completed on 07/11/2011 (version 1.0).  The "wet prairie" (6430) category was added back into the database on 01/18/2012, for areas that were classified as wet prairie in the 2004-5 LCLU and had been converted to freshwater marsh (6410) for the 2008-9 LCLU (version 1.1).</abstract>
+			<purpose>This data supports various missions of the District (SFWMD).</purpose>
+			<supplinf>
+Florida Department of Transportation FLUCCS and the SFWMD Photointerpretation Classification Key for the full definitions of the class codes are currently stored in this location: http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi-key.pdf
+
+How to attach domains to shapefile, please see the PDF in the following link:
+http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/domaintoshapefile.pdf
+
+To see a simplified version of PI Key Guide in one single page, please follow the link:
+http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi_key_guide.pdf
+
+The FLUCCS codes used in this update are similar to the 2004-05 LCLU codes with some minor modifications. In the 2008-09 update, the LCLU code of 7440 - Levees in the 2004-05 version of the FLUCCS has been re-mapped to 7470 - Dikes and Levees; The LCLU code for Abandoned Groves has been changed from 3230 to 2240; Wet Prairite 6430 was remapped to Fresh Water Marshes 6410.
+
+The workspace domains used in 2009 LCLU Dataset are listed as follows -
+
+2008_DELIVERABLE_SECTION (links to the field of PRIORITY): 
+[feature value: domain description]
+0: Uncoded
+1: Pilot Area
+2: Section 1
+3: Section 2
+4: Section 3
+5: Section 4
+6: Section 5
+7: Section 6
+8: Section 7
+
+2008_EXOTICS (links to the field of EXOTICS):
+[feature value: domain description]
+0: Not present
+1:Present, non-species specific
+2:Australian Pine
+3:Kudzu
+4:Lygodium
+
+2008_LCLU_CODE_DOMAIN: (see PI Key; links to the fields of LCCODE and LUCODE)
+
+2008_MELAELUCA (links to the field of MELAEUCA):
+[feature value: domain description]
+0: No
+1: Yes
+2: Dead
+3: Cleared
+4: Multiple
+
+2008_PI_EDITOR (Photo-interpreters; links to the field of PI_EDITOR):
+[feature value: domain description]
+0: Uncoded
+1: Gary Krasovetz
+2: Cindy Bowes
+3: Other
+
+2008_UPDATE_STATUS (links to the field of UPDATE_STATUS):
+[feature value: domain description]
+0: Not checked
+1: PI reviewed
+8: No imagery
+
+2008_YES_NO (links to the fields of BRAZILIAN_PEPPER, TREE_ISLANDS, DEAD_TREES, ORV,  and BURNED):
+[feature value: domain description]
+0: No
+1: Yes
+
+The corresponding years and coverages of county imagery used in the update are listed as follows (also see Metadata_Reference_Information):
+county name (year, spatial coverage)
+Broward (2009, partial)
+Collier (2009, entire)
+Charlotte (2008, entire)
+Glades (2009, entire)
+Hendry (2008, entire)
+Highlands (2008, entire)
+Lee (2008, entire)
+Martin (2009, entire)
+Miami Dade (2009, partial)
+Monroe (2009, Key only)
+Okeechobee (2009, entire)
+Orange (2009, entire)
+Osceola (2008, entire)
+Palm Beach (2008/09, entire)
+Polk (2008, entire)
+St. Lucie (2009, entire).
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 1 are listed as follows:
+Level 1 - 97.7% and 97.0% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 96.5% - 97.5%
+Level 2 - 95.5% and 95.1% (&gt;85%, business requirement for level 2)
+Level 3 - 93.6% and 93.3% (&gt;75%, business requirement for level 3)
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 2 are listed as follows:
+Level 1 - 95.2% and 93.0% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 92.4% - 93.6%
+Level 2 - 89.7% and 88.2% (&gt;85%, business requirement for level 2)
+Level 3 - 86.9% and 86.0% (&gt;75%, business requirement for level 3)
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 3 are listed as follows:
+Level 1 - 94.1% and 91.3% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 89.0% - 93.0%
+Level 2 - 89.2% and 87.6% (&gt;85%, business requirement for level 2)
+Level 3 - 84.0% and 82.3% (&gt;75%, business requirement for level 3)
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 4 are listed as follows:
+Level 1 - 96.2% and 93.9% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 92.8.0% - 94.9%
+Level 2 - 90.1% and 88.5% (&gt;85%, business requirement for level 2)
+Level 3 - 87.2% and 85.7% (&gt;75%, business requirement for level 3)
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 5 are listed as follows:
+Level 1 - 94.2% and 91.8% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 90.8% - 92.9%
+Level 2 - 89.2% and 87.6% (&gt;85%, business requirement for level 2)
+Level 3 - 86.8% and 85.5% (&gt;75%, business requirement for level 3)
+
+The Overall Accuracies and the Kappa Coefficients for Priority Area 6 are listed as follows:
+Level 1 - 95.8% and 93.2% (&gt;90%, business requirement for level 1); 95% Confidence Interval of Kappa: 92.2% - 94.2%
+Level 2 - 91.1% and 89.8% (&gt;85%, business requirement for level 2)
+Level 3 - 88.0% and 87.3% (&gt;75%, business requirement for level 3)
+</supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>20071215</begdate>
+					<enddate>20090330</enddate>
+				</rngdates>
+			</timeinfo>
+			<current>Source photography date.</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Updated approximately every 5 years.</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-82.335957</westbc>
+				<eastbc>-80.006333</eastbc>
+				<northbc>28.582615</northbc>
+				<southbc>24.520355</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>none</themekt>
+				<themekey>LCLU</themekey>
+				<themekey>LULC</themekey>
+				<themekey>Land Cover</themekey>
+				<themekey>Land Use</themekey>
+				<themekey>FLUCCS</themekey>
+				<themekey>vegetation</themekey>
+				<themekey>agriculture</themekey>
+				<themekey>urban built up</themekey>
+				<themekey>upland forests</themekey>
+				<themekey>wetlands</themekey>
+				<themekey>barren land</themekey>
+				<themekey>transportation</themekey>
+				<themekey>communication</themekey>
+				<themekey>utilities</themekey>
+				<themekey>levees</themekey>
+				<themekey>levee</themekey>
+				<themekey>melaleuca</themekey>
+				<themekey>dead trees</themekey>
+				<themekey>off road vehicles</themekey>
+				<themekey>orv</themekey>
+				<themekey>exotics</themekey>
+				<themekey>burned areas</themekey>
+				<themekey>brazillian pepper</themekey>
+			</theme>
+			<place>
+				<placekt>none</placekt>
+				<placekey>SFWMD</placekey>
+				<placekey>South Florida Water Management District</placekey>
+				<placekey>County</placekey>
+				<placekey>Broward</placekey>
+				<placekey>Collier</placekey>
+				<placekey>Charlotte</placekey>
+				<placekey>Glades</placekey>
+				<placekey>Hendry</placekey>
+				<placekey>Highlands</placekey>
+				<placekey>Lee</placekey>
+				<placekey>Martin</placekey>
+				<placekey>Miami Dade</placekey>
+				<placekey>Monroe</placekey>
+				<placekey>Okeechobee</placekey>
+				<placekey>Orange</placekey>
+				<placekey>Osceola</placekey>
+				<placekey>Palm Beach</placekey>
+				<placekey>Polk</placekey>
+				<placekey>St. Lucie</placekey>
+				<placekey>Florida</placekey>
+				<placekey>USA</placekey>
+			</place>
+			<temporal>
+				<tempkt>Year</tempkt>
+				<tempkey>2008</tempkey>
+				<tempkey>2009</tempkey>
+			</temporal>
+		</keywords>
+		<accconst>This database is made available to the public in response to the Florida Public Records Law, Florida Statutes, Chapter 119.</accconst>
+		<useconst>Acknowledgement of South Florida Water Management District would be appreciated in products derived from this data. The positional accuracy of the 2004 data meets USGS NMAS for 1:12000 scale maps, providing a foundation for 2009 updates. During feature updates, map scale was set between 1:7,000 to 12,000.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Kuang Lee</cntper>
+					<cntorg>SFWMD</cntorg>
+				</cntperp>
+				<cntpos>Sr. GIS Data Steward</cntpos>
+				<cntaddr>
+					<addrtype>mailing and street</addrtype>
+					<address>3301 Gun Club Road</address>
+					<city>West Palm Beach</city>
+					<state>FL</state>
+					<postal>33406</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>(561) 682-6936</cntvoice>
+				<cntemail>kulee@sfwmd.gov</cntemail>
+				<hours>8am-5pm M-F</hours>
+			</cntinfo>
+		</ptcontac>
+		<datacred>SFWMD IT-GIS is responisble for the 2008-09 Land Cover / Land Use Mapping Update project</datacred>
+		<native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>Performed accuracy assessment by using Overall Accuracy and Kappa Coefficient. The reports have been stored in Documentum (see Project #00627 - 2009 Land Cover Land Use Mapping Update).</attraccr>
+		</attracc>
+		<logic>
+Assessment of classification Accuracy:
+IT-GIS assessed overall quality and classification accuracy using a standardized quality control process to meet accuracy criteria. Each section deliverable, as well as the pilot, had a overall classification accuracy of 90% for each Level I category, 85% for each FLUCCS Level II category and 75% for FLUCCS Level III and IV categories.
+</logic>
+		<complete>Minimum mapping unit for land cover/land use polygons was 2 acres for wetlands and 5 acres for uplands.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>The 2008-09 update uses the 2004-05 LCLU dataset as the basis. The delineations were performed in a heads-up digital environment relative to the 2008-09 natural color county aerial photography. All boundaries were updated through on screen digitizing to ensure accurate and coincident registration of LCLU data that reflects the 2008-09 aerial photography.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>An overview of the mapping methodology and work flow which was utilized during the project is demonstrated in "Database Design" document stored in Documentum. The typical workflow for each check in-and-out cycle includes 1) check out data from SDE to FGDB; 2) perform editing on screen based on 2008-09 aerial photography as the background; 3) validate topology rules; 4) eliminate coincidental attribution with some exceptions such as polygons connected to each other with a corner point or polygons share the same boundary but one of them has not the latest aerial photograph available as the background; 5) assess overall accuracy using Kappa statistics; and 6) check in data to SDE. No line work was transferred from the county parcel data.</procdesc>
+				<procdate>20100518</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Kuang Lee</cntper>
+							<cntorg>SFWMD</cntorg>
+						</cntperp>
+						<cntpos>GIS Data Steward, Sr.</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>3301 Gun Club Road</address>
+							<city>West Palm Beach</city>
+							<state>FL</state>
+							<postal>33406</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>(561) 682-6936</cntvoice>
+						<cntemail>kulee@sfwmd.gov</cntemail>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Restored the "Wet Prairie" (6430) category for areas that had simply been reclassified as freshwater marsh (6410).   Initially, the 6430 code had been dropped from the 2008-9 version.  Selected 2004-5 polygons that had been classified as 6430, and ovelaid them with the 2008-9 deliverable.  It was presumed that areas that  were 6430 in 2004-5 and 6410 in 2008-9 were still wet prairie and had simply been reclassified when the 6430 code was dropped.  Changes into some other code were presumed valid.  About 62 percent of the area that was 6430 in 2004-5 was "restored" as 6430 for the 2008-9 version.  This change was made independently for LCCODE and LUCODE.</procdesc>
+				<procdate>01/18/2012</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Tim Liebermann</cntper>
+							<cntorg>SFWMD</cntorg>
+						</cntperp>
+						<cntpos>Sr. Geographer</cntpos>
+						<cntemail>tlieber@sfwmd.gov</cntemail>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>U:\GeoData\Sfwmd\LandUse\WetPrairie\metadata\lclu_08wp.xml</srcused>
+				<procdate>20120203</procdate>
+				<proctime>10270300</proctime>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>Server=gresdsde; Service=5153:lclu; User=lclu; Version=LCLU.DEFAULT</srcused>
+				<procdate>20120216</procdate>
+				<proctime>10043600</proctime>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>Server=grestsde; Service=5173:lclu; User=lclu; Version=LCLU.DEFAULT</srcused>
+				<procdate>20120229</procdate>
+				<proctime>13455100</proctime>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>Server=gresssde; Service=5195:lclu; User=lclu; Version=LCLU.DEFAULT</srcused>
+				<procdate>20120229</procdate>
+				<proctime>13552500</proctime>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>Server=gispsde; Service=5161; User=gisuser; Version=SDE.DEFAULT</srcused>
+				<procdate>20120305</procdate>
+				<proctime>13245800</proctime>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000328</absres>
+						<ordres>0.000328</ordres>
+					</coordrep>
+					<plandu>survey feet</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D_North_American_1983_HARN</horizdn>
+				<ellips>Geodetic Reference System 80</ellips>
+				<semiaxis>6378137.000000</semiaxis>
+				<denflat>298.257222</denflat>
+			</geodetic>
+		</horizsys>
+		<vertdef>
+			<altsys>
+				<altdatum>North American Vertical Datum of 1988</altdatum>
+				<altres>1.000000</altres>
+				<altunits>feet</altunits>
+				<altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>sefl_SFWMD_2008_09_LCLU_WM</enttypl>
+				<enttypd>LCLU featureclass</enttypd>
+				<enttypds>SFWMD</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal Object ID</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MELALEUCA</attrlabl>
+				<attrdef>Modifier - Presence of Melaleuca</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>BRAZILIAN_PEPPER</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>EXOTICS</attrlabl>
+				<attrdef>Presence of Exotic Species</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TREE_ISLANDS</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>DEAD_TREES</attrlabl>
+				<attrdef>Modifier - Presence of Dead Trees</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ORV</attrlabl>
+				<attrdef>Modifier - Presence of Off-Road Vehicles tire marks</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>BURNED</attrlabl>
+				<attrdef>Presence of Burned Vegetation</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>GENERAL_NOTE</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PRIORITY</attrlabl>
+				<attrdef>Update priority</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DATE_TIME_MODIFIED</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>UPDATE_STATUS</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>PI_EDITOR</attrlabl>
+				<attrdef>Name of photointerpreter</attrdef>
+				<attrdefs>Person Name</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LCCODE</attrlabl>
+				<attrdef>2009 Land Cover Code</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LUCODE</attrlabl>
+				<attrdef>2009 Land Use Code</attrdef>
+				<attrdefs>SFWMD</attrdefs>
+				<attrdomv>
+					<udom>see supplementary info</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CR_Label</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>CR_Label2</attrlabl>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SHAPE_Area</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>Esri</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+		<detailed>
+			<enttyp>
+				<enttypl>flu_lc</enttypl>
+			</enttyp>
+		</detailed>
+		<overview>
+			<eaover>The FLUCCS uses 4-digit integer codes to represent the land use or land cover types within the classification system pertaining to wetlands, uplands, and anthropogenic features.  The land cover code is populated in LCCODE field and the land use code populated in LUCODE.</eaover>
+			<eadetcit>Users should refer to the Florida Department of Transportation FLUCCS and the SFWMD Photointerpretation Classification Key for the full definitions of the class codes. (Download PI-Key PDF from http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi-key.pdf)</eadetcit>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntper>Kuang Lee</cntper>
+					<cntorg>South Florida Water Management District</cntorg>
+				</cntperp>
+				<cntpos>GIS Data Steward, Sr.</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>3301 Gun Club Road</address>
+					<city>West Palm Beach</city>
+					<state>FL</state>
+					<postal>33406</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>(561) 682-6936</cntvoice>
+				<cntemail>kulee@sfwmd.gov</cntemail>
+				<hours>8am - 5pm M-F</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc>Downloadable data</resdesc>
+		<distliab>This data is a conceptual tool utilized for project development and implementation only.  This data is not self-executing or binding, and does not otherwise affect the interests of any person including any vested rights or existing uses of real property.  Any information, including but not limited to maps and data, received from the SFWMD is provided "as is" without any warranty and the SFWMD expressly disclaims all expressed and implied warranties of merchantability and fitness for a particular purpose. The District does not make any representations regarding the use, or the results of the use, of the information provided to you by the District.</distliab>
+		<custom>Custom maps/data made to the public's specifications are not available.</custom>
+		<techpreq>The customer will need to have a GIS software package that is capable of importing and reading ArcGIS File-Geodatabase.</techpreq>
+	</distinfo>
+	<metainfo>
+		<metd>20120301</metd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Kuang Lee</cntper>
+					<cntorg>SFWMD</cntorg>
+				</cntperp>
+				<cntpos>Sr. GIS Data Steward</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>3301 Gun Club Road</address>
+					<city>West Palm Beach</city>
+					<state>FL</state>
+					<postal>33406</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>561-682-6936</cntvoice>
+				<cntemail>kulee@sfwmd.gov</cntemail>
+				<hours>8am-5pm M-F</hours>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2109</onlink>
+			<metprof>2009 Broward County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2069</onlink>
+			<metprof>2009 Collier County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2110</onlink>
+			<metprof>2008 Charlotte County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2070</onlink>
+			<metprof>2009 Glades County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2035</onlink>
+			<metprof>2008 Hendry County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2012</onlink>
+			<metprof>2008 Highlands County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=1995</onlink>
+			<metprof>2008 Lee County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2075</onlink>
+			<metprof>2009 Martin County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2065</onlink>
+			<metprof>2009 Miami-Dade aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2066</onlink>
+			<metprof>2009 Monroe County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2111</onlink>
+			<metprof>2009 Okeechobee County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2156</onlink>
+			<metprof>2009 Orange County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2005</onlink>
+			<metprof>2009 Osceola County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2135</onlink>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2080</onlink>
+			<metprof>2008 and 2009 Palm Beach County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2060</onlink>
+			<metprof>2008 Polk County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://imsprod1/sgisapps/sfwmdiwebdc/dataview.asp?query=unq_id=2059</onlink>
+			<metprof>2009 St. Lucie County aerials</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://my.sfwmd.gov/portal/page/portal/xrepository/sfwmd_repository_pdf/2009_pi-key.pdf</onlink>
+			<metprof>Modified FLUCCS Code - PI Key used by SFWMD</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+	</metainfo>
+	<Esri><CreaDate>20150121</CreaDate><CreaTime>12003800</CreaTime><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><SyncOnce>TRUE</SyncOnce><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\FL201-GSWGL12\C$\Users\KFreeman\CR_SEFL_Web_GDBs\MapService_Habitats\Metadata\sefl_SFWMD_2008_09_LCLU_WM</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\Users\KFreeman\CR_SEFL_Web_GDBs\sefl_SFWMD_2008_09_LCLU_WM" dest="\\FL201-GSWGL12\C$\Users\KFreeman\CR_SEFL_Web_GDBs\MapService_Habitats\Metadata\sefl_SFWMD_2008_09_LCLU_WM" date="20150121" time="12003800"></copy></copyHistory></DataProperties></Esri></metadata>
