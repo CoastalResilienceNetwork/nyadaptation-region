@@ -25,7 +25,7 @@
                         { "name": "FEMA_Repetitive_Loss", "type":"dynamic" }
                     ]
                 },
-{
+				{
                     "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/US",
 					"name": "",
 					"groupFolder": "Coastal Resilience (National)/Social_and_Economic",
