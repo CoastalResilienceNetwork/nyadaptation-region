@@ -8,7 +8,7 @@
 {
 	"name": "Florida - Keys",
 	"extent": {"xmin":-9115988.451986829,"ymin":2800401.958033812,"xmax":-8919448.451986829,"ymax":2959501.958033812,"spatialReference":{"wkid":102100,"latestWkid":3857}},
-    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/flkeys_SLAMM/ImageServer",
+    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/flkeys_SLAMM/ImageServer",
 	"cellsize": 1,
 	"root": "flkeys_SLAMM",
 	"field": "Name",

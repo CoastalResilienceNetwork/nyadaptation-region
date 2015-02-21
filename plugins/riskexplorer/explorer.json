@@ -95,9 +95,9 @@
                     "index": 2
                 }
             ],
-            "ancillaryUrl": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Gulf_of_Mexico_Risk_Explorer/Florida_Risk_Explorer_Show_Me_Layers/MapServer",
+            "ancillaryUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Gulf_of_Mexico_Risk_Explorer/Florida_Risk_Explorer_Show_Me_Layers/MapServer",
             "name": "Florida",
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"workspaceId": "postgis",
 			"geometryType": "point",
 			"methods": "methods/mymethod.pdf",
