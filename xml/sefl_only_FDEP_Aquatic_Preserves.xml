@@ -1,0 +1,206 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Aquatic Preserves (areas)</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Aquatic Preserves are state-owned sovereign submerged lands in areas which have exceptional biological, aesthetic, and scientific value, as described in Chapter 258.39, Florida Statutes, which have been set aside for the benefit of future generations. These areas are managed by the Florida Department of Environmental Protection's Office of Coastal and Aquatic Managed Areas.Currently, all Aquatic Preserves are also Outstanding Florida Waters (OFWs). However, it is important to note that there are three Aquatic Preserves whose OFW boundaries differ from the Aquatic Preserve boundary. These are described more specifically in the OFW rule 62-302.700: Indian River - Malabar to Vero Beach - does not include portions of Sebastian and Turkey creeks; Wekiva River - does not include portions of the St. Johns River; and Big Bend Seagrasses - the OFW rule specifies certain "incorporated and unincorporated areas" that are excluded from the Aquatic Preserve.</abstract>
+      <purpose>This coverage has been generated to provide a graphic depiction of the Aquatic Preserve boundaries and replace previous unofficial maps. These boundaries are only approximate and should not be used for enforcement or permitting purposes. Please see the use constraints for more details.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20111122</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-81.406977</westbc>
+        <eastbc>-80.076052</eastbc>
+        <northbc>27.446546</northbc>
+        <southbc>24.610916</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Water Resources (Inland)</themekey>
+        <themekey>environment</themekey>
+        <themekey>boundaries</themekey>
+        <themekey>oceans</themekey>
+        <themekey>Oceans and Estuaries</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>environment</themekey>
+        <themekey>boundaries</themekey>
+        <themekey>oceans</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>1. This is not a survey. 2. Boundaries are based on the aquatic preserve descriptions in Section 258.39, Florida Statutes. 3. The boundaries delineated are based on interpretation of aerial photography and on maps and surveys on record in the Bureau of Survey and Mapping, Division of State Lands. 4. All boundaries are approximate. The accurate location of the mean or ordinary high water line will require a field review or survey. 5. Privately owned submerged lands and any publicly owned and maintained navigation channel or public works project as defined in Section 258.40, Florida Statutes, are not identified. 6. For accurate determination of specific sites, contact the Title and Land Records Section of the Bureau of Survey and Mapping, Division of State Lands, 3900 Commonwealth Boulevard, MS 108, Tallahassee, Florida 32399; Phone: (850) 245-2788; Fax: (850) 412-0613.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Department of Environmental Protection, Office of Coastal and Aquatic Managed Areas</cntorg>
+          <cntper>Earl Pearson</cntper>
+        </cntorgp>
+        <cntpos>Environmental Specialist II</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>3900 Commonwealth Blvd., MS 235</address>
+          <city>Tallahassee</city>
+          <state>FL</state>
+          <postal>32399-3000</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>(850) 245-2104</cntvoice>
+        <cntfax>(850) 245-2110</cntfax>
+        <cntemail>Earl.Pearson@dep.state.fl.us</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Bureau of Survey &amp; Mapping, Division of State Lands</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</native>
+  </idinfo>
+  <dataqual>
+    <lineage>
+      <procstep>
+        <procdesc>Added new layer obtained from CAMA in SDE/DataMiner and MapDirect. Metadata updated.</procdesc>
+        <procdate>20111215</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>6</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>sefl_only_FDEP_Aquatic_Preserves</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONG_NAME</attrlabl>
+        <attrdef>This is the legal name of the Aquatic Preserve.</attrdef>
+        <attrdefs>CAMA</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SECOND_NAM</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SHORT_NAME</attrlabl>
+        <attrdef>This field provides a shorter version of the Aquatic Preserve name that is more suitable for labelling.</attrdef>
+        <attrdefs>CAMA</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>Privately owned submerged lands, publicly owned navigation channels and islands are not delineated is this coverage and this is reflected in the acreage.</attrdef>
+        <attrdefs>CAMA</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20150217</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Florida Department of Environmental Protection (FDEP) OTIS/GIS Section</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>2600 Blair Stone Rd</address>
+          <address>MS 6520</address>
+          <city>Tallahassee</city>
+          <state>FL</state>
+          <postal>32399-2400</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntemail>GIS.Librarian@dep.state.fl.us</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
