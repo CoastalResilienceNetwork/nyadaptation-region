@@ -92,7 +92,7 @@ define([
 					} else {
 						this.cdTool.showTool(this.cdTool);
 					}
-					t = this.cdTool
+					//t = this.cdTool
 			   },
 			   
                deactivate: function () { 

@@ -95,7 +95,7 @@ margin:0px 0px 0px 10px;
 
 #waveTypeDiv, #waterTypeDiv, #regionDiv, #unitsDiv {
 position: absolute;
-top:-5px;
+top:-7px;
 }
 
 #regionDiv {
@@ -124,16 +124,16 @@ background: none !important;
 
 #chooseProfileButtonDiv{
 position:absolute;
-top: 52px;
+top: 51px;
 left: 27px;
 }
 
 #waveTypeDiv{
-left: 90px;
+left: 100px;
 }
 
 #waterTypeDiv {
-left: 155px;
+left: 140px;
 }
 
 #windButton{
@@ -182,13 +182,7 @@ color: #4d4d4d;
 }
 
 #windComboLabel, #hurricaneComboLabel, #directInputLabel, #waveComboLabel, #seaLevelRiseComboLabel, #tideLevelComboLabel{
-margin: 15px 0px 5px 0px;
-}
-
-#resultsChartTypeDiv {
-left: 80px;
-position: absolute;
-top: -7px;
+margin: 15px 0px 2px 0px;
 }
 
 #surgeAttenuationBoxLabel {
@@ -668,4 +662,8 @@ width:175px !important;
 
 #cd-tc .nowrapTabStrip .dijitTabContainerTop-tabs {
 width: 100% !important;
+}
+
+#cd-overview p {
+line-height: 1;
 }

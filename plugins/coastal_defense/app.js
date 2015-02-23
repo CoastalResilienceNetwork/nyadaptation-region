@@ -131,7 +131,7 @@ define([
 		{
 
 		var cdTool = function(plugin, configFile, interfaceConfigFile){
-	    	this._map = plugin.map;
+			this._map = plugin.map;
 			this._app = plugin.app;
 			this._container = plugin.container;
 			
@@ -157,12 +157,50 @@ define([
 			
 			this.initialize = function(){
 				this._data = this.parseConfigData(configFile);
+				this.parameters.regionIndex = 0;
+				this.parameters.region = this._data[0].location;
 				this._interface = JSON.parse(interfaceConfigFile);
 				this.parameters.debug = this._interface.debug;				
 				this.parameters.layersLoaded = false;
 				this.gpFindProfileUrl = this._interface.gpServiceUrl.findProfile;
 				this.gpRunWaveModelUrl = this._interface.gpServiceUrl.runWaveModel;
 				this.loadInterface(this);
+				dojo.connect(dojo.query('#' + this._container.parentNode.parentNode.id + ' .plugin-container-header')[0], 'onmousedown', function() {
+					popup.close(self.chooseRegionButtonTooltip);
+					popup.close(self.chooseProfileButtonTooltip);
+					popup.close(self.chooseHabitatButtonTooltip);
+				});
+				
+				dojo.connect(dojo.query('#' + this._container.parentNode.parentNode.id + ' .plugin-container-header')[0], 'onmouseup', function() {
+					if (self.tabInputs.selected) {
+						if ( dojo.byId('regionButton_dropdown') && dijit.byId('chooseProfileButton').get('disabled') ) {
+							popup.open({
+								popup: self.chooseRegionButtonTooltip,
+								around: dojo.byId('regionButton'),
+								orient: ["after"]
+							});
+							self.adjustInterfaceTooltip("chooseRegionButtonTooltip", 15, 10, 15);
+						}
+						
+						if ( dojo.byId('chooseProfileButton_dropdown') && dijit.byId('habitatScenarioButton').get('disabled') ) {
+							popup.open({
+								popup: self.chooseProfileButtonTooltip,
+								around: dojo.byId('chooseProfileButton'),
+								orient: ["after"]
+							});
+							self.adjustInterfaceTooltip("chooseProfileButtonTooltip", 15, 10, 15);
+						}
+						
+						if ( dojo.byId('habitatScenarioButton_dropdown') && dijit.byId('runScenarioButton').get('disabled') ) {
+							popup.open({
+								popup: self.chooseHabitatButtonTooltip,
+								around: dojo.byId('habitatScenarioButton'),
+								orient: ["after"]
+							});
+							self.adjustInterfaceTooltip("chooseHabitatButtonTooltip", 15, 10, 15);
+						}
+					}
+				});
 			}
 			
 			this.showIntro = function(){
@@ -185,7 +223,34 @@ define([
 					domClass.add(this.tc.domNode, "claro");
 				this.tc.startup();
 				this.tc.resize();
-
+				
+				//HELP PANE
+				this.tabHelp = new ContentPane({
+			         title: "Overview",
+					 id: "cd-tc-Help",
+					 style: "position:relative;width:823px;height:553px;overflow:hidden;",
+					 isLayoutContainer: true,
+					 onShow: function() {
+						popup.close(self.chooseRegionButtonTooltip);
+						popup.close(self.chooseProfileButtonTooltip);
+						popup.close(self.chooseHabitatButtonTooltip);
+					 }
+			    });
+				this.tabHelp.startup();
+				//append help tab to main tabContainer
+			    this.tc.addChild(this.tabHelp);
+				
+				var cpOverview = new ContentPane({
+					id: "cd-overview",
+					style: "position:relative; width:100%; height:100%;",
+					content: ""
+					//content: self._interface.overview
+			    });
+			    cpOverview.startup();
+			    this.tabHelp.addChild(cpOverview);
+				//request the overview.html template and populate the pane's content
+				cpOverview.set("href", self.pluginDirectory + "/overview.html");
+				
 				//THE INPUTS PANEL
 			    this.tabInputs = new ContentPane({
 			         title: "Inputs",
@@ -193,6 +258,15 @@ define([
 					 style: "position:relative;width:823px;height:553px;overflow:hidden;",
 			         isLayoutContainer: true,
 					 onShow: function() {
+						self.resizeProfileChart();
+						if( dijit.byId('chooseProfileButton').get('disabled') ){
+							popup.open({
+								popup: self.chooseRegionButtonTooltip,
+								around: dojo.byId('regionButton'),
+								orient: ["after"]
+							});
+							self.adjustInterfaceTooltip("chooseRegionButtonTooltip", 15, 10, 15);
+						}
 					 }
 			    });
 			    this.tabInputs.startup();
@@ -206,25 +280,18 @@ define([
 					 style: "position:relative;width:823px;height:553px;overflow:hidden;",
 					 isLayoutContainer: true,
 					 onShow: function() {
-						self.resizeChart();
+						self.resizeResultsChart();
+						popup.close(self.chooseRegionButtonTooltip);
+						popup.close(self.chooseProfileButtonTooltip);
+						popup.close(self.chooseHabitatButtonTooltip);
+						/* self.coralReefCheckBoxTooltip.hide()
+						self.mangroveReefCheckBoxTooltip.hide()
+						self.underwaterStructureCheckBoxTooltip.hide(); */
 					 }
 			    });
 				this.tabResults.startup();
 				//append results tab to main tabContainer
 			    this.tc.addChild(this.tabResults);
-				
-				//HELP PANE
-				/* this.tabHelp = new ContentPane({
-			         title: "Help",
-					 id: "cd-tc-Help",
-					 style: "position:relative;width:823px;height:553px;overflow:hidden;",
-					 isLayoutContainer: true,
-					 onShow: function() {
-					 }
-			    });
-				this.tabHelp.startup();
-				//append results tab to main tabContainer
-			    this.tc.addChild(this.tabHelp); */
 				
 				//THE WAVE MODEL DEBUG PANEL
 				if (this.parameters.debug) {
@@ -234,6 +301,9 @@ define([
 						 style: "position:relative;width:823px;height:553px;",
 						 isLayoutContainer: true,
 						 onShow: function() {
+							popup.close(self.chooseRegionButtonTooltip);
+							popup.close(self.chooseProfileButtonTooltip);
+							popup.close(self.chooseHabitatButtonTooltip);
 						 }
 					});
 					this.tabDebug.startup();
@@ -288,7 +358,7 @@ define([
 				
 				//create panel for region, units, and profile
 			    var regionUnitsDiv = this.createRegionUnitsPanel(this);
-
+				
 			    //create panel for wave parameters
 			    var wavePanelDiv = this.createWavePanel(this);
 			  	
@@ -312,12 +382,6 @@ define([
 			this.showTool = function(){
 				if (!this.profileChart) {
 					this.addInterfaceTooltips();
-					popup.open({
-						popup: this.chooseRegionButtonTooltip,
-						around: dojo.byId('regionButton'),
-						orient: ["after"]
-					});
-					this.adjustInterfaceTooltip("chooseRegionButtonTooltip", 15, 10, 15);
 
 					var blankData = []
 					var range = 2000 
@@ -362,10 +426,10 @@ define([
 					var regionMenu = new DropDownMenu({ style: "display: none;"});
 					domClass.add(regionMenu.domNode, "claro");
 					
-					_.each(this._data, function(value, key){
+					_.each(this._data[this.parameters.regionIndex].extents.subRegions, function(value, key){
 						self.key = key;
 						var menuItem = new MenuItem({
-							label: value.location,
+							label: value.name,
 							onClick: function(){
 								self.regionButton.set("label", this.label);
 								self.regionSelect(this.label, key, self);
@@ -449,7 +513,7 @@ define([
 			  
 				var windWaveContentDiv = domConstruct.create("div", { id:"windWaveContentDiv", style:"position: relative;"});
 				
-				var waveTypeLabel = domConstruct.create("div", {innerHTML: "Set Wave Type:", id:"waveTypeLabel"});
+				var waveTypeLabel = domConstruct.create("div", {innerHTML: "Wave Conditions:", id:"waveTypeLabel"});
 				windWaveContentDiv.appendChild(waveTypeLabel);	
 				var waveTypeDiv = domConstruct.create("div", { id:"waveTypeDiv" });
 				windWaveContentDiv.appendChild(waveTypeDiv);	
@@ -470,12 +534,12 @@ define([
 										dojo.style("waveContentDiv", "display", "block");
 										dojo.style("hurricaneContentDiv", "display", "none");
 										break;
-									case "Wave":
+									case "Oceanic":
 										dojo.style("windContentDiv", "display", "none");
 										dojo.style("waveContentDiv", "display", "block");
 										dojo.style("hurricaneContentDiv", "display", "none");
 										break;
-									case "Wind":
+									case "Wind-Wave":
 										dojo.style("windContentDiv", "display", "block");
 										dojo.style("waveContentDiv", "display", "none");
 										dojo.style("hurricaneContentDiv", "display", "none");
@@ -492,7 +556,7 @@ define([
 				});
 
 				this.windWaveButton = new ComboButton({
-					label: "Wave",
+					label: "Oceanic",
 					name: "windWaveButton",
 					dropDown: windWaveMenu,
 					id: "windWaveButton",
@@ -500,6 +564,9 @@ define([
 				});
 
 				waveTypeDiv.appendChild(this.windWaveButton.domNode);
+				
+				/* var waveTypeHelpDiv = domConstruct.create("div", {innerHTML: "<span>?</span>", id:"waveTypeHelp", style: "position:absolute; width: 20px; height: 20px; font-size: 14px; right: 20px; top: 0px;" });
+				windWaveContentDiv.appendChild(waveTypeHelpDiv); */
 
 				var waveContentDiv = domConstruct.create("div", {id:"waveContentDiv", style: "position: relative;"});
 				windWaveContentDiv.appendChild(waveContentDiv);
@@ -547,7 +614,7 @@ define([
 				}, "wavePeriod");
 				waveContentDiv.appendChild(this.wavePeriodBox.domNode);
 
-				var waveComboLabel = domConstruct.create("div", {innerHTML: "Set Wave:", id:"waveComboLabel"});
+				var waveComboLabel = domConstruct.create("div", {innerHTML: "Wave Strength:", id:"waveComboLabel"});
 				waveContentDiv.appendChild(waveComboLabel);	
 
 				var waveMenu = new DropDownMenu({ style: "display: none;"});
@@ -558,7 +625,7 @@ define([
 						onClick: function(){
 							self.waveButton.set("label", this.label);
 							self.waveHeightBox.set("value", self.parameters.wave[this.label].height);
-							self.wavePeriodBox.set("value", self.parameters.wave[this.label].period)
+							self.wavePeriodBox.set("value", self.parameters.wave[this.label].period);
 						}
 					});
 				
@@ -578,7 +645,7 @@ define([
 				var windContentDiv = domConstruct.create("div", { id:"windContentDiv", style:"display:none;"});
 				windWaveContentDiv.appendChild(windContentDiv);	
 
-				var windComboLabel = domConstruct.create("div", {innerHTML: "Set Wind Type:", id:"windComboLabel"});
+				var windComboLabel = domConstruct.create("div", {innerHTML: "Wind Strength:", id:"windComboLabel"});
 				windContentDiv.appendChild(windComboLabel);	
 
 				var windMenu = new DropDownMenu({ style: "display: none;"});
@@ -608,7 +675,7 @@ define([
 				var hurricaneContentDiv = domConstruct.create("div", { id:"hurricaneContentDiv", style:"display:none;"});
 				windWaveContentDiv.appendChild(hurricaneContentDiv);
 
-				var hurricaneComboLabel = domConstruct.create("div", {innerHTML: "Set Hurricane Category:", id:"hurricaneComboLabel"});
+				var hurricaneComboLabel = domConstruct.create("div", {innerHTML: "Hurricane Category:", id:"hurricaneComboLabel"});
 				hurricaneContentDiv.appendChild(hurricaneComboLabel);	
 
 				var hurricaneMenu = new DropDownMenu({ style: "display: none;"});
@@ -651,7 +718,7 @@ define([
 			   
 				var waterContentDiv = domConstruct.create("div", { id:"waterContentDiv", style:"position: relative;"});
 				
-				var waterTypeLabel = domConstruct.create("div", {innerHTML: "Set Sea Level Increase Type:", id:"waterTypeLabel"});
+				var waterTypeLabel = domConstruct.create("div", {innerHTML: "Sea Level Increase Type:", id:"waterTypeLabel"});
 				waterContentDiv.appendChild(waterTypeLabel);	
 				var waterTypeDiv = domConstruct.create("div", { id:"waterTypeDiv" });
 				waterContentDiv.appendChild(waterTypeDiv);	
@@ -682,7 +749,7 @@ define([
 				var seaLevelRiseContentDiv = domConstruct.create("div", {id:"seaLevelRiseContentDiv", style: "display: none;"});
 				waterContentDiv.appendChild(seaLevelRiseContentDiv);
 				
-				var seaLevelRiseComboLabel = domConstruct.create("div", {innerHTML: "Set Sea Level Rise Type:", id:"seaLevelRiseComboLabel", class:"btnLabels"});
+				var seaLevelRiseComboLabel = domConstruct.create("div", {innerHTML: "Sea Level Rise Scenario:", id:"seaLevelRiseComboLabel", class:"btnLabels"});
 				seaLevelRiseContentDiv.appendChild(seaLevelRiseComboLabel);	
 
 				var seaLevelRiseMenu = new DropDownMenu({ style: "display: none;"});
@@ -715,7 +782,7 @@ define([
 				var tideLevelContentDiv = domConstruct.create("div", {id:"tideLevelContentDiv", style: "display: block;"});
 				waterContentDiv.appendChild(tideLevelContentDiv);
 				
-				var tideLevelComboLabel = domConstruct.create("div", {innerHTML: "Set Tide Level:", id:"tideLevelComboLabel", class:"btnLabels"});
+				var tideLevelComboLabel = domConstruct.create("div", {innerHTML: "Tide Level:", id:"tideLevelComboLabel", class:"btnLabels"});
 				tideLevelContentDiv.appendChild(tideLevelComboLabel);	
 
 				var tideLevelMenu = new DropDownMenu({ style: "display: none;"});
@@ -735,7 +802,7 @@ define([
 								self.mangroveCheckBoxTooltip.set("label", "(Disabled) Mangrove habitat must be submerged to modify - set tide level to Mean Higher High Water or above.");
 							} else {
 								self.mangroveCheckBox.set("disabled", false);
-								self.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+								self.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
 							}
 						}
 					});
@@ -772,7 +839,7 @@ define([
 						}
 						if ((this.currentHabitatData.mangrove) && (this.currentHabitatData.mangrove.length > 0)) {
 							this.mangroveCheckBox.set("disabled", false);
-							this.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+							this.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
 						}
 						break;
 					case "Tide":
@@ -793,7 +860,7 @@ define([
 							this.mangroveCheckBoxTooltip.set("label", "(Disabled) Mangrove habitat must be submerged to modify - set tide level to Mean Higher High Water or above.");
 						} else {
 							this.mangroveCheckBox.set("disabled", false);
-							this.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+							this.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
 						}
 						break;
 				}
@@ -831,7 +898,7 @@ define([
 				
 				this.habitatScenarioTitleDiv = domConstruct.create("div", {
 					id:"habitatScenarioTitleDiv",
-					style: "position: absolute; width: 470px; height: 24px; top:0px; right: 10px; text-align: center; line-height: 24px;"
+					style: "position: absolute; width: 470px; height: 24px; top:0px; right: 10px; text-align: center; line-height: 24px;font-size: 16px; font-weight: bolder;"
 				});
 				habitatTitlePaneDiv.domNode.appendChild(this.habitatScenarioTitleDiv);
 				
@@ -1101,7 +1168,7 @@ define([
 					  name: "cd_reefResponseDegradationBox",
 					  id: "cd_reefResponseDegradationBox",
 					  label:  "Degradation (%):",
-					  value: 100,
+					  value: 0,
 					  required: false,
 					  smallDelta:1,
 					  disabled: true,
@@ -1416,7 +1483,7 @@ define([
 					  name: "cd_underwaterStructureHeightBox",
 					  id: "cd_underwaterStructureHeightBox",
 					  label:  "Height: ",
-					  value: 8,
+					  value: 1,
 					  required: false,
 					  disabled: true,
 					  style: inputWidth + inputHeight + inputMargin
@@ -1427,7 +1494,7 @@ define([
 					  name: "cd_underwaterStructureBaseWidthBox",
 					  id: "cd_underwaterStructureBaseWidthBox",
 					  label:  "Base Width: ",
-					  value: 16,
+					  value: 3,
 					  required: false,
 					  disabled: true,
 					  style: inputWidth + inputHeight + inputMargin
@@ -1438,7 +1505,7 @@ define([
 					  name: "cd_underwaterStructureCrestWidthBox",
 					  id: "cd_underwaterStructureCrestWidthBox",
 					  label:  "Crest Width: ",
-					  value: 4,
+					  value: 0,
 					  required: false,
 					  disabled: true,
 					  style: inputWidth + inputHeight + inputMargin
@@ -1681,8 +1748,10 @@ define([
 						} */
 						self.setWaveModelParameters();
 						this.set("disabled", true);
-						self.clearResultsChartData();
+
 						self.tc.selectChild(self.tabResults);
+						self.resetResultsPane();
+						
 						domStyle.set("cd_resultsDataLoadingDiv", "display", "block");
 						domStyle.set("cd_noResultsDataHtmlContentDiv", "display", "none");
 						domStyle.set("cd_resultsDataLoadingContentDiv", "display", "block");
@@ -1707,43 +1776,43 @@ define([
 			    this.resultsContentPanel.startup();
 			    this.tabResults.addChild(this.resultsContentPanel);
 				
-				var resultsTitleDiv  = domConstruct.create("div", {id:"cd_resultsTitleDiv", innerHTML: "Modeled Wave Heights", style:"position: absolute; left: 300px; top: 0px; color: #444; font-size: 17pt; font-weight:bolder; text-align: center; padding:10px; z-index: 10;"});
+				var resultsTitleDiv  = domConstruct.create("div", {id:"cd_resultsTitleDiv", innerHTML: "Modeled Wave Heights", style:"position: absolute;  left: 95px; top: 10px; width: 650px; color: #444; font-size: 16.5pt; font-weight:bolder; text-align: center; z-index: 10;"});
 				this.resultsContentPanel.domNode.appendChild(resultsTitleDiv);
 				
-				var resultsChartTypeContentDiv = domConstruct.create("div", { id:"resultsChartTypeContentDiv", style:"position:absolute; width: 200px; right: 30px; top: 15px; display:block; z-index: 10;"});
+				var resultsSubTitleDiv  = domConstruct.create("div", {id:"cd_resultsSubTitleDiv", innerHTML: "", style:"position: absolute; left: 125px; top: 40px; width: 520px; color: #444; font-size: 11pt; text-align: center; z-index: 10;"});
+				this.resultsContentPanel.domNode.appendChild(resultsSubTitleDiv);
+				
+				var resultsChartTypeContentDiv = domConstruct.create("div", { id:"resultsChartTypeContentDiv", style:"position:absolute; width: 200px; right: 35px; top: 12px; display:block; z-index: 10;"});
 				this.resultsContentPanel.domNode.appendChild(resultsChartTypeContentDiv);	
 
-				var resultsChartTypeComboLabel = domConstruct.create("div", {innerHTML: "Chart Type:", id:"resultsChartTypeComboLabel", style: "position: relative; left: 15px; width: 65px; line-height: 18px;"});
+				var resultsChartTypeComboLabel = domConstruct.create("div", {innerHTML: "Habitat:", id:"resultsChartTypeComboLabel", style: "position: relative; left: 55px; width: 75px; line-height: 18px;"});
 				resultsChartTypeContentDiv.appendChild(resultsChartTypeComboLabel);
 				
 				var resultsChartType = new DropDownMenu({ style: "display: none;"});
 				domClass.add(resultsChartType.domNode, "claro");
 				
-				var menuItem1 = new MenuItem({
-						label: "Wave Height",
-						onClick: function(){
-							self.resultsChartTypeButton.set("label", this.label);
-						}
-					});
-				resultsChartType.addChild(menuItem1);
-				var menuItem2 = new MenuItem({
-						label: "Percent Reduction",
-						onClick: function(){
-							self.resultsChartTypeButton.set("label", this.label);
-						}
-					});
-				resultsChartType.addChild(menuItem2);
+				var menuItem = new MenuItem({
+					label: "Coral Reef",
+					onClick: function(){
+						self.resultsChartTypeButton.set("label", this.label);
+					}
+				});
+				resultsChartType.addChild(menuItem);
 
 				this.resultsChartTypeButton = new ComboButton({
-					label: "Wave Height",
+					label: "Coral Reef",
+					value: "coral",
 					name: "resultsChartTypeButton",
 					dropDown: resultsChartType,
 					id: "resultsChartTypeButton",
 					disabled: true
 				});
-				var resultsChartTypeDiv = domConstruct.create("div", { id:"resultsChartTypeDiv" });
+				var resultsChartTypeDiv = domConstruct.create("div", { id:"resultsChartTypeDiv", style:"position: absolute; left: 100px; top: -7px;" });
 				resultsChartTypeDiv.appendChild(this.resultsChartTypeButton.domNode);	
 				resultsChartTypeContentDiv.appendChild(resultsChartTypeDiv);
+				
+				var resultsHabitatMessage = domConstruct.create("div", { id:"resultsHabitatMessage", style:"position: absolute;top: 40px; right: 40px; width: 155px; z-index: 15; text-align: right; color: #444;"  });
+				this.resultsContentPanel.domNode.appendChild(resultsHabitatMessage);
 				
 				var resultsDataLoadingDiv  = domConstruct.create("div", {id:"cd_resultsDataLoadingDiv", style:"position: absolute; width:710px; height: 400px; top:22px; left: 77px; z-index:5; background: #ffffff; display:block;"});
 				this.resultsContentPanel.domNode.appendChild(resultsDataLoadingDiv);
@@ -1768,13 +1837,13 @@ define([
 				resultsDataLoadingDiv.appendChild(resultsDataNoDataHtmlContentDiv);
 				
 				var plotWidth = 775;
-				var plotHeight = 300; //originally 375px
+				var plotHeight = 285; //originally 375px
 							  
 				var plotDivHTML = "<div id='cd_resultsPlotDiv' style='position: relative; height: " + plotHeight + "px; width:" + plotWidth + "px;'></div>"
 				var plotDiv = domConstruct.create("div", {
 						id:"cd_resultsChartDiv",
 						innerHTML: plotDivHTML,
-						style:"position: absolute; height: " + plotHeight + "px; width:100%; top: 20px;"
+						style:"position: absolute; height: " + plotHeight + "px; width:100%; top: 35px;"
 					});
 				this.resultsContentPanel.domNode.appendChild(plotDiv);
 				
@@ -1791,8 +1860,8 @@ define([
 				
 				var plotTextDiv = domConstruct.create("div", {
 						id:"cd_resultsChartTextDiv",
-						innerHTML: "The plot above shows modeled wave heights for present (yellow) and future (red) habitat scenarios. The extent of each habitat for both present and future scenarios is displayed in the plot below for reference. Note that both plots share the same x-axis.",
-						style:"position: absolute; height: 50px; top: 300px; width: 700px; left:75px; text-align:center"
+						innerHTML: "The plot above shows modeled wave heights for present (grey) and future (dashed) habitat scenarios. Shaded regions show either a decrease (green) or increase (red) in wave heights under the future scenario.  The extent of each habitat is displayed in the plot below for reference. <b><i>Note:</i></b>  both plots share the same x-axis.",
+						style:"position: absolute; height: 50px; top: 292px; width: 700px; left:77px; text-align:center"
 				});
 				this.resultsContentPanel.domNode.appendChild(plotTextDiv);
 				
@@ -1807,7 +1876,8 @@ define([
 				//Create Plot
 				this.resultsChart = new Chart("cd_resultsPlotDiv");
 				this.resultsChart.addPlot("futureWaveHeight", {type: Lines, tension: "S" });
-				this.resultsChart.addPlot("presentWaveHeight", {type: Areas, tension: "S"});
+				this.resultsChart.addPlot("presentWaveHeight", {type: Lines, tension: "S"});
+				
 				this.resultsChart.addPlot("grid", {
 					type: Grid,
 					hMajorLines: true,
@@ -1819,19 +1889,50 @@ define([
 					minorHLine: { color: "#eeeeee", width: 1 },
 					minorVLine: { color: "#eeeeee", width: 1 }
 				});
+				
+				this.resultsChart.addPlot("waveHeightMin", {type: Areas, tension: "S"});
+				this.resultsChart.addPlot("futureWaveHeightBetter", {type: Areas, tension: "S"});
+				this.resultsChart.addPlot("futureWaveHeightWorse", {type: Areas, tension: "S"});
+				
 			    this.resultsChart.addAxis("x", {vertical: false, title: xTitle, font:'3pt', fontColor: "rgba(255,255,255,0.0)", titleFontColor: "white", titleGap: 0, min: _.first(data).x, max:_.last(data).x, titleOrientation: 'away', majorLabels: false, minorTicks: true, minorLabels: false, microTicks: false, majorTick: {color: "white", length: 0}, minorTick: {stroke: "white", length: 0}  });
 			    this.resultsChart.addAxis("y", {vertical: true, title: yTitle, font:axisFonts, titleGap: 10, min: 0, max: 10, majorTickStep: 1, minorTickStep:0.5, minorLabels: false, microTicks: false, minorTick: {stroke: "white", length: 0} });
 				
 				this.resultsChart.addSeries("Present", data, {
 					plot: "presentWaveHeight", 
-					stroke: {color:"rgba(255,202,83,1)", width: 4 },
-					fill: "rgba(255,202,83,0.25)"
+					stroke: { color:"rgba(150,150,150,1)", width: 4 }
 				});
 				
-				this.resultsChart.addSeries("Future", data, {
+				/* this.resultsChart.addSeries("Future", data, {
 					plot: "futureWaveHeight", 
 					stroke: {color:"rgba(207,66,60,1)", width: 2 },
 					fill: "rgba(207,66,60,0.25)"
+				}); */
+				
+				this.resultsChart.addSeries("Future", data, {
+					plot: "futureWaveHeight", 
+					stroke: { color:"rgba(75,75,75,1)", width: 0, style:"Dash" },
+					outline: null
+				});
+				
+				this.resultsChart.addSeries("waveHeightMin", data, {
+					plot: "waveHeightMin", 
+					stroke: {color:"rgba(182,211,137,1)", width: 2, style:"Dash" },
+					fill: "rgba(255,255,255,1)",
+					outline: null
+				});
+				
+				this.resultsChart.addSeries("futureWaveHeightBetter", data, {
+					plot: "futureWaveHeightBetter", 
+					stroke: {color:"rgba(182,211,137,1)", width: 0, style:"Dash" },
+					fill: "rgba(79,140,83,0.25)",
+					outline: null
+				});
+				
+				this.resultsChart.addSeries("futureWaveHeightWorse", data, {
+					plot: "futureWaveHeightWorse", 
+					stroke: {color:"rgba(211,156,137,1)", width: 2, style:"Dash" },
+					fill: "rgba(211,156,137,0.5)",
+					outline: null
 				});
 
 				this.resultsChart.render();
@@ -1848,34 +1949,36 @@ define([
 				
 				this.resultsHabitatChart.addSeries("Present", data, {
 					plot: "waveHeight", 
-					stroke: {color:"rgba(255,202,83,1)", width: 4 }
+					stroke: { color:"rgba(150,150,150,1)", width: 4 }
 				});
 				
 				this.resultsHabitatChart.addSeries("Future", data, {
 					plot: "waveHeight", 
-					stroke: {color:"rgba(207,66,60,1)", width: 2 }
+					stroke: { color:"rgba(100,100,100,1)", width: 2, style:"Dash" },
+					outline: null
 				});
 				
 				this.resultsHabitatChart.addSeries("Reef (present)", [ {x:-100, y:-100}, {x:-101, y:-100} ], { 
 					plot: "presentHabitat", 
-					stroke: { color: "#1C4A85", width: 5 }
+					stroke: { color: "#1C4A85", width: 5, cap: "round"  }
 				});
 				
 				this.resultsHabitatChart.addSeries("Reef (future)", [ {x:-100, y:-100}, {x:-101, y:-100} ], { 
 					plot: "futureHabitat", 
-					stroke: { color: "rgba(28, 74, 133, 0.5)", width: 0 }, 
-					fill: "rgba(28, 74, 133, 0.5)"
+					stroke: { color: "rgba(28, 74, 133, 0.35)", width: 0 }, 
+					fill: "rgba(28, 74, 133, 0.35)"
 				});
 				
 				this.resultsHabitatChart.addSeries("Mangrove (present)", [ {x:-100, y:-100}, {x:-101, y:-100} ], { 
 					plot: "presentHabitat", 
-					stroke: { color: "rgba(55, 128, 84, 1.0)", width: 5 }
+					stroke: { color: "rgba(75, 96, 78, 1.0)", width: 5, cap: "round" }
+					
 				});
 				
 				this.resultsHabitatChart.addSeries("Mangrove (future)", [ {x:-100, y:-100}, {x:-101, y:-100} ], { 
 					plot: "futureHabitat", 
 					stroke: { color: "rgba(55, 128, 84, 0.5)", width: 0 }, 
-					fill: "rgba(55, 128, 84, 0.5)" 
+					fill: "rgba(192, 201, 165, 0.5)" 
 				});
 				
 				this.resultsHabitatChart.addSeries("Structure", [ {x:-100, y:-100}, {x:-101, y:-100} ], {
@@ -1887,11 +1990,11 @@ define([
 				this.resultsHabitatChart.render();
 				
 				this.resultsHabitatChartLegend = new Legend({ id: "cd_resultsHabitatLegend", "class": "cd_resultsLegend", chart: this.resultsHabitatChart, layoutAlign: "center"}, "cd_resultsHabitatLegendDiv");
-
+				/* 
 				this.resultsHabitatChart.removeSeries("Present");
 				this.resultsHabitatChart.removeSeries("Future");
 				this.resultsHabitatChart.removePlot("waveHeight");
-				
+				 */
 				this.resultsHabitatChart.addSeries("Elevation", data, {
 					plot: "elevation",
 					stroke: {color:"#BFBF99", width: 1 }, 
@@ -1919,11 +2022,22 @@ define([
 				
 			}
 			
-			this.resizeChart = function(){
-				this.resultsChart.resize(775,300);
+			this.resizeResultsChart = function(){
+				this.resultsChart.resize(775,285);
 				this.resultsHabitatChart.resize(775,175);
 				this.setChartBackgroundToTransparent("cd_resultsHabitatPlotDiv");
 				this.setChartBackgroundToTransparent("cd_resultsPlotDiv");
+			}
+			
+			this.resizeProfileChart = function(){
+				var width = this.profileChart.dim.width;
+				console.log(width);
+				if (width != 525) {
+					this.profileChart.resize(525,250);
+					var innerPlotArea =  dojo.query('#cd_plotDiv svg rect')[1];
+					var sliderWidth = number.round(innerPlotArea.width.baseVal.value,0) + 17;
+					dijit.byId("cd_habitatSliderDiv").domNode.style.cssText = "position: relative !important; width: " + sliderWidth + "px !important; left: 45px !important;";
+				}
 			}
 			
 			this.onHabitatCheckboxChange = function(type, widget){
@@ -2040,7 +2154,7 @@ define([
 							dojo.byId('habitatSliderText').innerHTML = 'live corals are to be restored';
 							break;
 						case 'mangrove':
-							dojo.style('cd_sliderInputText', 'color', '#378054');
+							dojo.style('cd_sliderInputText', 'color', '#4B604E');
 							dojo.byId('habitatSliderText').innerHTML = 'mangrove is either restored or degraded';
 							break;
 						case 'underwaterStructure':
@@ -2113,14 +2227,20 @@ define([
 							dojo.byId("cd_reefSeaEdgeBox").value = number.round(seaEdge,0);
 							self.parameters.futureReefShoreEdge = shoreEdge;
 							dojo.byId("cd_reefShoreEdgeBox").value = number.round(shoreEdge,0);
-							var data = self.profileChart.getSeries(seriesName).data;
-							data[0].x = seaEdge;
-							data[1].x = shoreEdge;
+							//var data = self.profileChart.getSeries(seriesName).data;
+							//data[0].x = seaEdge;
+							//data[1].x = shoreEdge;
+							var data = self.currentHabitatData.coral;
+							data = dojo.map(data, function(item){ 
+								var obj = { x: item.x };
+								obj.y = (item.y != null && item.x > seaEdge && item.x < shoreEdge) ? 0 : null;
+								return obj;
+							})
 							break;
 							
 						case 'mangrove':
 							var seriesName = "Mangrove (future)";
-							var mangroveMinEdge = self.parameters.mangroveSeaEdgeEnd;
+							var mangroveMinEdge = self.parameters.currentMangroveSeaEdge;
 							var mangroveMaxEdge =  widget.get('maximum');
 							
 							if (seaEdge < mangroveMinEdge) {
@@ -2147,10 +2267,18 @@ define([
 							var underwaterStructureMinEdge = self.parameters.currentUnderwaterStructureSeaEdge;
 							var underwaterStructureMaxEdge =  self.parameters.currentUnderwaterStructureShoreEdge;
 							
-							if (seaEdge < underwaterStructureMinEdge) {
+							var index = this.utilities.findClosestValueInArray(seaEdge, self.currentHabitatData.distance).index;
+							var coral = self.currentHabitatData.coral;
+							if ( (coral[index]) && (coral[index].y != null) ) {
+								var absent = dojo.map(dojo.filter(coral, function(item) { return item.y == null }), function(item){ return item.x });
+								seaEdge = this.utilities.findClosestValueInArray(seaEdge, absent).value;
+								widget.set('value', [seaEdge, shoreEdge]);
+							}
+							
+							/* if (seaEdge < underwaterStructureMinEdge) {
 								widget.set('value', [underwaterStructureMinEdge, shoreEdge]);
 								seaEdge = underwaterStructureMinEdge;
-							}
+							} */
 							if (seaEdge > underwaterStructureMaxEdge) {
 								widget.set('value', [underwaterStructureMaxEdge, shoreEdge]);
 								shoreEdge = underwaterStructureMaxEdge;
@@ -2194,21 +2322,21 @@ define([
 				this.profileChart.addPlot("currentMangrove", {type: Lines, tension: "S"});
 				this.profileChart.addPlot("currentUnderwaterStructure", {type: Lines});
 				this.profileChart.addPlot("elevationArea", {type: Areas, tension: "S"});
+				this.profileChart.addPlot("futureUnderwaterStructure", {type: Areas});
 				this.profileChart.addPlot("futureReef", {type: Areas, tension: "S"});
 				this.profileChart.addPlot("futureMangrove", {type: Areas, tension: "S"});
-				this.profileChart.addPlot("futureUnderwaterStructure", {type: Areas});
 				this.profileChart.addPlot("waterArea", {type: Areas, tension: "S"});
 			    this.profileChart.addAxis("x", {vertical: false, title: xTitle, font: axisFonts, titleGap: 2, min: _.first(data).x, max:_.last(data).x, titleOrientation: 'away',  });
 			    this.profileChart.addAxis("y", {vertical: true, title: yTitle, font: axisFonts, titleGap: 5, min: 0, max: 10, minorTicks: true, minorLabels: false, microTicks: false, majorTickStep: 10, minorTickStep: 2});
 				
 				this.profileChart.addSeries("Coral Reef & Hard Bottom", data, { 
 					plot: "currentReef", 
-					stroke: { color: "#1C4A85", width: 5 } 
+					stroke: { color: "#1C4A85", width: 5, cap: "round", join: "round"  }
 				});
 				
 				this.profileChart.addSeries("Mangrove", data, { 
 					plot: "currentMangrove", 
-					stroke: { color: "#378054", width: 5 } 
+					stroke: { color: "#4B604E", width: 5, cap: "round", join: "round"  }
 				});
 						
 				this.profileChart.addSeries("Artificial Reef Structure", [ {x:-100, y:-100}, {x:-101, y:-100} ], {
@@ -2243,23 +2371,24 @@ define([
 				var maxY = this.profileChart.getAxis("y").opt.max
 				switch (type) {
 					case "coral":
-						var data = this.futureHabitatData.coral;
-						data = [ {x:_.first(data).x, y:0 }, {x:_.last(data).x, y:0 } ];
+						var data = this.currentHabitatData.coral;
+						//data = [ {x:_.first(data).x, y:0 }, {x:_.last(data).x, y:0 } ];
+						data = dojo.map(data, function(item){ var obj = { x: item.x }; obj.y = (item.y != null) ? 0 : item.y; return obj })
 						var plotName = "Reef (future)";
 						var plot = "futureReef"; 
-						var color = "#b8cbe5"; 
+						var color = "rgba(28, 74, 133, 0.35)";
 						var width = 0; 
-						var fill = "#b8cbe5"; 
+						var fill = "rgba(28, 74, 133, 0.35)"; 
 						break;
 					
 					case "mangrove": 
-						var data = this.futureHabitatData.mangrove;
+						var data = this.currentHabitatData.mangrove;
 						data = [ {x:_.first(data).x, y:maxY }, {x:_.last(data).x, y:maxY } ];
 						var plotName = "Mangrove (future)";
 						var plot = "futureMangrove"; 
-						var color = "#b9ddc8"; 
+						var color = "rgba(192, 201, 165, 0.5)"; 
 						var width = 0; 
-						var fill = "#b9ddc8";
+						var fill = "rgba(192, 201, 165, 0.5)";
 						break;
 					
 					case "underwaterStructure":
@@ -2288,7 +2417,7 @@ define([
 				switch (type) {
 					case "coral":
 						var name = "Reef (future)";
-						this.futureHabitatData.coral= this.profileChart.getSeries(name).data;
+						this.futureHabitatData.coral = this.profileChart.getSeries(name).data;
 						break;
 						
 					case "mangrove":
@@ -2304,6 +2433,130 @@ define([
 				
 				this.profileChart.removeSeries(name);
 				this.profileChart.render();
+			}
+
+			this.removeResultsHabitatPlots = function(type) {
+				this.resultsHabitatChart.removeSeries("Present");
+				this.resultsHabitatChart.removeSeries("Future");
+				this.resultsHabitatChart.removeSeries("Elevation");
+				this.resultsHabitatChart.removeSeries("Water");
+				this.resultsHabitatChart.removeSeries("Reef (present)");
+				this.resultsHabitatChart.removeSeries("Reef (future)");
+				this.resultsHabitatChart.removeSeries("Mangrove (present)");
+				this.resultsHabitatChart.removeSeries("Mangrove (future)");
+				this.resultsHabitatChart.removeSeries("Structure");
+				
+				this.resultsHabitatChart.render();
+				this.resultsHabitatChartLegend.refresh();
+				
+				var data = []
+				var range = 2000 
+				for (var i = 0; i <= range; i++) {
+					data.push({ "x": i-(range/2), "y": -100 });
+				}
+				this.addResultsHabitatPlot("wave_present", data);
+				this.resultsHabitatChart.render();
+			}
+			
+			this.addResultsHabitatPlot = function(type, data) {
+				switch (type) {
+					case "wave_present":
+						var plotName = "Present";
+						var plot = "waveHeight"; 
+						var color = "rgba(150,150,150,1)";
+						var width = 4;
+						break;
+					case "wave_future":
+						var plotName = "Future";
+						var plot = "waveHeight"; 
+						var color = "rgba(100,100,100,1)";
+						var width = 2;
+						var style = "Dash";
+						var outline = null;
+						break;
+					case "coral_present":
+						var plotName = "Reef (present)";
+						var plot = "presentHabitat"; 
+						var color = "#1C4A85";
+						var width = 5;
+						break;
+					case "coral_future":
+						var plotName = "Reef (future)";
+						var plot = "futureHabitat"; 
+						var color = "rgba(28, 74, 133, 0.35)";
+						var width = 0; 
+						var fill = "rgba(28, 74, 133, 0.35)"; 
+						break;
+					case "mangrove_present": 
+						var plotName = "Mangrove (present)";
+						var plot = "presentHabitat"; 
+						var color = "rgba(75, 96, 78, 1.0)"; 
+						var width = 5; 
+						break;
+					case "mangrove_future": 
+						var plotName = "Mangrove (future)";
+						var plot = "futureHabitat"; 
+						var color = "rgba(55, 128, 84, 0.5)"; 
+						var width = 0; 
+						var fill = "rgba(55, 128, 84, 0.5)";
+						break;
+					case "underwaterStructure":
+						var plotName = "Structure";
+						var plot = "underwaterStructure"; 
+						var color = "rgba(76, 86, 87, 0.35)"; 
+						var width = 0; 
+						var fill = "rgba(76, 86, 87, 0.35)";
+						break;
+					case "elevation":
+						var plotName = "Elevation";
+						var plot = "elevation";
+						var color = "#BFBF99"; 
+						var width = 1; 
+						var fill = "#fafad4";
+						break;
+					case "water":
+						var plotName = "Water";
+						var plot = "water";
+						var color = "#A9C5DA"; 
+						var width = 1; 
+						var fill = "rgba(169,197,218,0.1)";
+						break;
+				}
+				
+				var params = {
+					plot: plot, 
+					stroke: { 
+						color: color, 
+						width: width 
+					}
+				};
+				if (fill) { params.fill = fill; }
+				if (style) { params.stroke.style = style; }
+				if (outline) { params.outline = outline; }
+				
+				this.resultsHabitatChart.addSeries(plotName, data, params);
+			}
+			
+			this.renderResultsHabitatPlot = function() {
+				var data = [{"x":-100, "y":-100}, {"x":-101, "y":-101}];
+				//this.addResultsHabitatPlot("wave_present", data);
+				this.addResultsHabitatPlot("wave_future", data);
+				this.addResultsHabitatPlot("coral_present", data);
+				if (this.coralReefCheckBox.checked) { this.addResultsHabitatPlot("coral_future", data); }
+				this.addResultsHabitatPlot("mangrove_present", data);
+				if (this.mangroveCheckBox.checked) { this.addResultsHabitatPlot("mangrove_future", data); }
+				if (this.underwaterStructureCheckBox.checked) { this.addResultsHabitatPlot("underwaterStructure", data); }
+				
+				this.resultsHabitatChart.render();
+				this.resultsHabitatChartLegend.refresh();
+
+				this.addResultsHabitatPlot("elevation", data);
+				this.addResultsHabitatPlot("water", data );
+				
+				this.resultsHabitatChart.render();
+
+				this.setChartBackgroundToTransparent("cd_resultsHabitatPlotDiv");
+				this.setChartBackgroundToTransparent("cd_resultsPlotDiv");
 			}
 			
 			this.addInterfaceTooltips = function() {
@@ -2334,10 +2587,11 @@ define([
 				
 				this.chooseRegionButtonTooltip = new TooltipDialog({
 					id: 'chooseRegionButtonTooltip',
-					style: "width: 125px;",
-					content: "Click to select a region for analysis."
+					style: "width: 155px;",
+					content: "1. Click to select a region<br>&nbsp;&nbsp;&nbsp;&nbsp;for analysis.",
 				});
 				this.chooseRegionButtonTooltip.startup();
+				
 
 				dojo.connect(dojo.byId('regionButton'), 'onclick', function(){
 					popup.close(self.chooseRegionButtonTooltip);
@@ -2345,8 +2599,8 @@ define([
 				
 				this.chooseProfileButtonTooltip = new TooltipDialog({
 					id: 'chooseProfileButtonTooltip',
-					style: "width: 125px;",
-					content: "Click to set a profile for analysis."
+					style: "width: 135px;",
+					content: "2. Click to set a profile<br>&nbsp;&nbsp;&nbsp;&nbsp;for analysis."
 				});
 				this.chooseProfileButtonTooltip.startup();
 
@@ -2356,11 +2610,11 @@ define([
 				
 				this.chooseHabitatButtonTooltip = new TooltipDialog({
 					id: 'chooseHabitatButtonTooltip',
-					style: "width: 150px;",
-					content: "Click to select a habitat scenario for analysis."
+					style: "width: 175px;",
+					content: "3. Click to select a habitat<br>&nbsp;&nbsp;&nbsp;&nbsp;scenario for analysis."
 				});
 				this.chooseHabitatButtonTooltip.startup();
-
+				
 				dojo.connect(dojo.byId('habitatScenarioButton'), 'onclick', function(){
 					popup.close(self.chooseHabitatButtonTooltip);
 				});
@@ -2373,8 +2627,8 @@ define([
 			}
 			
 			this.regionSelect = function(region, key){
-				this.parameters.region = region;
-				this.parameters.regionIndex = key;
+				this.parameters.subRegion = region;
+				this.parameters.subRegionIndex = key;
 				this.parameters.currentWindow = 1;
 				
 				var self = this;
@@ -2382,8 +2636,8 @@ define([
 				//Load GIS Layers
 				if (!this.parameters.layersLoaded){
 					var layers = this.loadLayers(this);
-					var extent = this.setExtent(this);
 				}
+				this.setExtent(key);
 				
 				//this.unitsButton.set("disabled", false);
 				this.chooseProfileButton.set("disabled", false);
@@ -2411,12 +2665,12 @@ define([
 					
 			}
 			
-			this.setExtent = function(){
+			this.setExtent = function(key){
 				newExtent = new esri.geometry.Extent({
-					"ymax": this._data[this.parameters.regionIndex].extent.ymax,
-					"xmax": this._data[this.parameters.regionIndex].extent.xmax,
-					"ymin": this._data[this.parameters.regionIndex].extent.ymin,
-					"xmin": this._data[this.parameters.regionIndex].extent.xmin,
+					"ymax": this._data[this.parameters.regionIndex].extents.subRegions[key].extent.ymax,
+					"xmax": this._data[this.parameters.regionIndex].extents.subRegions[key].extent.xmax,
+					"ymin": this._data[this.parameters.regionIndex].extents.subRegions[key].extent.ymin,
+					"xmin": this._data[this.parameters.regionIndex].extents.subRegions[key].extent.xmin,
 					"spatialReference": {
 						"wkid": 4326
 					}
@@ -2464,7 +2718,7 @@ define([
 						self.habitatLayer.setVisibleLayers(visibleLayers);
 						
 						var params = {
-							"Region": "Fl_Keys",
+							"Region": self._data[self.parameters.regionIndex].location.replace(' ', '_'),
 							"Input_Location": evt.mapPoint.x + "," + evt.mapPoint.y,
 							"Filter_Number": self._data[self.parameters.regionIndex].profilePointFilterNumber
 						}
@@ -2515,7 +2769,8 @@ define([
 					
 					dojo.connect(this.profilePolygon, "onLoad", function(){
 						this.show();
-						self._map.setExtent(this.fullExtent);
+						//self._map.setExtent(this.fullExtent);
+						self.setExtent(self.parameters.subRegionIndex);
 					});
 					
 					dojo.connect(this.profilePolygon, "onMouseMove", function(evt) {
@@ -2530,7 +2785,8 @@ define([
 					var visibleLayers = lang.clone(mapLayers.habitatLayerIds);
 					visibleLayers.push(mapLayers.profilePolygonLayerId);
 					this.habitatLayer.setVisibleLayers(visibleLayers);
-					this._map.setExtent(this.profilePolygon.fullExtent);
+					//this._map.setExtent(this.profilePolygon.fullExtent);
+					self.setExtent(self.parameters.subRegionIndex);
 					this.profilePolygon.show();
 				}
 			
@@ -2546,7 +2802,7 @@ define([
 						visible: true
 					});
 					this.profileTransect.setRenderer(new esri.renderer.SimpleRenderer(profileTransectSymbol));
-					this.profileTransect.setDefinitionExpression("Id = " + this.parameters.profileId );
+					this.profileTransect.setDefinitionExpression("Id = '" + this.parameters.profileId + "'");
 					
 					this.profileTransectOnUpdateHandler = dojo.connect(this.profileTransect, "onUpdateEnd", function(){
 						self._map.setExtent(this.graphics[0].geometry.getExtent().expand(1), true);
@@ -2559,7 +2815,7 @@ define([
 						self._map.setExtent(this.graphics[0].geometry.getExtent().expand(1), true);
 						dojo.disconnect(self.profileTransectOnUpdateHandler);
 					});
-					this.profileTransect.setDefinitionExpression("Id = " + this.parameters.profileId);
+					this.profileTransect.setDefinitionExpression("Id = '" + this.parameters.profileId + "'");
 					this.profileTransect.show();
 				}
 				
@@ -2632,13 +2888,19 @@ define([
 				this.coralReefCheckBoxTooltip.set("label", "(Disabled) No habitat scenario chosen.");
 				this.mangroveCheckBoxTooltip.set("label", "(Disabled) No habitat scenario chosen.");
 				this.underwaterStructureCheckBoxTooltip.set("label", "(Disabled) No habitat scenario chosen.");
-				this.windWaveButton.set("label", "Wave");
+				this.windWaveButton.set("label", "Oceanic");
+				dojo.style("windContentDiv", "display", "none");
+				dojo.style("waveContentDiv", "display", "block");
+				dojo.style("hurricaneContentDiv", "display", "none");
 				this.waveButton.set("label", "Storm");
 				this.windButton.set("label", "Strong Storm");
 				this.hurricaneButton.set("label", "Category 1");
-				this.waterTypeButton.set("label", "Tide");
+				this.waterTypeButtonOnChange("Tide");
+				//this.waterTypeButton.set("label", "Tide");
 				this.tideLevelButton.set("label", "Mean Sea Level");
 				this.seaLevelRiseButton.set("label", "Moderate");
+				this.setProfileSliderText('', false);
+				dijit.byId('habitatPane').selectChild('coralReefPanel');
 			}
 			
 			this.updateInterfaceInputs = function(scenario){
@@ -2666,7 +2928,8 @@ define([
 							this.coralReefCheckBox.set("disabled", false);
 							this.coralReefCheckBox.set("checked", true);
 							this.onHabitatCheckboxChange('coral', this.coralReefCheckBox);
-							this.coralReefCheckBoxTooltip.set("label", "Check to modify current coral reef characteristics.");
+							this.coralReefCheckBoxTooltip.set("label", "Check to set a coral reef restoration scenario. Uncheck to run under current conditions.");
+							this.coralReefCheckBoxTooltip.open("coralReefPanel_button_title");
 						} else {
 							this.coralReefCheckBox.set("disabled", true);
 							this.coralReefCheckBox.set("checked", false);
@@ -2701,7 +2964,8 @@ define([
 							this.coralReefCheckBox.set("disabled", false);
 							this.coralReefCheckBox.set("checked", true);
 							this.onHabitatCheckboxChange('coral', this.coralReefCheckBox);
-							this.coralReefCheckBoxTooltip.set("label", "Check to modify current coral reef characteristics.");
+							this.coralReefCheckBoxTooltip.set("label", "Check to set a coral reef restoration scenario. Uncheck to run under current conditions.");
+							this.coralReefCheckBoxTooltip.open("coralReefPanel_button_title");
 						} else {
 							this.coralReefCheckBox.set("disabled", true);
 							this.coralReefCheckBox.set("checked", false);
@@ -2741,7 +3005,8 @@ define([
 							this.coralReefCheckBox.set("disabled", false);
 							this.coralReefCheckBox.set("checked", true);
 							this.onHabitatCheckboxChange('coral', this.coralReefCheckBox);
-							this.coralReefCheckBoxTooltip.set("label", "Check to modify current coral reef characteristics.");
+							this.coralReefCheckBoxTooltip.set("label", "Check to set a coral reef restoration scenario. Uncheck to run under current conditions.");
+							this.coralReefCheckBoxTooltip.open("coralReefPanel_button_title");
 						} else {
 							this.coralReefCheckBox.set("disabled", true);
 							if (typeof this.profileChart.getSeries("Reef (future)") !== "undefined") {
@@ -2752,7 +3017,7 @@ define([
 						
 						this.waterTypeButton.set("label", "Tide");
 						this.waterTypeButtonOnChange("Tide");
-						this.waterTypeButton.set("disabled", false);
+						this.waterTypeButton.set("disabled", true);
 						break;
 					case "Mangroves":
 						domStyle.set(dijit.byId("underwaterStructurePanel").getParent().id, "display","none");
@@ -2775,7 +3040,8 @@ define([
 							this.mangroveCheckBox.set("disabled", false);
 							this.mangroveCheckBox.set("checked", true);
 							this.onHabitatCheckboxChange('mangrove', this.mangroveCheckBox);
-							this.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+							this.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
+							this.mangroveCheckBoxTooltip.open("mangrovePanel_button_title");
 						} else {
 							this.mangroveCheckBox.set("disabled", true);
 							this.mangroveCheckBox.set("checked", false);
@@ -2788,7 +3054,7 @@ define([
 						this.waterTypeButton.set("label", "Tide");
 						this.tideLevelButton.set("label", "Mean Higher High Water");
 						this.waterTypeButtonOnChange("Tide");
-						this.waterTypeButton.set("disabled", false);
+						this.waterTypeButton.set("disabled", true);
 						break;
 					case "Coral Reef, Mangroves, & Artificial Reef Structures":
 						domStyle.set(dijit.byId("underwaterStructurePanel").getParent().id, "display","block");
@@ -2803,11 +3069,6 @@ define([
 						this.addFutureHabitatPlot("underwaterStructure");
 						this.underwaterStructureCheckBoxTooltip.set("label", "Check to place an artificial underwater structure.");
 						
-						this.waterTypeButton.set("label", "Tide");
-						this.tideLevelButton.set("label", "Mean Higher High Water");
-						this.waterTypeButtonOnChange("Tide");
-						this.waterTypeButton.set("disabled", false);
-						
 						domStyle.set(dijit.byId("mangrovePanel").getParent().id, "display","block");
 						if (this.currentHabitatData.mangrove) {
 							this.mangroveCheckBox.set("disabled", false);
@@ -2821,12 +3082,17 @@ define([
 							this.mangroveMudDensityBox.set('disabled', false); 
 							this.mangroveSurgeAttenuationBox.set('disabled', false); 
 							this.addFutureHabitatPlot("mangrove");
-							this.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+							this.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
 						} else {
 							this.mangroveCheckBox.set("disabled", true);
 							this.mangroveCheckBox.set("checked", false);
 							this.mangroveCheckBoxTooltip.set("label", "(Disabled) No mangrove habitat available to modify.");
 						}
+						
+						this.waterTypeButton.set("label", "Tide");
+						this.tideLevelButton.set("label", "Mean Higher High Water");
+						this.waterTypeButtonOnChange("Tide");
+						this.waterTypeButton.set("disabled", true);
 						
 						domStyle.set(dijit.byId("coralReefPanel").getParent().id, "display","block");
 						dijit.byId('habitatPane').selectChild('coralReefPanel');
@@ -2834,7 +3100,8 @@ define([
 							this.coralReefCheckBox.set("disabled", false);
 							this.coralReefCheckBox.set("checked", true);
 							this.onHabitatCheckboxChange('coral', this.coralReefCheckBox);
-							this.coralReefCheckBoxTooltip.set("label", "Check to modify current coral reef characteristics.");
+							this.coralReefCheckBoxTooltip.set("label", "Check to set a coral reef restoration scenario. Uncheck to run under current conditions.");
+							this.coralReefCheckBoxTooltip.open("coralReefPanel_button_title");
 						} else {
 							this.coralReefCheckBox.set("disabled", true);
 							if (typeof this.profileChart.getSeries("Reef (future)") !== "undefined") {
@@ -2852,7 +3119,8 @@ define([
 					this.parameters.futureReefSeaEdge = this.parameters.currentReefSeaEdge;
 					this.parameters.futureReefShoreEdge = this.parameters.currentReefShoreEdge;
 					//this.futureHabitatData.coral = [this.parameters.currentReefSeaEdge, this.parameters.currentReefShoreEdge];
-					this.futureHabitatData.coral = [ { x: this.parameters.currentReefSeaEdge, y: 0 }, { x: this.parameters.currentReefShoreEdge, y: 0 }];
+					//this.futureHabitatData.coral = [ { x: this.parameters.currentReefSeaEdge, y: 0 }, { x: this.parameters.currentReefShoreEdge, y: 0 }];
+					this.futureHabitatData.coral = dojo.map(this.currentHabitatData.coral, function(item){ var obj = { x: item.x }; obj.y = (item.y != null) ? 0 : item.y; return obj })
 				}
 				
 				if (this.currentHabitatData.mangrove) {
@@ -2886,11 +3154,7 @@ define([
 			this.processProfileData = function(result) {			
 				this.parameters.profileId = result.id;
 				this.parameters.mllw = result.mllw;
-				this.parameters.wave = { 
-					'Average' : { 'height': 2, 'period': 8 },
-					'Most Frequent' : { 'height': 1, 'period': 4 },
-					'Storm' : { 'height': 6, 'period': 10 }
-				};
+				this.parameters.wave = result.wave;
 				var distance = result.distance;
 				var elevation = result.elevation;
 				var profileData = dojo.map(distance, function(d, i) { 
@@ -2966,11 +3230,12 @@ define([
 					this.parameters.currentReefSeaEdge = coral.seaEdge.value;
 					this.parameters.currentReefShoreEdge = coral.shoreEdge.value;
 					
-					this.futureHabitatData.coral = [ { x: coral.seaEdge.value, y: 0 }, { x: coral.shoreEdge.value, y: 0 }];
+					//this.futureHabitatData.coral = [ { x: coral.seaEdge.value, y: 0 }, { x: coral.shoreEdge.value, y: 0 }];
+					this.futureHabitatData.coral = dojo.map(this.currentHabitatData.coral, function(item){ var obj = { x: item.x }; obj.y = (item.y != null) ? 0 : item.y; return obj });
 					this.parameters.futureReefSeaEdge = this.parameters.currentReefSeaEdge;
 					this.parameters.futureReefShoreEdge = this.parameters.currentReefShoreEdge;
 					//this.coralReefCheckBox.set("disabled", false);
-					this.coralReefCheckBoxTooltip.set("label", "Check to modify current coral reef characteristics.");
+					this.coralReefCheckBoxTooltip.set("label", "Check to set a coral reef restoration scenario. Uncheck to run under current conditions.");
 				} else {
 					this.currentHabitatData.coral = [];
 					this.parameters.currentReefSeaEdge = 0;
@@ -2994,23 +3259,26 @@ define([
 					
 					var mangroveMinValues = dojo.filter(profileData,function(item) { return item.y > (self.parameters.mllw*2 - 0.25) && item.y < (self.parameters.mllw*2 + 0.25) });
 					var mangroveValues = dojo.map(mangroveMinValues, function(value){ return value.x});
-					var mangroveMinValue = dojo.filter(mangroveMinValues, function(item) {
+					console.log(mangroveValues);
+					/* var mangroveMinValue = dojo.filter(mangroveMinValues, function(item) {
 						return item.x == _.max(mangroveValues);
 					});
-					this.parameters.mangroveSeaEdgeEnd = _.last(mangroveMinValue).x;
+					this.parameters.mangroveSeaEdgeEnd = _.last(mangroveMinValue).x; */
+					
+					this.parameters.mangroveSeaEdgeEnd = _.min(mangroveValues);
 					
 					if ((this.waterTypeButton.get('label') == 'Tide') && (this.tideLevelButton.get('label') == 'Mean Lower Low Water' || this.tideLevelButton.get('label') == 'Mean Sea Level')) {
 						this.mangroveCheckBox.set("disabled", true);
 						this.mangroveCheckBoxTooltip.set("label", "(Disabled) Mangrove habitat must be submerged to modify - set tide level to Mean Higher High Water or above.");
 					} else {
 						//this.mangroveCheckBox.set("disabled", false);
-						this.mangroveCheckBoxTooltip.set("label", "Check to modify current mangrove characteristics.");
+						this.mangroveCheckBoxTooltip.set("label", "Check to set a mangrove restoration scenario. Uncheck to run under current conditions.");
 					}
 					
 				} else {
 					this.currentHabitatData.mangrove = [];
-					this.parameters.currentMangroveSeaEdge = 0;
-					this.parameters.currentMangroveShoreEdge = 0;
+					this.parameters.currentMangroveSeaEdge = this.parameters.mllw;
+					this.parameters.currentMangroveShoreEdge = _.last(this.currentHabitatData.distance);
 					
 					this.futureHabitatData.mangrove = [];
 					this.parameters.futureMangroveSeaEdge = this.parameters.currentMangroveSeaEdge;
@@ -3021,7 +3289,8 @@ define([
 				
 				if (_.min(distance) <= -40) {
 					this.parameters.underwaterStructureShoreEdgeEnd = -40;
-					this.parameters.currentUnderwaterStructureSeaEdge = (this.currentHabitatData.coral.length > 0) ? this.parameters.currentReefShoreEdge : _.min(distance);
+					//this.parameters.currentUnderwaterStructureSeaEdge = (this.currentHabitatData.coral.length > 0) ? this.parameters.currentReefShoreEdge : _.min(distance);
+					this.parameters.currentUnderwaterStructureSeaEdge = _.min(distance);
 					this.parameters.currentUnderwaterStructureShoreEdge = this.parameters.underwaterStructureShoreEdgeEnd;
 					
 					var initialX = this.parameters.currentUnderwaterStructureShoreEdge - ((this.parameters.currentUnderwaterStructureShoreEdge - this.parameters.currentUnderwaterStructureSeaEdge)/2)
@@ -3098,23 +3367,23 @@ define([
 				if (this.currentHabitatData.coral.length > 0) {
 					this.profileChart.addSeries("Coral Reef & Hard Bottom", this.currentHabitatData.coral, { 
 						plot: "currentReef", 
-						stroke: { color: "#1C4A85", width: 5 } 
+						stroke: { color: "#1C4A85", width: 5, cap: "round", join: "round" } 
 					});
 				} else {
 					this.profileChart.addSeries("Coral Reef & Hard Bottom", [{"x": -1000, "y": -1000},{"x": -1001, "y": -1001}], { 
 						plot: "currentReef", 
-						stroke: { color: "#1C4A85", width: 5 } 
+						stroke: { color: "#1C4A85", width: 5, cap: "round", join: "round" } 
 					});
 				}
 				if (this.currentHabitatData.mangrove.length > 0) {
 					this.profileChart.addSeries("Mangrove", this.currentHabitatData.mangrove, { 
 						plot: "currentMangrove", 
-						stroke: { color: "#378054", width: 5 } 
+						stroke: { color: "#4B604E", width: 5, cap: "round", join: "round" } 
 					});
 				} else {
 					this.profileChart.addSeries("Mangrove", [{"x": -1000, "y": -1000},{"x": -1001, "y": -1001}], { 
 						plot: "currentMangrove", 
-						stroke: { color: "#378054", width: 5 } 
+						stroke: { color: "#4B604E", width: 5, cap: "round", join: "round" } 
 					});
 				}
 				
@@ -3131,13 +3400,16 @@ define([
 				this.habitatRangeSlider.set("disabled", false);
 				domStyle.set(this.habitatRangeSlider.sliderHandle,"display", "none");
 				domStyle.set(this.habitatRangeSlider.sliderHandleMax,"display", "none");
+				
+				this.waveHeightBox.set("value", this.parameters.wave["Storm"].height);
+				this.wavePeriodBox.set("value", this.parameters.wave["Storm"].period);
 			}
 			
 			this.setWaveModelParameters = function() {
 				var valueTranslate = { 
 					"wave": {
-						"Wave":"Direct Input",
-						"Wind":"From Wind",
+						"Oceanic":"Direct Input",
+						"Wind-Wave":"From Wind",
 						"Hurricane":"From Hurricane"
 					},
 					"hurricane": {
@@ -3160,8 +3432,8 @@ define([
 				var random = Math.round(Math.random() * 10000);
 				var params = {
 					//Geographic Parameters
-					"Run_Label": this.regionButton.get("label").replace(" ", "_") + "_" + random,
-					"Region": this.regionButton.get("label").replace(" ", "_"),
+					"Run_Label": this.parameters.region.replace(" ", "_") + "_" + random,
+					"Region": this.parameters.region.replace(" ", "_"),
 					"Profile_Number": this.parameters.profileId,
 					"Use_Cross-Shore_Extent": 0,
 					"Offshore_Limit": 0,
@@ -3190,7 +3462,7 @@ define([
 					"Coral_Reef_Response_to_SLR__Keep_Up": (this.reefResponseTypeButton.get("label") == "Keep Up") ? "Yes" : "No",
 					"Coral_Reef_Response_to_SLR__Degradation____": this.reefResponseDegradationBox.get("value"),
 					
-					"Vegetation": 1,
+					"Vegetation": (this.mangroveCheckBox.checked) ? 1 : 0,
 					//Mangrove Parameters
 					"Modify_Mangroves":  (this.mangroveCheckBox.checked) ? 1 : 0,
 					"Modify_Mangrove_Location": (this.mangroveCheckBox.checked) ? 1 : 0,
@@ -3492,7 +3764,6 @@ define([
 			}
 			
 			this.processResultsData = function(result) {
-				console.log(result);
 				this.waveModelResults = {};
 				this.waveModelResults.waveHeight = {}
 				this.waveModelResults.waveHeight.present = {}
@@ -3515,18 +3786,24 @@ define([
 					}
 				});
 
-				var start = (dojo.indexOf(this.currentHabitatData.distance, _.first(distance)) > -1) ? dojo.indexOf(this.currentHabitatData.distance, _.first(distance)) : 0;
-				this.waveModelResults.distance = this.currentHabitatData.distance.slice(start, this.currentHabitatData.distance.length);
-				this.waveModelResults.elevation = this.currentHabitatData.elevation.slice(start, this.currentHabitatData.distance.length);
+				var closestDistanceValue = this.utilities.findClosestValueInArray(_.first(distance), this.currentHabitatData.distance).value
+				var start = dojo.indexOf(distance, closestDistanceValue);
+				//console.log('index = ' + start);
+				this.waveModelResults.distance = distance.slice(start, distance.length+1);
+				this.waveModelResults.elevation = elevation.slice(start, elevation.length+1);
+				
+				this.waveModelResults.waveHeight.present.data = waveHeightPresent.slice(start, waveHeightPresent.length+1);
+				this.waveModelResults.waveHeight.future.data = waveHeightFuture.slice(start,  waveHeightFuture.length+1);
 				this.waveModelResults.waveHeight.min = min;
 				this.waveModelResults.waveHeight.max = max;
 				
-				this.waveModelResults.waveHeight.present.data = waveHeightPresent.slice(dojo.indexOf(distance, _.first(this.waveModelResults.distance)),  this.currentHabitatData.distance.length);
-				this.waveModelResults.waveHeight.future.data = waveHeightFuture.slice(dojo.indexOf(distance, _.first(this.waveModelResults.distance)),  this.currentHabitatData.distance.length);
+				this.waveModelResults.messages = result.output_messages;
 			}
 			
 			this.loadResultsData = function() {
 				domStyle.set("cd_resultsDataLoadingDiv", "display", "none");
+				
+				this.renderResultsHabitatPlot();
 				
 				var xOpts = this.resultsChart.getAxis("x").opt;
 				xOpts.min = this.profileChart.getAxis("x").opt.min;
@@ -3535,13 +3812,34 @@ define([
 				
 				var yOpts = this.resultsChart.getAxis("y").opt;
 				yOpts.min =this.waveModelResults.waveHeight.min;
-				yOpts.max = (this.waveModelResults.waveHeight.max < 1) ? Math.ceil(this.waveModelResults.waveHeight.max, 1): this.waveModelResults.waveHeight.max;
-				yOpts.majorTickStep = (this.waveModelResults.waveHeight.max < 1) ? 0.1 : 1;
-				yOpts.minorTickStep = (this.waveModelResults.waveHeight.max < 1) ? 0.05 : 0.5;
+				yOpts.max = (this.waveModelResults.waveHeight.max < 1) ? Math.ceil(this.waveModelResults.waveHeight.max, 1): this.waveModelResults.waveHeight.max + this.waveModelResults.waveHeight.max*0.15;
+				yOpts.majorTickStep = (this.waveModelResults.waveHeight.max < 1.5) ? 0.1 : (this.waveModelResults.waveHeight.max >= 1.5 && this.waveModelResults.waveHeight.max < 10) ? 0.5 : 1;
+				yOpts.minorTickStep = (this.waveModelResults.waveHeight.max < 1.5) ? 0.05 :  (this.waveModelResults.waveHeight.max >= 1.5 && this.waveModelResults.waveHeight.max < 10) ? 0.25 : 0.5;
 				this.resultsChart.addAxis("y", yOpts);
 				
 				this.resultsChart.updateSeries("Present", this.waveModelResults.waveHeight.present );
 				this.resultsChart.updateSeries("Future", this.waveModelResults.waveHeight.future );
+				
+				this.resultsChart.render();
+				
+				var waveHeightMin = dojo.map(this.waveModelResults.waveHeight.future.data, function(item, i) {
+					var obj = (item.y > self.waveModelResults.waveHeight.present.data[i].y) ? { x: item.x, y:self.waveModelResults.waveHeight.present.data[i].y } : item;
+					return  obj;
+				});
+				this.resultsChart.updateSeries("waveHeightMin", { data: waveHeightMin } );
+				
+				var futureWaveHeightBetter = dojo.map(this.waveModelResults.waveHeight.future.data, function(item, i) {
+					var obj = (item.y > self.waveModelResults.waveHeight.present.data[i].y) ? { x: item.x, y:null } : { x: item.x, y:self.waveModelResults.waveHeight.present.data[i].y };
+					return  obj;
+				});
+				this.resultsChart.updateSeries("futureWaveHeightBetter", { data: futureWaveHeightBetter } );
+				
+				var futureWaveHeightWorse = dojo.map(this.waveModelResults.waveHeight.future.data, function(item, i) {
+					var obj = (item.y < self.waveModelResults.waveHeight.present.data[i].y) ? { x: item.x, y:null } : item;
+					return  obj;
+				});
+				this.resultsChart.updateSeries("futureWaveHeightWorse", { data: futureWaveHeightWorse } );
+				
 				this.resultsChart.render();
 				
 				var xOpts = this.resultsHabitatChart.getAxis("x").opt;
@@ -3559,11 +3857,11 @@ define([
 				var data = (this.currentHabitatData.coral.length > 0) ? this.profileChart.getSeries("Coral Reef & Hard Bottom").data : blankData;
 				this.resultsHabitatChart.updateSeries("Reef (present)",  data);
 				
-				var data = (this.currentHabitatData.mangrove.length > 0) ? this.profileChart.getSeries("Mangrove").data : blankData;
-				this.resultsHabitatChart.updateSeries("Mangrove (present)",  data);
-				
 				var data = (this.coralReefCheckBox.checked) ? this.profileChart.getSeries("Reef (future)").data : blankData;
 				this.resultsHabitatChart.updateSeries("Reef (future)",  data);
+				
+				var data = (this.currentHabitatData.mangrove.length > 0) ? this.profileChart.getSeries("Mangrove").data : blankData;
+				this.resultsHabitatChart.updateSeries("Mangrove (present)",  data);
 				
 				var data = (this.mangroveCheckBox.checked) ? this.profileChart.getSeries("Mangrove (future)").data : blankData;
 				this.resultsHabitatChart.updateSeries("Mangrove (future)",  data);
@@ -3578,14 +3876,99 @@ define([
 
 				this.setChartBackgroundToTransparent("cd_resultsHabitatPlotDiv");
 				this.setChartBackgroundToTransparent("cd_resultsPlotDiv");
+				
+				
+				var resultsChartType = new DropDownMenu({ style: "display: none;"});
+				domClass.add(resultsChartType.domNode, "claro");
+
+				if (this.waveModelResults.messages.coral != null && this.waveModelResults.messages.coral != '') {
+					var menuItem = new MenuItem({
+						label: "Coral Reef",
+						value: "coral",
+						onClick: function(){
+							self.resultsChartTypeButton.set("label", this.label);
+							self.resultsChartTypeButton.set("value", "coral");
+							var message = self.waveModelResults.messages.coral;
+							message = (message.split('wave').length > 2) ? message.split('wave').join('<br>wave').replace(' and','') : message;
+							dojo.byId('resultsHabitatMessage').innerHTML = message;
+							domStyle.set('resultsChartTypeContentDiv', "right", "35px");
+						}
+					});
+					resultsChartType.addChild(menuItem);
+				}
+				
+				if (this.waveModelResults.messages.mangrove != null && this.waveModelResults.messages.mangrove != '') {
+					var menuItem = new MenuItem({
+						label: "Mangrove",
+						value: "mangrove",
+						onClick: function(){
+							self.resultsChartTypeButton.set("label", this.label);
+							self.resultsChartTypeButton.set("value", "mangrove");
+							var message = self.waveModelResults.messages.mangrove;
+							message = (message.split('height').length > 1) ? message.split('wave').join('<br>wave').replace(' and','<br>and').replace(' forest', '') : message;
+							dojo.byId('resultsHabitatMessage').innerHTML = message;
+							domStyle.set('resultsChartTypeContentDiv', "right", "30px");
+						}
+					});
+					resultsChartType.addChild(menuItem);
+				} 
+				
+				if (this.waveModelResults.messages.underwaterStructure != null && this.waveModelResults.messages.underwaterStructure != '') {
+					var menuItem = new MenuItem({
+						label: "Artificial Reef",
+						value: "underwaterStructure",
+						onClick: function(){
+							self.resultsChartTypeButton.set("label", this.label);
+							self.resultsChartTypeButton.set("value", "underwaterStructure");
+							var message = self.waveModelResults.messages.underwaterStructure;
+							message = (message.split('wave').length > 2) ? message.split('wave').join('<br>wave').replace(' and','') : message;
+							dojo.byId('resultsHabitatMessage').innerHTML = message;
+							domStyle.set('resultsChartTypeContentDiv', "right", "50px");
+						}
+					});
+					resultsChartType.addChild(menuItem);
+				} 
+				this.resultsChartTypeButton.set('dropDown', resultsChartType);
+				var menuItem = _.first(this.resultsChartTypeButton.get("dropDown").getChildren());
+				this.resultsChartTypeButton.set("label", menuItem.label);
+				this.resultsChartTypeButton.set("value", menuItem.value);
+				
+				var message = self.waveModelResults.messages[menuItem.value];
+				if (menuItem.value != "Mangrove") {
+					message = (message.split('wave').length > 2) ? message.split('wave').join('<br>wave').replace(' and','').replace(' forest', '') : message;
+				} else {
+					message = (message.split('height').length > 1) ? message.split('wave').join('<br>wave').replace(' and','<br>and').replace(' forest', '') : message;
+				}
+				dojo.byId('resultsHabitatMessage').innerHTML = message;
+				switch(menuItem.value) {
+					case "coral":
+						var right = "35px";
+						break;
+					case "mangrove":
+						var right = "30px";
+						break;
+					case "underwaterStructure":
+						var right = "50px";
+						break;
+				}
+				domStyle.set('resultsChartTypeContentDiv', "right", right);cd_resultsTitleDiv
+				
+				domStyle.set('cd_resultsTitleDiv', "left", "65px");
+				dojo.byId('cd_resultsSubTitleDiv').innerHTML = this.waveModelResults.messages.shore + "<br>" + this.waveModelResults.messages.mud;
+				this.resultsChartTypeButton.set('disabled', false);
 			}
 			
 			this.resetResultsPane = function() {
+				dojo.byId('resultsHabitatMessage').innerHTML = '';
+				dojo.byId('cd_resultsSubTitleDiv').innerHTML = '';
+				domStyle.set('cd_resultsTitleDiv', "left", "95px");
 				domStyle.set("cd_resultsDataLoadingDiv", "display", "block");
 				domStyle.set("cd_noResultsDataHtmlContentDiv", "display", "block");
 				domStyle.set("cd_resultsDataLoadingContentDiv", "display", "none");
 				this.waveModelProgressBar.set({ "value": 0 });
 				this.clearResultsChart();
+				this.removeResultsHabitatPlots();
+				this.resultsChartTypeButton.set('disabled', true);
 			}
 			
 			this.clearResultsChart = function() {	
@@ -3613,6 +3996,12 @@ define([
 				this.resultsHabitatChart.addAxis("y", yOpts);
 				
 				this.clearResultsChartData();
+				this.removeResultsHabitatPlots();
+				this.resultsHabitatChart.render();
+				this.resultsHabitatChartLegend.refresh();
+				
+				this.setChartBackgroundToTransparent("cd_resultsHabitatPlotDiv");
+				this.setChartBackgroundToTransparent("cd_resultsPlotDiv");
 			
 			}
 			
@@ -3633,7 +4022,9 @@ define([
 				
 				this.resultsChart.updateSeries("Present", data );
 				this.resultsChart.updateSeries("Future", data );
-				this.resultsHabitatChart.updateSeries("Elevation", data);
+				this.resultsChart.updateSeries("waveHeightMin", data );
+				this.resultsChart.updateSeries("futureWaveHeightBetter", data );
+				this.resultsHabitatChart.updateSeries("futureWaveHeightWorse", data);
 				
 				this.resultsChart.render();
 				this.resultsHabitatChart.render();
@@ -3752,57 +4143,83 @@ define([
 			}
 
 			var layerConfigSchema = {
-			        $schema: 'http://json-schema.org/draft-04/schema#',
-			        title: 'Coastal Defense Config Schema',
-			        type: 'array',
-			        items: {
-			            type: 'object',
-			            additionalProperties: false,
-			            properties: {
-							location: { type: 'string' },
-							layers: {
-								type: 'object',
-								additionalProperties: false,
-								properties:{
-									profileLandPoints: {type: 'string'},
-									profilePoints: {type: 'string'},
-									profilePolygon: {type: 'string'},
-									profileTransect: {type: 'string'},
-									reefLayer: {type: 'string'},
-									marshLayer: {type: 'string'},
-									mangroveLayer: {type: 'string'},
-									seagrassLayer: {type: 'string'},
-									underwaterStructureLayer: {type: 'string'},
-									structureLayer: {type: 'string'},
-									beachLayer: {type: 'string'},
-									bathyLayer: {type: 'string'},
-									mapLayers: {
+				$schema: 'http://json-schema.org/draft-04/schema#',
+				title: 'Coastal Defense Config Schema',
+				type: 'array',
+				items: {	
+					type: 'object',
+					additionalProperties: false,
+					properties: {
+						location: { type: 'string' },
+						layers: {
+							type: 'object',
+							additionalProperties: false,
+							properties:{
+								profileLandPoints: {type: 'string'},
+								profilePoints: {type: 'string'},
+								profilePolygon: {type: 'string'},
+								profileTransect: {type: 'string'},
+								reefLayer: {type: 'string'},
+								marshLayer: {type: 'string'},
+								mangroveLayer: {type: 'string'},
+								seagrassLayer: {type: 'string'},
+								underwaterStructureLayer: {type: 'string'},
+								structureLayer: {type: 'string'},
+								beachLayer: {type: 'string'},
+								bathyLayer: {type: 'string'},
+								mapLayers: {
+									type: 'object',
+									additionalProperties: false,
+									properties: {
+										url: { type: 'string'},
+										habitatLayerIds: { type: 'array', items: { type: 'number' } },
+										profilePolygonLayerId: { type: 'number' },
+										profileTransectLayerId: { type: 'number' }
+									}
+								}
+							}
+						}, // end layers
+						extents: {
+							type: 'object',
+							additionalProperties: false,
+							properties: {
+								initial: {
+									type: 'object',
+									additionalProperties: false,
+									properties:  {
+										xmin: { type: 'number'},
+										xmax: { type: 'number'},
+										ymin: { type: 'number'},
+										ymax: { type: 'number'}
+									}
+								},
+								subRegions: {
+									type: 'array',
+									items: {
 										type: 'object',
 										additionalProperties: false,
 										properties: {
-											url: { type: 'string'},
-											habitatLayerIds: { type: 'array', items: { type: 'number' } },
-											profilePolygonLayerId: { type: 'number' },
-											profileTransectLayerId: { type: 'number' }
+											name: { type: 'string' },
+											extent: {
+												type: 'object',
+												additionalProperties: false,
+												properties:  {
+													xmin: { type: 'number'},
+													xmax: { type: 'number'},
+													ymin: { type: 'number'},
+													ymax: { type: 'number'}
+												}
+											}
 										}
 									}
 								}
-							}, // end layers
-							extent: {
-								type: 'object',
-								additionalProperties: false,
-								properties: {
-									xmin: { type: 'number'},
-									xmax: { type: 'number'},
-									ymin: { type: 'number'},
-									ymax: { type: 'number'}
-								}
-							},
-							profilePointFilterNumber: {type: 'number'},
-							habitatList: { type: 'array', items: { type: 'string' } },
-							menuItemExcludeList: { type: 'array', items: { type: 'string' } }
-						} //Close Properties
-			    }  // Close Items
+							}
+						}, //end extents
+						profilePointFilterNumber: {type: 'number'},
+						habitatList: { type: 'array', items: { type: 'string' } },
+						menuItemExcludeList: { type: 'array', items: { type: 'string' } }
+					} //Close Properties
+				}  // Close Items
 			} //end layerconfigschema
 		
 		} ;// End cdTool
@@ -3810,6 +4227,4 @@ define([
 		
 	} //end anonymous function
 
-); //End define		
-			
-			
+); //End define
