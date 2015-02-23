@@ -8,7 +8,7 @@
                     "name": "Southeast_Florida",
                     "services": [
 						{ "name": "Habitats", "type":"dynamic" },
-						{ "name": "SEFL_Social_and_Economic", "type":"dynamic" }
+						{ "name": "Social_and_Economic", "type":"dynamic" }
                     ]
 				},
                 {
