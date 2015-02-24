@@ -1,183 +1,114 @@
-[
-    {
-        "agsSource": {
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
-            "folderTitle": "Coastal Resilience (National)",
-            "folders": [
-                {
-                    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/US",
-                    "name": "",
-                    "groupFolder": "Coastal Resilience (National)/Social_and_Economic",
-                    "groupAsService": true,
-                    "description": "The Social and Economic map service features data concerning the social vulnerability of coastal communities and indicators of local dependence on coastal natural resources. A brief description appears when you click on each layer.",
-                    "services": [
-                        {
-                            "name": "Population",
-                            "displayName": "Population",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Population_Density",
-                            "displayName": "Population Density",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Children_Under_5",
-                            "displayName": "Children Under 5",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Children_Under_5_Percentage",
-                            "displayName": "Children Under 5 (% of total pop)",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "People_Over_65",
-                            "displayName": "People Over 65",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "People_Over_65_Percentage",
-                            "displayName": "People Over 65 (% of total pop)",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Families_in_Poverty",
-                            "displayName": "Families in Poverty",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Families_in_Poverty_Percentage",
-                            "displayName": "Families in Poverty (% of total families)",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        },
-                        {
-                            "name": "Median_Owner_Occupied_Home_Value",
-                            "displayName": "Median Owner-Occupied Home Value (1,000s of USD)",
-                            "type": "tiled",
-                            "opacity": 0.75
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "agsSource": {
-            "url": "https://services.gis.ca.gov/arcgis/rest/services",
-            "folderTitle": "California from gis.ca.gov",
-            "folders": [
-                {
-                    "url": "https://services.gis.ca.gov/arcgis/rest/services/Government",
-                    "name": "",
-					"groupFolder": "California from gis.ca.gov/Government",
-                    "groupAsService": true,
-					"description": "",
-                    "displayName": "Government",
-                    "services": [
-                        {
-                            "name": "CACounties10",
-                            "displayName": "CA Counties and Large Cities",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "CPAD",
-                            "displayName": "CA Protected Lands Database",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "AgencyDistAndBound",
-                            "displayName": "Agency Districts And Boundaries",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "CaliforniaDistricts",
-                            "displayName": "Legislative Districts And Boundaries",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "UnifiedSchDistricts",
-                            "displayName": "Unified School Districts",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "State_Property_Inventory",
-                            "displayName": "State Property Inventory",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "CA_Govt_Offices",
-                            "displayName": "CA Government Offices",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-						{
-                            "name": "CaLibraries10_17_2012",
-                            "displayName": "CA Libraries",
-                            "type": "dynamic",
-                            "opacity": 1
-                        }
-                    ]
-                },
-				{
-                    "url": "https://services.gis.ca.gov/arcgis/rest/services/Environment",
-                    "name": "",
-					"groupFolder": "California from gis.ca.gov/Environment",
-                    "groupAsService": true,
-					"description": "",
-                    "displayName": "Environment",
-                    "services": [
-                        {
-                            "name": "DTSCMapCorrectiveActionActive1",
-                            "displayName": "Active Corrective Action Sites DTSC",
-                            "type": "dynamic",
-                            "opacity": 1
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "agsSource": {
-            "url": "http://www.tnccmaps.org/ArcGIS/rest/services",
-            "folderTitle": "California from TNC",
-            "folders": [
-                {
-                    "url": "http://www.tnccmaps.org/ArcGIS/rest/services/",
-                    "name": "",
-					"description": "The following layers depict various statewide features within California.",
-                    "displayName": "California Data",
-                    "services": [
-                        {
-                            "name": "ca_Statewide_Layers_outlines",
-                            "displayName": "Statewide Data (Outlines)",
-                            "type": "dynamic",
-                            "opacity": 1
-                        },
-                        {
-                            "name": "ca_Statewide_Layers_fills",
-                            "displayName": "Statewide Data (Solid)",
-                            "type": "dynamic",
-                            "opacity": 1
-                        }
-                    ]
-                }
-            ]
-        }
+[{
+    "agsSource": {
+        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "folderTitle": "Coastal Resilience (NY)",
+        "folders": [{
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York",
+			"name": "",
+            "services": [{
+                "name": "Marsh_Protection_Analysis",
+                "type": "dynamic"
+            }, {
+				"name": "Marsh_Advancement_Zones", 
+				"type":"dynamic"
+			}, {
+                "name": "Ecological",
+                "type": "dynamic"
+            }, {
+                "name": "Economic",
+                "type": "dynamic"
+            }, {
+                "name": "Social",
+                "type": "dynamic"
+            }, {
+                "name": "Critical_Facilities",
+                "type": "dynamic"
+            }, {
+                "name": "Boundaries",
+                "type": "dynamic"
+            }, {
+                "name": "Land_Use_Management",
+                "type": "dynamic"
+            }]
+        }]
     }
-]
+}, {
+    "agsSource": {
+        "url": "",
+        "folderTitle": "Hurricane Sandy",
+        "folders": [{
+            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy",
+            "name": "",
+            "services": [{
+                "name": "SurgeBoundaries_Final_0214",
+                "displayName": "Final FEMA Surge Area - February 2013",
+                "type": "dynamic",
+                "visibleLayerIds": [0,1,2],
+                "showLayers": []
+            },  {
+                "name": "2012_Sandy",
+                "displayName": "Hurricane Sandy - County Impact Analysis",
+                "type": "dynamic",
+                "visibleLayerIds": [2],
+                "showLayers": []
+            }]
+		},  {
+            "url": "http://54.243.149.253:8080/ArcGIS/rest/services",
+            "name": "",
+            "services": [{
+                "name": "Peak_Locations",
+                "displayName": "Peak Stormtide Elevations",
+                "type": "dynamic",
+                "visibleLayerIds": [0],
+                "showLayers": []
+            }, {
+                "name": "sandy_nwis_sites",
+                "displayName": "USGS Tide Gauges",
+                "type": "dynamic",
+                "visibleLayerIds": [1],
+                "showLayers": []
+            }, {
+                "name": "sandy_storm_surge",
+                "displayName": "High Water Marks",
+                "type": "dynamic",
+                "visibleLayerIds": [6],
+                "showLayers": []
+            }]
+
+        }]
+
+    }
+
+}, {
+
+    "agsSource": {
+
+        "url": "",
+
+        "folderTitle": "Depth to Groundwater",
+
+        "folders": [{
+
+            "url": "http://54.225.181.217:6080/arcgis/rest/services/LongIsland",
+
+            "name": "",
+
+            "services": [{
+
+                "name": "LIdtw10",
+
+                "displayName": "USGS Depth to groundwater 2010",
+
+                "type": "dynamic",
+
+                "visibleLayerIds": [0,1,2],
+
+                "showLayers": []
+
+            }]
+
+        }]
+
+    }
+
+}]

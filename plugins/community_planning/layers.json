@@ -1,16 +1,15 @@
 [
     {
         "agsSource": {
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
-            "folderTitle": "Coastal_Resilience_Ventura",
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+            "folderTitle": "New_York_Community_Planning",
             "folders": [
                 {
-                    "name": "Ventura_County","services": [{ "name": "MapLayers", "type":"dynamic" }]
-					
-                },
-				{
-					"name": "Ventura_Economics", "services": [{ "name": "Ventura_Damage_Estimates", "type":"dynamic" }]
-				}
+				    "name": "Suffolk_County_South_Shore",
+                    "services": [
+                        { "name": "Base_data", "type":"dynamic" }
+                    ]
+                }
             ]
         }
     }
