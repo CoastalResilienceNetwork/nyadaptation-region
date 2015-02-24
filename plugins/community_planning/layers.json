@@ -1,0 +1,17 @@
+[
+    {
+        "agsSource": {
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
+            "folderTitle": "Coastal_Resilience_Ventura",
+            "folders": [
+                {
+                    "name": "Ventura_County","services": [{ "name": "MapLayers", "type":"dynamic" }]
+					
+                },
+				{
+					"name": "Ventura_Economics", "services": [{ "name": "Ventura_Damage_Estimates", "type":"dynamic" }]
+				}
+            ]
+        }
+    }
+]

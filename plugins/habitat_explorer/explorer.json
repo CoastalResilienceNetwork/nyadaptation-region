@@ -1,0 +1,116 @@
+{
+    "name": "Habitat Explorer",
+    "text": "To begin, select a region to view.",
+    "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
+	"mainToggle": {"index": 0, "text": "Toggle Marsh Score on or off"},
+    "betweenGroups": "*",
+    "averageGroups": true,
+	"infoGraphic": "HabitatExplorer_c.jpg",
+	"pluginHeight": 550,
+    "regions": [
+        {
+            "items": [	{
+							"text": "<b>Ecological Variables (weight):</b>",
+							"type": "text"
+						},
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "area_scl", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Marsh Size", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "FIRST_prot", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Likelihood of Shoreline Armoring", 
+							"type": "layer"
+						}, 
+						{
+							"text": "<b>Socioeconomic Variables (weight):</b>",
+							"type": "text"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "bldg_scl", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Cost of Buildings Exposed", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "crit_scl", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Amount of Critical Facilities Exposed", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "road_scl", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Amount of Roads Exposed", 
+							"type": "layer"
+						},
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "pop_scl", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Amount of People Exposed", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "FIRST_sovi", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Average Social Vulnerability", 
+							"type": "layer"
+						}
+			],
+            "name": "NY",
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+			"methods": "methods/Habitat_Explorer_2013.pdf",
+			"workspaceId": "postgis",
+			"geometryType": "polygon",
+			"dataset": "sde.nyct_marsh_explorer_data where state='New York'",
+			"reqFields": ["objectid", "shape"],
+			"defaultSymbol": { "type": "esriSFS",
+							 "style": "esriSFSSolid",
+							 "color": [150,150,150,255],
+							 "size": 8,
+							 "angle": 0,
+							 "xoffset": 0,
+							 "yoffset": 0,
+							 "outline": 
+							  {
+							  "type": "esriSLS",
+							  "style": "esriSLSSolid",
+							  "color": [150,150,150,0],
+							   "width": 1
+							  }
+							},
+			"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]]
+        }
+    ]
+}
