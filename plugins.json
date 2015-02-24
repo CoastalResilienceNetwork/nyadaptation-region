@@ -1,16 +1,8 @@
 {
   "plugins": [
     {
-      "repo": “layer_selector”,
-      "name": “layer_selector”
-    },
-    {
-      "repo": “community-planning”,
-      "name": “community_planning”
-    },
-    {
-      "repo": “flood_slr”,
-      "name": “flood_slr”
+      "repo": "flood_slr",
+      "name": "flood_slr"
     },
     {
       "repo": "explorer",
@@ -21,8 +13,8 @@
       "name": "risk_explorer"
     },
     {
-      "repo": “future_habitat”,
-      "name": “future_habitat”
+      "repo": "future_habitat",
+      "name": "future_habitat"
     }
   ]
 }
