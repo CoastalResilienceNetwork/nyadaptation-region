@@ -7,7 +7,7 @@
 {
 	"name": "New York City",
 	"extent": {"xmin":-74.2621508077,"ymin":40.4711929162,"xmax":-73.6717057828,"ymax":40.9205683248,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_NYC/ImageServer",
+    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_NYC/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_NYC",
 	"field": "name",

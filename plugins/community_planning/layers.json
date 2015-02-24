@@ -1,7 +1,7 @@
 [
     {
         "agsSource": {
-            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
             "folderTitle": "New_York_Community_Planning",
             "folders": [
                 {

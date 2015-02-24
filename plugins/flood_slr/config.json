@@ -12,7 +12,7 @@
 				{"name":"Choose Sea Level Rise", "index":1, "values":[ {"name":"None","value":"None"},{"name":"Low","value":"Low"},{"name":"Medium","value":"Medium"},{"name":"High","value":"High"}]},
 				{"name":"Choose Storm Surge", "index":2, "values":[ {"name":"None","value":"None"},{"name":"Category 2","value":"c2", "default": true},{"name":"Category 3","value":"c3"}]}
 				],
-			"mainURL": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York/NY_Flood_and_SLR_Data/MapServer",
+			"mainURL": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_York/NY_Flood_and_SLR_Data/MapServer",
 			"combos": {
 			
 				"Current|None|None": undefined,

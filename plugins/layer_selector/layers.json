@@ -1,6 +1,6 @@
 [{
     "agsSource": {
-        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
         "folderTitle": "Coastal Resilience (NY)",
         "folders": [{
             "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York",
