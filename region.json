@@ -1,7 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-14",
     "titleMain": { "text": "Coastal Resilience", "url": "http://coastalresilience.org/" },
-    "titleDetail": { "text": "New York Adaptation", "url": "http://coastalresilience.org/" },
+    "titleDetail": { "text": "New York Adaptation Toolkit", "url": "http://coastalresilience.org/" },
 	"headerLinks": [
 		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
