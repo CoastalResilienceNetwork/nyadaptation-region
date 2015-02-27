@@ -1,33 +1,12 @@
 [{
     "agsSource": {
         "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
-        "folderTitle": "Coastal Resilience (NY)",
+        "folderTitle": "NY Adaptation Toolkit",
         "folders": [{
             "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York",
 			"name": "",
             "services": [{
-                "name": "Marsh_Protection_Analysis",
-                "type": "dynamic"
-            }, {
-				"name": "Marsh_Advancement_Zones", 
-				"type":"dynamic"
-			}, {
-                "name": "Ecological",
-                "type": "dynamic"
-            }, {
-                "name": "Economic",
-                "type": "dynamic"
-            }, {
-                "name": "Social",
-                "type": "dynamic"
-            }, {
-                "name": "Critical_Facilities",
-                "type": "dynamic"
-            }, {
-                "name": "Boundaries",
-                "type": "dynamic"
-            }, {
-                "name": "Land_Use_Management",
+                "name": "NY_ClimateAdaptation_test1",
                 "type": "dynamic"
             }]
         }]
