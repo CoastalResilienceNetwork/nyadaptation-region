@@ -40,11 +40,11 @@
     ],
     "pluginOrder": [
         "layer_selector",
-		"flood_slr",
-		"risk_explorer",
-		"future_habitat",
-		"community_planning",
-		"habitat_explorer",
+	"flood_slr",
+	"risk_explorer",
+	"future_habitat",
+	"community_planning",
+	"habitat_explorer",
         "measure"
     ],
     "print": {
