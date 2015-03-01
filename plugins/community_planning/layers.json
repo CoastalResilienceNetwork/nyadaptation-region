@@ -1,13 +1,13 @@
 [
     {
         "agsSource": {
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
-            "folderTitle": "Coastal_Resilience_base_data",
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+            "folderTitle": "New_York_Community_Planning",
             "folders": [
                 {
-                    "name": "Florida_Keys",
+				    "name": "Suffolk_County_South_Shore",
                     "services": [
-                        { "name": "Monroe_County_Sustainability_Action_Plan", "type":"dynamic" }
+                        { "name": "Base_data", "type":"dynamic" }
                     ]
                 }
             ]

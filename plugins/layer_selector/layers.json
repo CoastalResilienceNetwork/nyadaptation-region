@@ -1,31 +1,93 @@
-[
-    {
-        "agsSource": {
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
-            "folderTitle": "Coastal_Resilience_base_data",
-            "folders": [
-                {
-                    "name": "Southeast_Florida",
-                    "services": [
-						{ "name": "Habitats", "type":"dynamic" },
-						{ "name": "Social_and_Economic", "type":"dynamic" }
-                    ]
-				},
-                {
-				    "name": "Florida_Keys",
-                    "services": [
-                        { "name": "Habitats", "type":"dynamic" },
-                        { "name": "Landuse_and_Other_Management_Boundaries", "type":"dynamic" },
-						{ "name": "Social_and_Economic", "type":"dynamic" }
-                    ]
-				},
-                {
-                    "name": "Florida",
-                    "services": [
-                        { "name": "FEMA_Repetitive_Loss", "type":"dynamic" }
-                    ]
-                }
-            ]
-        }
+[{
+    "agsSource": {
+        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "folderTitle": "NY Adaptation Toolkit",
+        "folders": [{
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York",
+			"name": "",
+            "services": [{
+                "name": "NY_ClimateAdaptation_test1",
+                "type": "dynamic"
+            }]
+        }]
     }
-]
+}, {
+    "agsSource": {
+        "url": "",
+        "folderTitle": "Hurricane Sandy",
+        "folders": [{
+            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy",
+            "name": "",
+            "services": [{
+                "name": "SurgeBoundaries_Final_0214",
+                "displayName": "Final FEMA Surge Area - February 2013",
+                "type": "dynamic",
+                "visibleLayerIds": [0,1,2],
+                "showLayers": []
+            },  {
+                "name": "2012_Sandy",
+                "displayName": "Hurricane Sandy - County Impact Analysis",
+                "type": "dynamic",
+                "visibleLayerIds": [2],
+                "showLayers": []
+            }]
+		},  {
+            "url": "http://54.243.149.253:8080/ArcGIS/rest/services",
+            "name": "",
+            "services": [{
+                "name": "Peak_Locations",
+                "displayName": "Peak Stormtide Elevations",
+                "type": "dynamic",
+                "visibleLayerIds": [0],
+                "showLayers": []
+            }, {
+                "name": "sandy_nwis_sites",
+                "displayName": "USGS Tide Gauges",
+                "type": "dynamic",
+                "visibleLayerIds": [1],
+                "showLayers": []
+            }, {
+                "name": "sandy_storm_surge",
+                "displayName": "High Water Marks",
+                "type": "dynamic",
+                "visibleLayerIds": [6],
+                "showLayers": []
+            }]
+
+        }]
+
+    }
+
+}, {
+
+    "agsSource": {
+
+        "url": "",
+
+        "folderTitle": "Depth to Groundwater",
+
+        "folders": [{
+
+            "url": "http://54.225.181.217:6080/arcgis/rest/services/LongIsland",
+
+            "name": "",
+
+            "services": [{
+
+                "name": "LIdtw10",
+
+                "displayName": "USGS Depth to groundwater 2010",
+
+                "type": "dynamic",
+
+                "visibleLayerIds": [0,1,2],
+
+                "showLayers": []
+
+            }]
+
+        }]
+
+    }
+
+}]

@@ -1,16 +1,18 @@
 {
+    "googleAnalyticsPropertyId": "7401895-14",
     "titleMain": { "text": "Coastal Resilience", "url": "http://coastalresilience.org/" },
-    "titleDetail": { "text": "Southeast Florida", "url": "http://coastalresilience.org/project-areas/florida-keys-introduction" },
+    "titleDetail": { "text": "New York Adaptation Toolkit", "url": "http://coastalresilience.org/" },
 	"headerLinks": [
 		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
                 { "text": "Entire USA", "url": "http://maps.coastalresilience.org/us/" },
 				{ "text": "California", "url": "http://maps.coastalresilience.org/ventura/" },
+				{ "text": "Connecticut", "url": "http://maps.coastalresilience.org/ct/" },
+				{ "text": "Florida Keys", "url": "http://maps.coastalresilience.org/flkeys/" },
 				{ "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
-				{ "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex/" },
+				{ "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex" },
 				{ "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
-                { "text": "New York & Connecticut", "url": "http://maps.coastalresilience.org/nyct" },
                 { "text": "New Jersey", "url": "http://maps.coastalresilience.org/nj" },
 				{ "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
                 { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
@@ -21,10 +23,10 @@
         { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
     ],
     "initialExtent": [
-         -82.03673772530,
-        24.88050648220,
-        -78.984580962,
-        26.964407477
+        -74.45,
+        40.41,
+        -71.7,
+        41.27
     ],
     "basemaps": [
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
@@ -38,11 +40,11 @@
     ],
     "pluginOrder": [
         "layer_selector",
-		"community_planning",
-		"coastal_defense",
-		"future_habitat",
 		"flood_slr",
 		"risk_explorer",
+		"future_habitat",
+		"community_planning",
+		"habitat_explorer",
         "measure"
     ],
     "print": {
