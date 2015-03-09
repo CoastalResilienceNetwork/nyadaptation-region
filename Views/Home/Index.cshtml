@@ -1,0 +1,483 @@
+﻿@{
+    Layout = null;
+}
+
+@using GeositeFramework.Models
+@model Geosite
+
+@helper OptionalLinkText(Geosite.Link link)
+{
+    if (link.Url != null)
+    {
+        <a target="_blank" href="@link.Url">@link.Text</a>
+    }
+    else
+    {
+        @link.Text
+    }
+        
+}
+
+
+@helper RenderLinks(IList<Geosite.Link> links, bool showDividers = true)
+{
+    foreach (var link in links)
+    {
+        if (link != Model.HeaderLinks.First() && showDividers)
+        {
+            <li class="divider"></li>
+        }
+        <li id="@link.ElementId">
+            @if (link.Popup)
+            {
+                <a class="framework-popup" href="javascript:;" data-url="@link.Url">@link.Text</a>
+            }
+            else if (link.Items != null && link.Items.Any())
+            {
+                var id = "link-dd-" + link.GetHashCode();
+                <a href="@link.Url" data-dropdown="#@id" class="dropdown-init">@link.Text
+                    <span class="dropdown-arrow">▼</span>
+                </a>
+                <div id="@id" class="dropdown dropdown-tip">
+                    <ul class="dropdown-menu">
+                        @RenderLinks(link.Items, false)
+                    </ul>
+                </div>
+            }
+            else
+            {
+                <a target="_blank" href="@link.Url">@link.Text</a>
+            }
+                                
+        </li>
+    }
+
+}
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=9"/>
+    <meta charset="utf-8" />
+    <title>@Model.TitleMain.Text | @Model.TitleDetail.Text</title>
+
+    <!-- Load CSS for plugins -->
+    @foreach (var url in Model.PluginCssUrls)
+    {
+        <link rel="stylesheet" href="@url">
+    }
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dojox/layout/resources/ResizeHandle.css">
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/TinyBox2.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/pageguide.min.css"/>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/jquery.dropdown.css"/>
+    
+    <!-- Simple implementation style overrides from config -->
+    <style type="text/css">
+        .top-bar {
+            background: @Model.PrimaryColor;
+        } 
+
+        .top-bar ul > li.name h1 a {
+            color: @Model.SecondaryColor;
+        }
+
+        /* Use custom colors for overlay */
+        body #tlyPageGuideWrapper #tlyPageGuideMessages span,
+        body #tlyPageGuideWrapper #tlyPageGuideMessages .tlypageguide_close,
+        body #tlyPageGuideWrapper #tlyPageGuide li:hover,
+        body #tlyPageGuideWrapper #tlyPageGuide li.tlypageguide-active
+        {
+            background: @Model.SecondaryColor;
+        }
+        body #tlyPageGuideWrapper #tlyPageGuide li.tlypageguide-active.tlypageguide_right:after, 
+        body #tlyPageGuideWrapper #tlyPageGuide li.tlypageguide-active.tlypageguide_left:after, 
+        body #tlyPageGuideWrapper #tlyPageGuide li.tlypageguide-active.tlypageguide_top:after,
+        body #tlyPageGuideWrapper #tlyPageGuide li:hover.tlypageguide_right:after, 
+        body #tlyPageGuideWrapper #tlyPageGuide li:hover.tlypageguide_left:after, 
+        body #tlyPageGuideWrapper #tlyPageGuide li:hover.tlypageguide_top:after {
+            border-top: 15px solid @Model.SecondaryColor;
+        }
+
+
+        body .tlypageguide_shadow:after {
+            background-color: @Model.SecondaryColor;
+            opacity: 0.2;
+        }
+
+        /* Site color for header dropdown menu selection */
+        .top-bar .dropdown .dropdown-menu LI > A:hover,
+        .top-bar .dropdown .dropdown-menu LABEL:hover {
+            background-color: @Model.SecondaryColor;
+        }
+    </style>
+
+    @if (Model.GoogleAnalyticsPropertyId != null)
+    {
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-@Model.GoogleAnalyticsPropertyId']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    }
+</head>
+
+
+<!-- EX.: view-split, view-left, view-right -->
+<body class="view-left" style="zoom: 0 !important;">
+
+    <script type="text/template" id="template-pane">
+        <div class="sidebar">
+            <ul class="plugins side-nav twelve top"></ul>
+            <ul class="side-nav twelve bottom"></ul>
+        </div>
+        <div class="map-outer">
+            <div id="map-<%= paneNumber %>" class="map">
+                <div class="top-tools"></div>
+                <div class="tools"></div>
+                <div class="basemap-selector">
+                    <div class="basemap-selector-title"></div>
+                    <div class="basemap-selector-list">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div id="legend-container-<%= paneNumber %>" class="legend">
+                    <div class="legend-header">Map Legend
+                        <a class="legend-close" title="Hide Legend" href="javascript:;">_</a></div>
+                    <div class="legend-body">
+                        <div id="legend-<%= paneNumber %>"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="template-sidebar">
+        <li class="divider"></li>
+        <% if (isMain) { %>
+            <% if (splitScreen) { %>
+                <li><a class="switch-screen" data-screen="0" title="View only Map 1" href="javascript:;"><img class="icon" src="img/icons/icon_switch-0_up.png"/>Full Map</a></li>
+                <li><a class="switch-screen" data-screen="1" title="View only Map 2" href="javascript:;"><img class="icon" src="img/icons/icon_switch-1_up.png"/>Full Map</a></li>
+            <% } else { %>
+                <li><a class="switch-screen" data-screen="<%= alternatePaneNumber %>" href="javascript:;" title="Currently viewing Map <%= paneNumber + 1 %>, switch to view Map <%= alternatePaneNumber + 1 %>">
+                    <img class="icon" src="img/icons/icon_switch-<%= paneNumber %>_up.png"/>Switch To Map <%= alternatePaneNumber + 1 %>
+                </a></li>
+                <li><a class="split-screen" href="javascript:;" title="Split the current workspace into two workspaces"><img class="icon" src="img/icons/icon_split_up.png"/>Split View</a><li>
+            <% } %>
+            <li class="divider"></li>
+            <li><a href="javascript:;" class="permalink-button hide-for-tablet" title="Receive a hyperlink to share your current workspace"><img class="icon" src="img/icons/icon_share_up.png"/>Save &amp; Share</a></li>
+            <% if (helpUrl) { %>
+                <li><a target="_blank" href="<%= helpUrl %>" class="help-button hide-for-tablet" title="Receive help on how to use this application"><img class="icon" src="img/icons/icon_help-support_up.png"/>Help</a></li>
+            <% } %>
+        <% } else { %>
+            <li>
+                <a href="javascript:;" class="hide-for-tablet map-sync" title=<%= syncMaps ? '"Allow maps to show different extents"' : '"Force maps to show the same extent"' %>>
+                    <img class="icon" src="img/icons/icon_<%= syncMaps ? '' : 'un' %>link-views_up.png"/>
+                    <%= syncMaps ? 'Unlink' : 'Link' %> Maps
+                </a>
+            </li>
+        <% } %>
+        <% if (showExportButton) { %>
+            <li><a href="javascript:;" class="export-button hide-for-tablet" title="Receive a printable copy of the current map"><img class="icon" src="img/icons/icon_print_up.png"/>Export Page</a></li>
+        <% } %>
+
+    </script>
+
+    <script type="text/template" id="template-sidebar-plugin">
+            <a class="plugin-launcher" title="<%=fullName%>" href="javascript:;">
+                <img src="<%- pluginSrcFolder %>/icon<%= selected ? '_active' : ''%>.png">
+                <div><%- pluginObject.toolbarName %></div>
+            </a>
+    </script>
+
+    <script type="text/template" id="template-topbar-plugin">
+            <a class="plugin-launcher" title="<%=fullName%>" href="javascript:;"></a>
+    </script>
+    
+    <script type="text/template" id="template-topbar-tools">
+        <span class="topbar-tools">
+            <a class="plugin-clear" href="javascript:;">&#10006;</a>
+        </span>
+    </script>
+    <script type="text/template" id="template-sidebar-link">
+        <div class="sidebar-link">
+            <a target="_blank" href="<%= link.url %>"><%- link.text %></a>
+        </div>
+    </script>
+
+    <script type="text/template" id="template-basemap-selector-item">
+        <li data-index="<%- index %>"><%- name %></li>
+    </script>
+
+    <script type="text/template" id="template-plugin-container">
+        <div class="plugin-container-outer" id="<%= id %>" style="position: absolute;"> <!-- Extra outer div to minimize mis-alignment of dojo resize "ghost".
+                                                                                             Position:absolute to eliminate jump in dojo drag. -->
+            <div class="plugin-container">
+                <div class="plugin-container-header">
+                    <h6><%- title %></h6>
+                    <a class="plugin-off" href="javascript:;">&#10006;</a>
+                    <a class="plugin-close" href="javascript:;">&#95;</a>
+                    <% if (isHelpButtonVisible) { %>
+                        <a class="plugin-help" href="javascript:;" title="View the info-graphic">?</a>
+                    <% } %>
+                </div>
+                <div class="plugin-container-inner"></div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="template-result-of-identify">
+        <div>
+            <div class="identify-section"><%- pluginTitle %></div>
+            <div class="identify-result"></div>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="plugin-result-of-identify">
+        <div class="result-of-identify collapsed">
+            <div data-class="result-of-identify-inner">
+                <div class="identify-header-label"><span>Layer:</span><%= layerName %></div>
+                <% if (value) { %>
+                    <div class="identify-header-label">
+                        <span><%= displayFieldName || 'Value'%>:</span><%= value %>
+                    </div>
+                <% } %>
+                    <div class="attributes" style="display: none;">
+                        <table>
+                            <tbody>
+                                <% _.each(feature.attributes, function(attributeValue, attributeName) { %>
+                                    <% if (attributeName !== displayFieldName) { %>
+                                        <tr>
+                                            <td><%= attributeName %></td>
+                                            <td><%= attributeValue %></td>
+                                        </tr>
+                                    <% } %>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="template-export-window">
+      <h3>Map <span class="export-pane-number"></span> Export</h3>
+      <h5>Title (Optional):</h5> <input type="text" id="export-title"/>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <h5>Orientation</h5>
+                <label><input type="radio" name="export-orientation" value="Landscape" checked="checked"/>Landscape</label>
+                <label><input type="radio" name="export-orientation" value="Portrait"/>Portrait</label>
+            </div>
+            <div class="small-4 columns">
+                 <h5>Legend</h5>
+                <label><input type="checkbox" name="export-include-legend" />Include Layer Legend</label>
+            </div>
+            <div class="small-4 columns">
+                <div class="export-indicator"><img class="icon" src="img/spinner.gif" /></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <div class="export-output-area"></div>
+            </div>
+            <div class="right-col">
+                <a href="#" id="export-button" class="button radius" disabled="disabled">Generate Map Export</a>
+            </div>
+        </div>
+      
+    </script>
+
+    <script type="text/template" id="template-export-url">
+            <a target="_blank" class="export-output-url" href="<%= url %>">View your printable document.</a>
+    </script>
+
+    <!-- Adding any white space between the textarea and the iframe
+        will result in whitespace within the rendered textarea, which looks strange. -->
+    <script type="text/template" id="embed-iframe">
+       <textarea class="code-like"><iframe width="<%= width %>" height="<%= height %>" src="<%= shortUrl %>"></iframe>        
+       </textarea>
+    </script>
+
+    <script type="text/template" id="permalink-share-window">
+        <div id="permalink-dialog">
+          <h3>Save & Share</h3>
+          <label>Permalink:<input class="code-like permalink-textbox" type="text" value="<%= shortUrl %>"/></label>
+          <p>Share your map with friends or family, or just bookmark the link for later.</p>
+          <label>Embed this map in your website:</label>
+          <div id="iframe-embed"></div>
+          <label>Embed Width (px)
+               <input type="number" class="embed-size width" value="<%= width %>" /></label>
+           <label>Embed Height (px)
+               <input type="number" class="embed-size height" value="<%= height %>" /></label>
+        </div>
+    </script>
+
+
+    <!-- TOP BAR, FIXED TO THE TOP OF THE SCREEN -->
+    <div class="fixed">
+        <nav class="top-bar">
+            <ul>
+                <li class="name">
+                    <h1>@OptionalLinkText(@Model.TitleMain)</h1>
+                    <h2>@OptionalLinkText(@Model.TitleDetail)</h2>
+                </li>
+                <!-- USED FOR SMALLER SCREENS TO CONDENSE NAVIGATION -->
+                <li class="toggle-topbar"><a href="javascript:;"></a></li>
+            </ul>
+            <section>
+                <ul class="right">
+                    @RenderLinks(Model.HeaderLinks)
+                </ul>
+            </section>
+        </nav>
+    </div>
+    
+    @Html.Partial("TourInfo")
+    
+    <!-- LEFT CONTENT AREA -->
+    <div id="left-pane" class="content"></div>
+    
+    <!-- RIGHT CONTENT AREA -->
+    <div id="right-pane" class="content"></div>
+    
+    <script src="js/polyfill.js"></script>
+    
+    <script src="//apis.google.com/js/client.js"></script>
+    <script src="//serverapi.arcgisonline.com/jsapi/arcgis/?v=3.5compact"></script>
+    <script src="Scripts/json2.min.js"></script>
+    <script src="js/lib/foundation/foundation.min.js"></script>
+    <script src="js/lib/foundation/app.js"></script>
+    <script src="js/lib/jquery.dropdown.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+    <script src="js/lib/backbone.picky.js"></script>
+    <script src="js/lib/jquery.history.min.js"></script>
+    <script src="js/lib/backbone.hashmodels.js"></script>
+    <script src="js/lib/TinyBox2.js"></script>
+    <script src="js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/lib/jquery.mousewheel.min.js"></script>
+    <script src="js/lib/pageguide.min.js"></script>
+
+    <script type="text/javascript">
+            // Configure the Dojo module loader so that module identifiers starting with "plugins/" 
+            // will be loaded from the site's root "plugins" folder.
+            // (This usage of require() is mentioned in http://dojotoolkit.org/documentation/tutorials/1.7/modules)
+            //
+            // The calls to location.pathname.replace() below prepend the app's root path to library locations. 
+            // Otherwise, since Dojo is loaded from a CDN it will prepend the CDN server path, and fail.
+            // (See https://dojotoolkit.org/documentation/tutorials/1.7/cdn)
+
+        var useConfig = { @Html.Raw(Model.ConfigurationForUseJs) };
+        useConfig['Azavea'] = { attach: 'Azavea' };
+        useConfig['Geosite'] = { attach: 'Geosite' };
+
+        require({
+            async: true,
+            packages: [
+                {
+                    name: "plugins",
+                    location: location.pathname.replace(/\/[^/]+$/, "") + "plugins"  // e.g. "/virtualFolderName/plugins"
+                },
+                {
+                    name: "tnc",
+                    location: location.protocol + "//" + location.host + location.pathname.replace(/\/+$/, "")
+                },
+                {
+                    name: "framework",
+                    location: location.pathname.replace(/\/[^/]+$/, "") + "js"
+                }
+            ],
+            // The next two sections configure https://github.com/tbranyen/use.js, which handles non-AMD-compliant libraries
+            // like Underscore and Ext JS. (Reference syntax in plugins is e.g. "use!underscore".)
+            paths: {
+                "use": location.pathname.replace(/\/[^/]+$/, "") + "js/lib/use",
+                "Azavea": location.pathname.replace(/\/[^/]+$/, "") + "js/azavea.util",
+                "Geosite": location.pathname.replace(/\/[^/]+$/, "") + "js/Geosite"
+            },
+            use: useConfig
+        });
+            // Tell Dojo's "define" that JQuery is AMD-compatible. Otherwise you can't reference it in a define().
+            define.amd.jQuery = true;
+    </script>
+
+    <script src="js/Geosite.js"></script>
+    <script src="js/HelpOverlay.js"></script>
+    <script src="js/BasemapSelector.js"></script>
+    <script src="js/TimeoutWrapper.js"></script>
+    <script src="js/Identify.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/MapWrapper.js"></script>
+    <script src="js/Pane.js"></script>
+    <script src="js/Plugin.js"></script>
+    <script src="js/Export.js"></script>
+    <script src="js/Permalink.js"></script>
+    <script src="js/TemplateLoader.js"></script>
+    <script src="js/Screen.js"></script>
+    <script src="js/SyncedMapManager.js"></script>
+    <script src="js/App.js"></script>
+    
+    <script type="text/javascript">
+
+        require(['use!Azavea'], function(Azavea) {
+            // Initialize logging URL before we load any modules
+            Azavea.logUrl = "Log";
+        });
+
+        // Our require() call below for loading plugins shouldn't fail, since:
+        //     * Server-side code verifies that each plugin folder exists and contains a main.js file.
+        //     * require() succeeds even if main.js has errors. (It passes an empty object for that module.)
+        // 
+        // However, plugins can trigger a Dojo module loading error by mis-configuring their define() calls.
+        // Do our best to report a useful message.
+
+        require.on('error', function(error) {
+            var message = "(unknown)";
+            if (error.info !== undefined && error.info.length > 0) {
+                message = "Unable to load module " + error.info[0];
+            } else if (error.message !== undefined) {
+                message = error.message;
+            }
+            Azavea.logError(message, "load Dojo module");
+        });
+
+        // Load the plugins and launch the app.
+        // We're using server-generated data to build this JavaScript block. Example result:
+        // 
+        //     require(['plugins/layer_selector/main', 'plugins/measure/main'], function(p0, p1) {
+        //         $(document).ready(function() {
+        //             var regionData = {
+        //                                  title: "Geosite Framework Sample",
+        //                                       // ... (omitting middle of region.json) ...
+        //                                  pluginOrder: [ "layer_selector", "measure" ]
+        //                              },
+        //                 plugins = [p0, p1]; // loaded plugin objects
+        //             Geosite.app.init(regionData, plugins);
+        //         });
+        //     });
+
+        require([@Html.Raw(Model.PluginModuleIdentifiers)],
+            function(@Html.Raw(Model.PluginVariableNames)) {
+                $(document).ready(function() {
+                    var regionData = @Html.Raw(Model.RegionDataJson),     // contents of region.json (augmented)
+                        plugins = [@Html.Raw(Model.PluginVariableNames)]; // loaded plugin objects
+                        Geosite.app.init('@Html.Raw(Model.GeositeFrameworkVersion)', regionData, plugins);
+                });
+        });
+
+    </script>
+</body>
+</html>
