@@ -3,7 +3,7 @@
     "titleMain": { "text": "Coastal Resilience", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "New York Adaptation Toolkit", "url": "http://coastalresilience.org/" },
 	"headerLinks": [
-		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
+        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
                 { "text": "Entire USA", "url": "http://maps.coastalresilience.org/us/" },
@@ -28,6 +28,35 @@
         -71.7,
         41.27
     ],
+
+            "subregions": {
+        "color": "#00C5CD",
+        "opacity": 0.2,
+        "clickToFocus": true,
+        "hideByDefault": false,
+        "areas": [
+            {
+                "id": "flower-garden",
+                "display": "Flower Garden Banks Marine Sanctuary",
+                "details": "The sanctuary protects a productive...",
+                "shape": [[-94.7900390625,27.780771643348196],[-94.7900390625,28.497660832963472],[-93.724365234375,28.497660832963472],[-93.724365234375,27.780771643348196],[-94.7900390625,27.780771643348196]],
+                "availablePlugins": ["layer_selector"]
+            },
+            {
+                "id": "the-ocean",
+                "display": "Somewhere in the ocean",
+                "details": "Mostly water",
+                "shape": [[-88.2861328125,27.449790329784214],[-86.3525390625,28.07198030177986],[-85.25390625,27.72243591897343],[-85.53955078125,26.80446076654616],[-87.4951171875,26.09625490696853],[-88.74755859375,26.29341500426577],[-88.2861328125,27.449790329784214]]
+            },
+            {
+                "id": "galveston",
+                "display": "Galveston Bay",
+                "details": "",
+                "shape": [[-95.2734375,29.983486718474694],[-95.0482177734375,29.38217507514529],[-95.460205078125,28.97931203672246],[-95.16357421875,28.859107573773],[-94.21875,29.506549442788618],[-94.89990234375,30.164126343161097],[-95.2734375,29.983486718474694]],
+                "color": "#ff0080",
+            }
+        ]
+    },
     "basemaps": [
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
         { "name": "National Geographic", "url": "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" },
@@ -45,7 +74,11 @@
 		"future_habitat",
 		"community_planning",
 		"habitat_explorer",
-        "measure"
+        "zoom_to",
+        "measure",
+        "legend_display",
+        "full_extent",
+        "subregion_toggle"
     ],
     "print": {
         "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
@@ -54,5 +87,29 @@
        "primary": "#26648E",
        "secondary": "#26648E"
     },
-    "identifyBlacklist": ["OBJECTID", "OBJECTID_1"]
+    "identifyBlacklist": ["OBJECTID", "OBJECTID_1"],
+ "launchpads": [
+        {
+            "id": "get-started",
+            "title": "Getting Started",
+            "description": "This is the launchpad description",
+            "showSubRegions": true,
+            "showByDefault": true,
+            "categories": [
+              {
+                "name": "What's new?",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "issues": [
+                    {
+                      "name": "Sea Level Rise",
+                      "description": "Combined storm surge and sea level condition in the Florida Keys",
+                      "saveCode": "e34df34rd3....3434",
+                      "saveCode": "eyJwYW5lMCI6xIDEgsSETnVtYmVyxIcwLCJzdGF0ZU9mUGx1Z2luc8SHxIBzZWxlY8SZZMSdxJ/EocSHxIHEnsSgxKIvZmxvb2RTTFIixJRwxLLEocSjxIjEscSuxLRsYXnEkF/EpsSoxKpvxJHFhHLEuHQvQ29hxJZhbCBSZXNpbGllbmNlIGLFmcWnZMSYYS9Tb3V0aGXFmXQgRsS3cmnFrC9IYWJpxJd0xYPEgG/EgmPGgnnEki43xJRjxbRja2VkxIdmxZvEpn3ElMWTb8WVxZfFtsWbxZ3Fn8WhxaPFpcWnxanEpiDFrMSXxa/FscWzxbXElsW4xbrFvMWuxbDGicahxINkIEVjb25vbWljxKQixodhxol0xos6MMaNxo/GkcaTxpU6xpdsxpnGm8WUxZbFmMWaxZzFnsWgxaLFpMWmxajFqsaqxa0vxbnFkMa0IEtleXPFvsaAxoLEmMaFx4XGiMaKxozGjiLGkMSpx5DGlsaYZcaaIsacxp7HmcSXx5vGo8eexqbHocapxqvFrsemxbvFrMepx6vHrUzGuXXGqca5IE/Gr3IgTcSDYWdlbcWkxbdCxbFuxazFu8Wfx4THhseIx4rHjMe3x7nGksaUx7zHlMe+x5bGnceYxqDIhcedxqXHoMaoxavHpMiNx6jHqsesxq3Gt8WcyJfGvMa+x4DHgsirx7THice2x47Husizx5LHvce/yIHIuceaxqLIvMefxqfHosiLx6XGs8W9RkVNQcaicGV0xoJpdsWnTG9zx7LIrMe1x4vHjce4x4/JlMeTxpnHv8WAxYbHrcS2xLjEusS8x4RuYciixLDJgsiPyYTEo8SUZXjEmW50x4R4x4FuxIctOTEwNzcwx4wzODYyxJR5ypbEhzI4MTk4NDcuMjbKqsqfyp8xxJTKlWF4ypg4OTI0NMq+LjgwNjXKpW3KucqoOcuAyqM4xo00MTPKtDAxx7dzxILJq8WbxZ5mxJDJnceEd2vFvMSHypsyypvEkyLFiMSZxJZXy6HHkcqhNTd9x7/IosWzxLnHssmrdMSoxLBNyapoy7bEviJ1cmzEsMu0y75kx61GTF/KjMWMdMWQbcWMzILIoF/Mhsu2LnBkZiLHv8SXYsWDW8SAyobKiDoiTkHMgMa9ypLFk8eUxIfMoSLMo2XEsEPLvsmxxadTxbUgTGXJrsebacapKMS7UikgSW51yKfEmGnGvsyAZ8WTdXDMhWHEr8SUdsWbdciqOsyvzLHEsE7GvsyyzZXNl8yyzKXGv8SEzIDFjcSpxKvItMeVzKLKh82jIjHFuMWUzIDNlsSeza8xZsqTxJTNqMSqybrJlizNrcykIjLFuGXJqs20zaLEsDLNuc2nxKfNqc2+yLXGms6Bza8zzoXOh82hzbbEsDPOjM27zo7NvceRybvIts6TxLA0zpbNuiLNtc2YzqTOnMSVzp7Nqjp0cs2YfV3ElMeJyanEsHPFomTEkMyczoDMsM2uxLBTzI9ybSBTzJPNoCLNjsWxzZHMpcuIzZTOqM2izKDOo8ylzZ7Nps6YzqrNpMmxz4RtzIDOvMmpyKfIo8Swzbh0fM6Lz6bOm8+mNM6szbzOr86hzpLPgM6Cz4PMkCAoSMyCxbtjxIPFp1fFocuIKc6IzpnMpcSWzJDOjcWOzq/Osc6zzrUizrfNr3JhZM2LzJzQjMa9xI7JsceEz6V8xr/Qhc+FzK7EgNCOxLBkecyjyY3Nu8u+d8yuNl3OtMSUz6jQm8+c0IbNmtCgec64zKXQo9Clx4PQp2/Qqc2aN9Cs0IzPqtCw0J3PntCz0I3Qtc2v0LjKh9CmxJXQqMyuONGAxJTPrM+m0JzPndCf0YfQtiLRiseB0LrRjdC8zK450ZHMsM2ffNGE0LDNptGG0KHQt9Ck0YvRnXPRjs2aypvRotCa0YTRl9Gq0ZrRrNGczafRsFsxMdCMzILMhMylaHR0cDovL868di7EpnJ2x4LFnzIuxr3IunLIhsi9ZS7FkGc6NjDLgy9hcmPEoMet0pfEli/SjtKQxabHrcWwxbLFtMW2X8qKyIzEt8S5X8a5X82CL8idcMy40o/OvdCtzoPNudGl0ZbRqdGI0KLRudGM0a/Rn9GxMtKAzIPEsNKE0obSiNKKzLzSjcSQ0qzSktKUyIPFm9KoxqTJndKbctKd0p/SodKj0qXMvy/SqMWV0qvSkdKuxq7SscSW0rPJotK1yoLSuMin0rrEvNK8YdK+05nTgdGB04TRtdOH0ZnRm9OL0bzLkdOQ0oIi05PSh9KJ0ovTmNKP067Sk9KVx5rTn8iHxabTotOk0qAw0qLSpNKm06rFn9Os05nTrsat0rDGsHTTs8enyaPStmTTt9St0rvSvdK/ya7EkdOC0ZPThdCyzK/Rt9SF0a7UhzTUidOS0oXUjdOW0ozTrdKt1JPTnWzUltKZ1JnSntSb1J3TqNKn1KHSqtSj0q3Upcav0rLStMmh07bSudSw07zUstO/y7PNk25VUkzVgNOU1I7Tl9WF05vUlMiE1YrTodKc1Y3TptSe06nTq9WT1JHVldKv1ZfTstWZx6bSt9Wc07rUsdO+1LTQrMuy1aFwxIbFhMqPypHKk8WE0bfWi8+jyrfKpzrKmdG+NzPLkC7LhTg4MjfKvMe3yqbErzrKqcqpNzI1xo02yqPKssuEy4YiyrjKutaUyrwxyq44My41M8qh1qfKm8q2Isqmy4nWpDnWuzc1x4zKvjPLkcqrM9eGzbvLmGnLmmXLnNKXxqbLn8uty6Mwy6XKn8SUy6nUocusy6I6y6/LscSUX8SCcsaE0ZfWkMqSx4TWj8qQ1pHWsNaT1pXLldaYMdaaNdac1p7WoMuH1qPWpTjWp9apN9aryrHLg8uF1pLXgi3WtNa21rjWuta815vWv9eB1rIy14TXjdeHyrA014rXiteE147EldeQ15LXlMuexYTLoNehy6TLptedxJjXn9eY16I4y7DLssSUZtCQyKJJzIjMrjDRgMe/z67GlELFqsuIcM2GzrzWsjHLsg==",
+                      "faIcon": "fa fa-life-bouy"
+                    }
+                  ]
+              }
+            ]
+        }
+    ]
 }
