@@ -1,20 +1,8 @@
 {
   "plugins": [
     {
-      "repo": "flood_slr",
-      "name": "flood_slr"
-    },
-    {
       "repo": "explorer",
       "name": "habitat_explorer"
-    },
-    {
-      "repo": "explorer",
-      "name": "risk_explorer"
-    },
-    {
-      "repo": "future_habitat",
-      "name": "future_habitat"
     }
   ]
 }
