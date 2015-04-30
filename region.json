@@ -89,14 +89,14 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "The Adaptation Toolkit is a decision support tool that provides natural resource managers and municipal staff easy access to data on the current condition of, future threats to, and climate change exposure and sensitivity of natural resources across NY and its watersheds. It also provides a structured process for managers to use these data to select the most appropriate climate adaptation options for their particular area or interest. <br>Pick a geography to start exploring the data OR a use mode to get help deciding what your best adaptation options are, based on your focus. If you need help figuring out how to start, click on the Tour tab near the top right of the screen, or visit our <a href='http://coastalresilience.org/training' target='_blank'>Training</a> page.",
+            "description": "The Adaptation Toolkit is a decision support tool that provides natural resource managers and municipal staff easy access to data on the current condition of, future threats to, and climate change exposure and sensitivity of natural resources across NY and its watersheds. It also provides a structured process for managers to use these data to select the most appropriate climate adaptation options for their particular area or interest. <br><br>Pick a geography to start exploring the data OR a use mode to get help deciding what your best adaptation options are, based on your focus. If you need help figuring out how to start, click on the Tour tab near the top right of the screen, or visit our <a href='http://coastalresilience.org/training' target='_blank'>Training</a> page.",
             "showSubRegions": false,
             "subRegionDescription": "Choose a specific region and it will take you there, or you can freely explore the map.",
             "showByDefault": true,
             "categories": [
               {
-                "name": "One-click Interactive Map",
-                "description": "Custom maps for adaptation, conservation and restoration planning",
+                "name": "Select a Use Mode",
+                "description": "Choose a specific region and it will take you to the recommendations map for that area, as well as allow you to explore the full suite of data and priority maps and make a custom map.",
                 "issues": [
                     {
                       "name": "Explore the map",
