@@ -1,0 +1,85 @@
+{
+    "name": "Condition Explorer",
+    "text": "To begin, select a region to view.",
+    "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
+	"mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+    "betweenGroups": "*",
+    "averageGroups": true,
+    "pluginHeight": 510,
+    "regions": [
+        {
+            "items": [	{
+							"text": "<b>Ecological Variables (weight):</b>",
+							"type": "text"
+						},
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "relspr_class", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "relspr_class", 
+							"help": "this is where the help text goes", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "inv_class", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "inv_class", 
+							"help": "Help Text.", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "regen_class", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "regen_class", 
+							"help": "More Help", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "size_class", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "size_class", 
+							"help": "Even More Help", 
+							"type": "layer"
+						}
+			],
+	          "name": "New York State",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+			"methods": "methods/Alabama_Dashboard.pdf",
+			"workspaceId": "postgis",
+			"geometryType": "polygon",
+			"dataset": "sde.ny_climad_cscore_forest_simp",
+			"reqFields": ["objectid", "shape"],
+			"defaultSymbol": { "type": "esriSFS",
+							 "style": "esriSFSSolid",
+							 "color": [150,150,150,255],
+							 "size": 8,
+							 "angle": 0,
+							 "xoffset": 0,
+							 "yoffset": 0,
+							 "outline": 
+							  {
+							  "type": "esriSLS",
+							  "style": "esriSLSSolid",
+							  "color": [150,150,150,0],
+							   "width": 1
+							  }
+							},
+			"colorRamp": [[255, 255, 129, 255], [76, 190, 110, 255], [13, 31, 133, 255]]
+        }
+    ]
+}
