@@ -2,7 +2,7 @@
     "name": "Condition Explorer",
     "text": "To begin, select a region to view.",
     "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
-	"mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+	  "mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
     "betweenGroups": "*",
     "averageGroups": true,
     "pluginHeight": 510,
@@ -60,6 +60,7 @@
 	          "name": "New York State",
             "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
 			"methods": "methods/Alabama_Dashboard.pdf",
+      "sliderLabels" : ["None","Low","Med","High","V.High"],
 			"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
       "inputRanges" : [0,50,51,75,76,100],
       "outputValues" : [1,2,3]
