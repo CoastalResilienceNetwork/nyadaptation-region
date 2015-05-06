@@ -13,10 +13,10 @@
 							"type": "text"
 						},
 						{
-							"default": 5,
+							"default": 2,
 							"group": "all",
 							"index": "B1",
-							"max": 10,
+							"max": 4,
 							"min": 0,
 							"step": 1,
 							"text": "Patch Size",
@@ -24,10 +24,10 @@
 							"type": "layer"
 						},
 						{
-							"default": 5,
+							"default": 2,
 							"group": "all",
 							"index": "B2",
-							"max": 10,
+							"max": 4,
 							"min": 0,
 							"step": 1,
 							"text": "Invasives",
@@ -35,10 +35,10 @@
 							"type": "layer"
 						},
 						{
-							"default": 5,
+							"default": 2,
 							"group": "all",
 							"index": "B3",
-							"max": 10,
+							"max": 4,
 							"min": 0,
 							"step": 1,
 							"text": "Regeneration",
@@ -46,10 +46,10 @@
 							"type": "layer"
 						},
 						{
-							"default": 5,
+							"default": 2,
 							"group": "all",
 							"index": "B4",
-							"max": 10,
+							"max": 4,
 							"min": 0,
 							"step": 1,
 							"text": "Relative Species Richness",
