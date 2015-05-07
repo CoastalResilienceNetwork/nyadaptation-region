@@ -2,10 +2,6 @@
   "plugins": [
     {
       "repo": "explorer",
-      "name": "habitat_explorer"
-    },
-    {
-      "repo": "explorer",
       "name": "condition_explorer"
     }
   ]
