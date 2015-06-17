@@ -120,6 +120,17 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Stream Vector TEST", "showLayers": [
+                                {"id":55, "parentLayerId":-1 },
+                                {"id":56, "parentLayerId":-1 },
+                                {"id":57, "parentLayerId":-1 }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
