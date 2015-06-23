@@ -1,0 +1,69 @@
+{
+    "name": "Condition Explorer",
+    "text": "To begin, select a region to view.",
+    "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
+	  "mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+    "betweenGroups": "*",
+    "averageGroups": true,
+    "pluginHeight": 510,
+    "regions": [
+        {
+            "items": [	{
+							"text": "<b>Ecological Variables (weight):</b>",
+							"type": "text"
+						},
+						{
+							"default": 2,
+							"group": "all",
+							"index": "B1",
+							"max": 4,
+							"min": 0,
+							"step": 1,
+							"text": "Patch Size",
+							"help": "this is where the help text goes",
+							"type": "layer"
+						},
+						{
+							"default": 2,
+							"group": "all",
+							"index": "B2",
+							"max": 4,
+							"min": 0,
+							"step": 1,
+							"text": "Invasives",
+							"help": "Help Text.",
+							"type": "layer"
+						},
+						{
+							"default": 2,
+							"group": "all",
+							"index": "B3",
+							"max": 4,
+							"min": 0,
+							"step": 1,
+							"text": "Regeneration",
+							"help": "More Help",
+							"type": "layer"
+						},
+						{
+							"default": 2,
+							"group": "all",
+							"index": "B4",
+							"max": 4,
+							"min": 0,
+							"step": 1,
+							"text": "Relative Species Richness",
+							"help": "Even More Help",
+							"type": "layer"
+						}
+			],
+	          "name": "New York State",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
+			"methods": "methods/Alabama_Dashboard.pdf",
+      "sliderLabels" : ["None","Low","Med","High","V.High"],
+			"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+      "inputRanges" : [0,50,51,75,76,100],
+      "outputValues" : [1,2,3]
+        }
+    ]
+}
