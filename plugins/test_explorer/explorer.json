@@ -1,12 +1,11 @@
 {
-    "name": "Restoration Explorer",
+    "name": "Test Explorer",
     "text": "To begin, select a region to view.",
     "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
-	"mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+    "mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
     "betweenGroups": "*",
     "averageGroups": true,
     "pluginHeight": 510,
-	"infoGraphic": "RestorationExplorer_c.jpg",
     "regions": [
         {
             "items": [	{
@@ -88,12 +87,11 @@
 							"type": "layer"
 						}
 			],
-            "name": "Test Explorer",
+            "name": "Test Explorer 1",
             "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
-			"methods": "methods/Alabama_Dashboard.pdf",
 			"workspaceId": "postgis",
-			"geometryType": "polygon",
-			"dataset": "sde.gulfmex_AL_RestorationExplorer_Data",
+			"geometryType": "polyline",
+			"dataset": "sde.ny_climad_fwnet_v_ctest1mp",
 			"reqFields": ["objectid", "shape"],
 			"defaultSymbol": { "type": "esriSFS",
 							 "style": "esriSFSSolid",
