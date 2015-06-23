@@ -56,20 +56,10 @@
 			"geometryType": "polyline",
 			"dataset": "sde.ny_climad_fwnet_v_ctest1mp",
 			"reqFields": ["objectid", "shape"],
-			"defaultSymbol": { "type": "esriSFS",
-							 "style": "esriSFSSolid",
-							 "color": [150,150,150,255],
-							 "size": 8,
-							 "angle": 0,
-							 "xoffset": 0,
-							 "yoffset": 0,
-							 "outline": 
-							  {
-							  "type": "esriSLS",
-							  "style": "esriSLSSolid",
-							  "color": [150,150,150,0],
-							   "width": 1
-							  }
+			"defaultSymbol": {   	"type": "esriSLS",
+					 	"style": "esriSLSSolid",
+						"color": [150,150,150,0],
+						"width": 1
 							},
 			"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]]
         }
