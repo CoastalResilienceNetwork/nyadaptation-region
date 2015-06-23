@@ -1,11 +1,12 @@
 {
-    "name": "Condition Explorer",
+    "name": "Restoration Explorer",
     "text": "To begin, select a region to view.",
     "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
-	  "mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+	"mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
     "betweenGroups": "*",
     "averageGroups": true,
     "pluginHeight": 510,
+	"infoGraphic": "RestorationExplorer_c.jpg",
     "regions": [
         {
             "items": [	{
@@ -13,57 +14,103 @@
 							"type": "text"
 						},
 						{
-							"default": 2,
-							"group": "all",
-							"index": "B1",
-							"max": 4,
-							"min": 0,
-							"step": 1,
-							"text": "Patch Size",
-							"help": "this is where the help text goes",
+							"default": 5, 
+							"group": "all", 
+							"index": "depth", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Depth Score", 
 							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "salinity", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Salinity Score", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "historic_reefs", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Historic Oyster Reef Score", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "spat_settlement", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Spat Settlement Score", 
+							"type": "layer"
+						}, 
+						{
+							"text": "<b>Socioeconomic Variables (weight):</b>",
+							"type": "text"
 						},
 						{
-							"default": 2,
-							"group": "all",
-							"index": "B2",
-							"max": 4,
-							"min": 0,
-							"step": 1,
-							"text": "Invasives",
-							"help": "Help Text.",
+							"default": 5, 
+							"group": "all", 
+							"index": "natural_resource_job_dependence", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Job Dependence Score", 
 							"type": "layer"
-						},
+						}, 
 						{
-							"default": 2,
-							"group": "all",
-							"index": "B3",
-							"max": 4,
-							"min": 0,
-							"step": 1,
-							"text": "Regeneration",
-							"help": "More Help",
+							"default": 5, 
+							"group": "all", 
+							"index": "project_permit_feasibility", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Project Permit Feasibility Score", 
 							"type": "layer"
-						},
+						}, 
 						{
-							"default": 2,
-							"group": "all",
-							"index": "B4",
-							"max": 4,
-							"min": 0,
-							"step": 1,
-							"text": "Relative Species Richness",
-							"help": "Even More Help",
+							"default": 5, 
+							"group": "all", 
+							"index": "shoreline_erosion", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Shoreline Erosion Score", 
 							"type": "layer"
 						}
 			],
-	          "name": "New York State",
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
+            "name": "Test Explorer",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"methods": "methods/Alabama_Dashboard.pdf",
-      "sliderLabels" : ["None","Low","Med","High","V.High"],
-			"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
-      "inputRanges" : [0,50,51,75,76,100],
-      "outputValues" : [1,2,3]
+			"workspaceId": "postgis",
+			"geometryType": "polygon",
+			"dataset": "sde.gulfmex_AL_RestorationExplorer_Data",
+			"reqFields": ["objectid", "shape"],
+			"defaultSymbol": { "type": "esriSFS",
+							 "style": "esriSFSSolid",
+							 "color": [150,150,150,255],
+							 "size": 8,
+							 "angle": 0,
+							 "xoffset": 0,
+							 "yoffset": 0,
+							 "outline": 
+							  {
+							  "type": "esriSLS",
+							  "style": "esriSLSSolid",
+							  "color": [150,150,150,0],
+							   "width": 1
+							  }
+							},
+			"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]]
         }
     ]
 }
