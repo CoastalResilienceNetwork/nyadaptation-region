@@ -8,82 +8,45 @@
     "pluginHeight": 510,
     "regions": [
         {
-            "items": [	{
-							"text": "<b>Ecological Variables (weight):</b>",
-							"type": "text"
-						},
+            "items": [	
 						{
 							"default": 5, 
 							"group": "all", 
-							"index": "depth", 
+							"index": "cvar1", 
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "Depth Score", 
+							"text": "One", 
 							"type": "layer"
 						}, 
 						{
 							"default": 5, 
 							"group": "all", 
-							"index": "salinity", 
+							"index": "cvar2", 
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "Salinity Score", 
+							"text": "Two", 
 							"type": "layer"
 						}, 
 						{
 							"default": 5, 
 							"group": "all", 
-							"index": "historic_reefs", 
+							"index": "cvar3", 
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "Historic Oyster Reef Score", 
+							"text": "Three", 
 							"type": "layer"
 						}, 
 						{
 							"default": 5, 
 							"group": "all", 
-							"index": "spat_settlement", 
+							"index": "cvar4", 
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "Spat Settlement Score", 
-							"type": "layer"
-						}, 
-						{
-							"text": "<b>Socioeconomic Variables (weight):</b>",
-							"type": "text"
-						},
-						{
-							"default": 5, 
-							"group": "all", 
-							"index": "natural_resource_job_dependence", 
-							"max": 10, 
-							"min": 0, 
-							"step": 1, 
-							"text": "Job Dependence Score", 
-							"type": "layer"
-						}, 
-						{
-							"default": 5, 
-							"group": "all", 
-							"index": "project_permit_feasibility", 
-							"max": 10, 
-							"min": 0, 
-							"step": 1, 
-							"text": "Project Permit Feasibility Score", 
-							"type": "layer"
-						}, 
-						{
-							"default": 5, 
-							"group": "all", 
-							"index": "shoreline_erosion", 
-							"max": 10, 
-							"min": 0, 
-							"step": 1, 
-							"text": "Shoreline Erosion Score", 
+							"text": "Four", 
 							"type": "layer"
 						}
 			],
