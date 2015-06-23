@@ -3,6 +3,10 @@
     {
       "repo": "explorer",
       "name": "condition_explorer"
+    },
+    {
+      "repo": "explorer",
+      "name": "test_explorer"
     }
   ]
 }
