@@ -162,11 +162,67 @@
 							"type": "layer"
 						}
 			],
-            "name": "Test Explorer 3",
+            "name": "Test Explorer 5",
             "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"workspaceId": "postgis",
 			"geometryType": "polyline",
-			"dataset": "sde.ny_climad_fwrec_v_ctest3sp",
+			"dataset": "sde.ny_climad_fwrec_v_test5sp",
+			"reqFields": ["objectid", "shape"],
+			"defaultSymbol": {   	"type": "esriSLS",
+					 	"style": "esriSLSSolid",
+						"color": [150,150,150,0],
+						"width": 2
+							},
+			"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]]
+        },
+         {
+            "items": [	
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "cvar1", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "One", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "cvar2", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Two", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "cvar3", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Three", 
+							"type": "layer"
+						}, 
+						{
+							"default": 5, 
+							"group": "all", 
+							"index": "cvar4", 
+							"max": 10, 
+							"min": 0, 
+							"step": 1, 
+							"text": "Four", 
+							"type": "layer"
+						}
+			],
+            "name": "Test Explorer 6",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+			"workspaceId": "postgis",
+			"geometryType": "polyline",
+			"dataset": "sde.ny_climad_fwrec_v_test6mp",
 			"reqFields": ["objectid", "shape"],
 			"defaultSymbol": {   	"type": "esriSLS",
 					 	"style": "esriSLSSolid",
