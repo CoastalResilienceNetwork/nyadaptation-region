@@ -62,7 +62,7 @@
             "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
 			"methods": "methods/Alabama_Dashboard.pdf",
       "sliderLabels" : ["None","Low","Med","High","V.High"],
-			"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+      "colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
       "inputRanges" : [0,50,51,75,76,100],
       "outputValues" : [1,2,3]
         },
@@ -75,7 +75,7 @@
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "imp_score", 
+							"text": "Percent Impervious Cover", 
 							"type": "layer"
 						}, 
 						{
@@ -85,7 +85,7 @@
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "lat_con_score", 
+							"text": "Lateral Connectivity", 
 							"type": "layer"
 						}, 
 						{
@@ -95,7 +95,7 @@
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "ara_fpc_score", 
+							"text": "Floodplain Processes", 
 							"type": "layer"
 						}, 
 						{
@@ -105,11 +105,12 @@
 							"max": 10, 
 							"min": 0, 
 							"step": 1, 
-							"text": "impair_score", 
+							"text": "Water Quality Impairments", 
 							"type": "layer"
 						}
 			],
             "name": "New York Streams",
+            "sliderLabels" : ["None","Low","Med","High","V.High"],
             "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"workspaceId": "postgis",
 			"geometryType": "polyline",
