@@ -69,7 +69,7 @@
         {
             "items": [	
 						{
-							"default": 5, 
+							"default": 2, 
 							"group": "all", 
 							"index": "cstr_curr_imp_score", 
 							"max": 4, 
@@ -79,7 +79,7 @@
 							"type": "layer"
 						}, 
 						{
-							"default": 5, 
+							"default": 2, 
 							"group": "all", 
 							"index": "cstr_lat_con_score", 
 							"max": 4, 
@@ -89,7 +89,7 @@
 							"type": "layer"
 						}, 
 						{
-							"default": 5, 
+							"default": 2, 
 							"group": "all", 
 							"index": "cstr_ara_fpc_score", 
 							"max": 4, 
@@ -99,7 +99,7 @@
 							"type": "layer"
 						}, 
 						{
-							"default": 5, 
+							"default": 2, 
 							"group": "all", 
 							"index": "cstr_impair_score", 
 							"max": 4, 
