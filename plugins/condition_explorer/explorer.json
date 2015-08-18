@@ -59,7 +59,7 @@
 						}
 			],
 	          "name": "New York Forests",
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest/ImageServer",
 			"methods": "methods/Alabama_Dashboard.pdf",
       "sliderLabels" : ["None","Low","Med","High","V.High"],
       "colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
@@ -111,7 +111,7 @@
 			],
             "name": "New York Streams",
             "sliderLabels" : ["None","Low","Med","High","V.High"],
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"workspaceId": "postgis",
 			"geometryType": "polyline",
 			"dataset": "sde.ny_condition_lines",
