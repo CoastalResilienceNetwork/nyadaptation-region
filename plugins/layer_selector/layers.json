@@ -1,9 +1,9 @@
 [{
     "agsSource": {
-        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "url": "http://services.coastalresilience.org/arcgis/rest/services",
         "folderTitle": "NY Adaptation Toolkit",
         "folders": [{
-            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_York",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_York",
 			"name": "",
             "services": [{
                 "name": "NY_ClimateAdaptation_test1",

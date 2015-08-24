@@ -7,7 +7,7 @@
 {
 	"name": "New York City",
 	"extent": {"xmin":-74.2621508077,"ymin":40.4711929162,"xmax":-73.6717057828,"ymax":40.9205683248,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_NYC/ImageServer",
+    "url": "http://services.coastalresilience.org/arcgis/rest/services/Future_Habitat/NY_SLAMM_NYC/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_NYC",
 	"field": "name",
@@ -58,7 +58,7 @@
 },{
 	"name": "Nassau County",
 	"extent": {"xmin":-73.7858554795,"ymin":40.5233235436,"xmax":-73.4116243449,"ymax":40.9934520639,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_Nassau/ImageServer",
+    "url": "http://services.coastalresilience.org/arcgis/rest/services/Future_Habitat/NY_SLAMM_Nassau/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_Nassau",
 	"field": "name",
@@ -109,7 +109,7 @@
 },{
 	"name": "Suffolk County - West",
 	"extent": {"xmin":-73.5052684826,"ymin":40.5449786964,"xmax":-72.7067562633,"ymax":41.1496419149,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_Suffolk_West/ImageServer",
+    "url": "http://services.coastalresilience.org/arcgis/rest/services/Future_Habitat/NY_SLAMM_Suffolk_West/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_Suffolk_West",
 	"field": "name",
@@ -160,7 +160,7 @@
 },{
 	"name": "Suffolk County - East",
 	"extent": {"xmin":-72.7342868195,"ymin":40.690557094,"xmax":-71.8425616491,"ymax":41.3166835481,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_Suffolk_East/ImageServer",
+    "url": "http://services.coastalresilience.org/arcgis/rest/services/Future_Habitat/NY_SLAMM_Suffolk_East/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_Suffolk_East",
 	"field": "name",
@@ -211,7 +211,7 @@
 },{
 	"name": "Hudson",
 	"extent": {"xmin":-74.1559583205,"ymin":40.644014332,"xmax":-73.8125646947,"ymax":41.0726541949,"spatialReference":{"wkid":4326}},
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/Future_Habitat/NY_SLAMM_Hudson/ImageServer",
+    "url": "http://services.coastalresilience.org/arcgis/rest/services/Future_Habitat/NY_SLAMM_Hudson/ImageServer",
 	"cellsize": 1,
 	"root": "NY_SLAMM_Hudson",
 	"field": "Name",
