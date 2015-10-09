@@ -1,8 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-14",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Coastal Resilience", "url": "http://naturalresourcenavigator.org/" },
-    "titleMain": { "text": "Natural Resource Navigator", "url": "" },
+    "titleMain": { "text": "Natural Resource Navigator", "url": "http://naturalresourcenavigator.org/" },
     "titleDetail": { "text": "New York Adaptation Toolkit", "url": "" },
 	"headerLinks": [
         { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
