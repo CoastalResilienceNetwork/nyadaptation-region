@@ -40,7 +40,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.map.graphics.clear();
 				}
 				if (this.fc != undefined){
-					this.map.removeLayer(this.fc)
+					this.fc.clear()
 				}
 				if (this.map != undefined){
 					this.map.graphics.clear();
