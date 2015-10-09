@@ -1,0 +1,170 @@
+table.tablesorter {
+	background-color:none;
+	text-align: left;
+	border-collapse: collapse;
+	overflow-y: scroll;
+    display: block;  
+    max-height: 434px;
+	border-bottom: 1px solid #215973;
+	margin-top:21px;
+	margin-bottom:0px;
+	display:none;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: none;
+	padding: 4px;
+}
+table.tablesorter tbody tr td, table.tablesorter tr td, table.tablesorter thead tr th{
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:10pt !important;
+}  
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	background-color: none;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	vertical-align: top;
+	background-color: none;
+	border-top: 1px solid #215973;
+	border-left: 1px solid #215973;
+	border-right: 1px solid #215973;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:none;
+}
+table.tablesorter thead > tr  {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 0;
+    top: 60px;
+	left:9px;
+	/*width:222px;*/
+}
+table.tablesorter tbody > tr:nth-of-type(1) {
+    margin-top: 27px;
+}
+table.tablesorter td, th {
+    width: 90px;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+	background-color: none;
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+	background-color: none;
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: none;
+}
+.trclick{
+	cursor:pointer;
+}
+.trclick:hover{
+	color:blue;
+}
+.clickTitle{
+	position:absolute;
+	left:10px;
+	background-color:white;
+	z-index:15;
+}
+.sectionHeader{
+	font-weight:bold;
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:11pt !important;
+	color:#21658c;
+}
+.selectNone{
+	position:absolute;
+	top: 40px;
+	width: 202px;
+	left: 6px;
+	z-index:50;
+	background-color:#fff;
+	padding:10px;
+	border: 1px solid #215973;
+	display:none;
+	color: #a14612;
+}
+table.tablesorter tbody tr {
+    display: block;
+}
+table.tablesorter tr:hover{
+	background-color:#e3eff5;
+}
+table.tablesorter th {
+	height:20px;
+	border: 1px solid #215973 !important;
+	background-color:white;
+}
+.hideLegend{
+	display:none !important;
+}
+.newHeight{
+	height:20px !important;
+}
+.bottomRight{
+	-webkit-box-shadow:2px 2px 3px 0px rgba(102,102,102,0.7); -moz-box-shadow:2px 2px 3px 0px rgba(102,102,102,0.7); box-shadow:2px 2px 3px 0px rgba(102,102,102,0.7);
+}
+.bottomRight1{
+	-webkit-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); -moz-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7);
+}
+
+.selectDivs{
+	margin-bottom:5px;
+}
+.selectInline{
+	margin-left:135px;
+}
+.selectFloat{
+	float:left;
+}
+.chosen-container-single .chosen-single{
+	padding: 0 0 0 4px;
+}
+.chosen-container-single .chosen-default, .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+	color:#444;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type="text"], .chosen-container, .search-choice, .active-result, .result-selected{
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:10pt !important;
+}
+.chosen-container-single .chosen-single span{
+	margin-right:20px;
+}
+.chosen-container-single .chosen-single-with-deselect span{
+	margin-right:20px;
+}
+abbr.search-choice-close {
+  cursor: pointer;
+}
+.spDetails{
+	border: 1px solid #215973; 
+	padding:10px; 
+	margin-top:5px;
+}
+.splabel{
+	display: inline-block;
+	width:145px;
+	text-align:right;
+	margin-bottom:5px;
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:10pt !important;
+}
+.spd{
+	margin-left:3px;
+	display: inline-block;
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:10pt !important;
+	font-weight:bold;
+}
+.spGroups{
+	vertical-align:top;
+}

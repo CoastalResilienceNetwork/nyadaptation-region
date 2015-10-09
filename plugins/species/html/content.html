@@ -1,0 +1,94 @@
+﻿	<div id='clickTitle' class='clickTitle sectionHeader'>Click Map to Select Hexagon</div>
+	<div id='leftSide' style='width: 199px; max-height:400px; float:left; display:none;'>
+		<div class='selectNone sectionHeader bottomRight' id='selectNone'>Your filter selections returned no results. Please deselect or change your selections to view results.</div>
+		<table id='myTable' class='tablesorter bottomRight' style=''> 
+			<thead> 
+				<tr> 
+					<th>Species</th> 
+					<th>Taxon</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr><td></td><td></td></tr>
+			</tbody> 
+		</table>
+	</div>
+	<div id='rightSide' style='margin-left:210px; height:350px; margin-bottom:20px; display:none;'>
+		<div class='sectionHeader' style='margin-bottom:5px;'>Filter Results By:</div>
+		<div class="selectDivs selectFloat">
+			<select id='ch-TAXON' data-placeholder="Taxon" class="chosen-select filter" tabindex="16">
+				<option value=""></option>
+				<option value="Fish">Fish</option>
+				<option value="Invertebrate">Invertebrate</option>
+				<option value="Mullusk">Mullusk</option>
+				<option value="Reptile">Reptile</option>
+				<option value="Tree">Tree</option>
+			</select>
+		</div>
+		<div class="selectDivs selectInline">
+			<select id='ch-MAX_habavail_up60' data-placeholder="Habitat Availability" class="chosen-select filter" tabindex="16">
+				<option value=""></option>
+				<option value='1'>Remove Low</option>
+			</select>
+		</div>
+		<div class="selectDivs selectFloat">	
+			<select id='ch-fut_rpatch_ratio_cls' data-placeholder="Habitat Change Class" class="chosen-select filter" tabindex="16">
+				<option value=""></option>
+				<option value='absent'>Absent</option>
+				<option value='decrease'>Decrease</option>
+				<option value='extripated'>Extirpated</option>
+				<option value='increase'>Increase</option>
+				<option value='new entry'>New Entry</option>
+				<option value='no change'>No Change</option>
+			</select>
+		</div>
+		<div class="selectDivs selectInline">
+			<select id='ch-Cons_spp' data-placeholder="Special Designations" class="chosen-select filter" tabindex="16">
+				<option value=""></option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+			</select>
+		</div>
+		<div class="selectDivs">	
+			<select id='ch-Associations' data-placeholder="Habitat Associations" multiple class="chosen-select-multiple filter" tabindex="16">
+				<option value=""></option>
+				<option value='Agriculture'>Agriculture</option>
+				<option value='Alpine'>Alpine</option>
+				<option value='Developed'>Developed</option>
+				<option value='Estuarine'>Estuarine</option>
+				<option value='Forest_and_Woodland'>Forest and Woodland</option>
+				<option value='Headwater_or_Creek'>Headwater or Creek</option>
+				<option value='Lakes_and_Ponds'>Lakes and Ponds</option>
+				<option value='Large_or_Great_River'>Large or Great River</option>
+				<option value='Marine'>Marine</option>
+				<option value='Marine_Cultural'>Marine Cultural</option>
+				<option value='Medium_River'>Medium River</option>
+				<option value='Riverine_Cultural'>Riverine Cultural</option>
+				<option value='Shrubland_and_Grassland'>Shrubland and Grassland</option>
+				<option value='Small_River'>Small River</option>
+				<option value='Sparsely_Vegetated_Rock'>Sparsely Vegetated Rock</option>
+				<option value='Vernal_Pool'>Vernal Pool</option>
+			</select>
+		</div>
+		<div id='spDetailsHeader' class='sectionHeader'>&#8592; Click Rows for Species Details</div>
+		<div id='spDetails' class='spDetails bottomRight'>
+			<div class='spGroups'> <div class='spd' style='font-weight:bold; text-decoration:underline;' id='d-Display_Name'> </div> </div>	
+			<div class='spGroups'> <div class='splabel'>Taxon:</div><div class='spd' id='d-TAXON'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>NHP Current Hab Avail Class:</div><div class='spd' id='d-NHPc_rel_patch_qnt'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>GAP Current Hab Avail Class:</div><div class='spd' id='d-GAP_rel_patch_qnt'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>FV Current Hab Avail Class:</div><div class='spd' id='d-FVc_rel_patch_qnt'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>McK Current Hab Avail Class:</div><div class='spd' id='d-McK_rel_patch_qnt'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>TreeAtlas Current Habitat:</div><div class='spd' id='d-USFS_CCTA_cur_qnt'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>Connection to future habitat:</div><div class='spd' id='d-NHP_tConnect_label'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>SGCN:</div><div class='spd' id='d-SGCN'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>NY Condition Rating:</div><div class='spd' id='d-Condition_C'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>NY Threat Rating:</div><div class='spd' id='d-Threat_C'> </div> </div>
+			<div class='spGroups'>	<div class='splabel'>NY Vulnerability Rating:</div><div class='spd' id='d-Clim_Vuln_C'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>Zone Vulnerability Class:</div><div class='spd' id='d-CCVIS_mean_cls'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>Zone Habitat Change Class:</div><div class='spd' id='d-fut_rpatch_ratio_cls'> </div> </div>
+			<!--<div class='spGroups'> <div class='splabel'>Selected Future Model:</div><div class='spd' id='d-fut_mod'> </div> </div> -->
+			<div class='spGroups'> <div class='splabel'>NY Position in Range:</div><div class='spd' id='d-Range_position'> </div> </div>
+			<div class='spGroups'> <div class='splabel'>NY Range Shift:</div><div class='spd' id='d-Range_Shift_NY'> </div> </div>
+		</div>
+	</div>	
