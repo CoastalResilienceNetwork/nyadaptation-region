@@ -86,6 +86,12 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 			getState: function () {
 				this.config.extent = this.map.geographicExtent;
 				this.config.stateSet = "yes";
+				// Get OBJECTIDs of filtered items
+				if ( this.itemsFiltered.length > 0 ){
+					$.each(this.itemsFiltered, lang.hitch(this,function(i,v){
+						this.config.filteredIDs.push(v.OBJECTID)
+					}));
+				}	
 				var state = new Object();
 				state = this.config;
 				return state;
@@ -192,7 +198,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							this.items = $.map(fset.features, function(feature) {
 								return feature.attributes;
 							});
-							if (this.filter[0].value.length > 0 || this.filter[1].value.length > 0 || this.filter[2].value.length > 0 || this.filter[3].value.length > 0 || this.filter[4].value.length > 0){
+							if (this.config.filter[0].value.length > 0 || this.config.filter[1].value.length > 0 || this.config.filter[2].value.length > 0 || this.config.filter[3].value.length > 0 || this.config.filter[4].value.length > 0){
 								this.filterItems();
 							}else{
 								this.updateTable(this.items);
@@ -232,7 +238,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					
 					this.updateSpeciesDetails();
 				}));
-				//Use selections on chosen menus to update this.filter object
+				//Use selections on chosen menus to update this.config.filter object
 				require(["jquery", "plugins/species/js/chosen.jquery"],lang.hitch(this,function($) {			
 					$('#' + this.appDiv.id + 'rightSide .filter').chosen().change(lang.hitch(this,function(c, p){
 						// Hide species details box, update header text, and clear any selected row  
@@ -248,21 +254,21 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						var filterField = c.currentTarget.id.split("-").pop() 
 						// multiple select menu handler
 						if (filterField == "Associations"){
-							// Get index of the object where field equals 'Associations' in this.filter object
-							$.each(this.filter, lang.hitch(this,function(i,v){
+							// Get index of the object where field equals 'Associations' in this.config.filter object
+							$.each(this.config.filter, lang.hitch(this,function(i,v){
 								if (filterField == v.field){ 
 									this.ind = i; 
 								}	
 							}));
 							// Add selected field to value array in object where field equals 'Associations'
 							if (p.selected){
-								this.filter[this.ind].value.push(p.selected)
+								this.config.filter[this.ind].value.push(p.selected)
 							}
 							// Remove selected field to value array in object where field equals 'Associations'
 							else{
-								var index = this.filter[this.ind].value.indexOf(p.deselected);
+								var index = this.config.filter[this.ind].value.indexOf(p.deselected);
 								if (index > -1) {
-									this.filter[this.ind].value.splice(index, 1);
+									this.config.filter[this.ind].value.splice(index, 1);
 								}
 							}			
 						}
@@ -270,18 +276,18 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						else{
 							// Get object where active menu id matches the field value. If option is seleceted add its value to the value property in current object.
 							// If deselected, make value empty text in current object
-							$.each(this.filter, lang.hitch(this,function(i,v){
+							$.each(this.config.filter, lang.hitch(this,function(i,v){
 								if (filterField == v.field){
 									if (p){
-										this.filter[i].value = p.selected;
+										this.config.filter[i].value = p.selected;
 									}else{
-										this.filter[i].value = "";
+										this.config.filter[i].value = "";
 									}	
 								}	
 							}))								
 						}
 						// No items are selected
-						if (this.filter[0].value.length == 0 && this.filter[1].value.length == 0 && this.filter[2].value.length == 0 && this.filter[3].value.length == 0 && this.filter[4].value.length == 0){
+						if (this.config.filter[0].value.length == 0 && this.config.filter[1].value.length == 0 && this.config.filter[2].value.length == 0 && this.config.filter[3].value.length == 0 && this.config.filter[4].value.length == 0){
 							this.updateTable(this.items);
 							this.itemsFiltered = [];
 						}
@@ -294,18 +300,18 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}));
 				this.rendered = true;				
 			},
-			// Called when this.filter has values for filtering
+			// Called when this.config.filter has values for filtering
 			filterItems: function (){
 				// Make copy of this.items for filtering
 				this.itemsFiltered = this.items.slice();	
 				// Loop throuhg filter object and remove non-matches from itemsFiltered
-				$.each(this.filter, lang.hitch(this,function(i,v){
+				$.each(this.config.filter, lang.hitch(this,function(i,v){
 					this.removeArray = [];
 					// Find non-matching item positions and add to removeArray
 					// For multi-select menu
 					if (v.field == "Associations"){
-						if (this.filter[i].value.length > 0){
-							$.each(this.filter[i].value, lang.hitch(this,function(i1,v1){
+						if (this.config.filter[i].value.length > 0){
+							$.each(this.config.filter[i].value, lang.hitch(this,function(i1,v1){
 								$.each(this.itemsFiltered, lang.hitch(this,function(i2,v2){
 									if (v2[v1] == 0){
 										this.removeArray.push(i2)
@@ -331,6 +337,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						this.itemsFiltered.splice(v3, 1)
 					}));	
 				}));
+				
 				this.updateTable(this.itemsFiltered);
 			},	
 			// Build tabele rows based on map click or itemsFiltered objects
@@ -353,7 +360,21 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					}	
 					return 0;
 				}
-				item = items.sort(compare);
+				// Remove filtered items if running from setState
+			/*	if (this.config.stateSet == "yes"){
+					var keepArray = [];
+					$.each(this.config.filteredIDs, lang.hitch(this,function(i,v){
+						$.each(items, lang.hitch(this,function(i1,v1){
+							console.log(v1.OBJECTID + " " + v)
+							if (v1.OBJECTID == v){
+								keepArray.push(v1);
+							}	
+						}));
+					}));
+					console.log(keepArray)
+					items = keepArray;	
+				}	*/
+				items = items.sort(compare);
 				// Add rows
 				$.each(items, lang.hitch(this,function(i,v){
 					var newRow ="<tr class='trclick' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
@@ -392,6 +413,14 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							}	
 						}));
 						this.updateSpeciesDetails();
+					}	
+					// Update dropdown menu selections from previous session
+					$("#" + this.appDiv.id + "ch-TAXON").val(this.config.filter[0].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-MAX_habavail_up60").val(this.config.filter[1].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-fut_rpatch_ratio_cls").val(this.config.filter[2].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-Cons_spp").val(this.config.filter[3].value).trigger("chosen:updated");
+					if (this.config.filter[4].value.length > 0){
+						$("#" + this.appDiv.id + "ch-Associations").val(this.config.filter[4].value).trigger("chosen:updated");
 					}	
 					this.config.stateSet = "no";
 				}
