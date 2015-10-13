@@ -2,36 +2,11 @@
     "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_York/NY_CLIMAD_species/MapServer",
 	"visibleLayers": [0],
 	"extent": "",
-	"items": [],
-	"itemsFiltered": [],
 	"filterOrder": "first",
 	"selectedObId": "",
-	"atRow": "",
 	"detailsVis": "none",
 	"speciesRow": "",	
-	"stateSet": "no",
-	"filter": [
-		{
-			"field": "TAXON",
-			"value": ""
-		},
-		{
-			"field": "MAX_habavail_up60",
-			"value": ""
-		},
-		{
-			"field": "fut_rpatch_ratio_cls",
-			"value": ""
-		},
-		{
-			"field": "Cons_spp",
-			"value": ""
-		},
-		{
-			"field": "Associations",
-			"value": []
-		}
-	]
+	"stateSet": "no"
 }
 
 

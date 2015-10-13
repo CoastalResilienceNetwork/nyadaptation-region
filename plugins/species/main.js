@@ -27,6 +27,11 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					domStyle.set(this.con, "height", "70px");
 				}	
 				this.config = dojo.eval("[" + config + "]")[0];	
+				this.items = [];
+				this.itemsFiltered = [];
+				this.atRow = [];
+				this.filter = [ {"field": "TAXON", "value": ""}, {"field": "MAX_habavail_up60", "value": ""}, {"field": "fut_rpatch_ratio_cls",	"value": ""},
+								{"field": "Cons_spp", "value": ""}, {"field": "Associations", "value": [] }	];
 			},
 			// Called after initialize at plugin startup (why all the tests for undefined). Also called after deactivate when user closes app by clicking X. 
 			hibernate: function () {
@@ -99,7 +104,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				domStyle.set(this.appDiv.domNode, "height", this.sph + "px"); 
 			},
 			// Called by activate and builds the plugins elements and functions
-			render: function() {	
+			render: function() {
 				// Hide framework default legend
 				$('.legend').addClass("hideLegend");
 				// Define Content Pane		
@@ -184,13 +189,13 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						relatedTopsQuery.objectIds = [features[0].attributes.OBJECTID_12_13];
 						this.fc.queryRelatedFeatures(relatedTopsQuery, lang.hitch(this,function(relatedRecords) {
 							var fset = relatedRecords[features[0].attributes.OBJECTID_12_13];
-							this.config.items = $.map(fset.features, function(feature) {
+							this.items = $.map(fset.features, function(feature) {
 								return feature.attributes;
 							});
-							if (this.config.filter[0].value.length > 0 || this.config.filter[1].value.length > 0 || this.config.filter[2].value.length > 0 || this.config.filter[3].value.length > 0 || this.config.filter[4].value.length > 0){
+							if (this.filter[0].value.length > 0 || this.filter[1].value.length > 0 || this.filter[2].value.length > 0 || this.filter[3].value.length > 0 || this.filter[4].value.length > 0){
 								this.filterItems();
 							}else{
-								this.updateTable(this.config.items);
+								this.updateTable(this.items);
 							}
 						}));
 					}
@@ -204,7 +209,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}	
 				this.map.on("click", lang.hitch(this,function(evt){
 					$('#' + this.appDiv.id + 'spDetails').slideUp('slow');
-					this.config.detailsVis = "inline-block";
+					this.config.detailsVis = "none";
 					this.fc.clear()
 					var selectionQuery = new esri.tasks.Query();
 					var tol = 0;
@@ -220,20 +225,14 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					// get row number from element id
 					var i = parseInt(e.currentTarget.id.split('-')[1]);
 					// find object position in items by row number
-					this.config.atRow = this.config.items[i];
+					this.atRow = this.items[i];
 					// Get text from Species cell
 					this.config.speciesRow = e.currentTarget.children[0].innerHTML;
-					
 					//$('#' + e.currentTarget.id).css("background-color", "#abcfe1");
 					
 					this.updateSpeciesDetails();
-				})); 
-				// check if species details was visible for setState
-				if (this.config.detailsVis == "inline-block"){
-					console.log(this.config.speciesRow)
-					this.updateSpeciesDetails();
-				}	
-				//Use selections on chosen menus to update this.config.filter object
+				}));
+				//Use selections on chosen menus to update this.filter object
 				require(["jquery", "plugins/species/js/chosen.jquery"],lang.hitch(this,function($) {			
 					$('#' + this.appDiv.id + 'rightSide .filter').chosen().change(lang.hitch(this,function(c, p){
 						// Hide species details box, update header text, and clear any selected row  
@@ -249,21 +248,21 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						var filterField = c.currentTarget.id.split("-").pop() 
 						// multiple select menu handler
 						if (filterField == "Associations"){
-							// Get index of the object where field equals 'Associations' in this.config.filter object
-							$.each(this.config.filter, lang.hitch(this,function(i,v){
+							// Get index of the object where field equals 'Associations' in this.filter object
+							$.each(this.filter, lang.hitch(this,function(i,v){
 								if (filterField == v.field){ 
 									this.ind = i; 
 								}	
 							}));
 							// Add selected field to value array in object where field equals 'Associations'
 							if (p.selected){
-								this.config.filter[this.ind].value.push(p.selected)
+								this.filter[this.ind].value.push(p.selected)
 							}
 							// Remove selected field to value array in object where field equals 'Associations'
 							else{
-								var index = this.config.filter[this.ind].value.indexOf(p.deselected);
+								var index = this.filter[this.ind].value.indexOf(p.deselected);
 								if (index > -1) {
-									this.config.filter[this.ind].value.splice(index, 1);
+									this.filter[this.ind].value.splice(index, 1);
 								}
 							}			
 						}
@@ -271,20 +270,20 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						else{
 							// Get object where active menu id matches the field value. If option is seleceted add its value to the value property in current object.
 							// If deselected, make value empty text in current object
-							$.each(this.config.filter, lang.hitch(this,function(i,v){
+							$.each(this.filter, lang.hitch(this,function(i,v){
 								if (filterField == v.field){
 									if (p){
-										this.config.filter[i].value = p.selected;
+										this.filter[i].value = p.selected;
 									}else{
-										this.config.filter[i].value = "";
+										this.filter[i].value = "";
 									}	
 								}	
 							}))								
 						}
 						// No items are selected
-						if (this.config.filter[0].value.length == 0 && this.config.filter[1].value.length == 0 && this.config.filter[2].value.length == 0 && this.config.filter[3].value.length == 0 && this.config.filter[4].value.length == 0){
-							this.updateTable(this.config.items);
-							this.config.itemsFiltered = [];
+						if (this.filter[0].value.length == 0 && this.filter[1].value.length == 0 && this.filter[2].value.length == 0 && this.filter[3].value.length == 0 && this.filter[4].value.length == 0){
+							this.updateTable(this.items);
+							this.itemsFiltered = [];
 						}
 						// At least one item is selected
 						else{
@@ -295,19 +294,19 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}));
 				this.rendered = true;				
 			},
-			// Called when this.config.filter has values for filtering
+			// Called when this.filter has values for filtering
 			filterItems: function (){
-				// Make copy of this.config.items for filtering
-				this.config.itemsFiltered = this.config.items.slice();	
+				// Make copy of this.items for filtering
+				this.itemsFiltered = this.items.slice();	
 				// Loop throuhg filter object and remove non-matches from itemsFiltered
-				$.each(this.config.filter, lang.hitch(this,function(i,v){
+				$.each(this.filter, lang.hitch(this,function(i,v){
 					this.removeArray = [];
 					// Find non-matching item positions and add to removeArray
 					// For multi-select menu
 					if (v.field == "Associations"){
-						if (this.config.filter[i].value.length > 0){
-							$.each(this.config.filter[i].value, lang.hitch(this,function(i1,v1){
-								$.each(this.config.itemsFiltered, lang.hitch(this,function(i2,v2){
+						if (this.filter[i].value.length > 0){
+							$.each(this.filter[i].value, lang.hitch(this,function(i1,v1){
+								$.each(this.itemsFiltered, lang.hitch(this,function(i2,v2){
 									if (v2[v1] == 0){
 										this.removeArray.push(i2)
 									}	
@@ -318,7 +317,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					// For single-select menu
 					else{
 						if (v.value != ""){
-							$.each(this.config.itemsFiltered, lang.hitch(this,function(i2,v2){
+							$.each(this.itemsFiltered, lang.hitch(this,function(i2,v2){
 								if (v2[v.field] != v.value){
 									this.removeArray.push(i2)
 								}	
@@ -329,10 +328,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.removeArray = this.removeArray.sort(function (a, b) { return b - a; });
 					// Remove non-matching items from itemsFiltered object	
 					$.each(this.removeArray, lang.hitch(this,function(i3,v3){
-						this.config.itemsFiltered.splice(v3, 1)
+						this.itemsFiltered.splice(v3, 1)
 					}));	
 				}));
-				this.updateTable(this.config.itemsFiltered);
+				this.updateTable(this.itemsFiltered);
 			},	
 			// Build tabele rows based on map click or itemsFiltered objects
 			updateTable: function (items){
@@ -383,6 +382,17 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}	
 				if (this.config.stateSet == "yes"){
 					$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");		
+					// check if species details was visible for setState
+					if (this.config.detailsVis == "inline-block"){
+						console.log(this.config.speciesRow)
+						$.each(this.items, lang.hitch(this,function(i,v){
+							if (v.Display_Name == this.config.speciesRow){
+								this.atRow = this.items[i];
+								return false;
+							}	
+						}));
+						this.updateSpeciesDetails();
+					}	
 					this.config.stateSet = "no";
 				}
 			}, 
@@ -390,12 +400,12 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 			updateSpeciesDetails: function(){
 				$('#' + this.appDiv.id + 'spDetails .spd').each(lang.hitch(this,function (i, att){
 					var id = att.id.split('-')[1]
-					if (this.config.atRow[id] === undefined) {
+					if (this.atRow[id] === undefined) {
 					  console.log("found undefined " + id )
-					}else if(this.config.atRow[id] === null) {
+					}else if(this.atRow[id] === null) {
 						$('#' + att.id).html(' null')
 					}else{
-						$('#' + att.id).html(this.config.atRow[id])	
+						$('#' + att.id).html(this.atRow[id])	
 					}
 				}));	
 				$('#' + this.appDiv.id + 'spDetailsHeader').html('Selected Species Details');
