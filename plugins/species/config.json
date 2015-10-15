@@ -9,11 +9,11 @@
 	"stateSet": "no",
 	"filteredIDs": [],
 	"filter": [ 
+		{"field": "Associations", "value": [] },
 		{"field": "TAXON", "value": ""}, 
 		{"field": "MAX_habavail_up60", "value": ""}, 
 		{"field": "fut_rpatch_ratio_cls",	"value": ""},
-		{"field": "Cons_spp", "value": ""}, 
-		{"field": "Associations", "value": [] }	
+		{"field": "Cons_spp", "value": ""}	
 	]
 }
 

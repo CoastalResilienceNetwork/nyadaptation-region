@@ -50,7 +50,10 @@ table.tablesorter tbody > tr:nth-of-type(1) {
     margin-top: 27px;
 }
 table.tablesorter td, th {
-    width: 90px;
+    width: 174px;
+}
+table.tablesorter td+td, table.tablesorter th+th {
+	width:76px;
 }
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(asc.gif);
@@ -84,7 +87,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 .selectNone{
 	position:absolute;
 	top: 40px;
-	width: 202px;
+	width: 272px;
 	left: 6px;
 	z-index:50;
 	background-color:#fff;
@@ -150,6 +153,28 @@ abbr.search-choice-close {
 	padding:10px; 
 	margin-top:5px;
 	display:none;
+}
+.spDetailsKey{
+	display:none;
+	position:absolute;
+	left:20px;
+	top:174px;
+	border: 1px solid #215973; 
+	padding:10px; 
+	width:260px;
+	height:321px;
+	background-color:#ffffff;
+}
+.sdkClose{
+	position:absolute;
+	top:5px;
+	right:7px;
+	font-weight:bold;
+	font-size:12pt;
+	cursor:pointer;
+}
+.sdkOpen{
+	cursor:pointer;
 }
 .splabel{
 	display: inline-block;
