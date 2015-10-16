@@ -7,10 +7,10 @@ define([
 	"dojo/_base/declare", "framework/PluginBase", "esri/layers/FeatureLayer", "esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", 
 	"esri/symbols/SimpleMarkerSymbol", "esri/graphic", "dojo/_base/Color", 	"dijit/layout/ContentPane", "dijit/form/HorizontalSlider", "dojo/dom", 
 	"dojo/dom-class", "dojo/dom-style", "dojo/dom-construct", "dojo/dom-geometry", "dojo/_base/lang", "dojo/on", "dojo/parser", 
-	"dojo/text!./config.json", "jquery", "dojo/text!./html/content.html"
+	"dojo/text!./config.json", "jquery", "dojo/text!./html/content.html", 'plugins/species/js/jquery-ui-1.11.0/jquery-ui'
 ],
 function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Color,
-	ContentPane, HorizontalSlider, dom, domClass, domStyle, domConstruct, domGeom, lang, on, parser, config, $, content ) {
+	ContentPane, HorizontalSlider, dom, domClass, domStyle, domConstruct, domGeom, lang, on, parser, config, $, content, ui ) {
 		return declare(PluginBase, {
 			toolbarName: "Species", showServiceLayersInLegend: false, allowIdentifyWhenActive: false, rendered: false, resizable: false,
 			// First function called when the user clicks the pluging icon. Defines the default JSON and plugin size
@@ -107,8 +107,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 			// Tweak the numbers subtracted in the if and else statements to alter the size if it's not looking good.
 			resize: function(w, h) {
 				cdg = domGeom.position(this.container);
-				if (cdg.h == 0) { this.sph = this.height - 90; }
-				else { this.sph = cdg.h - 72; }
+				if (cdg.h == 0) { this.sph = this.height - 80; }
+				else { this.sph = cdg.h - 62; }
 				domStyle.set(this.appDiv.domNode, "height", this.sph + "px"); 
 			},
 			// Called by activate and builds the plugins elements and functions
@@ -123,32 +123,22 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				dom.byId(this.container).appendChild(this.appDiv.domNode);					
 				// Bottom bar for buttons and sliders								
 				this.buttonpane = new ContentPane({
-				  style:"border-top-style:groove !important; height:40px !important;overflow: hidden !important;background-color:#F3F3F3 !important;" +
-				  "padding-top:5px !important; display:none;"
+				  style:"border-top-style:groove !important; height:30px !important;overflow: hidden !important;background-color:#F3F3F3 !important;" +
+				  "padding-top:5px !important; display:none; text-align:center; "
 				});
 				dom.byId(this.container).appendChild(this.buttonpane.domNode);	
 				// Transparency slider	
-				nslidernode = domConstruct.create("div");
-				this.buttonpane.domNode.appendChild(nslidernode); 
-				labelsnode = domConstruct.create("ol", {
-					"data-dojo-type":"dijit/form/HorizontalRuleLabels", 
-					container:"bottomDecoration", 
-					style:"height:0.25em;padding-top: 7px !important;color:black !important", 
-					innerHTML: "<li>Opaque</li><li>Transparent</li>"
-				})
-				nslidernode.appendChild(labelsnode);
-				slider = new HorizontalSlider({
-					value: 0,
-					minimum: 0,
-					maximum: 1,
-					showButtons:false,
-					title: "Change the layer transparency",
-					onChange: lang.hitch(this,function(e){
-						this.dynamicLayer.setOpacity(1 - e);
-					}),
-					style: "width:120px; background-color:#F3F3F3 !important; margin:auto !important;"
-				}, nslidernode);
-				parser.parse()
+				slider = domConstruct.create("div", {
+					innerHTML: "<div style='display:inline-block; margin-right:9px; font-size:10pt;'>Opaque</div><div id='" + this.appDiv.id + "slider' style='width:100px; display:inline-block;'></div><div style='display:inline-block; margin-left:5px; font-size:10pt;'>Transparent</div>"	
+				});	
+				this.buttonpane.domNode.appendChild(slider);
+				$('#' + this.appDiv.id + 'slider').slider({
+					min: 0,
+					max: 10
+				});
+				$('#' + this.appDiv.id + 'slider').on( "slidechange", lang.hitch(this,function( e, ui ) {
+					this.dynamicLayer.setOpacity(1 - ui.value/10);
+				}));
 				// Add dynamic map service
 				this.dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer(this.config.url);
 				this.map.addLayer(this.dynamicLayer);
@@ -162,7 +152,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						var extent = new esri.geometry.Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new esri.SpatialReference({ wkid:4326 }))
 						this.map.setExtent(extent, true);
 						this.config.extent = ""; 	
-					}	
+					}
+					this.layersArray = this.dynamicLayer.layerInfos;;
 				}));				
 				this.resize();
 				// Get html from content.html, append appDiv.id to id's, and add to appDiv
@@ -179,7 +170,19 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						'.chosen-select-multiple'     : {width:"263px"} }
 					for (var selector in config) { $(selector).chosen(config[selector]); }
 				}));	
-				//add hex feature class and click events
+				// Add hex for display/mouse-over
+				this.fcDraw = new FeatureLayer(this.config.url + "/0", {
+					mode: FeatureLayer.MODE_SNAPSHOT,
+					outFields: ["*"]
+				});
+				this.map.addLayer(this.fcDraw);	
+				dojo.connect(this.fcDraw, "onMouseOver", lang.hitch(this,function(e){
+					this.map.setMapCursor("pointer");
+				}));
+				dojo.connect(this.fcDraw, "onMouseOut", lang.hitch(this,function(e){
+					this.map.setMapCursor("default");
+				}));				
+				// Add hex feature class and click events
 				this.fc = new FeatureLayer(this.config.url + "/0", {
 					mode: FeatureLayer.MODE_SELECTION,
 					outFields: ["*"]
@@ -192,7 +195,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					var features = evt.features;
 					if (features.length > 0){
 						this.config.selectedObId = features[0].attributes.OBJECTID_12_13;
-						console.log(this.config.selectedObId)
 						var relatedTopsQuery = new esri.tasks.RelationshipQuery();
 						relatedTopsQuery.outFields = ["*"];
 						relatedTopsQuery.relationshipId = 0;
@@ -209,8 +211,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							}
 						}));
 					}
-				}));	
-				this.map.addLayer(this.fc);
+				}));
+				this.map.addLayer(this.fc);				
 				// If setState select feature
 				if (this.config.selectedObId.length != "") {
 					var q = new esri.tasks.Query()
@@ -219,6 +221,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}	
 				this.map.on("click", lang.hitch(this,function(evt){
 					$('#' + this.appDiv.id + 'spDetails').slideUp('slow');
+					$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
+					this.spid = -1;
+					this.config.visibleLayers = [-1];
+					this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
 					this.config.detailsVis = "none";
 					this.fc.clear()
 					var selectionQuery = new esri.tasks.Query();
@@ -234,17 +240,44 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				$('#' + this.appDiv.id + 'myTable').on('click','tr',lang.hitch(this,function(e) { 
 					// Get text from Species cell
 					this.config.speciesRow = e.currentTarget.children[0].innerHTML;
-					// find object position in items by row number
+					// Find object position in items by row number
 					$.each(this.items, lang.hitch(this,function(i,v){
 						if ( v.Display_Name == this.config.speciesRow ){
 							this.atRow = this.items[i];
 							return false;
 						}		
 					}));
-					console.log(this.config.speciesRow)
-					//$('#' + e.currentTarget.id).css("background-color", "#abcfe1");
+					// Figure out sepecies code and see if it's in the map service
+					this.sppcode = this.atRow.sppcode
+					$.each(this.layersArray, lang.hitch(this,function(i,v){
+						if (v.name == this.sppcode){
+							this.config.visibleLayers = [];
+							this.spid = v.id;
+							this.config.visibleLayers.push(this.spid);
+							return false;
+						}	
+					}))
+					// If it is and the checkbox is checked, show it 
+					if ( $('#' + this.appDiv.id + 'rMapCb').is(":checked") ){
+						this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
+						$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
+					}else{
+						$('#' + this.appDiv.id + 'rmText').html('Click to Show Range Map');
+					}		
+					// Update Sepecies Details
 					this.updateSpeciesDetails();
 				}));
+				// Range map check box
+				$('#' + this.appDiv.id + 'rMapCb').on('change', lang.hitch(this,function() { 
+					if	( $('#' + this.appDiv.id + 'rMapCb').is(':checked') ){
+						this.config.visibleLayers.push(this.spid);
+						$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
+					}else{
+						this.config.visibleLayers = [-1];
+						$('#' + this.appDiv.id + 'rmText').html('Click to Show Range Map');
+					}	
+					this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
+				}));		
 				// Species Details Key Clicks
 				$('#' + this.appDiv.id + 'sdkClose').on('click',lang.hitch(this,function(){
 					$('#' + this.appDiv.id + 'spDetailsKey').slideUp();
@@ -254,6 +287,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					$('#' + this.appDiv.id + 'rightSide .filter').chosen().change(lang.hitch(this,function(c, p){
 						// Hide species details box, update header text, and clear any selected row  
 						$('#' + this.appDiv.id + 'spDetails').slideUp();
+						$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
 						this.config.detailsVis = "none";
 						$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
 						$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
@@ -394,7 +428,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					$('#' + this.appDiv.id + 'myTable').trigger("update");
 				}));	
 				$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
-				$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
+				$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
 				//Resize main container - check which side first
 				if (this.mapSide == "map-1_container"){
 					this.useCon = this.con1;
@@ -404,7 +438,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				if ($(this.useCon).width() < 300){
 					$( this.useCon ).animate({
 						width: "580",
-						height: "553px"
+						height: "573px"
 					}, 500 , lang.hitch(this,function() {
 						$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide, #' + this.buttonpane.domNode.id).css('display', 'block');
 						this.resize();	

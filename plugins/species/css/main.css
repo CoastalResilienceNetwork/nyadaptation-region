@@ -4,7 +4,7 @@ table.tablesorter {
 	border-collapse: collapse;
 	overflow-y: scroll;
     display: block;  
-    max-height: 434px;
+    max-height: 462px;
 	border-bottom: 1px solid #215973;
 	margin-top:21px;
 	margin-bottom:0px;
@@ -83,6 +83,12 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
 	font-size:11pt !important;
 	color:#21658c;
+}
+.sectionHeader1{
+	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
+	font-size:11pt !important;
+	color:#21658c;
+	cursor: default;
 }
 .selectNone{
 	position:absolute;
@@ -194,3 +200,18 @@ abbr.search-choice-close {
 .spGroups{
 	vertical-align:top;
 }
+.rMapCb{
+	cursor:pointer;
+}
+.showRangeMaps{
+	margin-left:0px;
+	margin-top:5px;
+}
+label.showRangeMaps input[type=checkbox]{
+	position: relative;
+    vertical-align: middle;
+    bottom: 1px;
+	margin-right:3px;
+}
+.ui-slider-horizontal { height: 5px; }
+.ui-slider-horizontal .ui-slider-handle { height:15px; width:15px; margin-top:-1px; }
