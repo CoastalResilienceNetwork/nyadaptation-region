@@ -156,7 +156,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.layersArray = this.dynamicLayer.layerInfos;;
 				}));				
 				this.resize();
-				// Get html from content.html, append appDiv.id to id's, and add to appDiv
+				// Get html from content.html, prepend appDiv.id to html element id's, and add to appDiv
 				var idUpdate = content.replace(/id='/g, "id='" + this.appDiv.id);
 				this.structure = domConstruct.create("div", { innerHTML: idUpdate, id: "test" });
 				this.appDiv.domNode.appendChild(this.structure)
