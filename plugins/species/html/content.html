@@ -1,8 +1,7 @@
-﻿<!--This HTML is used in the render function to build the elements within the plugin. The render function first creats a Dijit ContentPane
-	to hold all the elements. The ContentPane is assigned a dynamic id upon creation. The render function takes the ContentPane id and 
-	prepends it to every element with a declared id in this HTML before the elements are created. The unique ContentPane id makes all 
-	the element ids unique and prevents duplicate id errors in split screen mode.-->
-
+﻿<!--This HTML is used in the render function to build the elements within the plugin. The render function first creats a 
+Dijit ContentPane to hold all the elements. The ContentPane is assigned a dynamic id upon creation. The render function 
+takes the ContentPane id and prepends it to every element with a declared id in this HTML before the elements are created. 
+The unique ContentPane id makes all the element ids unique and prevents duplicate id errors in split screen mode.-->
 <!--Opening view of the app. Give a little background and instructions to get started-->
 <div id='clickTitle' class='clickTitle sectionHeader'>
 	<p>Welcome to the CLIMAD Species app. It does all kinds of cool stuff. It is brought to you by the number 3 and the color blue.<p> 
@@ -27,10 +26,12 @@
 <div id='rightSide' style='margin-left:280px; height:350px; margin-bottom:20px; display:none;'>
 	<div class='sectionHeader' style='margin-bottom:5px;'>Filter Results By:</div>
 	<div class="selectDivs selectFloat">
-		<!--Select elements are given an id of ch- plus the field name from the attribute table (TAXON in this case). The option values match known values
-			from the named field in the attribute table. So if someone selects FISH the javascript takes TAXON from the id and removes results where TAXON != 'FISH'. 
-			The javascript listens for select menu for changes to the class filter within the id rightSide. Adding the right side id prevents class changes to populate on both sides during split screen mode.
-			As long as you follow the naming convention you can add/remove select menus or options without changing the javascript.-->
+		<!--Select elements are given an id of ch- plus the field name from the attribute table (TAXON in this case). 
+		The option values match known values from the named field in the attribute table. So if someone selects FISH, 
+		the javascript takes TAXON from the id and removes results where TAXON != 'FISH'. The javascript listens for 
+		select menu for changes to the class filter within the id rightSide. Adding the right side id prevents class 
+		changes from updating on both sides during split screen mode. As long as you follow the naming convention you 
+		can add/remove select menus or options without changing the javascript.-->
 		<select id='ch-TAXON' data-placeholder="Taxon" class="chosen-select filter" tabindex="16">
 			<option value=""></option>
 			<option value="Fish">Fish</option>
@@ -65,8 +66,9 @@
 		</select>
 	</div>
 	<div class="selectDivs">
-		<!--This is a multiple select and uses the id to differntiate how it's handled in the javascript. The option values refer to field names in this one and any field with a value of 1 is kept. 
-			So if someone chose Alpine and Medium River the javascript would basically create a query that asked for Apline == 1 OR Medium_River == 1-->
+		<!--This is a multiple select and uses the id to differntiate how it's handled in the javascript. 
+		The option values refer to field names in this one and any field with a value of 1 is kept. 
+		So if someone chose Alpine and Medium River the javascript would basically create a query that asked for Apline == 1-->
 		<select id='ch-Associations' data-placeholder="Habitat Associations" multiple class="chosen-select-multiple filter" tabindex="16">
 			<option value=""></option>
 			<option value='Agriculture'>Agriculture</option>
@@ -89,10 +91,10 @@
 	</div>
 	<div id='spDetailsHeader' class='sectionHeader'><img src='images/leftArrow.png' alt='left arrow'> Click Rows for Species Details</div>
 	<label class='sectionHeader1 showRangeMaps'><input type='checkbox' id='rMapCb' class='rMapCb'><span id='rmText'>Show Range Map On Selection</span></label>
-	<!--The species details div is populated using ids (d- plus field name) that match the field name from a selected species row
-		When someone clicks on a row in the species table the javascript loops through all the field names in the attributes paramenter
-		If a field name matches the id of one of the divs below that fields value is placed in the div.
-		If you follow the id naming convention (d- plus field name) you can add or remove divs from this table without changing the javascript and the app will update the correct values-->
+	<!--The species details div is populated using ids (d- plus field name) that match the field name from a selected species row.
+	When someone clicks on a row in the species table the javascript loops through all the field names in the attributes paramenter.
+	If a field name matches the id of one of the divs below that fields value is placed in the div.
+	If you follow the id naming convention (d- plus field name) you can add or remove divs from this table without changing the javascript and the app will update the correct values-->
 	<div id='spDetails' class='spDetails bottomRight'>
 		<div class='spGroups'> <div class='spd' style='font-weight:bold; text-decoration:underline;' id='d-Display_Name'> </div> </div>	
 		<div class='spGroups'> <div class='splabel'>Taxon:</div><div class='spd' id='d-TAXON'> </div> </div>
