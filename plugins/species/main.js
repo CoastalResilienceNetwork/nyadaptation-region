@@ -20,10 +20,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				this.con = dom.byId('plugins/species-0');
 				this.con1 = dom.byId('plugins/species-1');
 				if (this.con1 != undefined){
-					domStyle.set(this.con1, "width", "245px");
+					domStyle.set(this.con1, "width", "255px");
 					domStyle.set(this.con1, "height", "165px");
 				}else{
-					domStyle.set(this.con, "width", "245px");
+					domStyle.set(this.con, "width", "255px");
 					domStyle.set(this.con, "height", "165px");
 				}	
 				this.config = dojo.eval("[" + config + "]")[0];	
@@ -38,8 +38,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					$('#' + this.appDiv.id).hide();
 					$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'none');
 					$('#' + this.appDiv.id + 'bottomDiv').hide();
-					$('#' + this.appDiv.id + 'clickTitle').html("<p>Welcome to the CLIMAD Species app. It does all kinds of cool stuff. It is brought to you by the number 3 and the color blue.<p>" + 
-																"<p style='font-weight:bold;margin-left:25px;margin-bottom:-10px;'>Click a Hexagon to Get Started</p>");
+					$('#' + this.appDiv.id + 'clickTitle').html("<p>Welcome to the CLIMAD Species app. Hold the Shift key while dragging your mouse over the map to zoom to your area of interest.<p>" + 
+																"<p style='font-weight:bold;margin-left:25px;margin-bottom:-10px;'>Click a Hexagon to Learn More</p>");
 				}
 				if (this.dynamicLayer != undefined)  {
 					this.dynamicLayer.setVisibility(false);
@@ -75,10 +75,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						this.con = dom.byId('plugins/species-0');
 						this.con1 = dom.byId('plugins/species-1');
 						if (this.con1 != undefined){
-							domStyle.set(this.con1, "width", "245px");
+							domStyle.set(this.con1, "width", "255px");
 							domStyle.set(this.con1, "height", "165px");
 						}else{
-							domStyle.set(this.con, "width", "245px");
+							domStyle.set(this.con, "width", "255px");
 							domStyle.set(this.con, "height", "165px");
 						}
 						$('#' + this.appDiv.id).css('height', '20');
