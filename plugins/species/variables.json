@@ -1,8 +1,6 @@
 {
-    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_York/NY_CLIMAD_species/MapServer",
-	"visibleLayers": [-1],
+    "visibleLayers": [],
 	"extent": "",
-	"filterOrder": "first",
 	"selectedObId": "",
 	"detailsVis": "none",
 	"speciesRow": "",	
@@ -16,5 +14,3 @@
 		{"field": "Cons_spp", "value": ""}	
 	]
 }
-
-
