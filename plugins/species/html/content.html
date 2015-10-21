@@ -8,12 +8,12 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	<p style='font-weight:bold;margin-left:25px;margin-bottom:-10px;'>Click a Hexagon to Get Started</p>
 </div>
 <!--Left side floating div that holds the species table and alter message if no species are selected-->
-<div id='leftSide' style='width: 269px; max-height:400px; float:left; display:none;'>
+<div id='leftSide' style='width: 270px; height:482px; float:left; display:none;'>
 	<div class='selectNone sectionHeader bottomRight' id='selectNone'>Your filter selections returned no results. Please deselect or change your selections to view results.</div>
 	<table id='myTable' class='tablesorter bottomRight' style=''> 
 		<thead> 
 			<tr> 
-				<th>Species</th> 
+				<th>Species Name</th> 
 				<th>Taxon</th> 
 			</tr> 
 		</thead> 
@@ -36,7 +36,7 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 			<option value=""></option>
 			<option value="Fish">Fish</option>
 			<option value="Invertebrate">Invertebrate</option>
-			<option value="Mullusk">Mullusk</option>
+			<option value="Mollusk">Mollusk</option>
 			<option value="Reptile">Reptile</option>
 			<option value="Tree">Tree</option>
 		</select>
@@ -97,21 +97,38 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	If you follow the id naming convention (d- plus field name) you can add or remove divs from this table without changing the javascript and the app will update the correct values-->
 	<div id='spDetails' class='spDetails bottomRight'>
 		<div class='spGroups'> <div class='spd' style='font-weight:bold; text-decoration:underline;' id='d-Display_Name'> </div> </div>	
-		<div class='spGroups'> <div class='splabel'>Taxon:</div><div class='spd' id='d-TAXON'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>NHP Current Hab Avail Class:</div><div class='spd' id='d-NHPc_rel_patch_qnt'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>GAP Current Hab Avail Class:</div><div class='spd' id='d-GAP_rel_patch_qnt'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>FV Current Hab Avail Class:</div><div class='spd' id='d-FVc_rel_patch_qnt'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>McK Current Hab Avail Class:</div><div class='spd' id='d-McK_rel_patch_qnt'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>TreeAtlas Current Habitat:</div><div class='spd' id='d-USFS_CCTA_cur_qnt'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>Connection to future habitat:</div><div class='spd' id='d-NHP_tConnect_label'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>SGCN:</div><div class='spd' id='d-SGCN'> </div> </div>
 		<div class='spGroups'> <div class='splabel'>NY Condition Rating:</div><div class='spd' id='d-Condition_C'> </div> </div>
 		<div class='spGroups'> <div class='splabel'>NY Threat Rating:</div><div class='spd' id='d-Threat_C'> </div> </div>
-		<div class='spGroups'>	<div class='splabel'>NY Vulnerability Rating:</div><div class='spd' id='d-Clim_Vuln_C'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>Zone Vulnerability Class:</div><div class='spd' id='d-CCVIS_mean_cls'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>Zone Habitat Change Class:</div><div class='spd' id='d-fut_rpatch_ratio_cls'> </div> </div>
 		<div class='spGroups'> <div class='splabel'>NY Position in Range:</div><div class='spd' id='d-Range_position'> </div> </div>
-		<div class='spGroups'> <div class='splabel'>NY Range Shift:</div><div class='spd' id='d-Range_Shift_NY'> </div> </div>
+		<div class='spGroups'>	<div class='splabel'>NY Climate Vulnerability Rating:</div><div class='spd' id='d-Clim_Vuln_C'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Hex Avg Vulnerability Index:</div><div class='spd' id='d-CCVIS_mean_cls'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Hex Future Habitat Change:</div><div class='spd' id='d-fut_rpatch_ratio_cls'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>NY Future Habitat Change:</div><div class='spd' id='d-Range_Shift_NY'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Rare Species:</div><div class='spd' id='d-Rare_spp'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>SGCN:</div><div class='spd' id='d-SGCN'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Future connection area:</div><div class='spd' id='d-NHP_tConnect_label'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Habitat Availability (NYNHP):</div><div class='spd' id='d-NHPc_rel_patch_qnt'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Habitat Availability (GAP):</div><div class='spd' id='d-GAP_rel_patch_qnt'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Habitat Availability (FishVis):</div><div class='spd' id='d-FVc_rel_patch_qnt'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Habitat Availability (McK):</div><div class='spd' id='d-McK_rel_patch_qnt'> </div> </div>
+		<div class='spGroups'> <div class='splabel'>Habitat Availability (USFS):</div><div class='spd' id='d-USFS_CCTA_cur_qnt'> </div> </div>
+	</div>
+</div>	
+<!--Bottom bar with slider and print/csv buttons-->
+<div id='bottomDiv' class='bottomDiv'>
+	<div id='printReport' class='printReport bottomLinks'>Print Report</div>
+	<div id='sliderDiv' class='sliderDiv'>
+		<div class='leftSliderLabel'>
+			Opaque
+		</div>
+		<div id='slider' class='slider'>
+		</div>
+		<div class='rightSliderLabel'>
+			Transparent
+		</div>
+	</div>
+	<div id='dlCSV' class='dlCSV bottomLinks'>
+		Get CSV
 	</div>
 </div>	
 <!--Key to species details div. Absolutely positioned so it overlaps the species rsesults table when turned on-->

@@ -6,11 +6,11 @@ require({
 define([
 	"dojo/_base/declare", "framework/PluginBase", "esri/layers/FeatureLayer", "esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", 
 	"esri/symbols/SimpleMarkerSymbol", "esri/graphic", "dojo/_base/Color", 	"dijit/layout/ContentPane", "dijit/form/HorizontalSlider", "dojo/dom", 
-	"dojo/dom-class", "dojo/dom-style", "dojo/dom-construct", "dojo/dom-geometry", "dojo/_base/lang", "dojo/on", "dojo/parser", 
-	"dojo/text!./config.json", "jquery", "dojo/text!./html/content.html", 'plugins/species/js/jquery-ui-1.11.0/jquery-ui'
+	"dojo/dom-class", "dojo/dom-style", "dojo/dom-construct", "dojo/dom-geometry", "dojo/_base/lang", "dojo/on", "dojo/parser", 'plugins/species/js/ConstrainedMoveable',
+	"dojo/text!./config.json", "jquery", "dojo/text!./html/legend.html", "dojo/text!./html/content.html", 'plugins/species/js/jquery-ui-1.11.0/jquery-ui'
 ],
 function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Color,
-	ContentPane, HorizontalSlider, dom, domClass, domStyle, domConstruct, domGeom, lang, on, parser, config, $, content, ui ) {
+	ContentPane, HorizontalSlider, dom, domClass, domStyle, domConstruct, domGeom, lang, on, parser, ConstrainedMoveable, config, $, legendContent, content, ui ) {
 		return declare(PluginBase, {
 			toolbarName: "Species", showServiceLayersInLegend: false, allowIdentifyWhenActive: false, rendered: false, resizable: false,
 			// First function called when the user clicks the pluging icon. Defines the default JSON and plugin size
@@ -30,15 +30,14 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				this.items = [];
 				this.itemsFiltered = [];
 				this.atRow = [];
-				this.filter = [ {"field": "TAXON", "value": ""}, {"field": "MAX_habavail_up60", "value": ""}, {"field": "fut_rpatch_ratio_cls",	"value": ""},
-								{"field": "Cons_spp", "value": ""}, {"field": "Associations", "value": [] }	];
 			},
 			// Called after initialize at plugin startup (why all the tests for undefined). Also called after deactivate when user closes app by clicking X. 
 			hibernate: function () {
 				this.small = "yes";
 				if (this.appDiv != undefined){
 					$('#' + this.appDiv.id).hide();
-					$('#' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide, #' + this.buttonpane.domNode.id).css('display', 'none');
+					$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'none');
+					$('#' + this.appDiv.id + 'bottomDiv').hide();
 					$('#' + this.appDiv.id + 'clickTitle').html("<p>Welcome to the CLIMAD Species app. It does all kinds of cool stuff. It is brought to you by the number 3 and the color blue.<p>" + 
 																"<p style='font-weight:bold;margin-left:25px;margin-bottom:-10px;'>Click a Hexagon to Get Started</p>");
 				}
@@ -56,6 +55,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 			},
 			// Called after hibernate at app startup. Calls the render function which builds the plugins elements and functions.   
 			activate: function () {
+				// Hide framework default legend
+				$('.legend').addClass("hideLegend");
 				if (this.rendered == false) {
 					this.rendered = true;							
 					this.render();
@@ -115,30 +116,31 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 			render: function() {
 				// Info icon src
 				this.info = "data:image/png;base64,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";	
-				// Hide framework default legend
-				$('.legend').addClass("hideLegend");
 				// Define Content Pane		
 				this.appDiv = new ContentPane({});
 				parser.parse();
 				dom.byId(this.container).appendChild(this.appDiv.domNode);					
-				// Bottom bar for buttons and sliders								
-				this.buttonpane = new ContentPane({
-				  style:"border-top-style:groove !important; height:30px !important;overflow: hidden !important;background-color:#F3F3F3 !important;" +
-				  "padding-top:5px !important; display:none; text-align:center; "
+				// Get html from content.html, prepend appDiv.id to html element id's, and add to appDiv
+				var idUpdate = content.replace(/id='/g, "id='" + this.appDiv.id);	
+				$('#' + this.appDiv.id).html(idUpdate);
+				// Custom legend
+				// Get the parent element of the map for placement
+				var a = $('#' + $(this.map).attr('id')).parent();
+				// Use legend.html to build the elements in the ContentPane - update the ids with this.appDiv
+				var legHTML = legendContent.replace(/id='/g, "id='" + this.appDiv.id);
+				this.legendWin = new ContentPane({ id: this.appDiv.id + "myLegendDiv", innerHTML: legHTML	});
+				// Add legend window to maps parent and add class for symbology
+				dom.byId(a[0]).appendChild(this.legendWin.domNode)
+				$('#' + this.appDiv.id + 'myLegendDiv').addClass('myLegendDiv');
+				$('#' + this.appDiv.id + 'myLegendDiv').hide();
+				// Make legend div movable
+				var p = new ConstrainedMoveable( dom.byId(this.legendWin.id), {
+					handle: dom.byId(this.appDiv.id + "myLegendHeader"), within: true
 				});
-				dom.byId(this.container).appendChild(this.buttonpane.domNode);	
-				// Transparency slider	
-				slider = domConstruct.create("div", {
-					innerHTML: "<div style='display:inline-block; margin-right:9px; font-size:10pt;'>Opaque</div><div id='" + this.appDiv.id + "slider' style='width:100px; display:inline-block;'></div><div style='display:inline-block; margin-left:5px; font-size:10pt;'>Transparent</div>"	
-				});	
-				this.buttonpane.domNode.appendChild(slider);
-				$('#' + this.appDiv.id + 'slider').slider({
-					min: 0,
-					max: 10
-				});
-				$('#' + this.appDiv.id + 'slider').on( "slidechange", lang.hitch(this,function( e, ui ) {
-					this.dynamicLayer.setOpacity(1 - ui.value/10);
-				}));
+				// Click handler to close legend
+				$('#' + this.appDiv.id + 'myLegendDiv .myLegendCloser' ).on('click',lang.hitch(this,function(){
+					$('#' + this.appDiv.id + 'myLegendDiv').hide();
+				}))
 				// Add dynamic map service
 				this.dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer(this.config.url);
 				this.map.addLayer(this.dynamicLayer);
@@ -156,10 +158,11 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.layersArray = this.dynamicLayer.layerInfos;;
 				}));				
 				this.resize();
-				// Get html from content.html, prepend appDiv.id to html element id's, and add to appDiv
-				var idUpdate = content.replace(/id='/g, "id='" + this.appDiv.id);
-				this.structure = domConstruct.create("div", { innerHTML: idUpdate, id: "test" });
-				this.appDiv.domNode.appendChild(this.structure)
+				// Create and handle transparency slider
+				$('#' + this.appDiv.id + 'slider').slider({ min: 0,	max: 10 });
+				$('#' + this.appDiv.id + 'slider').on( "slidechange", lang.hitch(this,function( e, ui ) {
+					this.dynamicLayer.setOpacity(1 - ui.value/10);
+				}));				
 				// Enable jquery plugin 'tablesorter'
 				require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
 					$("#" + this.appDiv.id + "myTable").tablesorter(); 
@@ -236,6 +239,13 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.fc.selectFeatures(selectionQuery,FeatureLayer.SELECTION_NEW);	
 					this.mapSide = evt.currentTarget.id
 				}));
+				// Print and CSV clicks
+				$('#' + this.appDiv.id + 'printReport').on('click',lang.hitch(this,function(e) { 
+					alert("Print Report is coming soon. Brace yourself, it's going to be awesome!")
+				}));
+				$('#' + this.appDiv.id + 'dlCSV').on('click',lang.hitch(this,function(e) { 
+					alert("CSV Download is coming soon. Brace yourself, it's going to be awesome!")
+				}));
 				// Table row click
 				$('#' + this.appDiv.id + 'myTable').on('click','tr',lang.hitch(this,function(e) { 
 					// Get text from Species cell
@@ -248,7 +258,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						}		
 					}));
 					// Figure out sepecies code and see if it's in the map service
-					this.sppcode = this.atRow.sppcode
+					this.sppcode = this.atRow.sppcode;
+					this.speciesName = this.atRow.Display_Name;
 					$.each(this.layersArray, lang.hitch(this,function(i,v){
 						if (v.name == this.sppcode){
 							this.config.visibleLayers = [];
@@ -261,6 +272,9 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					if ( $('#' + this.appDiv.id + 'rMapCb').is(":checked") ){
 						this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
 						$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
+						this.buildLegend();
+						$('#' + this.appDiv.id + 'myLegendDiv').show();
+						$('#' + this.appDiv.id + 'sliderDiv').css('display', 'inline-block');
 					}else{
 						$('#' + this.appDiv.id + 'rmText').html('Click to Show Range Map');
 					}		
@@ -272,9 +286,14 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					if	( $('#' + this.appDiv.id + 'rMapCb').is(':checked') ){
 						this.config.visibleLayers.push(this.spid);
 						$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
+						this.buildLegend();
+						$('#' + this.appDiv.id + 'myLegendDiv').show();
+						$('#' + this.appDiv.id + 'sliderDiv').css('display', 'inline-block');
 					}else{
 						this.config.visibleLayers = [-1];
 						$('#' + this.appDiv.id + 'rmText').html('Click to Show Range Map');
+						$('#' + this.appDiv.id + 'myLegendDiv').hide();
+						$('#' + this.appDiv.id + 'sliderDiv').css('display', 'none');
 					}	
 					this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
 				}));		
@@ -426,7 +445,8 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				// Update table
 				require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
 					$('#' + this.appDiv.id + 'myTable').trigger("update");
-				}));	
+				}));
+				console.log($('#' + this.appDiv.id + 'myTable').height())	
 				$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
 				$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
 				//Resize main container - check which side first
@@ -440,9 +460,11 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						width: "580",
 						height: "573px"
 					}, 500 , lang.hitch(this,function() {
-						$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide, #' + this.buttonpane.domNode.id).css('display', 'block');
+						$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'block');
+						$('#' + this.appDiv.id + 'bottomDiv').show();
 						this.resize();	
 					}));
+					
 				}	
 				if (this.config.stateSet == "yes"){
 					$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");		
@@ -494,8 +516,42 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				$('#' + this.appDiv.id + 'sdkOpen').on('click',lang.hitch(this,function(){
 					$('#' + this.appDiv.id + 'spDetailsKey').slideDown();
 				}));
+			},
+			// Build legend from JSON request
+			buildLegend: function(){
+				// Refresh Legend div content and height and width
+				var hmw = { height: '235px', minWidth: '150px' }	
+				$('#' + this.appDiv.id + 'myLegendDiv').css(hmw);
+				$('#' + this.appDiv.id + 'mySpeciesLegend').html('');
+				$.getJSON( this.config.url +  "/legend?f=pjson&callback=?", lang.hitch(this,function( json ) {
+					var speciesArray = [];
+					console.log("I hate IE")
+					//get legend pics
+					$.each(json.layers, lang.hitch(this,function(i, v){
+						if (v.layerName == this.sppcode){
+							speciesArray.push(v)	
+						}	
+					}));
+					console.log(json)
+					// Set Title
+					$('#' + this.appDiv.id + 'mySpeciesLegend').append("<div style='display:inline;text-decoration:underline;font-weight:bold;margin-top:5px;'>" + this.speciesName + "</div><br>")
+					// build legend items
+					$.each(speciesArray[0].legend, lang.hitch(this,function(i, v){
+						$('#' + this.appDiv.id + 'mySpeciesLegend').append("<p style='display:inline;'>" + v.label + "</p><img style='margin-bottom:-5px; margin-left:5px;' src='data:image/png;base64," + v.imageData + "' alt='Legend color'><br>")		
+					})) 
+					// Set legend div height and width
+					var h = $('#' + this.appDiv.id + 'mySpeciesLegend').height() + 60;
+					var w = $('#' + this.appDiv.id + 'mySpeciesLegend').width() + 30;
+					var hw = { height: h + 'px', width: w + 'px' }	
+					$('#' + this.appDiv.id + 'myLegendDiv').css(hw);
+				})); 	
 			}	
 		});
 	});	
-					   
-
+function makeid(){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}					   
