@@ -51,6 +51,9 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				if (this.map != undefined){
 					this.map.graphics.clear();
 				}
+				if (this.fcDraw != undefined){
+					this.map.removeLayer(this.fcDraw);	
+				}
 				$('.legend').removeClass("hideLegend");
 			},
 			// Called after hibernate at app startup. Calls the render function which builds the plugins elements and functions.   
@@ -64,6 +67,9 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				} else {
 					if (this.dynamicLayer != undefined)  {
 						this.dynamicLayer.setVisibility(true);	
+					}
+					if (this.fcDraw != undefined){
+						this.map.addLayer(this.fcDraw);	
 					}
 					if (this.small == "yes"){
 						this.con = dom.byId('plugins/species-0');
@@ -140,7 +146,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				// Click handler to close legend
 				$('#' + this.appDiv.id + 'myLegendDiv .myLegendCloser' ).on('click',lang.hitch(this,function(){
 					$('#' + this.appDiv.id + 'myLegendDiv').hide();
-				}))
+				}));
 				// Add dynamic map service
 				this.dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer(this.config.url);
 				this.map.addLayer(this.dynamicLayer);
@@ -264,7 +270,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						if (v.name == this.sppcode){
 							this.config.visibleLayers = [];
 							this.spid = v.id;
-							this.config.visibleLayers.push(this.spid);
 							return false;
 						}	
 					}))
@@ -525,7 +530,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				$('#' + this.appDiv.id + 'mySpeciesLegend').html('');
 				$.getJSON( this.config.url +  "/legend?f=pjson&callback=?", lang.hitch(this,function( json ) {
 					var speciesArray = [];
-					console.log("I hate IE")
 					//get legend pics
 					$.each(json.layers, lang.hitch(this,function(i, v){
 						if (v.layerName == this.sppcode){
@@ -547,11 +551,4 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				})); 	
 			}	
 		});
-	});	
-function makeid(){
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    for( var i=0; i < 5; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-}					   
+	});						   
