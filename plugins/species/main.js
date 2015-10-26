@@ -176,8 +176,20 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.dynamicLayer.setOpacity(1 - ui.value/10);
 				}));				
 				// Enable jquery plugin 'tablesorter'
-				require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
-					$("#" + this.appDiv.id + "myTable").tablesorter(); 
+				require(["jquery", "plugins/species/js/jquery.tablesorter.combined"],lang.hitch(this,function($) {
+					$("#" + this.appDiv.id + "myTable").tablesorter({
+						widthFixed : true,
+						headerTemplate : '{content} {icon}', // Add icon for various themes
+
+						widgets: [ 'zebra', 'stickyHeaders', 'filter' ],
+						theme: 'blue',
+						
+						widgetOptions: {
+							// jQuery selector or object to attach sticky header to
+							stickyHeaders_attachTo : '.wrapper',
+							stickyHeaders_includeCaption: false // or $('.wrapper')
+						}
+					}); 
 				}));	
 				// Enable jquery plugin 'chosen'
 				require(["jquery", "plugins/species/js/chosen.jquery"],lang.hitch(this,function($) {
@@ -260,7 +272,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					alert("CSV Download is coming soon. Brace yourself, it's going to be awesome!")
 				}));
 				// Table row click
-				$('#' + this.appDiv.id + 'myTable').on('click','tr',lang.hitch(this,function(e) { 
+				$('#' + this.appDiv.id + 'myTable').on('click','.trclick',lang.hitch(this,function(e) { 
 					// Get text from Species cell
 					this.config.speciesRow = e.currentTarget.children[0].innerHTML;
 					// Find object position in items by row number
@@ -443,14 +455,20 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					}
 					items = items.sort(compare);
 					// Add rows
+					this.rowType = "even";
 					$.each(items, lang.hitch(this,function(i,v){
 						if (v.Display_Name != "Unknown"){
-							var newRow ="<tr class='trclick' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
+							if (this.rowType == "even"){
+								this.rowType = "odd";	
+							}else{
+								this.rowType = "even";
+							}	
+							var newRow ="<tr class='trclick " + this.rowType +"' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
 							$('#' + this.appDiv.id + 'myTable tbody').append(newRow)
 						}
 					}));
 					// Update table
-					require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
+					require(["jquery", "plugins/species/js/jquery.tablesorter.combined"],lang.hitch(this,function($) {
 						$('#' + this.appDiv.id + 'myTable').trigger("update");
 					}));
 					$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
@@ -484,7 +502,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						// Species range map was turned on and survived the filter
 						if (madeIt == "yes"){
 							// Highlight selected row on table
-							$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");			
+							$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").addClass("selected");			
 						}	
 						// Species range map was on but was filtered away. 
 						if (madeIt == "no"){
@@ -498,7 +516,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
 							$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
 								if (row.id != ""){						
-									$('#' + row.id).css("background-color", "");
+									$('#' + row.id).removeClass("selected");
 								}
 							}))
 						}	
@@ -548,10 +566,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				//update row background color
 				$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
 					if (row.id != ""){						
-						$('#' + row.id).css("background-color", "");
+						$('#' + row.id).removeClass("selected");
 					}	
 				}))
-				$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");	
+				$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").addClass("selected")
 				$('#' + this.appDiv.id + 'sdkOpen').on('click',lang.hitch(this,function(){
 					$('#' + this.appDiv.id + 'spDetailsKey').slideDown();
 				}));

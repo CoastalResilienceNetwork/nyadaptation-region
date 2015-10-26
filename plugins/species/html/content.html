@@ -11,17 +11,19 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 <!--Left side floating div that holds the species table and alter message if no species are selected-->
 <div id='leftSide' class='leftSide'>
 	<div class='selectNone sectionHeader bottomRight' id='selectNone'>Your filter selections returned no results. Please deselect or change your selections to view results.</div>
-	<table id='myTable' class='tablesorter bottomRight'> 
-		<thead> 
-			<tr> 
-				<th>Species Name</th> 
-				<th>Taxon</th> 
-			</tr> 
-		</thead> 
-		<tbody> 
-			<tr><td></td><td></td></tr>
-		</tbody> 
-	</table>
+	<div class="wrapper bottomRight">
+		<table id='myTable' class='tablesorter'> 
+			<thead> 
+				<tr> 
+					<th data-placeholder='Filter Names'>Species Name</th> 
+					<th data-placeholder='Filter Taxon'>Taxon</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr><td></td><td></td></tr>
+			</tbody> 
+		</table>
+	</div>
 </div>
 <!--Right side floating div that holds the filter elements and the species details div-->
 <div id='rightSide' class='rightSide'>

@@ -4,7 +4,8 @@
         "//code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css",
 		"plugins/species/css/prism.css",
 		"plugins/species/css/chosen.css",
-		"plugins/species/css/main.css"        
+		"plugins/species/css/main.css",
+		"plugins/species/css/theme.tablesorter.css"
     ],
     "use": {
         "underscore": { "attach": "_" },

@@ -20,7 +20,7 @@
 .bottomRight1{
 	-webkit-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); -moz-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7);
 }
-/* Tablesorter table elements */
+/* Tablesorter table elements 
 table.tablesorter {
 	background-color:none; text-align: left; border-collapse: collapse; overflow: -moz-scrollbars-vertical;  overflow-y: scroll !important; max-height: 460px !important; border-bottom: 1px solid #215973; 
 	margin-top:21px; margin-bottom:0px; display:none;
@@ -76,6 +76,8 @@ table.tablesorter tr:hover{
 table.tablesorter th {
 	height:20px; border: 1px solid #215973 !important; background-color:white;
 }
+
+
 /* Headers */
 .clickTitle{
 	position:absolute; left:10px; background-color:white; z-index:15;
