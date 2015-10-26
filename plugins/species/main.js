@@ -150,11 +150,13 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					$('#' + this.appDiv.id + 'myLegendDiv').hide();
 				}));
 				// Add dynamic map service
-				this.dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer(this.url);
+				this.dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer(this.url, {opacity: 1 - this.config.sliderVal/10});
 				this.map.addLayer(this.dynamicLayer);
 				this.dynamicLayer.on("load", lang.hitch(this, function () {  
 					if (this.config.extent == ""){
-						this.map.setExtent(this.dynamicLayer.fullExtent.expand(-1), true);  
+						if ( this.map.getZoom() > 12 ){
+							this.map.setLevel(12)	
+						}	
 					}else{
 						var extent = new esri.geometry.Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new esri.SpatialReference({ wkid:4326 }))
 						this.map.setExtent(extent, true);
@@ -168,8 +170,9 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}));				
 				this.resize();
 				// Create and handle transparency slider
-				$('#' + this.appDiv.id + 'slider').slider({ min: 0,	max: 10 });
+				$('#' + this.appDiv.id + 'slider').slider({ min: 0,	max: 10, value: this.config.sliderVal });
 				$('#' + this.appDiv.id + 'slider').on( "slidechange", lang.hitch(this,function( e, ui ) {
+					this.config.sliderVal = ui.value;
 					this.dynamicLayer.setOpacity(1 - ui.value/10);
 				}));				
 				// Enable jquery plugin 'tablesorter'
@@ -185,7 +188,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				// Add hex for display/mouse-over
 				this.fcDraw = new FeatureLayer(this.url + "/0", {
 					mode: FeatureLayer.MODE_SNAPSHOT,
-					outFields: ["*"]
+					outFields: ["OBJECTID_12_13"]
 				});
 				this.map.addLayer(this.fcDraw);	
 				dojo.connect(this.fcDraw, "onMouseOver", lang.hitch(this,function(e){
@@ -206,6 +209,14 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				this.fc.on("selection-complete", lang.hitch(this,function(evt){
 					var features = evt.features;
 					if (features.length > 0){
+						$('#' + this.appDiv.id + 'spDetails').slideUp('slow');
+						$('#' + this.appDiv.id + 'myLegendDiv').hide();
+						$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
+						this.spid = -1;
+						this.config.visibleLayers = [this.spid];
+						this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
+						this.config.detailsVis = "none";
+						this.config.speciesRow = "";
 						this.config.selectedObId = features[0].attributes.OBJECTID_12_13;
 						var relatedTopsQuery = new esri.tasks.RelationshipQuery();
 						relatedTopsQuery.outFields = ["*"];
@@ -232,13 +243,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					this.fc.selectFeatures(q,FeatureLayer.SELECTION_NEW);
 				}	
 				this.map.on("click", lang.hitch(this,function(evt){
-					$('#' + this.appDiv.id + 'spDetails').slideUp('slow');
-					$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
-					this.spid = -1;
-					this.config.visibleLayers = [-1];
-					this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
-					this.config.detailsVis = "none";
-					this.fc.clear()
 					var selectionQuery = new esri.tasks.Query();
 					var tol = 0;
 					var x = evt.mapPoint.x;
@@ -291,13 +295,16 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				}));
 				// Range map check box
 				$('#' + this.appDiv.id + 'rMapCb').on('change', lang.hitch(this,function() { 
-					console.log("made it");
 					if	( $('#' + this.appDiv.id + 'rMapCb').is(':checked') ){
-						this.config.visibleLayers.push(this.spid);
-						$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
-						this.buildLegend();
-						$('#' + this.appDiv.id + 'myLegendDiv').show();
-						$('#' + this.appDiv.id + 'sliderDiv').css('display', 'inline-block');
+						if (this.config.speciesRow == ""){
+							$('#' + this.appDiv.id + 'rmText').html('Now Select Row to See Range Map');
+						}else{	
+							this.config.visibleLayers.push(this.spid);
+							$('#' + this.appDiv.id + 'rmText').html('Click to Hide Range Map');
+							this.buildLegend();
+							$('#' + this.appDiv.id + 'myLegendDiv').show();
+							$('#' + this.appDiv.id + 'sliderDiv').css('display', 'inline-block');
+						}
 					}else{
 						this.config.visibleLayers = [-1];
 						$('#' + this.appDiv.id + 'rmText').html('Click to Show Range Map');
@@ -313,16 +320,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				//Use selections on chosen menus to update this.config.filter object
 				require(["jquery", "plugins/species/js/chosen.jquery"],lang.hitch(this,function($) {			
 					$('#' + this.appDiv.id + 'rightSide .filter').chosen().change(lang.hitch(this,function(c, p){
-						// Hide species details box, update header text, and clear any selected row  
-						$('#' + this.appDiv.id + 'spDetails').slideUp();
-						$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
-						this.config.detailsVis = "none";
-						$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
-						$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
-							if (row.id != ""){						
-								$('#' + row.id).css("background-color", "");
-							}
-						}))
 						// Figure out which menu was selected
 						var filterField = c.currentTarget.id.split("-").pop() 
 						// multiple select menu handler
@@ -431,75 +428,106 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				if (items.length == 0){
 					$('#' + this.appDiv.id + 'selectNone').slideDown('fast');
 				}else{
+					// Clear table rows and hide None Selected Div
+					$('#' + this.appDiv.id + 'myTable tbody tr').remove()				
 					$('#' + this.appDiv.id + 'selectNone').slideUp('fast');
-				}
-				// Clear table rows
-				$('#' + this.appDiv.id + 'myTable tbody tr').remove()
-				// Sort items by Display_Name
-				function compare(a,b) {
-					if (a.Display_Name < b.Display_Name){
-						return -1;
+					// Sort items by Display_Name
+					function compare(a,b) {
+						if (a.Display_Name < b.Display_Name){
+							return -1;
+						}
+						if (a.Display_Name > b.Display_Name){
+							return 1;
+						}	
+						return 0;
 					}
-					if (a.Display_Name > b.Display_Name){
-						return 1;
-					}	
-					return 0;
-				}
-				items = items.sort(compare);
-				// Add rows
-				$.each(items, lang.hitch(this,function(i,v){
-					if (v.Display_Name != "Unknown"){
-						var newRow ="<tr class='trclick' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
-						$('#' + this.appDiv.id + 'myTable tbody').append(newRow)
-					}
-				}));
-				// Update table
-				require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
-					$('#' + this.appDiv.id + 'myTable').trigger("update");
-				}));
-				$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
-				$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
-				//Resize main container - check which side first
-				if (this.mapSide == "map-1_container"){
-					this.useCon = this.con1;
-				}else{
-					this.useCon = this.con;
-				}
-				if ($(this.useCon).width() < 300){
-					$( this.useCon ).animate({
-						width: "580",
-						height: "573px"
-					}, 500 , lang.hitch(this,function() {
-						$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'block');
-						$('#' + this.appDiv.id + 'bottomDiv').show();
-						this.resize();	
+					items = items.sort(compare);
+					// Add rows
+					$.each(items, lang.hitch(this,function(i,v){
+						if (v.Display_Name != "Unknown"){
+							var newRow ="<tr class='trclick' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
+							$('#' + this.appDiv.id + 'myTable tbody').append(newRow)
+						}
 					}));
-					
-				}	
-				// Build if setState was called
-				if (this.config.stateSet == "yes"){
-					$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");		
-					// check if species details was visible for setState
-					if (this.config.detailsVis == "inline-block"){
-						$.each(this.items, lang.hitch(this,function(i,v){
+					// Update table
+					require(["jquery", "plugins/species/js/jquery.tablesorter"],lang.hitch(this,function($) {
+						$('#' + this.appDiv.id + 'myTable').trigger("update");
+					}));
+					$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
+					$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
+					//Resize main container - check which side first
+					if (this.mapSide == "map-1_container"){
+						this.useCon = this.con1;
+					}else{
+						this.useCon = this.con;
+					}
+					if ($(this.useCon).width() < 300){
+						$( this.useCon ).animate({
+							width: "580",
+							height: "573px"
+						}, 500 , lang.hitch(this,function() {
+							$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'block');
+							$('#' + this.appDiv.id + 'bottomDiv').show();
+							this.resize();	
+						}));
+						
+					}	
+					// Should visible layers stay on after filter 
+					if (this.config.visibleLayers[0] != -1){
+						var madeIt = "no";
+						// Test if the visible layer made it through the latest filter
+						$.each(items, lang.hitch(this,function(i,v){
 							if (v.Display_Name == this.config.speciesRow){
-								this.atRow = this.items[i];
-								return false;
+								madeIt = "yes";
 							}	
 						}));
-						this.updateSpeciesDetails();
-					}	
-					// Update dropdown menu selections from previous session
-					$("#" + this.appDiv.id + "ch-TAXON").val(this.config.filter[1].value).trigger("chosen:updated");
-					$("#" + this.appDiv.id + "ch-MAX_habavail_up60").val(this.config.filter[2].value).trigger("chosen:updated");
-					$("#" + this.appDiv.id + "ch-fut_rpatch_ratio_cls").val(this.config.filter[3].value).trigger("chosen:updated");
-					$("#" + this.appDiv.id + "ch-Cons_spp").val(this.config.filter[4].value).trigger("chosen:updated");
-					if (this.config.filter[0].value.length > 0){
-						$("#" + this.appDiv.id + "ch-Associations").val(this.config.filter[0].value).trigger("chosen:updated");
-					}	
-					this.config.stateSet = "no";
-					$('#' + this.appDiv.id + 'rMapCb').prop( "checked", true ); 
-					$('#' + this.appDiv.id + 'rMapCb').trigger("change");	
+						// Species range map was turned on and survived the filter
+						if (madeIt == "yes"){
+							// Highlight selected row on table
+							$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");			
+						}	
+						// Species range map was on but was filtered away. 
+						if (madeIt == "no"){
+							// Uncheck the view species range map checkbox and trigger change to clear visible layers and hide legend
+							$('#' + this.appDiv.id + 'rMapCb').prop( "checked", false ); 
+							$('#' + this.appDiv.id + 'rMapCb').trigger("change");
+							// Hide species details box, update header text, and clear any selected row  
+							$('#' + this.appDiv.id + 'spDetails').slideUp();
+							$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
+							this.config.detailsVis = "none";
+							$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
+							$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
+								if (row.id != ""){						
+									$('#' + row.id).css("background-color", "");
+								}
+							}))
+						}	
+					}
+					// Build if setState was called
+					if (this.config.stateSet == "yes"){
+						$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");		
+						// check if species details was visible for setState
+						if (this.config.detailsVis == "inline-block"){
+							$.each(this.items, lang.hitch(this,function(i,v){
+								if (v.Display_Name == this.config.speciesRow){
+									this.atRow = this.items[i];
+									return false;
+								}	
+							}));
+							this.updateSpeciesDetails();
+						}	
+						// Update dropdown menu selections from previous session
+						$("#" + this.appDiv.id + "ch-TAXON").val(this.config.filter[1].value).trigger("chosen:updated");
+						$("#" + this.appDiv.id + "ch-MAX_habavail_up60").val(this.config.filter[2].value).trigger("chosen:updated");
+						$("#" + this.appDiv.id + "ch-fut_rpatch_ratio_cls").val(this.config.filter[3].value).trigger("chosen:updated");
+						$("#" + this.appDiv.id + "ch-Cons_spp").val(this.config.filter[4].value).trigger("chosen:updated");
+						if (this.config.filter[0].value.length > 0){
+							$("#" + this.appDiv.id + "ch-Associations").val(this.config.filter[0].value).trigger("chosen:updated");
+						}	
+						this.config.stateSet = "no";
+						$('#' + this.appDiv.id + 'rMapCb').prop( "checked", true ); 
+						$('#' + this.appDiv.id + 'rMapCb').trigger("change");	
+					}
 				}
 			}, 
 			// add values from items row to species details table
@@ -507,7 +535,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				$('#' + this.appDiv.id + 'spDetails .spd').each(lang.hitch(this,function (i, att){
 					var id = att.id.split('-')[1]
 					if (this.atRow[id] === undefined) {
-					  console.log("found undefined " + id )
 					}else if(this.atRow[id] === null) {
 						$('#' + att.id).html(' null')
 					}else{
@@ -543,7 +570,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							speciesArray.push(v)	
 						}	
 					}));
-					console.log(json)
 					// Set Title
 					$('#' + this.appDiv.id + 'mySpeciesLegend').append("<div style='display:inline;text-decoration:underline;font-weight:bold;margin-top:5px;'>" + this.config.speciesRow + "</div><br>")
 					// build legend items

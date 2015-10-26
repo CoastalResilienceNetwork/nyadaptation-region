@@ -1,9 +1,11 @@
 {
     "visibleLayers": [],
 	"extent": "",
+	"sliderVal": 4,
 	"selectedObId": "",
 	"detailsVis": "none",
 	"sppcode": "",	
+	"speciesRow": "",
 	"stateSet": "no",
 	"filteredIDs": [],
 	"filter": [ 

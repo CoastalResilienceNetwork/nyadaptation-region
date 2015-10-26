@@ -6,12 +6,12 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 <div id='clickTitle' class='clickTitle sectionHeader'>
 	<p>Welcome to the CLIMAD Species app. Hold the Shift key while dragging your mouse over the map to zoom to your area of interest.<p> 
 	
-	<p style='font-weight:bold;margin-left:25px;margin-bottom:-10px;'>Click a Hexagon to Learn More</p>
+	<p class='introBold'>Click a Hexagon to Learn More</p>
 </div>
 <!--Left side floating div that holds the species table and alter message if no species are selected-->
-<div id='leftSide' style='width: 270px; height:482px; float:left; display:none;'>
+<div id='leftSide' class='leftSide'>
 	<div class='selectNone sectionHeader bottomRight' id='selectNone'>Your filter selections returned no results. Please deselect or change your selections to view results.</div>
-	<table id='myTable' class='tablesorter bottomRight' style=''> 
+	<table id='myTable' class='tablesorter bottomRight'> 
 		<thead> 
 			<tr> 
 				<th>Species Name</th> 
@@ -24,8 +24,8 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	</table>
 </div>
 <!--Right side floating div that holds the filter elements and the species details div-->
-<div id='rightSide' style='margin-left:280px; height:350px; margin-bottom:20px; display:none;'>
-	<div class='sectionHeader' style='margin-bottom:5px;'>Filter Results By:</div>
+<div id='rightSide' class='rightSide'>
+	<div class='sectionHeader fiveBottom'>Filter Results By:</div>
 	<div class="selectDivs selectFloat">
 		<!--Select elements are given an id of ch- plus the field name from the attribute table (TAXON in this case). 
 		The option values match known values from the named field in the attribute table. So if someone selects FISH, 
@@ -97,7 +97,7 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	If a field name matches the id of one of the divs below that fields value is placed in the div.
 	If you follow the id naming convention (d- plus field name) you can add or remove divs from this table without changing the javascript and the app will update the correct values-->
 	<div id='spDetails' class='spDetails bottomRight'>
-		<div class='spGroups'> <div class='spd' style='font-weight:bold; text-decoration:underline;' id='d-Display_Name'> </div> </div>	
+		<div class='spGroups'> <div class='spd spd1' id='d-Display_Name'> </div> </div>	
 		<div class='spGroups'> <div class='splabel'>NY Condition Rating:</div><div class='spd' id='d-Condition_C'> </div> </div>
 		<div class='spGroups'> <div class='splabel'>NY Threat Rating:</div><div class='spd' id='d-Threat_C'> </div> </div>
 		<div class='spGroups'> <div class='splabel'>NY Position in Range:</div><div class='spd' id='d-Range_position'> </div> </div>
@@ -134,8 +134,13 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 </div>	
 <!--Key to species details div. Absolutely positioned so it overlaps the species rsesults table when turned on-->
 <div id='spDetailsKey' class='spDetailsKey bottomRight'>
-	<span id='sdkClose' class='sdkClose bottomRight' style='padding:3px;'>X</span>
-	<p style='font-weight:bold;'>Species Details Key</p>
+	<div class='spDKheaderDiv'>
+		<div class='sectionHeader spDKheader'>Species Details Key</div>
+		<a id='sdkClose' class='sdkClose' href='#'>
+			&#10006;
+		</a>
+	</div>
+	
 	<p>A whole bunch of info explaining each field.</p> 
 	<p>You will be informed.</p>
 </div>
