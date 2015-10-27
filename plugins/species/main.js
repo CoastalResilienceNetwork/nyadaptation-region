@@ -238,10 +238,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						$('#' + this.appDiv.id + 'spDetails').slideUp('slow');
 						$('#' + this.appDiv.id + 'myLegendDiv').hide();
 						$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
-						this.spid = -1;
-						this.config.visibleLayers = [this.spid];
-						this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
 						if (this.config.stateSet == "no") {
+							this.spid = -1;
+							this.config.visibleLayers = [this.spid];
+							this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
 							this.config.speciesRow = "";
 							this.config.detailsVis = "none";
 						}
