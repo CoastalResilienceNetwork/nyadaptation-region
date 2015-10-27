@@ -20,64 +20,6 @@
 .bottomRight1{
 	-webkit-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); -moz-box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7); box-shadow:1px 1px 2px 0px rgba(102,102,102,0.7);
 }
-/* Tablesorter table elements 
-table.tablesorter {
-	background-color:none; text-align: left; border-collapse: collapse; overflow: -moz-scrollbars-vertical;  overflow-y: scroll !important; max-height: 460px !important; border-bottom: 1px solid #215973; 
-	margin-top:21px; margin-bottom:0px; display:none;
-}	
-table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	background-color: none; padding: 4px;
-}
-table.tablesorter tbody tr td, table.tablesorter tr td, table.tablesorter thead tr th{
-	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important; font-size:10pt !important;
-}  
-table.tablesorter thead tr .header {
-	background-image: url(bg.gif); background-repeat: no-repeat; background-position: center right; cursor: pointer; background-color: none;
-}
-table.tablesorter tbody td {
-	color: #3D3D3D; padding: 4px; vertical-align: top; background-color: none; border-top: 1px solid #215973; border-left: 1px solid #215973; border-right: 1px solid #215973;
-}
-table.tablesorter tbody tr.odd td {
-	background-color:none;
-}
-table.tablesorter thead > tr  {
-    position: absolute; display: block; padding: 0; margin: 0; top: 60px; left:9px; 
-}
-table.tablesorter tbody > tr:nth-of-type(1) {
-    margin-top: 27px;
-}
-table.tablesorter td, th {
-    width: 174px;
-}
-table.tablesorter td+td, table.tablesorter th+th {
-	width:76px;
-}
-table.tablesorter thead tr .headerSortUp {
-	background-image: url(asc.gif); background-color: none;
-}
-table.tablesorter thead tr .headerSortDown {
-	background-image: url(desc.gif); background-color: none;
-}
-table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-	background-color: none;
-}
-.trclick{
-	cursor:pointer;
-}
-.trclick:hover{
-	color:blue;
-}
-table.tablesorter tbody tr {
-    display: block;
-}
-table.tablesorter tr:hover{
-	background-color:#e3eff5;
-}
-table.tablesorter th {
-	height:20px; border: 1px solid #215973 !important; background-color:white;
-}
-
-
 /* Headers */
 .clickTitle{
 	position:absolute; left:10px; background-color:white; z-index:15;
@@ -93,7 +35,7 @@ table.tablesorter th {
 }
 /* Nothing selected popup */
 .selectNone{
-	position:absolute; top: 40px; width: 272px; left: 6px; z-index:50; background-color:#fff; padding:10px; border: 1px solid #215973; display:none; color: #a14612;
+	position:absolute; top: 122px; width: 270px; left: 8px; z-index:50; background-color:#fff; padding:10px; border: 1px solid #215973; display:none; color: #a14612;
 }
 /* Chosen select menu elements */
 .selectDivs{
@@ -110,7 +52,7 @@ table.tablesorter th {
 }
 .chosen-container-single .chosen-default, .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
 	color:#444;
-}
+}	
 .chosen-container-multi .chosen-choices li.search-field input[type="text"], .chosen-container, .search-choice, .active-result, .result-selected{
 	font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif !important;
 	font-size:10pt !important;

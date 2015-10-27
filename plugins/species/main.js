@@ -33,6 +33,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				this.items = [];
 				this.itemsFiltered = [];
 				this.atRow = [];
+				this.firstRun = "yes";
 				this.url = "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_York/NY_CLIMAD_species/MapServer"
 			},
 			// Called after initialize at plugin startup (why all the tests for undefined). Also called after deactivate when user closes app by clicking X. 
@@ -189,7 +190,20 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							stickyHeaders_attachTo : '.wrapper',
 							stickyHeaders_includeCaption: false // or $('.wrapper')
 						}
-					}); 
+					})	
+					.bind('filterEnd',lang.hitch(this,function(e, filter){					
+						if ( filter.filteredRows == 0 && filter.totalRows > 0){
+							$('#' + this.appDiv.id + 'selectNone').slideDown('fast');
+							this.noneSelected();							
+						}else{
+							if (this.config.stateSet == "no"){
+								this.config.tsFilters = $.tablesorter.getFilters( $('table') );
+								$('#' + this.appDiv.id + 'selectNone').slideUp('fast');
+							}
+						}
+						console.log(this.config.tsFilters);
+					}));
+					
 				}));	
 				// Enable jquery plugin 'chosen'
 				require(["jquery", "plugins/species/js/chosen.jquery"],lang.hitch(this,function($) {
@@ -227,8 +241,10 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						this.spid = -1;
 						this.config.visibleLayers = [this.spid];
 						this.dynamicLayer.setVisibleLayers(this.config.visibleLayers); 
-						this.config.detailsVis = "none";
-						this.config.speciesRow = "";
+						if (this.config.stateSet == "no") {
+							this.config.speciesRow = "";
+							this.config.detailsVis = "none";
+						}
 						this.config.selectedObId = features[0].attributes.OBJECTID_12_13;
 						var relatedTopsQuery = new esri.tasks.RelationshipQuery();
 						relatedTopsQuery.outFields = ["*"];
@@ -239,11 +255,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							this.items = $.map(fset.features, function(feature) {
 								return feature.attributes;
 							});
-							if (this.config.filter[0].value.length > 0 || this.config.filter[1].value.length > 0 || this.config.filter[2].value.length > 0 || this.config.filter[3].value.length > 0 || this.config.filter[4].value.length > 0){
-								this.filterItems();
-							}else{
-								this.updateTable(this.items);
-							}
+							this.updateTable(this.items);
 						}));
 					}
 				}));
@@ -282,7 +294,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 							return false;
 						}		
 					}));
-					// Figure out sepecies code and see if it's in the map service
+					// Figure out species code and see if it's in the map service
 					this.config.sppcode = this.atRow.sppcode;
 					$.each(this.layersArray, lang.hitch(this,function(i,v){
 						if (v.name == this.config.sppcode){
@@ -368,16 +380,26 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 								}	
 							}))								
 						}
+						// Remove filtered2 class from all rows to make them visible. If anything is filtered the class will be added back to the correct row in the filterItems function
+						$("#" + this.appDiv.id + "myTable tr.trclick").each(lang.hitch(this,function (i, row){
+							$(row).removeClass("filtered2");
+						}))
 						// No items are selected
 						if (this.config.filter[0].value.length == 0 && this.config.filter[1].value.length == 0 && this.config.filter[2].value.length == 0 && this.config.filter[3].value.length == 0 && this.config.filter[4].value.length == 0){
-							this.updateTable(this.items);
 							this.itemsFiltered = [];
+							// Check if Species or Taxon filters have hidden every row on their own. If they have every row will have 3 classes (trclick, odd or even, and filtered).
+							// If one row has less than 3 classes (meaning filtered is missing) then the Species/Taxon filter will return a visible row so we need to hide the selectNone div
+							$("#" + this.appDiv.id + "myTable tr.trclick").each(lang.hitch(this,function (i, row){
+								var c = $(row).attr('class').split(/\s+/);
+								if (c.length < 3){
+									$('#' + this.appDiv.id + 'selectNone').slideUp('fast');
+								}		
+							}))
 						}
 						// At least one item is selected
 						else{
 							this.filterItems()
 						}	
-					
 					}));
 				}));
 				this.rendered = true;				
@@ -388,7 +410,6 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 				this.itemsFiltered = this.items.slice();	
 				// Loop throuhg filter object and remove non-matches from itemsFiltered
 				$.each(this.config.filter, lang.hitch(this,function(i,v){
-					this.removeArray = [];
 					this.keepArray = [];
 					// Find non-matching item positions and add to removeArray
 					// For multi-select menu
@@ -409,7 +430,7 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 									}
 								}));
 								if (this.remove == "yes"){
-									this.removeArray.push(i)
+									this.hideRow(v.Display_Name)
 								}	
 							}));						
 						}	
@@ -419,134 +440,118 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 						if (v.value != ""){
 							$.each(this.itemsFiltered, lang.hitch(this,function(i2,v2){
 								if (v2[v.field] != v.value){
-									this.removeArray.push(i2)
+									this.hideRow(v2.Display_Name)
 								}	
 							}));									
 						}
 					}	
-					// Sort array largest to smallest
-					this.removeArray = this.removeArray.sort(function (a, b) { return b - a; });
-					// Remove non-matching items from itemsFiltered object	
-					$.each(this.removeArray, lang.hitch(this,function(i3,v3){
-						this.itemsFiltered.splice(v3, 1)
-					}));	
 				}));
-				
-				this.updateTable(this.itemsFiltered);
-			},	
-			// Build tabele rows based on map click or itemsFiltered objects
-			updateTable: function (items){
-				// Show/hide message that no results were found 
-				if (items.length == 0){
+				// If no rows visible (number of filtered items equlas number of data rows), show message to clear some filters
+				if ( $("#" + this.appDiv.id + "myTable tr.filtered2").length == $("#" + this.appDiv.id + "myTable tr.trclick").length ){
 					$('#' + this.appDiv.id + 'selectNone').slideDown('fast');
 				}else{
-					// Clear table rows and hide None Selected Div
-					$('#' + this.appDiv.id + 'myTable tbody tr').remove()				
 					$('#' + this.appDiv.id + 'selectNone').slideUp('fast');
-					// Sort items by Display_Name
-					function compare(a,b) {
-						if (a.Display_Name < b.Display_Name){
-							return -1;
-						}
-						if (a.Display_Name > b.Display_Name){
-							return 1;
-						}	
-						return 0;
-					}
-					items = items.sort(compare);
-					// Add rows
-					this.rowType = "even";
-					$.each(items, lang.hitch(this,function(i,v){
-						if (v.Display_Name != "Unknown"){
-							if (this.rowType == "even"){
-								this.rowType = "odd";	
-							}else{
-								this.rowType = "even";
-							}	
-							var newRow ="<tr class='trclick " + this.rowType +"' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
-							$('#' + this.appDiv.id + 'myTable tbody').append(newRow)
-						}
-					}));
-					// Update table
-					require(["jquery", "plugins/species/js/jquery.tablesorter.combined"],lang.hitch(this,function($) {
-						$('#' + this.appDiv.id + 'myTable').trigger("update");
-					}));
-					$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
-					$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
-					//Resize main container - check which side first
-					if (this.mapSide == "map-1_container"){
-						this.useCon = this.con1;
-					}else{
-						this.useCon = this.con;
-					}
-					if ($(this.useCon).width() < 300){
-						$( this.useCon ).animate({
-							width: "580",
-							height: "573px"
-						}, 500 , lang.hitch(this,function() {
-							$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'block');
-							$('#' + this.appDiv.id + 'bottomDiv').show();
-							this.resize();	
-						}));
-						
-					}	
-					// Should visible layers stay on after filter 
-					if (this.config.visibleLayers[0] != -1){
-						var madeIt = "no";
-						// Test if the visible layer made it through the latest filter
-						$.each(items, lang.hitch(this,function(i,v){
-							if (v.Display_Name == this.config.speciesRow){
-								madeIt = "yes";
-							}	
-						}));
-						// Species range map was turned on and survived the filter
-						if (madeIt == "yes"){
-							// Highlight selected row on table
-							$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").addClass("selected");			
-						}	
-						// Species range map was on but was filtered away. 
-						if (madeIt == "no"){
-							// Uncheck the view species range map checkbox and trigger change to clear visible layers and hide legend
-							$('#' + this.appDiv.id + 'rMapCb').prop( "checked", false ); 
-							$('#' + this.appDiv.id + 'rMapCb').trigger("change");
-							// Hide species details box, update header text, and clear any selected row  
-							$('#' + this.appDiv.id + 'spDetails').slideUp();
-							$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
-							this.config.detailsVis = "none";
-							$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
-							$('#' + this.appDiv.id + 'myTable tr').each(lang.hitch(this,function (i, row){
-								if (row.id != ""){						
-									$('#' + row.id).removeClass("selected");
-								}
-							}))
-						}	
-					}
-					// Build if setState was called
-					if (this.config.stateSet == "yes"){
-						$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").css("background-color", "#abcfe1");		
-						// check if species details was visible for setState
-						if (this.config.detailsVis == "inline-block"){
-							$.each(this.items, lang.hitch(this,function(i,v){
-								if (v.Display_Name == this.config.speciesRow){
-									this.atRow = this.items[i];
-									return false;
-								}	
-							}));
-							this.updateSpeciesDetails();
-						}	
-						// Update dropdown menu selections from previous session
-						$("#" + this.appDiv.id + "ch-TAXON").val(this.config.filter[1].value).trigger("chosen:updated");
-						$("#" + this.appDiv.id + "ch-MAX_habavail_up60").val(this.config.filter[2].value).trigger("chosen:updated");
-						$("#" + this.appDiv.id + "ch-fut_rpatch_ratio_cls").val(this.config.filter[3].value).trigger("chosen:updated");
-						$("#" + this.appDiv.id + "ch-Cons_spp").val(this.config.filter[4].value).trigger("chosen:updated");
-						if (this.config.filter[0].value.length > 0){
-							$("#" + this.appDiv.id + "ch-Associations").val(this.config.filter[0].value).trigger("chosen:updated");
-						}	
-						this.config.stateSet = "no";
-						$('#' + this.appDiv.id + 'rMapCb').prop( "checked", true ); 
-						$('#' + this.appDiv.id + 'rMapCb').trigger("change");	
-					}
+				}	
+			},	
+			// Hide rows filtered by chosen selects
+			hideRow: function (rowName){
+				// Add filterer2 class to hide the row
+				$("#" + this.appDiv.id + "myTable tr:contains('"+ rowName +"')").addClass("filtered2")
+				// Get species name from selected row and check to see if the selected row is being hidden
+				var selRow = $('tr.selected').find('td')
+				if ( $(selRow[0]).html() == rowName ){
+					this.noneSelected();
 				}
+			},			
+			// Build tabele rows based on map click or itemsFiltered objects
+			updateTable: function (items){
+				// Clear table rows 
+				$('#' + this.appDiv.id + 'myTable tbody tr').remove()				
+				// Sort items by Display_Name
+				function compare(a,b) {
+					if (a.Display_Name < b.Display_Name){
+						return -1;
+					}
+					if (a.Display_Name > b.Display_Name){
+						return 1;
+					}	
+					return 0;
+				}
+				items = items.sort(compare);
+				// Add rows
+				this.rowType = "even";
+				$.each(items, lang.hitch(this,function(i,v){
+					if (v.Display_Name != "Unknown"){
+						if (this.rowType == "even"){
+							this.rowType = "odd";	
+						}else{
+							this.rowType = "even";
+						}	
+						var newRow ="<tr class='trclick " + this.rowType +"' id='" + this.appDiv.id + "row-" + i + "'><td>" + v.Display_Name + "</td><td>" + v.TAXON + "</td></tr>" ;
+						$('#' + this.appDiv.id + 'myTable tbody').append(newRow)
+					}
+				}));
+				// Update table
+				require(["jquery", "plugins/species/js/jquery.tablesorter.combined"],lang.hitch(this,function($) {
+					$('#' + this.appDiv.id + 'myTable').trigger("update");
+				}));
+				$('#' + this.appDiv.id + 'clickTitle').html('Species in Selected Hexagon')
+				$('#' + this.appDiv.id + 'spDetailsHeader').html('<img src="plugins/species/images/leftArrow.png" width="20" alt="left arrow">  Click Rows for Species Details')
+				//Resize main container - check which side first
+				if (this.mapSide == "map-1_container"){
+					this.useCon = this.con1;
+				}else{
+					this.useCon = this.con;
+				}
+				if ($(this.useCon).width() < 300){
+					$( this.useCon ).animate({
+						width: "580",
+						height: "573px"
+					}, 500 , lang.hitch(this,function() {
+						$('#' + this.appDiv.id + 'myTable, #' + this.appDiv.id + 'leftSide, #' + this.appDiv.id + 'rightSide').css('display', 'block');
+						$('#' + this.appDiv.id + 'bottomDiv').show();
+						this.resize();	
+					}));
+					
+				}	
+				// Build if setState was called
+				if (this.config.stateSet == "yes"){
+					$("#" + this.appDiv.id + "myTable tr:contains('"+ this.config.speciesRow +"')").addClass("selected");		
+					// check if species details was visible for setState
+					if (this.config.detailsVis == "inline-block"){
+						$.each(this.items, lang.hitch(this,function(i,v){
+							if (v.Display_Name == this.config.speciesRow){
+								this.atRow = this.items[i];
+								return false;
+							}	
+						}));
+						this.updateSpeciesDetails();
+					}	
+					// Update dropdown menu selections from previous session
+					$("#" + this.appDiv.id + "ch-TAXON").val(this.config.filter[1].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-MAX_habavail_up60").val(this.config.filter[2].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-fut_rpatch_ratio_cls").val(this.config.filter[3].value).trigger("chosen:updated");
+					$("#" + this.appDiv.id + "ch-Cons_spp").val(this.config.filter[4].value).trigger("chosen:updated");
+					if (this.config.filter[0].value.length > 0){
+						$("#" + this.appDiv.id + "ch-Associations").val(this.config.filter[0].value).trigger("chosen:updated");
+					}	
+					if (this.config.filter[0].value.length > 0 || this.config.filter[1].value.length > 0 || this.config.filter[2].value.length > 0 || this.config.filter[3].value.length > 0 || this.config.filter[4].value.length > 0){
+						this.filterItems();
+					}
+					this.config.stateSet = "no";
+					$('#' + this.appDiv.id + 'rMapCb').prop( "checked", true ); 
+					$('#' + this.appDiv.id + 'rMapCb').trigger("change");	
+					// Update the tablesorter filter on Species Name and Taxon
+					require(["jquery", "plugins/species/js/jquery.tablesorter.combined"],lang.hitch(this,function($) {
+						$.tablesorter.setFilters( $('table'), this.config.tsFilters, true );
+						console.log("made it")
+					}));	
+				}
+				else{
+					if (this.config.filter[0].value.length > 0 || this.config.filter[1].value.length > 0 || this.config.filter[2].value.length > 0 || this.config.filter[3].value.length > 0 || this.config.filter[4].value.length > 0){
+						this.filterItems();
+					}	
+				}	
 			}, 
 			// add values from items row to species details table
 			updateSpeciesDetails: function(){
@@ -600,6 +605,19 @@ function ( declare, PluginBase, FeatureLayer, SimpleLineSymbol, SimpleFillSymbol
 					var hw = { height: h + 'px', width: w + 'px' }	
 					$('#' + this.appDiv.id + 'myLegendDiv').css(hw);
 				})); 	
+			},
+			noneSelected: function(){
+				// Uncheck the view species range map checkbox and trigger change to clear visible layers and hide legend
+				$('#' + this.appDiv.id + 'rMapCb').prop( "checked", false ); 
+				$('#' + this.appDiv.id + 'rMapCb').trigger("change");
+				// Hide species details box, update header text, and clear any selected row  
+				$('#' + this.appDiv.id + 'spDetails').slideUp();
+				$('#' + this.appDiv.id + 'rmText').html('Show Range Map On Selection');
+				this.config.detailsVis = "none";
+				$('#' + this.appDiv.id + 'spDetailsHeader').html('&#8592; Click Rows for Species Details')
+				$("#" + this.appDiv.id + "myTable tr.trclick").each(lang.hitch(this,function (i, row){
+					$(row).removeClass("selected");
+				}));	
 			}	
 		});
 	});						   

@@ -20,7 +20,7 @@
 	top:0px;
 	left:0px;
 	margin:0;	
-	width: 100%;
+	table-width:fixed;
 	background-color: #fff;
 	text-align: left;
 	border-spacing: 0;
@@ -244,12 +244,17 @@ caption {
 	-moz-transition: height 0.1s ease;
 	-o-transition: height 0.1s ease;
 	transition: height 0.1s ease;
+	-moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.6) inset;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.6) inset;
 }
 /* rows hidden by filtering (needed for child rows) */
 .tablesorter .filtered {
 	display: none;
 }
-
+.tablesorter .filtered2 {
+	display: none;
+}
 /* ajax error row */
 .tablesorter .tablesorter-errorRow td {
 	text-align: center;
