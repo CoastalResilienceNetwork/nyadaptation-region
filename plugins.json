@@ -7,10 +7,6 @@
     {
       "repo": "multiexplorer",
       "name": "combined_explorer"
-    },
-	{
-	  "repo": "species-attributes",
-      "name": "species-attributes"	
-	}
+    }
   ]
 }
