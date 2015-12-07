@@ -1,10 +1,6 @@
 {
   "plugins": [
     {
-      "repo": "explorer",
-      "name": "condition_explorer"
-    },
-    {
       "repo": "multiexplorer",
       "name": "combined_explorer"
     },
