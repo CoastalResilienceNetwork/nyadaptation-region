@@ -2,27 +2,15 @@
     "googleAnalyticsPropertyId": "7401895-14",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
     "titleMain": { "text": "Natural Resource Navigator", "url": "http://naturalresourcenavigator.org" },
-    "titleDetail": { "text": "New York Adaptation Toolkit", "url": "http://naturalresourcenavigator.org" },
+    "titleDetail": { "text": "New York Climate Adaptation", "url": "http://naturalresourcenavigator.org" },
 	"headerLinks": [
         { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
-                { "text": "California", "url": "http://maps.coastalresilience.org/california" },
-                { "text": "Connecticut", "url": "http://maps.coastalresilience.org/connecticut" },
-                { "text": "Global", "url": "http://maps.coastalresilience.org/global/" },
-                { "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex/" },
-                { "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
-                { "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
-                { "text": "New York", "url": "http://maps.coastalresilience.org/newyork" },
-                { "text": "New Jersey", "url": "http://maps.coastalresilience.org/newjersey" },
-                { "text": "Southeast Florida", "url": "http://maps.coastalresilience.org/seflorida/" },
-                { "text": "United States", "url": "http://maps.coastalresilience.org/unitedstates/" },
-                { "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
-                { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
+                { "text": "Guidebook", "url": "http://nature.org/newyork" }
             ]
         },
-        { "text": "The Nature Conservancy", "url": "http://nature.org/marine/" },
-        { "text": "Partners", "url": "partners.html", "popup": true },
+        { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
         { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
     ],
     "initialExtent": [
@@ -54,7 +42,7 @@
         "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
     },
     "colors": {
-       "primary": "#26648E",
+       "primary": "#45812B",
        "secondary": "#26648E"
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
