@@ -83,14 +83,14 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "The Adaptation Toolkit is a decision support tool that provides natural resource managers and municipal staff easy access to data on the current condition of, future threats to, and climate change exposure and sensitivity of natural resources across NY and its watersheds. It also provides a structured process for managers to use these data to select the most appropriate climate adaptation options for their particular area or interest. <br><br>Pick a geography to start exploring the data OR a use mode to get help deciding what your best adaptation options are, based on your focus. If you need help figuring out how to start, click on the Tour tab near the top right of the screen, or visit our <a href='http://coastalresilience.org/training' target='_blank'>Training</a> page. <br><br><img src='img/tnc1.png' />&nbsp<img src='img/nyserda.jpeg' />&nbsp<img src='img/NYNHP.jpeg' />",
+            "description": "The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds. Our < a href= 'http://www.naturalresourcenavigator.org/get-started/guidebook/' 'target='_blank'>Climate Adaptation Guidebook</a> helps managers use this webmap as a structured decision support tool to select the most appropriate climate adaptation options for their particular area or interest. <br><br> To <b>launch the Navigator</b>, select an option in Interactive Maps that best matches your interests. For additional help getting started, visit the <a href= 'http://www.naturalresourcenavigator/get-started/examples/' 'target=_blank'>How Do I Begin</a> page. <br><br><center><img src='img/tnc1.png' />&nbsp<img src='img/nyserda.jpeg' />&nbsp<img src='img/NYNHP.jpeg' /></center>",
             "showSubRegions": false,
             "subRegionDescription": "Choose a specific region and it will take you there, or you can freely explore the map.",
             "showByDefault": true,
             "categories": [
               {
-                "name": "Select a Use Mode",
-                "description": "Choose a specific region and it will take you to the recommendations map for that area, as well as allow you to explore the full suite of data and priority maps and make a custom map.",
+                "name": "Interactive Maps",
+                "description": "Choose a button to take you to our analysis tools. After picking a button, you will be able to explore the full suite of data and make a custom map.",
                 "issues": [
                     {
                       "name": "Explore the map",
