@@ -15,8 +15,7 @@
                                 {"id":5, "parentLayerId":-1 },
                                 {"id":6, "parentLayerId":-1 },
                                 {"id":7, "parentLayerId":-1 },
-                                {"id":8, "parentLayerId":-1 },
-                                {"id":9, "parentLayerId":-1 }
+                                {"id":8, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -25,7 +24,8 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Protection", "showLayers": [
-                                {"id":11, "parentLayerId":-1 },
+                                {"id":10, "parentLayerId":-1 },
+								{"id":11, "parentLayerId":-1 },
                                 {"id":12, "parentLayerId":-1 }
                             ]
                         }
@@ -41,7 +41,9 @@
                                 {"id":18, "parentLayerId":-1 },
                                 {"id":19, "parentLayerId":-1 },
                                 {"id":20, "parentLayerId":-1 },
-                                {"id":21, "parentLayerId":-1 }
+                                {"id":21, "parentLayerId":-1 },
+								{"id":22, "parentLayerId":-1 },
+								{"id":23, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -50,12 +52,12 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Threats", "showLayers": [
-                                {"id":23, "parentLayerId":-1 },
-                                {"id":24, "parentLayerId":-1 },
                                 {"id":25, "parentLayerId":-1 },
                                 {"id":26, "parentLayerId":-1 },
                                 {"id":27, "parentLayerId":-1 },
-                                {"id":28, "parentLayerId":-1 }
+                                {"id":28, "parentLayerId":-1 },
+                                {"id":29, "parentLayerId":-1 },
+                                {"id":30, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -64,11 +66,11 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Climate Sensitivity", "showLayers": [
-                                {"id":30, "parentLayerId":-1 },
-                                {"id":31, "parentLayerId":-1 },
                                 {"id":32, "parentLayerId":-1 },
                                 {"id":33, "parentLayerId":-1 },
-                                {"id":34, "parentLayerId":-1 }
+                                {"id":34, "parentLayerId":-1 },
+                                {"id":35, "parentLayerId":-1 },
+                                {"id":36, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -77,13 +79,15 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Climate Exposure", "showLayers": [
-                                {"id":36, "parentLayerId":-1 },
-                                {"id":37, "parentLayerId":-1 },
                                 {"id":38, "parentLayerId":-1 },
                                 {"id":39, "parentLayerId":-1 },
                                 {"id":40, "parentLayerId":-1 },
                                 {"id":41, "parentLayerId":-1 },
-                                {"id":42, "parentLayerId":-1 }
+                                {"id":42, "parentLayerId":-1 },
+                                {"id":43, "parentLayerId":-1 },
+                                {"id":44, "parentLayerId":-1 },
+								{"id":45, "parentLayerId":-1 },
+								{"id":46, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -92,11 +96,13 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Recommendations", "showLayers": [
-                                {"id":44, "parentLayerId":-1 },
-                                {"id":45, "parentLayerId":-1 },
-                                {"id":46, "parentLayerId":-1 },
-                                {"id":47, "parentLayerId":-1 },
-                                {"id":48, "parentLayerId":-1 }
+                                {"id":48, "parentLayerId":-1 },
+                                {"id":49, "parentLayerId":-1 },
+                                {"id":50, "parentLayerId":-1 },
+                                {"id":51, "parentLayerId":-1 },
+                                {"id":52, "parentLayerId":-1 },
+								{"id":53, "parentLayerId":-1 },
+								{"id":54, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -105,15 +111,15 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Supporting data", "showLayers": [
-                                {"id":50, "parentLayerId":-1 },
-                                {"id":51, "parentLayerId":-1 },
-                                {"id":52, "parentLayerId":-1 },
-                                {"id":53, "parentLayerId":-1 },
-                                {"id":54, "parentLayerId":-1 },
-                                {"id":55, "parentLayerId":-1 },
                                 {"id":56, "parentLayerId":-1 },
                                 {"id":57, "parentLayerId":-1 },
-                                {"id":58, "parentLayerId":-1 }
+                                {"id":58, "parentLayerId":-1 },
+                                {"id":59, "parentLayerId":-1 },
+                                {"id":60, "parentLayerId":-1 },
+                                {"id":61, "parentLayerId":-1 },
+                                {"id":62, "parentLayerId":-1 },
+                                {"id":63, "parentLayerId":-1 },
+                                {"id":64, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -122,12 +128,13 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Condition", "showLayers": [
-                                {"id":61, "parentLayerId":-1 },
-                                {"id":62, "parentLayerId":-1 },
-                                {"id":63, "parentLayerId":-1 },
-                                {"id":64, "parentLayerId":-1 },
-                                {"id":65, "parentLayerId":-1 },
-                                {"id":66, "parentLayerId":-1 }
+                                {"id":67, "parentLayerId":-1 },
+                                {"id":68, "parentLayerId":-1 },
+                                {"id":69, "parentLayerId":-1 },
+                                {"id":70, "parentLayerId":-1 },
+                                {"id":71, "parentLayerId":-1 },
+                                {"id":72, "parentLayerId":-1 },
+								{"id":73, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -136,13 +143,6 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Threats", "showLayers": [
-                                {"id":68, "parentLayerId":-1 },
-                                {"id":69, "parentLayerId":-1 },
-                                {"id":70, "parentLayerId":-1 },
-                                {"id":71, "parentLayerId":-1 },
-                                {"id":72, "parentLayerId":-1 },
-                                {"id":73, "parentLayerId":-1 },
-                                {"id":74, "parentLayerId":-1 },
                                 {"id":75, "parentLayerId":-1 },
                                 {"id":76, "parentLayerId":-1 },
                                 {"id":77, "parentLayerId":-1 },
@@ -155,7 +155,13 @@
                                 {"id":84, "parentLayerId":-1 },
                                 {"id":85, "parentLayerId":-1 },
                                 {"id":86, "parentLayerId":-1 },
-                                {"id":87, "parentLayerId":-1 }
+                                {"id":87, "parentLayerId":-1 },
+                                {"id":88, "parentLayerId":-1 },
+                                {"id":89, "parentLayerId":-1 },
+                                {"id":90, "parentLayerId":-1 },
+                                {"id":91, "parentLayerId":-1 },
+                                {"id":92, "parentLayerId":-1 },
+                                {"id":93, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -164,12 +170,12 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Climate Sensitivity", "showLayers": [
-                                {"id":89, "parentLayerId":-1 },
-                                {"id":90, "parentLayerId":-1 },
-                                {"id":91, "parentLayerId":-1 },
-                                {"id":92, "parentLayerId":-1 },
-                                {"id":93, "parentLayerId":-1 },
-                                {"id":94, "parentLayerId":-1 }
+                                {"id":95, "parentLayerId":-1 },
+                                {"id":96, "parentLayerId":-1 },
+                                {"id":97, "parentLayerId":-1 },
+                                {"id":98, "parentLayerId":-1 },
+                                {"id":99, "parentLayerId":-1 },
+                                {"id":100, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -178,12 +184,14 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Climate Exposure", "showLayers": [
-                                {"id":96, "parentLayerId":-1 },
-                                {"id":97, "parentLayerId":-1 },
-                                {"id":98, "parentLayerId":-1 },
-                                {"id":99, "parentLayerId":-1 },
-                                {"id":100, "parentLayerId":-1 },
-                                {"id":101, "parentLayerId":-1 }
+                                {"id":102, "parentLayerId":-1 },
+                                {"id":103, "parentLayerId":-1 },
+                                {"id":104, "parentLayerId":-1 },
+                                {"id":105, "parentLayerId":-1 },
+                                {"id":106, "parentLayerId":-1 },
+                                {"id":107, "parentLayerId":-1 },
+								{"id":108, "parentLayerId":-1 },
+								{"id":109, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -192,11 +200,13 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Recommendations", "showLayers": [
-                                {"id":103, "parentLayerId":-1 },
-                                {"id":104, "parentLayerId":-1 },
-                                {"id":105, "parentLayerId":-1 },
-                                {"id":106, "parentLayerId":-1 },
-                                {"id":107, "parentLayerId":-1 }
+                                {"id":111, "parentLayerId":-1 },
+                                {"id":112, "parentLayerId":-1 },
+                                {"id":113, "parentLayerId":-1 },
+                                {"id":114, "parentLayerId":-1 },
+                                {"id":115, "parentLayerId":-1 },
+								{"id":116, "parentLayerId":-1 },
+								{"id":117, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -205,13 +215,14 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Forests: Supporting data", "showLayers": [
-                                {"id":109, "parentLayerId":-1 },
-                                {"id":110, "parentLayerId":-1 },
-                                {"id":111, "parentLayerId":-1 },
-                                {"id":112, "parentLayerId":-1 },
-                                {"id":113, "parentLayerId":-1 },
-                                {"id":114, "parentLayerId":-1 },
-                                {"id":115, "parentLayerId":-1 }
+                                {"id":119, "parentLayerId":-1 },
+                                {"id":120, "parentLayerId":-1 },
+                                {"id":121, "parentLayerId":-1 },
+                                {"id":122, "parentLayerId":-1 },
+                                {"id":123, "parentLayerId":-1 },
+                                {"id":124, "parentLayerId":-1 },
+                                {"id":125, "parentLayerId":-1 },
+							    {"id":126, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -220,9 +231,9 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Non-Forested Uplands", "showLayers": [
-                                {"id":117, "parentLayerId":-1 },
-                                {"id":118, "parentLayerId":-1 },
-                                {"id":119, "parentLayerId":-1 }
+                                {"id":129, "parentLayerId":-1 },
+                                {"id":130, "parentLayerId":-1 },
+                                {"id":131, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -230,13 +241,13 @@
                 {
                     "name": "",
                     "services": [
-                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Wetlands", "showLayers": [
-                                {"id":121, "parentLayerId":-1 },
-                                {"id":122, "parentLayerId":121 },
-                                {"id":123, "parentLayerId":-1 },
-                                {"id":124, "parentLayerId":123 },
-                                {"id":125, "parentLayerId":123 },
-                                {"id":126, "parentLayerId":123 }
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Wetlands", "showLayers" : [
+                                {"id":133, "parentLayerId":-1 },
+                                {"id":134, "parentLayerId":133 },
+                                {"id":135, "parentLayerId":-1 },
+                                {"id":136, "parentLayerId":135 },
+                                {"id":137, "parentLayerId":135 },
+                                {"id":138, "parentLayerId":135 }
                             ]
                         }
                     ]
@@ -245,33 +256,25 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Climate", "showLayers": [
-                                {"id":128, "parentLayerId":-1 },
-                                {"id":129, "parentLayerId":-1 },
-                                {"id":130, "parentLayerId":-1 },
-                                {"id":131, "parentLayerId":-1 },
-                                {"id":132, "parentLayerId":-1 },
-                                {"id":133, "parentLayerId":-1 },
-                                {"id":134, "parentLayerId":-1 },
-                                {"id":135, "parentLayerId":-1 },
-                                {"id":136, "parentLayerId":-1 },
-                                {"id":137, "parentLayerId":-1 }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "",
-                    "services": [
-                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Ecosystem Services", "showLayers": [
-                                {"id":139, "parentLayerId":-1 },
-                                {"id":140, "parentLayerId":139 },
-                                {"id":141, "parentLayerId":139 },
-                                {"id":142, "parentLayerId":139 },
-                                {"id":143, "parentLayerId":139 },
+                                {"id":140, "parentLayerId":-1 },
+                                {"id":141, "parentLayerId":-1 },
+                                {"id":142, "parentLayerId":-1 },
+                                {"id":143, "parentLayerId":-1 },
                                 {"id":144, "parentLayerId":-1 },
-                                {"id":145, "parentLayerId":144 },
-                                {"id":146, "parentLayerId":144 },
-                                {"id":147, "parentLayerId":144 }
+                                {"id":145, "parentLayerId":-1 },
+                                {"id":146, "parentLayerId":-1 },
+                                {"id":147, "parentLayerId":-1 },
+                                {"id":148, "parentLayerId":-1 },
+                                {"id":149, "parentLayerId":-1 },
+                                {"id":150, "parentLayerId":-1 },
+                                {"id":151, "parentLayerId":-1 },
+                                {"id":152, "parentLayerId":-1 },
+                                {"id":153, "parentLayerId":-1 },
+                                {"id":154, "parentLayerId":-1 },
+                                {"id":155, "parentLayerId":-1 },
+                                {"id":156, "parentLayerId":-1 },
+                                {"id":157, "parentLayerId":-1 },
+                                {"id":158, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -279,38 +282,55 @@
                 {
                     "name": "",
                     "services": [
-                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Freshwater Flooding", "showLayers": [
-                                {"id":149, "parentLayerId":-1 },
-                                {"id":150, "parentLayerId":149 },
-                                {"id":151, "parentLayerId":149 },
-                                {"id":152, "parentLayerId":149 },
-                                {"id":153, "parentLayerId":149 },
-                                {"id":154, "parentLayerId":149 },
-                                {"id":155, "parentLayerId":149 },
-                                {"id":156, "parentLayerId":-1 },
-                                {"id":157, "parentLayerId":156 },
-                                {"id":158, "parentLayerId":156 },
-                                {"id":159, "parentLayerId":-1 },
-                                {"id":160, "parentLayerId":159 },
-                                {"id":161, "parentLayerId":159 },
-                                {"id":162, "parentLayerId":159 },
-                                {"id":163, "parentLayerId":159 },
-                                {"id":164, "parentLayerId":159 },
-                                {"id":165, "parentLayerId":159 },
-                                {"id":166, "parentLayerId":-1 },
-                                {"id":167, "parentLayerId":166 },
-                                {"id":168, "parentLayerId":166 },
-                                {"id":169, "parentLayerId":166 },
-                                {"id":170, "parentLayerId":166 },
-                                {"id":171, "parentLayerId":-1 },
-                                {"id":172, "parentLayerId":171 },
-                                {"id":173, "parentLayerId":171 },
-                                {"id":174, "parentLayerId":171 },
-                                {"id":175, "parentLayerId":171 },
-                                {"id":176, "parentLayerId":171 },
-                                {"id":177, "parentLayerId":171 },
-                                {"id":178, "parentLayerId":171 },
-                                {"id":179, "parentLayerId":171 }
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Ecosystem Services", "showLayers" : [
+                                {"id":160, "parentLayerId":-1 },
+                                {"id":161, "parentLayerId":160 },
+                                {"id":162, "parentLayerId":160 },
+                                {"id":163, "parentLayerId":160 },
+                                {"id":164, "parentLayerId":160 },
+                                {"id":165, "parentLayerId":-1 },
+                                {"id":166, "parentLayerId":165 },
+                                {"id":167, "parentLayerId":165 },
+                                {"id":168, "parentLayerId":165 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Freshwater Flooding", "showLayers" : [
+                                {"id":170, "parentLayerId":-1 },
+                                {"id":171, "parentLayerId":170 },
+                                {"id":172, "parentLayerId":170 },
+                                {"id":173, "parentLayerId":170 },
+                                {"id":174, "parentLayerId":170 },
+                                {"id":175, "parentLayerId":170 },
+                                {"id":176, "parentLayerId":170 },
+                                {"id":177, "parentLayerId":-1 },
+                                {"id":178, "parentLayerId":177 },
+                                {"id":179, "parentLayerId":177 },
+                                {"id":180, "parentLayerId":-1 },
+                                {"id":181, "parentLayerId":180 },
+                                {"id":182, "parentLayerId":180 },
+                                {"id":183, "parentLayerId":180 },
+                                {"id":184, "parentLayerId":180 },
+                                {"id":185, "parentLayerId":180 },
+                                {"id":186, "parentLayerId":180 },
+                                {"id":187, "parentLayerId":-1 },
+                                {"id":188, "parentLayerId":187 },
+                                {"id":189, "parentLayerId":187 },
+                                {"id":190, "parentLayerId":187 },
+                                {"id":191, "parentLayerId":187 },
+                                {"id":192, "parentLayerId":-1 },
+                                {"id":193, "parentLayerId":192 },
+                                {"id":194, "parentLayerId":192 },
+                                {"id":195, "parentLayerId":192 },
+                                {"id":196, "parentLayerId":192 },
+                                {"id":197, "parentLayerId":192 },
+                                {"id":198, "parentLayerId":192 },
+                                {"id":199, "parentLayerId":192 },
+                                {"id":200, "parentLayerId":192 }
                             ]
                         }
                     ]
@@ -319,11 +339,11 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Landuse/Landcover (LULC)", "showLayers": [
-                                {"id":181, "parentLayerId":-1 },
-                                {"id":182, "parentLayerId":-1 },
-                                {"id":183, "parentLayerId":-1 },
-                                {"id":184, "parentLayerId":-1 },
-                                {"id":185, "parentLayerId":-1 }
+                                {"id":202, "parentLayerId":-1 },
+                                {"id":203, "parentLayerId":-1 },
+                                {"id":204, "parentLayerId":-1 },
+                                {"id":205, "parentLayerId":-1 },
+                                {"id":206, "parentLayerId":-1 }
                             ]
                         }
                     ]
@@ -332,8 +352,15 @@
                     "name": "",
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Topography", "showLayers": [
-                                {"id":187, "parentLayerId":-1 }
+                                {"id":208, "parentLayerId":-1 }
                             ]
+                        }
+                    ]
+                },
+				{
+					"name": "",
+                    "services": [
+						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species"
                         }
                     ]
                 }
