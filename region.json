@@ -23,10 +23,10 @@
         { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
     ],
     "initialExtent": [
-        -74.45,
-        40.41,
-        -71.7,
-        41.27
+        -80.55,
+        40.13,
+        -70.70,
+        45.33
     ],
     "basemaps": [
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
