@@ -35,6 +35,7 @@
     ],
     "pluginOrder": [
         "layer_selector",
+		"habitat_explorer",
         "zoom_to",
         "measure",
         "legend_display",
