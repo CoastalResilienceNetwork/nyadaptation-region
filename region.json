@@ -40,12 +40,6 @@
     ],
     "pluginOrder": [
         "layer_selector",
-	"flood_slr",
-	"risk_explorer",
-	"future_habitat",
-	"community_planning",
-	"habitat_explorer",
-        "measure"
     ],
     "print": {
         "printServerUrl": "http://services.coastalresilience.org/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
