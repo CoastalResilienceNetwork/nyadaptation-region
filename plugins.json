@@ -1,9 +1,5 @@
 {
   "plugins": [
-    {
-      "repo": "multiexplorer",
-      "name": "combined_explorer"
-    },
 	{
       "repo": "species",
       "name": "species"
