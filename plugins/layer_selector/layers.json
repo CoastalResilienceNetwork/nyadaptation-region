@@ -7,7 +7,7 @@
 				{
 					"name": "",
                     "services": [
-						{ "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Boundaries & Reference", "showLayers": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Boundaries & Reference", "showLayers": [
                                 {"id":1, "parentLayerId":-1 },
                                 {"id":2, "parentLayerId":-1 },
                                 {"id":3, "parentLayerId":-1 },
@@ -25,7 +25,7 @@
                     "services": [
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Protection", "showLayers": [
                                 {"id":10, "parentLayerId":-1 },
-								{"id":11, "parentLayerId":-1 },
+                                {"id":11, "parentLayerId":-1 },
                                 {"id":12, "parentLayerId":-1 }
                             ]
                         }
@@ -34,16 +34,58 @@
                 {
                     "name": "",
                     "services": [
-                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams: Condition", "showLayers": [
-                                {"id":15, "parentLayerId":-1 },
-                                {"id":16, "parentLayerId":-1 },
-                                {"id":17, "parentLayerId":-1 },
-                                {"id":18, "parentLayerId":-1 },
-                                {"id":19, "parentLayerId":-1 },
-                                {"id":20, "parentLayerId":-1 },
-                                {"id":21, "parentLayerId":-1 },
-								{"id":22, "parentLayerId":-1 },
-								{"id":23, "parentLayerId":-1 }
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Streams", "showLayers": [
+                                {"id":14, "parentLayerId":-1 },
+                                {"id":15, "parentLayerId":14 },
+                                {"id":16, "parentLayerId":14 },
+                                {"id":17, "parentLayerId":14 },
+                                {"id":18, "parentLayerId":14 },
+                                {"id":19, "parentLayerId":14 },
+                                {"id":20, "parentLayerId":14 },
+                                {"id":21, "parentLayerId":14 },
+                                {"id":22, "parentLayerId":14 },
+                                {"id":23, "parentLayerId":14 },
+                                {"id":24, "parentLayerId":-1 },
+                                {"id":25, "parentLayerId":24 },
+                                {"id":26, "parentLayerId":24 },
+                                {"id":27, "parentLayerId":24 },
+                                {"id":28, "parentLayerId":24 },
+                                {"id":30, "parentLayerId":24 },
+                                {"id":31, "parentLayerId":-1 },
+                                {"id":32, "parentLayerId":31 },
+                                {"id":32, "parentLayerId":31 },
+                                {"id":33, "parentLayerId":31 },
+                                {"id":34, "parentLayerId":31 },
+                                {"id":35, "parentLayerId":31 },
+                                {"id":36, "parentLayerId":31 },
+                                {"id":37, "parentLayerId":-1 },
+                                {"id":38, "parentLayerId":37 },
+                                {"id":39, "parentLayerId":37 },
+                                {"id":40, "parentLayerId":37 },
+                                {"id":41, "parentLayerId":37 },
+                                {"id":42, "parentLayerId":37 },
+                                {"id":43, "parentLayerId":37 },
+                                {"id":44, "parentLayerId":37 },
+                                {"id":45, "parentLayerId":37 },
+                                {"id":46, "parentLayerId":37 },
+                                {"id":47, "parentLayerId":-1 },
+                                {"id":48, "parentLayerId":47 },
+                                {"id":49, "parentLayerId":47 },
+                                {"id":50, "parentLayerId":47 },
+                                {"id":51, "parentLayerId":47 },
+                                {"id":52, "parentLayerId":47 },
+                                {"id":53, "parentLayerId":47 },
+                                {"id":54, "parentLayerId":47 },
+                                {"id":55, "parentLayerId":-1 },
+                                {"id":56, "parentLayerId":55 },
+                                {"id":57, "parentLayerId":55 },
+                                {"id":58, "parentLayerId":55 },
+                                {"id":59, "parentLayerId":55 },
+                                {"id":60, "parentLayerId":55 },
+                                {"id":61, "parentLayerId":55 },
+                                {"id":62, "parentLayerId":55 },
+                                {"id":63, "parentLayerId":55 },
+                                {"id":64, "parentLayerId":55 }
                             ]
                         }
                     ]
