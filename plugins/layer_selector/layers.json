@@ -314,7 +314,17 @@
                 {
 					"name": "",
                     "services": [
-						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species" [
+						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species", "showLayers": [
+                                {"id":0, "parentLayerId":-1 },
+                                {"id":1, "parentLayerId":-1 },
+                                {"id":2, "parentLayerId":1 },
+                                {"id":3, "parentLayerId":1 },
+                                {"id":4, "parentLayerId":1 },
+                                {"id":5, "parentLayerId":1 },
+                                {"id":6, "parentLayerId":1 },
+                                {"id":7, "parentLayerId":1 },
+                                {"id":8, "parentLayerId":1 },
+                                {"id":9, "parentLayerId":1 }
                             ]
                         }
                     ]
