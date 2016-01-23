@@ -1,26 +1,6 @@
 [
     {
         "agsSource": {
-            "url": "",
-            "folderTitle": "Roads",
-            "folders": [{
-                "url": "http://services.arcgisonline.com/arcgis/rest/services/Reference/World_Transportation/MapServer",
-                "name": "",
-                "services": [{
-                            "name": "World_Transportation",
-                                "displayName": "Transportation",
-                                "type": "dynamic",
-                                "visibleLayerIds": [0],
-                                "showLayers": [
-                            ]
-                        }   
-                    ]
-                }
-            ]
-        }
-    },  
-    {
-        "agsSource": {
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York",
 			"folderTitle": "Habitat, Climate, and Reference Data",
             "folders": [
