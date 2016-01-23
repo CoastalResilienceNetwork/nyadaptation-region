@@ -2,7 +2,7 @@
     {
         "agsSource": {
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York",
-			"folderTitle": "Habitat, Climate, and Reference Data",
+			"folderTitle": "Habitat Climate and Reference Data",
             "folders": [
 				{
 					"name": "",
@@ -300,6 +300,21 @@
                         { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Topography", "showLayers": [
                                 {"id":214, "parentLayerId":-1 }
                             ]
+                        }   
+                    ]
+                }
+            ]
+        }
+    },  
+    {
+        "agsSource": {
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York",
+            "folderTitle": "Species Distribution Data",
+            "folders": [
+                {
+					"name": "",
+                    "services": [
+						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species" 
                         }
                     ]
                 }
