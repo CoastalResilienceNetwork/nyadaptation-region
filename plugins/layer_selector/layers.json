@@ -160,6 +160,150 @@
                     ]
                 },
                 {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Non-Forested Uplands", "showLayers": [
+                                {"id":128, "parentLayerId":-1 },
+                                {"id":129, "parentLayerId":128 },
+                                {"id":130, "parentLayerId":128 },
+                                {"id":131, "parentLayerId":128 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Wetlands", "showLayers" : [
+                                {"id":133, "parentLayerId":-1 },
+                                {"id":134, "parentLayerId":133 },
+                                {"id":135, "parentLayerId":-1 },
+                                {"id":136, "parentLayerId":135 },
+                                {"id":137, "parentLayerId":135 },
+                                {"id":138, "parentLayerId":135 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Climate", "showLayers": [
+                                {"id":140, "parentLayerId":-1 },
+                                {"id":141, "parentLayerId":-1 },
+                                {"id":142, "parentLayerId":-1 },
+                                {"id":143, "parentLayerId":-1 },
+                                {"id":144, "parentLayerId":-1 },
+                                {"id":145, "parentLayerId":-1 },
+                                {"id":146, "parentLayerId":-1 },
+                                {"id":147, "parentLayerId":-1 },
+                                {"id":148, "parentLayerId":-1 },
+                                {"id":149, "parentLayerId":-1 },
+                                {"id":150, "parentLayerId":-1 },
+                                {"id":151, "parentLayerId":-1 },
+                                {"id":152, "parentLayerId":-1 },
+                                {"id":153, "parentLayerId":-1 },
+                                {"id":154, "parentLayerId":-1 },
+                                {"id":155, "parentLayerId":-1 },
+                                {"id":156, "parentLayerId":-1 },
+                                {"id":157, "parentLayerId":-1 },
+                                {"id":158, "parentLayerId":-1 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Sea Level Rise", "showLayers" : [
+                                {"id":160, "parentLayerId":-1 },
+                                {"id":161, "parentLayerId":-1 },
+                                {"id":162, "parentLayerId":-1 },
+                                {"id":163, "parentLayerId":-1 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Ecosystem Services", "showLayers" : [
+                                {"id":165, "parentLayerId":-1 },
+                                {"id":166, "parentLayerId":165 },
+                                {"id":167, "parentLayerId":165 },
+                                {"id":168, "parentLayerId":165 },
+                                {"id":169, "parentLayerId":165 },
+                                {"id":170, "parentLayerId":-1 },
+                                {"id":171, "parentLayerId":170 },
+                                {"id":172, "parentLayerId":170 },
+                                {"id":173, "parentLayerId":170 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Freshwater Flooding", "showLayers" : [
+                                {"id":175, "parentLayerId":-1 },
+                                {"id":176, "parentLayerId":175 },
+                                {"id":177, "parentLayerId":175 },
+                                {"id":178, "parentLayerId":175 },
+                                {"id":179, "parentLayerId":175 },
+                                {"id":180, "parentLayerId":175 },
+                                {"id":181, "parentLayerId":175 },
+                                {"id":182, "parentLayerId":-1 },
+                                {"id":183, "parentLayerId":182 },
+                                {"id":184, "parentLayerId":182 },
+                                {"id":185, "parentLayerId":-1 },
+                                {"id":186, "parentLayerId":185 },
+                                {"id":187, "parentLayerId":185 },
+                                {"id":188, "parentLayerId":185 },
+                                {"id":189, "parentLayerId":185 },
+                                {"id":190, "parentLayerId":185 },
+                                {"id":191, "parentLayerId":185 },
+                                {"id":192, "parentLayerId":-1 },
+                                {"id":193, "parentLayerId":192 },
+                                {"id":194, "parentLayerId":192 },
+                                {"id":195, "parentLayerId":192 },
+                                {"id":196, "parentLayerId":192 },
+                                {"id":197, "parentLayerId":-1 },
+                                {"id":198, "parentLayerId":197 },
+                                {"id":199, "parentLayerId":197 },
+                                {"id":200, "parentLayerId":197 },
+                                {"id":201, "parentLayerId":197 },
+                                {"id":202, "parentLayerId":197 },
+                                {"id":203, "parentLayerId":197 },
+                                {"id":204, "parentLayerId":197 },
+                                {"id":205, "parentLayerId":197 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Landuse/Landcover (LULC)", "showLayers": [
+                                {"id":207, "parentLayerId":-1 },
+                                {"id":208, "parentLayerId":-1 },
+                                {"id":209, "parentLayerId":-1 },
+                                {"id":210, "parentLayerId":-1 },
+                                {"id":211, "parentLayerId":-1 },
+                                {"id":212, "parentLayerId":-1 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "services": [
+                        { "name": "NY_CLIMAD_toolkit", "type":"dynamic", "displayName":"Topography", "showLayers": [
+                                {"id":214, "parentLayerId":-1 }
+                            ]
+                        }
+                    ]
+                },
+                {
 					"name": "",
                     "services": [
 						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species"
