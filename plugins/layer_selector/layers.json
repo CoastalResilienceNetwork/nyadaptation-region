@@ -314,7 +314,7 @@
                 {
 					"name": "",
                     "services": [
-						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species"
+						{ "name": "NY_CLIMAD_species_maptree", "type":"dynamic", "displayName":"Species", "showLayers": []
                         }
                     ]
                 }
