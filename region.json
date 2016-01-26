@@ -11,7 +11,7 @@
             ]
         },
                 { "text": "GET DATA", "url": "#", "items": [
-                { "text": "Download", "url": "http://nature.org/newyork" }
+                { "text": "Download", "url": "http://www.naturalresourcenavigator.org/resources-page/data/" }
             ]
         },
         { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
@@ -83,7 +83,7 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds. Our <a href= 'http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Climate Adaptation Guidebook</b></a> helps managers use this webmap as a structured decision support tool to select the most appropriate climate adaptation options for their particular area or interest. <br><br> To <b>launch the Navigator</b>, select an option in Interactive Maps that best matches your interests. For additional help getting started, visit the <a href= 'http://www.naturalresourcenavigator/get-started/examples/' target='_blank'><b>How Do I Begin</b></a> page. <br><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/nyserda.jpeg' hspace=20>&nbsp<img src='img/NYNHP.jpeg' hspace=20></center>",
+            "description": "The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds. Our <a href= 'http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Climate Adaptation Guidebook</b></a> helps managers use this webmap as a structured decision support tool to select the most appropriate climate adaptation options for their particular area or interest. <br><br> To <b>launch the Navigator</b>, select an option in Interactive Maps that best matches your interests. For additional help getting started, visit the <a href= 'http://www.naturalresourcenavigator.org/get-started/examples/' target='_blank'><b>How Do I Begin</b></a> page. <br><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/NYSERDA2.jpg' hspace=20>&nbsp<img src='img/NYNHP.jpeg' hspace=20></center>",
             "showSubRegions": false,
             "subRegionDescription": "Choose a specific region and it will take you there, or you can freely explore the map.",
             "showByDefault": true,
