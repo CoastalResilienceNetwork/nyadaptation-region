@@ -51,34 +51,6 @@
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "identifyEnabled": true,
-     "subregions": {
-        "hideAtZoomLevel": 8,
-        "color": "#00C5CD",
-        "outlineColor": "#008000",
-        "opacity": 0.2,
-        "clickToFocus": true,
-        "hideByDefault": false,
-        "areas": [
-            {
-                "id": "Ventura",
-                "display": "Ventura",
-                "details": "Ventura, CA",
-                "shape": [[-119.52276396600227, 34.387321441606375], [-119.4867901956278, 34.39238979023838], [-119.26656052672348, 34.26921460290802], [-118.90506800359715, 34.071031797619405], [-118.89980354904543, 33.994683833542574], [-118.92875804728317, 33.98740901687506], [-119.32797915926733, 34.08411311971952], [-119.52276396600227, 34.387321441606375]],
-                "availablePlugins": ["layer_selector", "community_planning","floodSLR", "economic", "future_habitat"],
-                "outlineColor": "#000",
-                "noFill": true
-            },
-            {
-                "id": "Monterey",
-                "display": "Monterey",
-                "details": "Monterey, CA",
-                "shape": [[-122.316832426822, 37.12771684650833], [-122.08521258993395, 37.0049464111225], [-121.6916149603745, 36.98444447851047], [-121.63599790395533, 36.592714047270626], [-121.90695279411031, 36.588133956161634], [-122.35901963560761, 37.11305945551137], [-122.316832426822, 37.12771684650833]],
-                "availablePlugins": ["layer_selector", "community_planning", "floodSLR"],
-                "outlineColor": "#000",
-                "noFill": true
-            }
-        ]
-    },
      "launchpads": [
         {
             "id": "get-started",
