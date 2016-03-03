@@ -2,7 +2,7 @@
     {
         "agsSource": {
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York",
-			"folderTitle": "Habitat Climate and Reference Data",
+			"folderTitle": "Habitat, Climate, and Reference Data",
             "folders": [
 				{
 					"name": "",
@@ -50,6 +50,7 @@
                                 {"id":26, "parentLayerId":24 },
                                 {"id":27, "parentLayerId":24 },
                                 {"id":28, "parentLayerId":24 },
+                                {"id":29, "parentLayerId":24 },
                                 {"id":30, "parentLayerId":24 },
                                 {"id":31, "parentLayerId":-1 },
                                 {"id":32, "parentLayerId":31 },
