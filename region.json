@@ -43,7 +43,7 @@
         "subregion_toggle"
     ],
     "print": {
-        "printServerUrl": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A OW2"  
+        "printServerUrl": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
     },
     "colors": {
        "primary": "#5E893C",
