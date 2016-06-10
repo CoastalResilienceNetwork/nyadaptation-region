@@ -1,13 +1,13 @@
 {
     "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "HOME", "url": "http://maps.naturalresourcenavigator.org" },
-    "titleDetail": { "text": "NATURAL RESOURCE NAVIGATOR", "url": "http://naturalresourcenavigator.org" },
+    "titleMain": { "text": "Home", "url": "http://maps.naturalresourcenavigator.org" },
+    "titleDetail": { "text": "Natural Resource Navigator", "url": "http://naturalresourcenavigator.org" },
 	"headerLinks": [
         { "text": "LAUNCHPAD", "launchpadId": "get-started", "url": "" },
 		{ "text": "HELP", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
-                { "text": "Guidebook", "url": "http://nature.org/newyork" }
+                { "text": "NRN Guidebook", "url": "http://nature.org/newyork" }
             ]
         },
                 { "text": "GET DATA", "url": "#", "items": [
