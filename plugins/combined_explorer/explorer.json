@@ -1,0 +1,607 @@
+{
+    "name": "Habitat Explorer",
+    "text": "To begin, select a target to view.",
+    "globalText": "Modify the sliders to change the values on the map (refresh takes a couple seconds).",
+    "mainToggle": {"text": "Main Layer Transparency"},
+    "ddText": "Choose a Target",
+    "betweenGroups": "*",
+    "averageGroups": true,
+	"pluginWidth": 500,
+    "pluginHeight": 520,
+	"noZoom": true,
+    "regions": [
+        {
+		  "methods": "methods/test.pdf",
+		  "intro": {"name": "Instructions", "text": "<p>The Habitat Explorer may be used to answer several different types of questions. Click one of the options below to get detailed walk-throughs:</p><ul><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Develop strategies for a project area </a></li><li> <a target='_blank' href=h'ttp://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart</a></li><li><a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Decide where to implement a particular strategy' </a></li></ul><p>Click on the other four tabs to view summary scores for Condition, Threat, Climate Exposure and Climate Sensitivity. The indicators for each component may be viewed by clicking the check box next to each indicator.</p><p>To create a custom habitat analysis, adjust the sliders under each indicator to change the weighting or remove it entirely.</p>"},
+		  "combined": {
+			"name": "Recommendations",
+			"text" : "<p>This map shows the recommended objectives for your selected habitat type. There are four main types of objectives. The <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10' target='_blank'>Course Adjustment Worksheets</a> in our Guidebook will help you develop strategies for each one: </p><div style='color:green'>Maintain: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div><br><br><div style='color:#00ffff'>Reduce Threats: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div><br><br>  <div style='color:orange'>Restore: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div><br><br><div style='color:red'>Reduce Threats & Restore: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div></p><p>Shading within each group indicates the degree of climate risk due to exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk. </p>Click the Methods button for more information on these map",
+			"selected": true
+		  },
+		  "tabs": [
+			{
+				"name": "Condition",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 155], [2, 157,243,58], [3, 114,204,138], [4, 81,145,182], [5, 58,77,159]],
+				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
+				"outputValues" : [1,2,3,4,5],
+				"items": [	{
+								"text": "<b>Current Condition Indicators:</b>",
+								"type": "text"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B1",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Patch Size",
+								"help": "this is where the help text goes",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B2",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Regeneration",
+								"help": "Help Text.",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B3",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Large Snag Density",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B4",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Relative Canopy Diversity",
+								"help": "Even More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B5",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Invasives Prevalence",
+								"help": "Even More Help",
+								"type": "layer"
+							}
+						]			
+			
+			},
+			{
+				"name": "Threat",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 155], [2, 157,243,58], [3, 114,204,138], [4, 81,145,182], [5, 58,77,159]],
+				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
+				"outputValues" : [1,2,3,4,5],
+				"items": [	{
+								"text": "<b>Future Threat Indicators:</b>",
+								"type": "text"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B6",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Pest and Pathogens",
+								"help": "this is where the help text goes",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B7",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Invasive Plants",
+								"help": "Help Text.",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B8",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Loss of Connectedness",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B9",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Fragmentation",
+								"help": "More Help",
+								"type": "layer"
+							}
+						]			
+			
+			},
+			{
+				"name": "Sensitivity",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 155], [2, 157,243,58], [3, 114,204,138], [4, 81,145,182], [5, 58,77,159]],
+				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
+				"outputValues" : [1,2,3,4,5],
+				"items": [	{
+								"text": "<b>Climate Change Sensitivity Indicators:</b>",
+								"type": "text"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B11",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Landform Variety",
+								"help": "this is where the help text goes",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B12",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Elevation Range",
+								"help": "Help Text.",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B13",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Connectedness",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B14",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Tree Species Richness",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B15",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Habitat Vulnerability Rating",
+								"help": "More Help",
+								"type": "layer"
+							}
+						]			
+			
+			},
+			{
+				"name": "Exposure",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 155], [2, 157,243,58], [3, 114,204,138], [4, 81,145,182], [5, 58,77,159]],
+				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
+				"outputValues" : [1,2,3,4,5],
+				"items": [	{
+								"text": "<b>Climate Change Exposure Indicators:</b>",
+								"type": "text"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B16",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Annual Aridity",
+								"help": "this is where the help text goes",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B17",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Summer Maximum Temperature",
+								"help": "Help Text.",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B18",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Number of Days below Freezing",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B19",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Growing Degree Days",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B20",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Total Annual Precipitation",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B21",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Change in Total Summer Precipitation",
+								"help": "More Help",
+								"type": "layer"
+							},
+							{
+								"default": 2,
+								"group": "all",
+								"index": "B22",
+								"max": 4,
+								"min": 0,
+								"step": 1,
+								"text": "Canopy Decline",
+								"help": "More Help",
+								"type": "layer"
+							}
+						]			
+			
+			}					  
+		  ],
+	        "name": "New York Forests",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest_Multi/ImageServer",
+			"methods": "methods/Alabama_Dashboard.pdf"
+
+        },
+        {
+		  "methods": "methods/test.pdf",
+		  "intro": {"name": "Instructions", "text": "<p>The Habitat Explorer may be used to answer several different types of questions. Click one of the options below to get detailed walk-throughs:</p><ul><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Develop strategies for a project area </a></li><li> <a target='_blank' href=h'ttp://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart</a></li><li><a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Decide where to implement a particular strategy' </a></li></ul><p>Click on the other four tabs to view summary scores for Condition, Threat, Climate Exposure and Climate Sensitivity. The indicators for each component may be viewed by clicking the check box next to each indicator.</p><p>To create a custom habitat analysis, adjust the sliders under each indicator to change the weighting or remove it entirely.</p>"},
+		  "combined": {
+			"name": "Recommendations",
+			"text" : "<p>This map shows the recommended objectives for your selected habitat type. There are four main types of objectives. The <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10' target='_blank'>Course Adjustment Worksheets</a> in our Guidebook will help you develop strategies for each one: </p><div style='color:green'>Maintain: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div><br><br><div style='color:#00ffff'>Reduce Threats: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div><br><br>  <div style='color:orange'>Restore: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div><br><br><div style='color:red'>Reduce Threats & Restore: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div></p><p>Shading within each group indicates the degree of climate risk due to exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk. </p>Click the Methods button for more information on these map",
+			"selected": true
+		  },
+		  "tabs": [
+			{
+				"name": "Condition",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"inputRanges" : [0,50,51,75,76,100],
+				"outputValues" : [1,2,3],
+				"items": [	
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_damstor_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Flow Alteration", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_curr_imp_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "% Impervious Cover", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_lat_con_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Floodplain Connectivity", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_ara_fpc_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Functioning Floodplains", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_rdxstm_den_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Fragmentation by Roads", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "cstr_impair_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Water Quality Impairments", 
+								"type": "layer"
+							}
+						]			
+			
+			},
+			{
+				"name": "Threat",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"inputRanges" : [0,50,51,75,76,100],
+				"outputValues" : [1,2,3],
+				"items": [	
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "tstr_chg_imp_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Percent Impervious", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "tstr_latcon_chg_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Floodplain Connectivity", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "tstr_rdxfragrsk_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Connectivity Threat from Additional Roads", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "tstr_fldpollrsk_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Flood Pollution Risk", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "tstr_aciddepossens_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Acid Deposition Sensitivity", 
+								"type": "layer"
+							}
+						]			
+			
+			},
+			{
+				"name": "Sensitivity",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"inputRanges" : [0,50,51,75,76,100],
+				"outputValues" : [1,2,3],
+				"items": [	
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "sstr_networklength_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Connected Network Length", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "sstr_szclct_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Size Variety", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "sstr_slpclct_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Slope Variety", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "sstr_tempclct_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Temperature Variety", 
+								"type": "layer"
+							}
+
+						]			
+			
+			},
+			{
+				"name": "Exposure",
+				"sliderLabels" : ["None","Low","Med","High","V.High"],
+				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"inputRanges" : [0,50,51,75,76,100],
+				"outputValues" : [1,2,3],
+				"items": [	
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_temp_chg_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Stream Temperature Class", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_xppt_fut_recur_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Extreme Precipitation", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_aridity_change_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Annual Aridity", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_maxt_jja_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Summer Maximum Temperature", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_tn32_ann_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Number of Days below Freezing", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_gdd50_ann_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Growing Degree Days", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_pcpn_ann_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Total Annual Precipitation", 
+								"type": "layer"
+							}, 
+							{
+								"default": 2, 
+								"group": "all", 
+								"index": "estr_pcpn_jja_score", 
+								"max": 4, 
+								"min": 0, 
+								"step": 1, 
+								"text": "Change in Total Summer Precipitation", 
+								"type": "layer"
+							}
+						]			
+			
+			}					  
+		  ],
+            "name": "New York Streams",
+            "sliderLabels" : ["None","Low","Med","High","V.High"],
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+			"workspaceId": "postgis",
+			"geometryType": "polyline",
+			"dataset": "sde.ny_climad_v2v1fcn_streams_allscores_nonull",
+			"reqFields": ["objectid", "shape"],
+			"defaultSymbol": {   	"type": "esriSLS",
+					 	"style": "esriSLSSolid",
+						"color": [150,150,150,0],
+						"width": 2
+							},
+			"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]]
+        }
+    ]
+}
