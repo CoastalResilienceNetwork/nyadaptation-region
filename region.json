@@ -7,11 +7,17 @@
         { "text": "LAUNCHPAD", "launchpadId": "get-started", "url": "" },
 		{ "text": "HELP", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
-                { "text": "NRN Guidebook", "url": "http://nature.org/newyork" }
+                { "text": "NRN Guidebook Home", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf" },
+                { "text": "Quick Start Guide", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Quick-Start-Guide-to-the-NRN_final.pdf " },
+                { "text": "Wayfinder", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=2" },
+                { "text": "Course Adjustment Worksheets", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10" },
+                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/03/DRAFT-NRN-Data-Documentation-030916.pdf" },
+                { "text": "FAQ", "url": "http://www.naturalresourcenavigator.org/help/" }
             ]
         },
                 { "text": "GET DATA", "url": "#", "items": [
-                { "text": "Download", "url": "http://www.naturalresourcenavigator.org/resources-page/data/" }
+                { "text": "Download", "url": "http://www.naturalresourcenavigator.org/resources-page/data/" },
+                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/03/DRAFT-NRN-Data-Documentation-030916.pdf" }
             ]
         },
         { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
