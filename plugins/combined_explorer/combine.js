@@ -54,7 +54,7 @@ define([
 				],
 				
 		
-		combineFunction: function(formulas){
+		combineFunction: function(formulas, geo){
 			
 						
 						rasterFunction0 = new RasterFunction();
@@ -249,7 +249,9 @@ define([
 
              lh = ((this.colors.length) * 30) + 10
              maxy = ((this.colors.length) * 30) - 15
-			OUTPUTLABEL = '<div style="margin-bottom:7px">' + "Explorer Overall Score" + '</div>'
+			 
+			 regfixname= " - " + geo.name
+			OUTPUTLABEL = '<div style="margin-bottom:7px">' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
              + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="' + lh + '">'
 			 + innerSyms
              + texter
