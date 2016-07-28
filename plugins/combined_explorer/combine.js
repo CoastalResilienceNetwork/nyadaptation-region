@@ -54,8 +54,9 @@ define([
 				],
 				
 		
-		combineFunction: function(formulas, geo){
+		combineFunction: function(formulas, geo, Tformulas){
 			
+						geo.BandFormulaText = Tformulas[0] + "<br><br>" + Tformulas[1] + "<br><br>" + Tformulas[2] + "<br><br>" + Tformulas[3] + "<br><br> A text desciption of how the layers are combined could appear in this location."
 						
 						rasterFunction0 = new RasterFunction();
 						rasterFunction0.functionName = "BandArithmetic";
@@ -83,8 +84,6 @@ define([
 						};
 						rfc.variableName = "riskOutput";
 						rfc.outputPixelType = "U16";							
-						
-
 
 
 						rasterFunction1 = new RasterFunction();
@@ -239,6 +238,7 @@ define([
 						
              innerSyms = ""
 			 texter = ""
+			 
              array.forEach(this.colors, lang.hitch(this,function(cColor, i){
 
                innerSyms = innerSyms + '<rect x="0" y ="'+ (i * 30) + '" width="30" height="20" style="fill:rgb('+ cColor[1] + "," + cColor[2] + "," + cColor[3] + ');stroke-width:0;stroke:rgb(0,0,0)" />' 
@@ -251,7 +251,7 @@ define([
              maxy = ((this.colors.length) * 30) - 15
 			 
 			 regfixname= " - " + geo.name
-			OUTPUTLABEL = '<div style="margin-bottom:7px">' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
+			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
              + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="' + lh + '">'
 			 + innerSyms
              + texter
@@ -263,8 +263,9 @@ define([
 						return outputData;
         },
 		
-		vectorCombineFunction: function(formulas, geo) {
+		vectorCombineFunction: function(formulas, geo, Tformulas) {
 			
+			geo.BandFormulaText = Tformulas[0] + "<br><br>" + Tformulas[1] + "<br><br>" + Tformulas[2] + "<br><br>" + Tformulas[3] + "<br><br> A text desciption of how the layers are combined could appear in this location."
 			
 			//majorFormula = ("(" + formulas[0] + " * 1000) + (" + formulas[1] + " * 100) + (" + formulas[2] + " * 10) + (" + formulas[3] + " * 1)"   )
 			
@@ -313,8 +314,30 @@ define([
 							  });
   
              }));
-		
-			return [outq, outrenderer];
+
+             innerSyms = ""
+			 texter = ""
+			 
+             array.forEach(this.colors, lang.hitch(this,function(cColor, i){
+
+               innerSyms = innerSyms + '<rect x="0" y ="'+ (i * 30) + '" width="30" height="20" style="fill:rgb('+ cColor[1] + "," + cColor[2] + "," + cColor[3] + ');stroke-width:0;stroke:rgb(0,0,0)" />' 
+			   texter = texter + ' <text x="35" y ="' + ((i * 30) + 15) + '" fill="black">' + this.labels[i] + '</text>'
+
+             }));
+			 
+
+             lh = ((this.colors.length) * 30) + 10
+             maxy = ((this.colors.length) * 30) - 15
+			 
+			 regfixname= " - " + geo.name
+			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
+             + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="' + lh + '">'
+			 + innerSyms
+             + texter
+			 
+			outputData = {outquery: outq, renderRule: outrenderer, legendHTML: OUTPUTLABEL}
+			 
+			return outputData; //[outq, outrenderer];
 			
 			//return majorFormula;
 			
