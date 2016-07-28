@@ -1,4 +1,4 @@
-﻿@media print {
+@media print {
 	
 	@page { 
         size: landscape;
@@ -10,13 +10,15 @@
 	}
 	
     #plugin-print-preview-map {
+		-webkit-transform: scale(2);
+		transform-style: scale(2);
         visibility: visible;
-		width:1000px;
-		height:600px;
+		width:900px;
+		height:500px;
 		margin-left:50px;
 		position:absolute;
-		top:50px;
-		left:-20px;
+		top:400px;
+		left:450px;		
     }	
 	
 	.pt{
@@ -34,11 +36,34 @@
 	
 	#title{
 	   visibility: visible;
-	   font-size: 40px;
+	   font-size: 80px;
+	   position:absolute;
+	   top:0px;
+	   left:48px;
+	   width:2000px;
 	}
 	
 	#table{
 	   visibility: visible;
+	}
+	
+	#legendprint{
+	   visibility: visible;
+		top:150px;
+		left:1900px;	
+		position:absolute;
+		-webkit-transform-origin: left top;
+		-webkit-transform: scale(3);
+		transform-style: scale(3);
+	}
+	
+	#formulaprint{
+	   visibility: visible;
+		top:1200px;
+		left:48px;	
+		width:1800px;
+		position:absolute;
+		font-size: 40px;
 	}
 	
 	#tableWrapper{
