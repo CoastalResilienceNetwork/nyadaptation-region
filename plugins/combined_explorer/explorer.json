@@ -8,10 +8,12 @@
     "averageGroups": true,
 	"pluginWidth": 500,
     "pluginHeight": 520,
+	"enableCustomPrint": true,
 	"noZoom": true,
     "regions": [
         {
 		  "methods": "methods/test.pdf",
+		  "printTitle": "NY Adaptation Forest Habitat Report",
 		  "intro": {"name": "Instructions", "text": "<p>The Habitat Explorer may be used to answer several different types of questions. Click one of the options below to get detailed walk-throughs:</p><ul><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Develop strategies for a project area </a></li><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart</a></li><li><a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Decide where to implement a particular strategy' </a></li></ul><p>Click on the other four tabs to view summary scores for Condition, Threat, Climate Exposure and Climate Sensitivity. </p><p>To create a custom habitat analysis, adjust the sliders under each indicator to change the weighting or remove it entirely.</p>"},
 		  "combined": {
 			"name": "Recommendations",
@@ -320,7 +322,7 @@
 			{
 				"name": "Condition",
 				"sliderLabels" : ["None","Low","Med","High","V.High"],
-				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
 				"items": [	
@@ -390,7 +392,7 @@
 			{
 				"name": "Threat",
 				"sliderLabels" : ["None","Low","Med","High","V.High"],
-				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
 				"items": [	
@@ -450,7 +452,7 @@
 			{
 				"name": "Sensitivity",
 				"sliderLabels" : ["None","Low","Med","High","V.High"],
-				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
 				"items": [	
@@ -501,7 +503,7 @@
 			{
 				"name": "Exposure",
 				"sliderLabels" : ["None","Low","Med","High","V.High"],
-				"colorRamp": [[1, 255, 255, 129], [2, 76, 190, 110], [3, 13, 31, 133]],
+				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
 				"items": [	
@@ -590,6 +592,7 @@
 			}					  
 		  ],
             "name": "New York Streams",
+			"printTitle": "NY Adaptation Stream Habitat Report",
             "sliderLabels" : ["None","Low","Med","High","V.High"],
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"workspaceId": "postgis",
