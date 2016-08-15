@@ -41,6 +41,7 @@
     ],
     "pluginOrder": [
         "layer-selector",
+        "regional-planning",
 		"habitat_explorer",
         "zoom_to",
         "measure",
