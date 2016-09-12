@@ -251,7 +251,7 @@ define([
              maxy = ((this.colors.length) * 30) - 15
 			 
 			 regfixname= " - " + geo.name
-			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
+			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective - Climate Risk" + '</div>'
              + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="' + lh + '">'
 			 + innerSyms
              + texter
@@ -330,7 +330,7 @@ define([
              maxy = ((this.colors.length) * 30) - 15
 			 
 			 regfixname= " - " + geo.name
-			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective" + '</div>'
+			OUTPUTLABEL = '<div style="margin-bottom:7px" >' + "Habitat Explorer" + regfixname + " <br>Recommended Objective - Climate Risk" + '</div>'
              + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="' + lh + '">'
 			 + innerSyms
              + texter
