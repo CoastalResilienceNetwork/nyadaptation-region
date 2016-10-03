@@ -9,6 +9,8 @@
 	"pluginWidth": 500,
     "pluginHeight": 520,
 	"enableCustomPrint": true,
+	"infoGraphic": "RestorationExplorer_c.jpg",
+	"showInfoOnStart": false,
 	"hoverText" : "Generates summaries of stream and forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives. Can also be used in conjunction with our Guidebook to identify which Course Adjustment Worksheets to complete and provide information to help you do so.",
 	"noZoom": true,
     "regions": [
@@ -200,8 +202,8 @@
 								"max": 4,
 								"min": 0,
 								"step": 1,
-								"text": "The diversity of tree species within a stand can be reduced by selective harvesting of high value species (highgrading), as well as by pest outbreaks. Diversity also varies by forest type and setting. Higher diversity is expected to improve resilience by helping to maintain forest cover in response to disturbance. Average current (2011) canopy species richness is based on USFS FIA plot data averaged across 50 km hexagons.",
-								"help": "More Help",
+								"help": "The diversity of tree species within a stand can be reduced by selective harvesting of high value species (highgrading), as well as by pest outbreaks. Diversity also varies by forest type and setting. Higher diversity is expected to improve resilience by helping to maintain forest cover in response to disturbance. Average current (2011) canopy species richness is based on USFS FIA plot data averaged across 50 km hexagons.",
+								"text": "Tree Species Richness",
 								"type": "layer"
 							},
 							{
@@ -211,8 +213,8 @@
 								"max": 4,
 								"min": 0,
 								"step": 1,
-								"text": "Vulnerability assessments performed at state and regional scales were applied to habitat types and bioclimatic zones in order to create a spatial visualization of habitat vulnerability ratings. Since no one assessment comprehensively covers all of the habitat types and zones within NY, assessments were combined from three reports on habitat vulnerability for various areas: the Northeast (Manomet 2013), New York (Hilke and Galbraith 2013), and Maine (Whitman et al. 2013). Vulnerability to climate change was assigned a 4-part rating from Least to Highly Vunerable (rating systems differed among the original reports) for those habitats where data were available.",
-								"help": "More Help",
+								"help": "Vulnerability assessments performed at state and regional scales were applied to habitat types and bioclimatic zones in order to create a spatial visualization of habitat vulnerability ratings. Since no one assessment comprehensively covers all of the habitat types and zones within NY, assessments were combined from three reports on habitat vulnerability for various areas: the Northeast (Manomet 2013), New York (Hilke and Galbraith 2013), and Maine (Whitman et al. 2013). Vulnerability to climate change was assigned a 4-part rating from Least to Highly Vunerable (rating systems differed among the original reports) for those habitats where data were available.",
+								"text": "Habitat Vulnerability Rating",
 								"type": "layer"
 							}
 						]			
