@@ -93,5 +93,38 @@
                 ]    
             }
         ]
+    },
+    { 
+        "displayName": "Species Data",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/",
+            "name": "NY_CLIMAD_species_maptree",
+            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportDbPath": "coastalresilience.gdb" 
+        },
+        "includeLayers": [
+            {
+                "name": "Total Predicted Species Richness",
+                "displayName": "Species Richness",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Total Predicted Species Richness by Taxon",
+                "displayName": "Species Richness by Taxon",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Predicted Species Richness for SGCN Species",
+                "displayName": "Species Richness for SGCN Species",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Predicted Species Richness for Rare Species",
+                "displayName": "Species Richness for Rare Species",
+                "includeLayers": true  
+            }
+        ]
     }
 ]
