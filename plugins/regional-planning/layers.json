@@ -119,11 +119,6 @@
                 "name": "Predicted Species Richness for SGCN Species",
                 "displayName": "Species Richness for SGCN Species",
                 "includeAllLayers": true
-            },
-            {
-                "name": "Predicted Species Richness for Rare Species",
-                "displayName": "Species Richness for Rare Species",
-                "includeLayers": true  
             }
         ]
     }
