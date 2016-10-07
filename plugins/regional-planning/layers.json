@@ -107,8 +107,7 @@
         "includeLayers": [
             {
                 "name": "Total Predicted Species Richness",
-                "displayName": "Species Richness",
-                "includeAllLayers": true
+                "displayName": "Species Richness"
             },
             {
                 "name": "Total Predicted Species Richness by Taxon",
@@ -118,6 +117,10 @@
             {
                 "name": "Predicted Species Richness for SGCN Species",
                 "displayName": "Species Richness for SGCN Species",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Birds [289]",
                 "includeAllLayers": true
             }
         ]
