@@ -1,7 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Home", "url": "<a href= http://maps.naturalresourcenavigator.org <img src='img/NRN-Compass.png'></a>" },
+    "titleMain": { "text": "Home", "url": "http://maps.naturalresourcenavigator.org" },
     "titleDetail": { "text": "Natural Resource Navigator Map Tool", "url": "" },
 	"headerLinks": [
         { "text": "LAUNCHPAD", "launchpadId": "get-started", "url": "" },
