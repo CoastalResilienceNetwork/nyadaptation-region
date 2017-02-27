@@ -1,0 +1,109 @@
+[
+    {
+        "displayName": "Habitat, Climate & Reference Data",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/",
+            "name": "NY_CLIMAD_toolkit",
+            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportDbPath": "coastalresilience.gdb" 
+        },
+        "includeLayers": [
+            {
+                "name": "Reference",
+                "displayName": "Boundaries & Reference",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Protection",
+                "displayName": "Protection",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Streams",
+                "displayName": "Streams",
+                "includeLayers": [
+                    {
+                        "name": "Streams: Current Condition",
+                        "displayName": "Current Condition",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Streams: Future Threats",
+                        "displayName": "Future Threats",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Streams: Climate Sensitivity",
+                        "displayName": "Climate Sensitivity",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Streams: Climate Exposure",
+                        "displayName": "Climate Exposure",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Streams: Recommendations",
+                        "displayName": "Recommendations",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Streams: Supporting Data",
+                        "displayName": "Supporting Data",
+                        "includeAllLayers": true
+                    }
+                ]
+            },
+            { 
+                "name": "Forests",
+                "displayName": "Forests",
+                "includeLayers": [
+                    {
+                        "name": "Forests: Current Condition",
+                        "displayName": "Current Condition",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Forests: Future Threats",
+                        "displayName": "Future Threats",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Forests: Climate Sensitivity",
+                        "displayName": "Climate Sensitivity",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Forests: Climate Exposure",
+                        "displayName": "Climate Exposure",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Forests: Recommendations",
+                        "displayName": "Recommendations",
+                        "includeAllLayers": true
+                    },
+                    {
+                        "name": "Forests: Supporting Data",
+                        "displayName": "Supporting Data",
+                        "includeAllLayers": true
+                    }
+                ]    
+            }
+        ]
+    },
+    { 
+        "displayName": "Species Data",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_York/",
+            "name": "NY_CLIMAD_species_maptree",
+            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportDbPath": "coastalresilience.gdb" 
+        },
+        "includeAllLayers" : true
+    }
+]
