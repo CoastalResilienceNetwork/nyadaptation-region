@@ -40,7 +40,7 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "layer_selector",
+        "regional-planning",
 		"habitat_explorer",
         "zoom_to",
         "measure",

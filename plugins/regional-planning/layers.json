@@ -101,7 +101,7 @@
             "layerType": "dynamic",
             "url": "http://services.coastalresilience.org/arcgis/rest/services/New_York/",
             "name": "NY_CLIMAD_species_maptree",
-            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportGpUrl": "http://services.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "coastalresilience.gdb" 
         },
         "includeAllLayers" : true
