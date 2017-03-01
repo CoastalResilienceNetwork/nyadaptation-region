@@ -4,8 +4,8 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/",
-            "name": "NY_CLIMAD_toolkit",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/NRN_NY/",
+            "name": "NRN_NY",
             "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "coastalresilience.gdb" 
         },
@@ -94,35 +94,88 @@
             }
         ]
     },
-    { 
-        "displayName": "Species Data",
+	{
+		"name" : "Species Data",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/",
-            "name": "NY_CLIMAD_species_maptree",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/NRN_NY/",
+            "name": "NRN_NY",
             "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "coastalresilience.gdb" 
         },
-        "includeLayers": [
-            {
-                "name": "Total Predicted Species Richness",
-                "displayName": "Species Richness"
-            },
-            {
-                "name": "Total Predicted Species Richness by Taxon",
-                "displayName": "Species Richness by Taxon",
-                "includeAllLayers": true
-            },
-            {
-                "name": "Predicted Species Richness for SGCN Species",
-                "displayName": "Species Richness for SGCN Species",
-                "includeAllLayers": true
-            },
-            {
-                "name": "Birds [289]",
-                "includeAllLayers": true
-            }
-        ]
-    }
+		"includeLayers" : [
+			{
+				"name": "Total Predicted Species Richness"
+			},
+			{
+				"name": "Total Predicted Species Richness by Taxon",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Predicted Species Richness for SGCN Species",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Predicted Species Richness for Rare Species",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Amphibians [13]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Beetles [2]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Birds [289]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Butterflies/Moths [20]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Crustaceans [1]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Fish [125]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mammals [51]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mayflies [1]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mollusks [14]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Nonvascular Plants [4]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Odonata [23]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Reptiles [52]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Trees [134]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Vascular Plants [198]",
+				"includeAllLayers": true
+			}
+		]
+	}
 ]
