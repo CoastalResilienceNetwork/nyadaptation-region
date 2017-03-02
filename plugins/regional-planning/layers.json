@@ -1,6 +1,6 @@
 [
     {
-        "displayName": "Habitat, Climate & Reference Data",
+        "name": "Habitat, Climate & Reference Data",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
@@ -9,90 +9,56 @@
             "reportGpUrl": "http://services.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "coastalresilience.gdb" 
         },
-        "includeLayers": [
-            {
-                "name": "Reference",
-                "displayName": "Boundaries & Reference",
-                "includeAllLayers": true
-            },
-            {
-                "name": "Protection",
-                "displayName": "Protection",
-                "includeAllLayers": true
-            },
-            {
-                "name": "Streams",
-                "displayName": "Streams",
-                "includeLayers": [
-                    {
-                        "name": "Streams: Current Condition",
-                        "displayName": "Current Condition",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Streams: Future Threats",
-                        "displayName": "Future Threats",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Streams: Climate Sensitivity",
-                        "displayName": "Climate Sensitivity",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Streams: Climate Exposure",
-                        "displayName": "Climate Exposure",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Streams: Recommendations",
-                        "displayName": "Recommendations",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Streams: Supporting Data",
-                        "displayName": "Supporting Data",
-                        "includeAllLayers": true
-                    }
-                ]
-            },
-            { 
-                "name": "Forests",
-                "displayName": "Forests",
-                "includeLayers": [
-                    {
-                        "name": "Forests: Current Condition",
-                        "displayName": "Current Condition",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Forests: Future Threats",
-                        "displayName": "Future Threats",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Forests: Climate Sensitivity",
-                        "displayName": "Climate Sensitivity",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Forests: Climate Exposure",
-                        "displayName": "Climate Exposure",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Forests: Recommendations",
-                        "displayName": "Recommendations",
-                        "includeAllLayers": true
-                    },
-                    {
-                        "name": "Forests: Supporting Data",
-                        "displayName": "Supporting Data",
-                        "includeAllLayers": true
-                    }
-                ]    
-            }
-        ]
+		"includeLayers":[
+			{
+				"name" : "Reference",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Protection",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Streams",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Forests",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Non-Forested Uplands",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Wetlands",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Climate",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Sea Level Rise",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Ecosystem Functions",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Freshwater Flooding",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Landuse/Landcover (LULC)",		
+				"includeAllLayers": true
+			},
+			{
+				"name" : "Topography",		
+				"includeAllLayers": true
+			}
+		]
     },
 	{
 		"name" : "Species Data",
