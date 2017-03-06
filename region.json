@@ -5,23 +5,24 @@
     "titleDetail": { "text": "Natural Resource Navigator", "url": "http://naturalresourcenavigator.org" },
 	"headerLinks": [
         { "text": "LAUNCHPAD", "launchpadId": "get-started", "url": "" },
-		{ "text": "HELP", "url": "javascript:;", "elementId": "help-overlay-start"},
+		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
                 { "text": "NRN Guidebook Home", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf" },
                 { "text": "Quick Start Guide", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Quick-Start-Guide-to-the-NRN_final.pdf " },
+                { "text": "Tactics Toolbox", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Copy-of-NRNTacticsToolbox_v1_2016JAN25.xlsx" },
                 { "text": "Wayfinder", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=2" },
                 { "text": "Course Adjustment Worksheets", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10" },
-                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/03/DRAFT-NRN-Data-Documentation-030916.pdf" },
+                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/10/NRN-Final-Metadata-Distribution_v1_2_2016_9_30.pdf" },
                 { "text": "FAQ", "url": "http://www.naturalresourcenavigator.org/help/" }
             ]
         },
                 { "text": "GET DATA", "url": "#", "items": [
                 { "text": "Download", "url": "http://www.naturalresourcenavigator.org/resources-page/data/" },
-                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/03/DRAFT-NRN-Data-Documentation-030916.pdf" }
+                { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/10/NRN-Final-Metadata-Distribution_v1_2_2016_9_30.pdf" }
             ]
         },
-        { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
-        { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
+                { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
+                { "text": "Legal Disclosure", "url": "http://www.naturalresourcenavigator.org/terms-of-use/" }
     ],
     "initialExtent": [
         -80.55,
@@ -61,10 +62,10 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds. Our <a href= 'http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Climate Adaptation Guidebook</b></a> helps managers use this webmap as a structured decision support tool to select the most appropriate climate adaptation options for their particular area or interest. <br><br> To <b>launch the Navigator</b>, select an option in Interactive Maps that best matches your interests. For additional help getting started, visit the <a href= 'http://www.naturalresourcenavigator.org/get-started/examples/' target='_blank'><b>How Do I Begin</b></a> page. <br><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/NYSERDA2.jpg' hspace=20>&nbsp<img src='img/NYNHP.jpeg' hspace=20></center>",
+            "description": "The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds. Our <a href= 'http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Climate Adaptation Guidebook</b></a> helps managers use this webmap as a structured decision support tool to select the most appropriate climate adaptation options for their particular area or interest. <br><br> To <b>launch the Navigator</b>, select an option in Interactive Maps that best matches your interests. For additional help getting started, visit the <a href= 'http://www.naturalresourcenavigator.org/get-started/examples/' target='_blank'><b>How Do I Begin</b></a> page. <br><br><center><img src='img/NRN-Compass.png' hspace=20><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/NYSERDA2.jpg' hspace=20>&nbsp<img src='img/NYNHP.jpeg' hspace=20></center>",
             "showSubRegions": false,
             "subRegionDescription": "Choose a specific region and it will take you there, or you can freely explore the map.",
-            "showByDefault": true,
+            "showByDefault": false,
             "categories": [
               {
                 "name": "Interactive Maps",
