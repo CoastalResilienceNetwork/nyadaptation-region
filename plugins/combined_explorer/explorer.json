@@ -15,12 +15,13 @@
 	"noZoom": true,
     "regions": [
         {
-		  "methods": "methods/test.pdf",
+		  "methods": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/09/2016-9-Habitat-Explorer-and-Recommendations-Background.pdf",
 		  "printTitle": "NY Natural Resource Navigator Forest Habitat Explorer Report",
-		  "intro": {"name": "Instructions", "layer": {"url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/NY_CLIMAD_toolkit/MapServer", "show": [111]}, "text": "<p>The Habitat Explorer allows you to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk.   Use it to identify which Course Adjustment Worksheet from our Guidebook to start with as well as to help you dig more into the data when you are filling out those Worksheets.   Zoom to your area of interest to begin, or click the hyperlink to get more detailed how-tos from the Wayfinder section of our Guidebook.</p>  <p>Start with the Recommendations Map (the final tab) to:</p>  <ul><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Identify appropriate conservation objectives for a project area</a>, based on an analysis of current condition, future threat, and climate exposure and sensitivity. </li>  <li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart.</a></li>  <li><a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Find places to pursue a particular strategy.</a> <i> Start with the Recommendations tab or find the indicator you are trying to address (like fragmentation or water quality) on the other tabs to identify places you could work.</i>    </li>  <li>  Easily view supporting data to turn the recommended conservation objective into a climate-smart strategy for your organization using the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Course Adjustment Worksheets</a>.  <i>The Worksheets tell you which Explorer tab to look at. </i>   </li>  </ul>  <p>If you want to customize the conservation recommendations analysis to use the indicators most important for your project or to better reflect your understanding of the system you work in...    <br><i>  Use the sliders to adjust the weight of an indicator or remove it entirely, and click the Recommendations tab to see the resulting recommended conservation objectives and likelihood of success.     </i></p>  <p>If you want to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk...  <br><i>  Click on the four tabs to view summary scores for Condition, Threat, Climate Exposure and Climate Sensitivity.   </i></p>"},
+		  "intro": {"name": "Instructions", "layer": {"url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/NY_CLIMAD_toolkit/MapServer", "show": [111]}, "text": "<p>  The Habitat Explorer allows you to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk.   Use it to identify which Course Adjustment Worksheet from our Guidebook to start with as well as to help you dig more into the data when you are filling out those Worksheets.   Zoom to your area of interest to begin, or click the hyperlinks below to get more detailed how-tos from the Wayfinder section of our Guidebook.  </p>   <ol>  <li>  Start with the Recommendations Map to:  <ul>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Identify appropriate conservation objectives for a project area</a>, based on an analysis of current condition, future threat, and climate exposure and sensitivity.   </li>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart.</a>  </li>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Find places to pursue a particular strategy</a>. <i> Start with the Recommendations tab or find the indicator you are trying to address (like fragmentation or water quality) on the other tabs to identify places you could work.</i>   </li>  </ul>  </li>  <li>  Click on each of the four tabs to explore the data behind the Recommendations.  Customize the analysis if desired by using the sliders to adjust the weight of an indicator or remove it entirely, and click the Recommendations tab to see the results.  </li>  <li>   Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Course Adjustment Worksheets</a> to use the supporting data in the other tabs to turn the recommended conservation objective into a climate-smart strategy for your organization.   </li>  </ol>"},
 		  "combined": {
 			"name": "Recommendations",
-			"text" : "<p>This map shows the place-specific recommended objective (main color) and the likelihood of success in light of climate change (shading) for your selected habitat type, based on its current condition, future threat, and climate change exposure and sensitivity. If you have adjusted the sliders on the other tabs, this map will reflect those changes. </p>  <p>Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Conservation Objectives Course Adjustment Worksheets</a> in our Guidebook that match the recommended objectives in your project area to develop strategies, and consider the climate risk information when doing so.  Then use the climate risk information to further hone your strategies with the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=19'>Preparing for Climate Change Course Adjustment Worksheet.</a></p>  <div style='color:green'><a style='color:green' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=13'>Maintain</a>: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div>  <br><br><div style='color:#00ffff'>Reduce Threats: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div>  <br><br>  <div style='color:orange'>Restore: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div>  <br><br><div style='color:red'>Reduce Threats & Restore: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div>  </p><p>Shading within each group indicates the likelihood of conservation success in light of climate change due to the risks of exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk.</p>",
+			"help": "Recommended conservation mgmt objectives & relative climate risk, based on condition, threat, exposure and sensitivity scores from the other tabs",
+			"text" : "<p>This map shows the place-specific recommended objective (main color) and the likelihood of success in light of climate change (shading) for your selected habitat type, based on its current condition, future threat, and climate change exposure and sensitivity. If you have adjusted the sliders on the other tabs, this map will reflect those changes. </p>  <p>Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Conservation Objectives Course Adjustment Worksheets</a> in our Guidebook that match the recommended objectives in your project area to develop strategies, and consider the climate risk information when doing so.  Then use the climate risk information to further hone your strategies with the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=19'>Preparing for Climate Change Course Adjustment Worksheet.</a></p>  <div style='color:green'><a style='color:green; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=13'>Maintain</a>: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div>  <br><br><div style='color:#00ffff'><a style='color:#00ffff; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=14'>Reduce Threats</a>: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div>  <br><br>  <div style='color:orange'><a style='color:orange; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=16'>Restore</a>: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div>  <br><br><div style='color:red'><a style='color:red; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=18'>Reduce Threats & Restore</a>: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div>  </p><p>Shading within each group indicates the likelihood of conservation success in light of climate change due to the risks of exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk.</p>",
 			"selected": true
 		  },
 		  "tabs": [
@@ -32,6 +33,10 @@
 				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
 				"outputValues" : [1,2,3,4,5],
 				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
+							{
 								"text": "<b>Current Condition Indicators:</b>",
 								"type": "text"
 							},
@@ -101,6 +106,10 @@
 				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
 				"outputValues" : [1,2,3,4,5],
 				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
+							{
 								"text": "<b>Future Threat Indicators:</b>",
 								"type": "text"
 							},
@@ -159,6 +168,10 @@
 				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
 				"outputValues" : [1,2,3,4,5],
 				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
+							{
 								"text": "<b>Climate Change Sensitivity Indicators:</b>",
 								"type": "text"
 							},
@@ -228,6 +241,10 @@
 				"inputRanges" : [0,20,20,40,40,60,60,80,80,100],
 				"outputValues" : [1,2,3,4,5],
 				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
+							{
 								"text": "<b>Climate Change Exposure Indicators:</b>",
 								"type": "text"
 							},
@@ -314,15 +331,16 @@
 		  ],
 	        "name": "New York Forests",
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/rasterExplorer/NY_CLIMAD_Forest_Multi/ImageServer",
-			"methods": "methods/Alabama_Dashboard.pdf"
+			"methods": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/09/2016-9-Habitat-Explorer-and-Recommendations-Background.pdf"
 
         },
         {
-		  "methods": "methods/test.pdf",
-		  "intro": {"name": "Instructions", "layer": {"url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/NY_CLIMAD_toolkit/MapServer", "show": [111]}, "text": "<p>The Habitat Explorer allows you to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk.   Use it to identify which Course Adjustment Worksheet from our Guidebook to start with as well as to help you dig more into the data when you are filling out those Worksheets.   Zoom to your area of interest to begin, or click the hyperlink to get more detailed how-tos from the Wayfinder section of our Guidebook.</p>  <p>Start with the Recommendations Map (the final tab) to:</p>  <ul><li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Identify appropriate conservation objectives for a project area</a>, based on an analysis of current condition, future threat, and climate exposure and sensitivity. </li>  <li> <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart.</a></li>  <li><a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Find places to pursue a particular strategy.</a> <i> Start with the Recommendations tab or find the indicator you are trying to address (like fragmentation or water quality) on the other tabs to identify places you could work.</i>    </li>  <li>  Easily view supporting data to turn the recommended conservation objective into a climate-smart strategy for your organization using the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Course Adjustment Worksheets</a>.  <i>The Worksheets tell you which Explorer tab to look at. </i>   </li>  </ul>  <p>If you want to customize the conservation recommendations analysis to use the indicators most important for your project or to better reflect your understanding of the system you work in...    <br><i>  Use the sliders to adjust the weight of an indicator or remove it entirely, and click the Recommendations tab to see the resulting recommended conservation objectives and likelihood of success.     </i></p>  <p>If you want to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk...  <br><i>  Click on the four tabs to view summary scores for Condition, Threat, Climate Exposure and Climate Sensitivity.   </i></p>"},
+		  "methods": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/09/2016-9-Habitat-Explorer-and-Recommendations-Background.pdf",
+		  "intro": {"name": "Instructions", "layer": {"url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_York/NY_CLIMAD_toolkit/MapServer", "show": [111]}, "text": "<p>  The Habitat Explorer allows you to explore the data behind place-specific recommended conservation objectives and their likelihood of success in light of climate change risk.   Use it to identify which Course Adjustment Worksheet from our Guidebook to start with as well as to help you dig more into the data when you are filling out those Worksheets.   Zoom to your area of interest to begin, or click the hyperlinks below to get more detailed how-tos from the Wayfinder section of our Guidebook.  </p>   <ol>  <li>  Start with the Recommendations Map to:  <ul>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3'>Identify appropriate conservation objectives for a project area</a>, based on an analysis of current condition, future threat, and climate exposure and sensitivity.   </li>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4'>Evaluate an existing project to see if it is climate smart.</a>  </li>  <li>  <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=5'>Find places to pursue a particular strategy</a>. <i> Start with the Recommendations tab or find the indicator you are trying to address (like fragmentation or water quality) on the other tabs to identify places you could work.</i>   </li>  </ul>  </li>  <li>  Click on each of the four tabs to explore the data behind the Recommendations.  Customize the analysis if desired by using the sliders to adjust the weight of an indicator or remove it entirely, and click the Recommendations tab to see the results.  </li>  <li>   Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Course Adjustment Worksheets</a> to use the supporting data in the other tabs to turn the recommended conservation objective into a climate-smart strategy for your organization.   </li>  </ol>"},
 		  "combined": {
 			"name": "Recommendations",
-			"text" : "<p>This map shows the place-specific recommended objective (main color) and the likelihood of success in light of climate change (shading) for your selected habitat type, based on its current condition, future threat, and climate change exposure and sensitivity. If you have adjusted the sliders on the other tabs, this map will reflect those changes. </p>  <p>Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Conservation Objectives Course Adjustment Worksheets</a> in our Guidebook that match the recommended objectives in your project area to develop strategies, and consider the climate risk information when doing so.  Then use the climate risk information to further hone your strategies with the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=19'>Preparing for Climate Change Course Adjustment Worksheet.</a></p>  <div style='color:green'><a style='color:green' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=13'>Maintain</a>: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div>  <br><br><div style='color:#00ffff'>Reduce Threats: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div>  <br><br>  <div style='color:orange'>Restore: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div>  <br><br><div style='color:red'>Reduce Threats & Restore: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div>  </p><p>Shading within each group indicates the likelihood of conservation success in light of climate change due to the risks of exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk.</p>",
+			"help": "Recommended conservation mgmt objectives & relative climate risk, based on condition, threat, exposure and sensitivity scores from the other tabs",
+			"text" : "<p>This map shows the place-specific recommended objective (main color) and the likelihood of success in light of climate change (shading) for your selected habitat type, based on its current condition, future threat, and climate change exposure and sensitivity. If you have adjusted the sliders on the other tabs, this map will reflect those changes. </p>  <p>Use the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10'>Conservation Objectives Course Adjustment Worksheets</a> in our Guidebook that match the recommended objectives in your project area to develop strategies, and consider the climate risk information when doing so.  Then use the climate risk information to further hone your strategies with the <a target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=19'>Preparing for Climate Change Course Adjustment Worksheet.</a></p>  <div style='color:green'><a style='color:green; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=13'>Maintain</a>: Good current condition & low future non-climate threats; these places are more likely to maintain their current conditions with minimal intervention.</div>  <br><br><div style='color:#00ffff'><a style='color:#00ffff; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=14'>Reduce Threats</a>: Good current condition but some future non-climate threats; these places may require intervention to prevent declines.</div>  <br><br>  <div style='color:orange'><a style='color:orange; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=16'>Restore</a>: Poor current condition but relatively low future threat; these may be good places to invest in restoration or ecological management.</div>  <br><br><div style='color:red'><a style='color:red; text-decoration: underline;' target='_blank' href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=18'>Reduce Threats & Restore</a>: Poor current condition and further threatened in the future; these places are likely to require greater ongoing investment and have more uncertain outcomes. </div>  </p><p>Shading within each group indicates the likelihood of conservation success in light of climate change due to the risks of exposure and/or sensitivity. Darker shades indicate that the climate risk is low, and actions may have more reliable outcomes. Lighter shades indicate a greater degree of uncertainty due to climate change. The Preparing for Climate Change worksheet will help you identify actions to address this risk.</p>",
 			"selected": true
 		  },
 		  "tabs": [
@@ -333,7 +351,10 @@
 				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
-				"items": [	
+				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
 							{
 								"default": 2, 
 								"group": "all", 
@@ -410,7 +431,10 @@
 				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
-				"items": [	
+				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
 							{
 								"default": 2, 
 								"group": "all", 
@@ -476,7 +500,10 @@
 				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
-				"items": [	
+				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
 							{
 								"default": 2, 
 								"group": "all", 
@@ -532,7 +559,10 @@
 				"colorRamp": [[255, 255, 129, 255], [131, 238, 13, 255], [76, 190, 110, 255], [39, 115, 163, 255], [13, 31, 133, 255]],
 				"inputRanges" : [0,50,51,75,76,100],
 				"outputValues" : [1,2,3],
-				"items": [	
+				"items": [	{
+								"text": "Adjust the sliders to alter the weight of each indicator in the overall score, or to “None” to remove it.  Adjustments will be reflected in the Recommendations.", 
+								"type": "text"
+							},
 							{
 								"default": 2, 
 								"group": "all", 
