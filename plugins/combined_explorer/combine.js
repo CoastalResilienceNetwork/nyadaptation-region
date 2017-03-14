@@ -55,8 +55,8 @@ define([
 				
 		
 		combineFunction: function(formulas, geo, Tformulas){
-			
-						geo.BandFormulaText = Tformulas[0] + "<br><br>" + Tformulas[1] + "<br><br>" + Tformulas[2] + "<br><br>" + Tformulas[3] + "<br><br> A text desciption of how the layers are combined could appear in this location."
+						
+						geo.BandFormulaText = Tformulas[0] + "<br><br>" + Tformulas[1] + "<br><br>" + Tformulas[2] + "<br><br>" + Tformulas[3] + "<br><br>" 
 						
 						rasterFunction0 = new RasterFunction();
 						rasterFunction0.functionName = "BandArithmetic";
