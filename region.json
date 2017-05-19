@@ -67,7 +67,7 @@
                     "pluginName": "combined_explorer"
                 },
                 {
-                    "title": "<img src='img/regional_planning.png' hspace=10>May Layers",
+                    "title": "<img src='img/regional_planning.png' hspace=10>Map Layers",
                     "description": "Brief text here",
                     "pluginName": "regional-planning"
                 }
