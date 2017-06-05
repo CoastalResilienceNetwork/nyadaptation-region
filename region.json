@@ -4,17 +4,14 @@
     "titleMain": { "text": "Natural Resource Navigator", "url": "http://dev.maps.naturalresourcenavigator.org" },
     "titleDetail": { "text": "Map Tool", "url": "" },
 	"headerLinks": [
-        { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
-        { "text": "Legal Disclosure", "url": "http://www.naturalresourcenavigator.org/terms-of-use/" },
         { "text": "NRN Guidebook Home", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf" },
-        { "text": "Quick Start Guide", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Quick-Start-Guide-to-the-NRN_final.pdf " },
-        { "text": "Tactics Toolbox", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Copy-of-NRNTacticsToolbox_v1_2016JAN25.xlsx" },
-        { "text": "Wayfinder", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=2" },
         { "text": "Course Adjustment Worksheets", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=10" },
-        { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/10/NRN-Final-Metadata-Distribution_v1_2_2016_9_30.pdf" },
-        { "text": "FAQ", "url": "http://www.naturalresourcenavigator.org/help/" },
+        { "text": "Tactics Toolbox", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Copy-of-NRNTacticsToolbox_v1_2016JAN25.xlsx" },
+        { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2017/03/NRN-Data-Documentation.pdf" },
         { "text": "Download Data", "url": "http://www.naturalresourcenavigator.org/resources-page/data/" },
-        { "text": "Data Documentation", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/10/NRN-Final-Metadata-Distribution_v1_2_2016_9_30.pdf" }
+        { "text": "Contact Us", "url": "http://www.naturalresourcenavigator.org/contact-us/)" },
+        { "text": "The Nature Conservancy", "url": "http://nature.org/newyork/" },
+        { "text": "Legal Disclosure", "url": "http://www.naturalresourcenavigator.org/terms-of-use/" }
     ],
     "initialExtent": [
         -80.55,
@@ -42,7 +39,7 @@
         "full_extent"
     ],
     "print": {
-        "printServerUrl": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
+        "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
     },
     "colors": {
        "primary": "#4F642D",
@@ -54,17 +51,17 @@
     "identifyEnabled": true,
     "launchpad": {
             "title": "Natural Resource Navigator",
-            "description": "<p>The Natural Resource Navigator offers natural resource managers and planners easy access to data on the current condition, future threats, and climate change exposure and sensitivity for natural resources across New York and its watersheds.</p>",
+            "description": "<p><img src='img/NRN-Compass.png' hspace=10>Welcome to the Natural Resource Navigator Map Tool, where natural resource managers and planners can chart a smart future for a changing climate. Use it to view and summarize data on natural resources across New York and its watersheds, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion Natural Resource Navigator <a href='http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Guidebook</b></a> in another window to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest. Hyperlinks throughout help you jump to relevant Guidebook sections</p>",
             "plugins": [
                 {
-                    "title": "<img src='img/species_explorer.png' hspace=10>Species Explorer",
-                    "description": "Brief text here",
-                    "pluginName": "species"
+                    "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
+                    "description": "Use this to develop climate-smart conservation strategies for a project area or evaluate an existing project to see if it is climate smart. Generates summaries of stream and forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustment Worksheets to complete and how.",
+                    "pluginName": "combined_explorer"
                 },
                 {
-                    "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
-                    "description": "Brief text here",
-                    "pluginName": "combined_explorer"
+                    "title": "<img src='img/species_explorer.png' hspace=10>Species Explorer",
+                    "description": "Use this to identify species that may be present in your project area currently or in the future and develop climate-smart conservation strategies for them. MORE Export custom species lists, identify priorities, and view models of current and future habitat. Includes climate vulnerability for some species.",
+                    "pluginName": "species"
                 },
                 {
                     "title": "<img src='img/regional_planning.png' hspace=10>Map Layers",
@@ -77,11 +74,6 @@
                     "logoPath": "img/TNCLogoPrimary_RGB.png",
                     "link": "http://nature.org/newyork",
                     "title": "The Nature Conservancy"
-                },
-                {
-                    "logoPath": "img/NRN-Compass.png",
-                    "link": "http://www.naturalresourcenavigator.org",
-                    "title": ""
                 },
                 {
                     "logoPath": "img/NYSERDA2.jpg",
