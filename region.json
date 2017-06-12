@@ -65,7 +65,7 @@
                 },
                 {
                     "title": "<img src='img/regional_planning.png' hspace=10>Map Layers",
-                    "description": "Gain quick access to individual datasets within the Navigator or explore the available datasets. View an expanded list of available datasets.",
+                    "description": "Gain quick access to an extensive list of datasets within the Navigator.",
                     "pluginName": "regional-planning"
                 },
                 {
