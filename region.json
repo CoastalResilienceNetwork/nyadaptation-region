@@ -56,7 +56,7 @@
                 {
                     "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
                     "description": "<a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3' target='_blank'>Develop climate-smart conservation strategies for a project area</a> or <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4' target='_blank'>evaluate an existing project to see if it is climate smart</a>. Generates summaries of stream and forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustments to complete and how.",
-                    "pluginName": "combined_explorer"
+                    "pluginName": "habitat_explorer"
                 },
                 {
                     "title": "<img src='img/species_explorer.png' hspace=10>Species Explorer",
