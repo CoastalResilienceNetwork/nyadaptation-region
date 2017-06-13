@@ -1,7 +1,7 @@
 {
 	"plugins": [{
-		"repo": "multiexplorer",
-		"name": "combined_explorer"
+		"repo": "habitat_explorer",
+		"name": "habitat_explorer"
 	},
 	{
 		"repo": "species",
