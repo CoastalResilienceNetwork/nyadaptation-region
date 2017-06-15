@@ -55,12 +55,12 @@
             "plugins": [
                 {
                     "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
-                    "description": "<a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=3' target='_blank'>Develop climate-smart conservation strategies for a project area</a> or <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=4' target='_blank'>evaluate an existing project to see if it is climate smart</a>. Generates summaries of stream and forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustments to complete and how.",
+                    "description": "Develop climate-smart conservation strategies for a project area or evaluate an existing project to see if it is climate smart. Generates summaries of stream and forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustments to complete and how.",
                     "pluginName": "habitat_explorer"
                 },
                 {
                     "title": "<img src='img/species_explorer.png' hspace=10>Species Explorer",
-                    "description": "<a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=7' target='_blank'>Identify species</a> that may be present in your project area currently or in the future and <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf#page=8' target='_blank'>develop climate-smart conservation strategies for them</a>. Export custom species lists, identify priorities, and view models of current and future habitat. Includes climate vulnerability for some species.",
+                    "description": "Identify species that may be present in your project area currently or in the future and develop climate-smart conservation strategies for them. Export custom species lists, identify priorities, and view models of current and future habitat. Includes climate vulnerability for some species.",
                     "pluginName": "species"
                 },
                 {
@@ -74,6 +74,11 @@
                 }
             ],
             "scenarios": [
+                {
+                    "title": "<img src='img/flood_risk_explorer.png' hspace=10>Freshwater Flooding",
+                    "description": "Freshwater flooding means...",
+                    "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky04OTczMTYzLjU2ODQ3ODI2NMSaecWBxJM0ODYwxYY0LjLFnTM2NjIxN8S/xKl4xIgtxZE3NjEzOS4zMzg1MsWGMDXFlsWqxIjFjTUzxZDFi8WIxZvFkzcxxbzEgXBhdGnEllJlZmXEhMSdxLjEiSJ3a2lkxIgxMMWmMDDEmmzGjWVzdFfGm8adOsW2NTfEpyJjYWNoxpfEgF/GjHJ0xKI6W8StxK/EscSzxLXEt8S5xLvHgsWpxYLFrMWFxYfFicWLxY3Fj8WRxZPFlSLFl8eKOsWaxZzFnsWgxaLFpMWmxagixYBhxas6xa04xa/FscWzxbXFt8W5N8W7xb3Ho8W/NsaBxoPFtDHGhjbGiMaKxIvGjcaPbMaRxpPGlWPGt8aZxqvGnsagxp/GoyLGpcSwxqjGqsacxIjGrsawxrFmcmFtZUlkxr1bMF19yJ/GscSYbGVjxLBkQmHEmMSpcEluZMSuxIgwxrHGjG5lxKvGmMi1ZU51bWLGlMiyxJrGqMamT2ZQbHVnxYLGvcSKZcikyKZlZMmHyYnHlyLEjMmUbnMvxITJim9uxJYtxIxhbm7FgmcixJrJl8mKyZnEs8mqyYvJm2XJncmfbMmhxqXJpMmmxLPGpXnGlMmMxrJ1csaVdMaRybLEiG51bGzEmmZpbMSwclTEu8S5yajEgcmOyKXIp0xhybtyyJwiSGFixI7GjSwgQ8SNxKnEsCAmIMiAxpTEhsiDIETGjWEvRsSEc2h3xqZyIEZsb29kyabKtMq2yrjKusq8yr7LgMmmOsqkyb/KgcqkyZ7LgcaOyZ7KtHXEncuSyaVuZ8uHyr9kyaLJiyJdxJrErsi1yLBkypjKmsqcyp7KoHTKosqkyqbGpsqpyqvGksqtxpbKsMqyypPLqsqhdMqjyqVpyqdly7HKrMiCzIDKscusy4PGp8uFyo7Lm8uJy5nLuMqfy7rLvMuvyqjKqsyCyq7MhMqyzIfKt8q5zIrKvcucy4LKtcyIzJvGlMyLy4HLmcuLQ8uNxLHLj8ivxI5pyZ7LoMakypnGlE/GjGPEjnnEiFvLoSLFgmZvQm94y6fGlMiayoXKh2zGsWTIlnfGkXBvxrvEs2HEhGHJhciuyo7Gp8SyOsqGyoh9zZ3Nng=="
+                },
                 {
                     "title": "Maintain",
                     "description": "Maintaining means...",
