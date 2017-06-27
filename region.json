@@ -51,7 +51,7 @@
     "identifyEnabled": true,
     "launchpad": {
             "title": "Natural Resource Navigator",
-            "description": "<p><a href='http://www.naturalresourcenavigator.org' target='_blank'><img src='img/NRN-Compass.png' hspace=10></a>Chart a smart future for a changing climate! Use the Navigator to view and summarize data on natural resources across NY, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion <a href='http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'><b>Guidebook</b></a> to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest.</p>",
+            "description": "<p><a href='http://www.naturalresourcenavigator.org' target='_blank'><img src='img/NRN-Compass.png' hspace=10></a>Chart a smart future for a changing climate! Use the Navigator to view and summarize data on natural resources across NY, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><b>Guidebook</b></a> to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest.</p>",
             "plugins": [
                 {
                     "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
@@ -69,7 +69,7 @@
                     "pluginName": "regional-planning"
                 },
                 {
-                    "title": "<img src='img/NRN-Compass-sm.png' hspace=10>Guidebook",
+                    "title": "<a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><img src='img/NRN-Compass-sm.png' hspace=10></a>Guidebook",
                     "description": "Launch the <a href='http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'>Guidebook</a> to help use alongside the maps to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest."
                 }
             ],
