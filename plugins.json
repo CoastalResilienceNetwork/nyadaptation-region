@@ -1,16 +1,14 @@
 {
-  "plugins": [
-    {
-      "repo": "multiexplorer",
-      "name": "combined_explorer"
-    },
+	"plugins": [{
+		"repo": "habitat_explorer",
+		"name": "habitat_explorer"
+	},
 	{
-      "repo": "species",
-      "name": "species"
-     },
-  {
-      "repo": "regional-planning",
-      "name": "regional-planning"
-    }
-  ]
+		"repo": "species",
+		"name": "species"
+	},
+	{
+		"repo": "regional-planning",
+		"name": "regional-planning"
+	}]
 }
