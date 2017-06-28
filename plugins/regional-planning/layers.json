@@ -4,9 +4,9 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
             "name": "Natural_Resource_Navigator",
-            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportGpUrl": "http://services.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "NRN_NY.gdb" 
         },
 		"includeLayers":[
@@ -69,9 +69,9 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
             "name": "Natural_Resource_Navigator",
-            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
+            "reportGpUrl": "http://services.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
             "reportDbPath": "NRN_NY.gdb" 
         },
 		"includeLayers" : [
