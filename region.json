@@ -67,10 +67,6 @@
                     "title": "<img src='img/regional_planning.png' hspace=10>Map Layers",
                     "description": "Gain quick access to an extensive list of datasets within the Navigator.",
                     "pluginName": "regional-planning"
-                },
-                {
-                    "title": "<a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><img src='img/NRN-Compass-sm.png' hspace=10></a>Guidebook",
-                    "description": "Launch the <a href='http://www.naturalresourcenavigator.org/get-started/guidebook/' target='_blank'>Guidebook</a> to help use alongside the maps to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest."
                 }
             ],
             "scenarios": [
