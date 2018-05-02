@@ -2,6 +2,6 @@
     "height": 500,
     "width": 400,
     "resizable": false,
-    "hasCustomPrint": true,
+    "hasCustomPrint": false,
     "name": "Map Layers"
 }
