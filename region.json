@@ -1,7 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-33",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Natural Resource Navigator", "url": "http://dev.maps.naturalresourcenavigator.org" },
+    "titleMain": { "text": "Natural Resource Navigator", "url": "https://maps.naturalresourcenavigator.org" },
     "titleDetail": { "text": "Map Tool", "url": "" },
 	"headerLinks": [
         { "text": "NRN Guidebook", "url": "http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf" },
@@ -20,14 +20,14 @@
         45.33
     ],
     "basemaps": [
-        { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
-        { "name": "National Geographic", "url": "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" },
-        { "name": "Ocean"              , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
-        { "name": "Imagery"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" },
-        { "name": "Physical"           , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer" },
-        { "name": "Shaded Relief"      , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" },
-        { "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
-        { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
+        { "name": "Topographic"        , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
+        { "name": "National Geographic", "url": "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" },
+        { "name": "Ocean"              , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
+        { "name": "Imagery"            , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" },
+        { "name": "Physical"           , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer" },
+        { "name": "Shaded Relief"      , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" },
+        { "name": "Streets"            , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
+        { "name": "Terrain"            , "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
         "habitat_explorer",
@@ -39,7 +39,7 @@
         "full_extent"
     ],
     "print": {
-        "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
+        "printServerUrl": "https://services2.coastalresilience.org/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
     },
     "colors": {
        "primary": "#4F642D",
@@ -51,7 +51,7 @@
     "identifyEnabled": true,
     "launchpad": {
             "title": "Natural Resource Navigator",
-            "description": "<p><a href='http://www.naturalresourcenavigator.org' target='_blank'><img src='img/NRN-Compass.png' hspace=10></a>Chart a smart future for a changing climate! Use the Navigator to view and summarize data on natural resources across NY, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><b>Guidebook</b></a> to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest.</p>",
+            "description": "<p><a href='https://www.naturalresourcenavigator.org' target='_blank'><img src='img/NRN-Compass.png' hspace=10></a>Chart a smart future for a changing climate! Use the Navigator to view and summarize data on natural resources across NY, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><b>Guidebook</b></a> to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest.</p>",
             "plugins": [
                 {
                     "title": "<img src='img/habitat_explorer.png' hspace=10>Habitat Explorer",
