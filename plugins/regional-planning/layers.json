@@ -5,9 +5,7 @@
             "type": "ags",
             "layerType": "dynamic",
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
-            "name": "Natural_Resource_Navigator",
-            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
-            "reportDbPath": "NRN_NY.gdb" 
+            "name": "Natural_Resource_Navigator"
         },
 		"includeLayers":[
 			{
@@ -70,9 +68,7 @@
             "type": "ags",
             "layerType": "dynamic",
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
-            "name": "Natural_Resource_Navigator_Species",
-            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer/getDrawAndReportDataMultiUnits",
-            "reportDbPath": "NRN_NY.gdb" 
+            "name": "Natural_Resource_Navigator_Species"
         },
 		"includeLayers" : [
 			{
