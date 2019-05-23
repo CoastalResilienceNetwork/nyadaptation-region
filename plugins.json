@@ -1,7 +1,12 @@
 {
-	"plugins": [{
-		"repo": "habitat_explorer",
-		"name": "habitat_explorer"
+	"plugins": [
+	{
+		"repo": "forest_habitat_explorer",
+		"name": "forest_habitat_explorer"
+	},
+	{
+		"repo": "stream_habitat_explorer",
+		"name": "stream_habitat_explorer"
 	},
 	{
 		"repo": "species",
