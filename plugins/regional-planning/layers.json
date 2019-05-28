@@ -67,13 +67,8 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-<<<<<<< HEAD
             "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
             "name": "Natural_Resource_Navigator" 
-=======
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
-            "name": "Natural_Resource_Navigator_Species"
->>>>>>> development
         },
 		"includeLayers" : [
 			{
