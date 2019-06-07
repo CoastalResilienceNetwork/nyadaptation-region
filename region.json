@@ -55,12 +55,12 @@
             "description": "<p><a href='http://www.naturalresourcenavigator.org' target='_blank'><img src='img/NRN-Compass.png' hspace=10></a>Chart a smart future for a changing climate! Use the Navigator to view and summarize data on natural resources across NY, including recommendations for location-specific conservation objectives and their likelihood of success in light of climate change. Open the companion <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><b>Guidebook</b></a> to provide structured decision support for selecting the most appropriate climate adaptation options for your particular area or interest.</p>",
             "plugins": [
                 {
-                    "title": "<img src='img/habitat_explorer.png' hspace=10>Forest Habitat Explorer",
+                    "title": "<img src='img/habitat_explorer.png' hspace=10>Forest Explorer",
                     "description": "Develop climate-smart conservation strategies for a project area or evaluate an existing project to see if it is climate smart. Generates summaries of forest data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustments to complete and how.",
                     "pluginName": "forest_habitat_explorer"
                 },
                 {
-                    "title": "<img src='img/habitat_explorer.png' hspace=10>Stream Habitat Explorer",
+                    "title": "<img src='img/habitat_explorer.png' hspace=10>Streams Explorer",
                     "description": "Develop climate-smart conservation strategies for a project area or evaluate an existing project to see if it is climate smart. Generates summaries of stream data for current condition, future threat, and climate change sensitivity and exposure. These are then used to map recommended conservation objectives and their likelihood of success in light of climate change risk. You can use this information to identify which Course Adjustments to complete and how.",
                     "pluginName": "stream_habitat_explorer"
                 },
