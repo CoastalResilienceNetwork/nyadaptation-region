@@ -1,0 +1,80 @@
+[
+    {
+        "displayName": "New York",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "https://services2.coastalresilience.org/arcgis/rest/services/New_York",
+            "name": "New_York"
+        },
+        "includeLayers": [
+			{
+				"name" : "Marsh Advancement SLAMM Uncertainty",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Marsh Advancement Zones",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Ecological",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Economic",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Social",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Critical Facilities",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Boundaries",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Land Use Management",
+				"includeAllLayers" : true
+			}
+		]
+	},
+	{
+        "displayName": "Hurricane Sandy",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "https://services.femadata.com/arcgis/rest/services/2012_Sandy/"
+        },
+        "includeLayers": [
+            {
+                "server": {
+                    "name": "SurgeBoundaries_Final_0214"
+                },
+                "name": "FINAL - High Resolution Storm Surge Extent",
+                "displayName": "Final FEMA Surge Area-Feb 2013",
+                "includeAllLayers" : true
+            }
+        ]
+    },
+    {
+        "displayName": "USGS Depth to Groundwater",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "https://www.sciencebase.gov/arcgis/rest/services/Catalog"
+        },
+        "includeLayers": [
+            {
+                "server": {
+                "name": "571fa4aee4b071321fe56c9e"
+                },
+                "name": "Estimated depth to water below land surface, in feet",
+                "displayName": "Estimated depth to water below land surface"
+            }
+        ]
+    }
+]
