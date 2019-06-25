@@ -95,7 +95,7 @@
 				"includeAllLayers": true
 			},
 			{
-		        "name": "Birds 289",
+		        "name": "Birds [289]",
 		        "server": {
 		            "type": "ags",
 		            "layerType": "dynamic",
@@ -104,11 +104,76 @@
 		        },
 		        "includeLayers": [
 					{
+						"name": "Species",
 						"includeAllLayers": true
 					}
-
 				]
-
+			},
+			{
+				"name": "Butterflies/Moths [20]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Crustaceans [1]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Fish [125]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mammals [51]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mayflies [1]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Mollusks [14]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Nonvascular Plants [4]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Odonata [23]",
+				"includeAllLayers": true
+			},
+			{
+				"name": "Reptiles [52]",
+				"includeAllLayers": true
+			},
+			{
+		        "name": "Trees [134]",
+		        "server": {
+		            "type": "ags",
+		            "layerType": "dynamic",
+		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+		            "name": "Natural_Resource_Navigator_Species_TreeVascPlant"
+		        },
+		        "includeLayers": [
+					{
+						"name": "Tree Species",
+						"includeAllLayers": true
+					}
+				]
+			},
+			{
+		        "name": "Vascular Plants [198]",
+		        "server": {
+		            "type": "ags",
+		            "layerType": "dynamic",
+		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+		            "name": "Natural_Resource_Navigator_Species_Birds_TreeVascPlant"
+		        },
+		        "includeLayers": [
+					{
+						"name": "Species",
+						"includeAllLayers": true
+					}
+				]
 			}
 		]
 	}
