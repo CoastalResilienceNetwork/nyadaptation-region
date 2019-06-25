@@ -166,7 +166,7 @@
 		            "type": "ags",
 		            "layerType": "dynamic",
 		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
-		            "name": "Natural_Resource_Navigator_Species_Birds_TreeVascPlant"
+		            "name": "Natural_Resource_Navigator_Species_TreeVascPlant"
 		        },
 		        "includeLayers": [
 					{
