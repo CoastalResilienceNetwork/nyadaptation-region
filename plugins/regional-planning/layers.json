@@ -95,6 +95,7 @@
 				"includeAllLayers": true
 			},
 			{
+		        "name": "Birds [289]",
 		        "server": {
 		            "type": "ags",
 		            "layerType": "dynamic",
@@ -103,7 +104,6 @@
 		        },
 		        "includeLayers": [
 					{
-						"name": "Birds [289]",
 						"includeAllLayers": true
 					}
 
