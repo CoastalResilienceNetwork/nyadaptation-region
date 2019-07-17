@@ -17,6 +17,14 @@
 		"name": "regional-planning"
 	},
 	{
+		"repo": "future_habitat",
+		"name": "future_habitat"
+	},
+	{
+		"repo": "flood-slr",
+		"name": "flood-slr"
+	},
+	{
 		"repo": "regional-planning",
 		"name": "coastal-resilience"
 	}]
