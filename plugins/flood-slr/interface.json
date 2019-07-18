@@ -37,10 +37,10 @@
 				"scenario": "Sea level rise inundation scenarios ranging from 1 to 3 feet."
 			},
 			"extent": {
-				"xmin":-8279552.773327565,
-				"ymin":4952655.188376434,
-				"xmax":-7983615.836980773,
-				"ymax":5088660.854503088,
+				"xmin":-8278130.1633,
+				"ymin":4929576.8282,
+				"xmax":-7991338.4332,
+				"ymax":5036894.4159,
 				"spatialReference":{
 					"wkid":102100,
 					"latestWkid":3857
