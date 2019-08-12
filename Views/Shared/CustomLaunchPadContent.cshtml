@@ -1,0 +1,92 @@
+<style>
+	.nj-app-wraps{
+		display:flex;
+	}
+	.nj-app-wraps h4{
+		margin-left:10px; margin-top:10px;
+	}
+	.nj-app-wraps img{
+		height:37px;
+	}
+	.nj-app-descs{
+		margin-left:5px;
+	}
+	.nj-app-button{
+		text-align:left; width:100%;
+	}
+	.nj-app-button span{
+		font-weight:bold; color:#5E94B6;
+	} 
+	.nj-hide-button{
+		display:none;
+	}
+</style>
+
+<h2>Natural Resource Navigator & Coastal Resilience</h2>
+<div>
+    Chart a smart future for a changing climate in NY! Use the Navigator to view data on natural resources across NY, and identify appropriate conservation objectives. Open the companion <a href='http://www.naturalresourcenavigator.org/wp-content/uploads/2016/01/Guidebook.pdf' target='_blank'><b>Guidebook</b></a> for structured decision support for selecting climate adaptation options for resource management.
+</div>
+
+<h3>Natural Resource Navigator</h3>
+<div class="button nj-app-button">	
+	<div class="nj-app-wraps">
+		<img src="img/habitat_explorer.png">
+		<h4 class="color-primary">Forest Explorer</h4>
+	</div>
+	<div class="nj-app-descs">
+		Develop climate-smart conservation strategies or evaluate an existing project to see if it is climate smart.
+	</div>
+</div>	
+<button class="button launch-plugin nj-hide-button" data-plugin-name="forest_habitat_explorer"></button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/streams_explorer.png">
+		<h4 class="color-primary">Streams Explorer</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Generates summaries of stream data for current condition, future threat, and climate change sensitivity and exposure.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="stream_habitat_explorer">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/species_explorer.png">
+		<h4 class="color-primary">Species Explorer</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Identify species that may be present in your project area currently or in the future and develop climate-smart conservation strategies for them.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="species">Go</button>
+
+
+<h3>Coastal Resilience</h3>
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/flood_slr">
+		<h4 class="color-primary">Flood and Sea Level Rise</h4>
+	</div>
+	<div class="nj-app-descs">
+		Explore the potential inundation extent of sea level rise.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="flood-slr">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/future_habitat.png">
+		<h4 class="color-primary">Future Habitat</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Shows how the size and distribution of salt marshes and other coastal habitats may change in response to future projected sea level rise scenarios.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="future_habitat">Go</button>
+
+<script>
+	$(".nj-app-button").click(function(c){
+		$(c.currentTarget).next().trigger("click")
+	})
+</script>
