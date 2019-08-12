@@ -3,5 +3,6 @@
     "width": 400,
     "resizable": false,
     "hasCustomPrint": true,
-    "name": "Coastal Resilience"
+    "name": "Coastal Resilience",
+    "hoverText": "Coastal Resilience Map Layers"
 }
