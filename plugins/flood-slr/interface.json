@@ -1,5 +1,6 @@
 {
 	"includeMinimize": true,
+	"fullName": "Flood and Sea Level Rise app: Explore current and future vulnerability to flooding caused by sea level rise, coastal storms, or the combined impact of both.",
 	"infoGraphic": {
 		"show": false,
 		"popup": true,
@@ -84,6 +85,14 @@
 						"show": true,
 						"labels": ["Current", "2020", "2050", "2080"],
 						"dependency": {
+							"slider": {
+									"scenario": {
+											"Current": {
+													"whitelist": ["Low"],
+													"disabled": true
+											}
+									}
+							}
 						}
 					},
 					"scenario": { 
@@ -171,6 +180,7 @@
 			},
 			"download": {
 				"report": {
+					"sea_level_rise": "https://media.coastalresilience.org/NRN/Inundation_Methods_TNC_CR.pdf",
 					"sea_level_rise_noaa": "http://coast.noaa.gov/digitalcoast/tools/slr"
 				},
 				"data":""
