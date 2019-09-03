@@ -139,7 +139,7 @@
 								"dependency": {
 									"slider": {
 										"climate": { 
-											"checked": { "whitelist": ["Current", "2020", "2050", "2080"] }
+											"checked": { "whitelist": ["2020", "2050", "2080"] }
 										},
 										"scenario": { 
 											"checked": {
@@ -162,7 +162,7 @@
 								"dependency": {
 									"slider": {
 										"climate": { 
-											"checked": { "whitelist": ["Current", "2020", "2050", "2080"] }
+											"checked": { "whitelist": ["2020", "2050", "2080"] }
 										},
 										"scenario": { 
 											"checked": {
