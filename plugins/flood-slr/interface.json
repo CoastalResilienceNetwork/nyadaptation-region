@@ -121,7 +121,7 @@
 										"scenario": { 
 											"checked": {
 												"whitelist": ["Low"],
-												"disabled": true
+												"disabled": false
 											}
 										}
 									}
