@@ -39,7 +39,7 @@
         "full_extent"
     ],
     "print": {
-        "printServerUrl": "https://services2.coastalresilience.org/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
+    	 "headerLogoPath": "https://maps.coastalresilience.org/assets/images/partners/TNCLogoPrimary_RGB2.jpg"    
     },
     "colors": {
        "primary": "#4F642D",
