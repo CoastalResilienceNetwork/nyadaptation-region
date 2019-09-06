@@ -38,8 +38,7 @@
         "legend_display",
         "full_extent"
     ],
-    "print": {
-    	 "headerLogoPath": "https://maps.coastalresilience.org/assets/images/partners/TNCLogoPrimary_RGB2.jpg"    
+    "print": {   
     },
     "colors": {
        "primary": "#4F642D",
