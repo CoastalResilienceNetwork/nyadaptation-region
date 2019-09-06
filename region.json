@@ -38,8 +38,6 @@
         "legend_display",
         "full_extent"
     ],
-    "print": {   
-    },
     "colors": {
        "primary": "#4F642D",
        "secondary": "#5e893c",
