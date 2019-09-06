@@ -32,9 +32,7 @@
         40.13,
         -70.70,
         45.33
-    ],
-    "print":{
-    },	    
+    ],	    
     "basemaps": [
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
         { "name": "Ocean"              , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
