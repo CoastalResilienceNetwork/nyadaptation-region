@@ -1,6 +1,7 @@
 {
 	"includeMinimize": true,
-	"fullName": "Flood and Sea Level Rise app: Explore current and future vulnerability to flooding caused by sea level rise, coastal storms, or the combined impact of both.",
+	"fullName": "Coastal Flood and Sea Level Rise",
+	"toolbarName": "Coastal Flood and Sea Level Rise",
 	"infoGraphic": {
 		"show": false,
 		"popup": true,
