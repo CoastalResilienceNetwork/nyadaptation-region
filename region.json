@@ -32,7 +32,7 @@
         40.13,
         -70.70,
         45.33
-    ],
+    ],	    
     "basemaps": [
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
         { "name": "Ocean"              , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
@@ -44,15 +44,14 @@
         "stream_habitat_explorer",
         "species",
         "regional-planning",
+        "flood-slr",
+        "future_habitat",
         "coastal-resilience",
         "zoom_to",
         "measure",
         "legend_display",
         "full_extent"
     ],
-    "print": {
-        "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A NRN"  
-    },
     "colors": {
        "primary": "#4F642D",
        "secondary": "#5e893c",
