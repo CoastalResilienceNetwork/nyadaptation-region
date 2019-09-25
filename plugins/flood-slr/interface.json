@@ -20,9 +20,9 @@
 	},
 	"region": {
 		"New York": {
-			"url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/Flood_SLR/MapServer",
+			"url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/Flood_SLR/MapServer",
 			"layers": {
-				"main": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/Flood_SLR/MapServer",
+				"main": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/Flood_SLR/MapServer",
 				"slr_0ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer" },
 				"slr_1ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer" },
 				"slr_2ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer" },

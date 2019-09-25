@@ -4,7 +4,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
             "name": "Natural_Resource_Navigator"
         },
 		"includeLayers":[
@@ -67,7 +67,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
             "name": "Natural_Resource_Navigator_Species"
         },
 		"includeLayers" : [
@@ -99,7 +99,7 @@
 		        "server": {
 		            "type": "ags",
 		            "layerType": "dynamic",
-		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+		            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
 		            "name": "Natural_Resource_Navigator_Species_Birds"
 		        },
 		        "includeLayers": [
@@ -150,7 +150,7 @@
 		        "server": {
 		            "type": "ags",
 		            "layerType": "dynamic",
-		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+		            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
 		            "name": "Natural_Resource_Navigator_Species_TreeVascPlant"
 		        },
 		        "includeLayers": [
@@ -165,7 +165,7 @@
 		        "server": {
 		            "type": "ags",
 		            "layerType": "dynamic",
-		            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
+		            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator",
 		            "name": "Natural_Resource_Navigator_Species_TreeVascPlant"
 		        },
 		        "includeLayers": [
