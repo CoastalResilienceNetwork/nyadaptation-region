@@ -4,7 +4,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
+            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
             "name": "Natural_Resource_Navigator" 
         },
 		"includeLayers":[
@@ -67,7 +67,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
+            "url": "https://dev-services.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
             "name": "Natural_Resource_Navigator" 
         },
 		"includeLayers" : [
