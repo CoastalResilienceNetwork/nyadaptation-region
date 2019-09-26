@@ -3,5 +3,6 @@
     "width": 400,
     "resizable": false,
     "hasCustomPrint": false,
-    "name": "Map Layers"
+    "name": "Map Layers",
+    "description": "Natural Resource Navigator Map Layers"
 }
