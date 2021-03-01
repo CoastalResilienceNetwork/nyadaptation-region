@@ -4,8 +4,8 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "https://services2.coastalresilience.org/arcgis/rest/services/New_York",
-            "name": "New_York"
+            "url": "https://services2.coastalresilience.org/arcgis/rest/services/Natural_Resource_Navigator/",
+            "name": "Coastal_Resilience_NY"
         },
         "includeLayers": [
 			{
